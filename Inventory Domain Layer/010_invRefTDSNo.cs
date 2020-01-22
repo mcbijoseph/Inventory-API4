@@ -9,7 +9,7 @@ namespace Inventory_Domain_Layer
 {
     public class _010_invRefTDSNo
     {
-        [Range(0,  int.MaxValue]
+        [Range(0,  int.MaxValue)]
         public int ID { get; set; }
         [Required]
         public string Name { get; set; }
