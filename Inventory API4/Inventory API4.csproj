@@ -157,7 +157,13 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\Category1Controller.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemCategoryController.cs" />
+    <Compile Include="Controllers\ItemImageController.cs" />
+    <Compile Include="Controllers\ItemPropListController.cs" />
+    <Compile Include="Controllers\ItemsEntryListController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\ItemsMasterListController.cs" />
+    <Compile Include="Controllers\ItemAttributeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
