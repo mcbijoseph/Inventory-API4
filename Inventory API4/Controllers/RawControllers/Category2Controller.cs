@@ -22,12 +22,12 @@ namespace Inventory_API4.Controllers
         }
 
         // POST api/values
-        public void Post([FromBody]string value)
+        public void Post([FromBody]Inventory_Domain_Layer._002_invRefCategory2 value)
         {
         }
 
         // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody]Inventory_Domain_Layer._002_invRefCategory2 value)
         {
         }
 
