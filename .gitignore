@@ -1,5 +1,4 @@
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
-
-/.vs/Inventory API4/v16/Server/sqlite3
+/.vs/Inventory API4/v16/Server/sqlite3/db.lock
