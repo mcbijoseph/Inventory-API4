@@ -162,6 +162,12 @@
     <Compile Include="Controllers\RawControllers\DeliveryDateController.cs" />
     <Compile Include="Controllers\RawControllers\EntryDateController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RawControllers\ItemAttributeController.cs" />
+    <Compile Include="Controllers\RawControllers\ItemCategoryController.cs" />
+    <Compile Include="Controllers\RawControllers\ItemImageController.cs" />
+    <Compile Include="Controllers\RawControllers\ItemPropListController.cs" />
+    <Compile Include="Controllers\RawControllers\ItemsEntryListController.cs" />
+    <Compile Include="Controllers\RawControllers\ItemsMasterListController.cs" />
     <Compile Include="Controllers\RawControllers\PropertyName1Controller.cs" />
     <Compile Include="Controllers\RawControllers\PropertyName2Controller.cs" />
     <Compile Include="Controllers\RawControllers\TDSNoController.cs" />
