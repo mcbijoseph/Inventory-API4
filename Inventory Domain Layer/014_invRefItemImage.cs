@@ -11,11 +11,19 @@ namespace Inventory_Domain_Layer
     {
         [Range(0, int.MaxValue)]
         public int ID { get; set; }
+
         [Range(0, int.MaxValue)]
         public int ItemID { get; set; }
+
+        [Required]
         public String ImageName { get; set; }
+
+        [Required]
         public String Extension { get; set; }
+
+
         public int Order { get; set; }
+
         public Boolean isProfile { get; set; }
     }
 }

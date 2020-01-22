@@ -16,17 +16,24 @@ namespace Inventory_Domain_Layer
         public int ItemID { get; set; }
 
         public decimal Qty { get; set; }
+
         public decimal UnitPrice { get; set; }
+
         [Range(0, int.MaxValue)]
         public int UnitID { get; set; }
+
         [Range(0, int.MaxValue)]
         public int TDSID { get; set; }
+
         [Range(0, int.MaxValue)]
         public int DelID { get; set; }
+
         [Range(0, int.MaxValue)]
         public int EntID { get; set; }
+
         [Range(0, int.MaxValue)]
         public int Sup_ID { get; set; }
+
         [Range(0, int.MaxValue)]
         public int Emp_Receive_ID { get; set; }
     }
