@@ -7,9 +7,8 @@ using System.Web.Http;
 
 namespace Inventory_API4.Controllers
 {
-    public class Category1Controller : ApiController
+    public class ItemsEntryListController : ApiController
     {
-        // GET api/values
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
@@ -22,12 +21,12 @@ namespace Inventory_API4.Controllers
         }
 
         // POST api/values
-        public void Post([FromBody]string value)
+        public void Post([FromBody]Inventory_Domain_Layer._013_invItemsEntryList value)
         {
         }
 
         // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody]Inventory_Domain_Layer._013_invItemsEntryList value)
         {
         }
 
