@@ -24,6 +24,7 @@ namespace Inventory_API4.Controllers
         // POST api/values
         public void Post([FromBody]Inventory_Domain_Layer._001_invRefCategory1 value)
         {
+
         }
 
         // PUT api/values/5
