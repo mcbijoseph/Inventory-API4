@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Inventory_Domain_Layer
 {
-    public class Class1
+    public class _008_invRefEntryDate
     {
+        public int ID { get; set; }
+        public DateTime EntryDate { get; set; }
+        public int IELID_013 { get; set; }
     }
 }
