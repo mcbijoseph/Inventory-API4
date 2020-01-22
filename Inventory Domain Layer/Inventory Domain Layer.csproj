@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Inventory_Domain_Layer</RootNamespace>
     <AssemblyName>Inventory Domain Layer</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,13 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="011_invRefItemsMasterList.cs" />
-    <Compile Include="012_invItemAttribute.cs" />
-    <Compile Include="013_invItemsEntryList.cs" />
-    <Compile Include="014_invRefItemImage.cs" />
-    <Compile Include="015_invRefItemPropList.cs" />
-    <Compile Include="016_invRefItemCategory.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="001_invRefCategory1.cs" />
+    <Compile Include="002_invRefCategory2.cs" />
+    <Compile Include="003_invRefCategory3.cs" />
+    <Compile Include="004_invRefPropertyName1.cs" />
+    <Compile Include="005_invRefPropertyName2.cs" />
+    <Compile Include="006_invRefAttribute.cs" />
+    <Compile Include="007_invRefDeliveryDate.cs" />
+    <Compile Include="008_invRefEntryDate.cs" />
+    <Compile Include="009_invRefUnits.cs" />
+    <Compile Include="010_invRefTDSNo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
