@@ -1,0 +1,4 @@
+C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\obj\Debug\Inventory.API4.csprojAssemblyReference.cache
+C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\obj\Debug\Inventory.API4.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\obj\Debug\Inventory API4.dll
+C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\obj\Debug\Inventory API4.pdb
