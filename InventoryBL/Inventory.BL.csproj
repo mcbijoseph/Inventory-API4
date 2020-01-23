@@ -51,6 +51,12 @@
     <Compile Include="008_invRefEntryDateBL.cs" />
     <Compile Include="009_invRefUnitsBL.cs" />
     <Compile Include="010_invRefTDSNoBL.cs" />
+    <Compile Include="011_invRefItemsMasterList.cs" />
+    <Compile Include="012_invItemAttribute.cs" />
+    <Compile Include="013_invItemsEntryList.cs" />
+    <Compile Include="014_invRefItemImage.cs" />
+    <Compile Include="015_invRefItemPropList.cs" />
+    <Compile Include="016_invRefItemCategory.cs" />
     <Compile Include="Common\IBaseBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Sample.cs" />
