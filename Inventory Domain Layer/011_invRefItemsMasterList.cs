@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Inventory_Domain_Layer
 {
-    public class _011_invRefItemsMasterList
+    public class _011_invRefItemsMasterListDomain
     {
         [Range(0, int.MaxValue)]
         public int ID { get; set; }
