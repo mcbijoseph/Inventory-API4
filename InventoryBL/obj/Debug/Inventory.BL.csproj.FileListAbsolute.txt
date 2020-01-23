@@ -1,0 +1,1 @@
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\InventoryBL\obj\Debug\Inventory.BL.csprojAssemblyReference.cache
