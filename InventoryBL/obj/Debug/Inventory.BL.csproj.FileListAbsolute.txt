@@ -1,1 +1,2 @@
-C:\Users\Nico Romano\Desktop\Inventory\Inventory API\InventoryBL\obj\Debug\Inventory.BL.csprojAssemblyReference.cache
+C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryBL\obj\Debug\Inventory.BL.csprojAssemblyReference.cache
+C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryBL\obj\Debug\Inventory.BL.csproj.CoreCompileInputs.cache

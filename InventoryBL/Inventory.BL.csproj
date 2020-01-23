@@ -41,12 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="011_invRefItemsMasterList.cs" />
-    <Compile Include="012_invItemAttribute.cs" />
-    <Compile Include="013_invItemsEntryList.cs" />
-    <Compile Include="014_invRefItemImage.cs" />
-    <Compile Include="015_invRefItemPropList.cs" />
-    <Compile Include="016_invRefItemCategory.cs" />
+    <Compile Include="001_invRefCategory1BL.cs" />
+    <Compile Include="002_invRefCategory2BL.cs" />
+    <Compile Include="003_invRefCategory3BL.cs" />
+    <Compile Include="004_invRefPropertyName1BL.cs" />
+    <Compile Include="005_invRefPropertyName2BL.cs" />
+    <Compile Include="006_invRefAttributeBL.cs" />
+    <Compile Include="007_invRefDeliveryDateBL.cs" />
+    <Compile Include="008_invRefEntryDateBL.cs" />
+    <Compile Include="009_invRefUnitsBL.cs" />
+    <Compile Include="010_invRefTDSNoBL.cs" />
+    <Compile Include="Common\IBaseBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Sample.cs" />
   </ItemGroup>
@@ -60,5 +65,6 @@
       <Name>Inventory.DAL</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
