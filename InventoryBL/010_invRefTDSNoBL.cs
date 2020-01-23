@@ -44,7 +44,11 @@ namespace InventoryBL
 
         public IEnumerable<_010_invRefTDSNoDomain> Get()
         {
-            throw new NotImplementedException();
+            return _dbHelper.GetRecords("sp010invRefTDSNoSelect").Tables[0].AsEnumerable().Select(drow => new _010_invRefTDSNoDomain
+            {
+                ID = drow.Field<int>("ID"),
+                Name = drow.Field<string>("Name")
+            }).ToList();
         }
 
         public _010_invRefTDSNoDomain Get(int id)
