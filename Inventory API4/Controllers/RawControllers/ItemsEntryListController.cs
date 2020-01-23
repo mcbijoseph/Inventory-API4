@@ -19,5 +19,12 @@ namespace Inventory_API4.Controllers
         {
             return Json(cat3.Command(new _013_invItemsEntryListDomain(), "insert"));
         }
+
+        public IEnumerable<_013_invItemsEntryListDomain> Get()
+        {
+            return cat3.Get();
+        }
+
+
     }
 }

@@ -9,6 +9,7 @@ using Inventory_API4.Filters;
 using InventoryBL;
 
 
+
 namespace Inventory_API4.Controllers
 {
     public class AttributeController : ApiController
@@ -24,6 +25,10 @@ namespace Inventory_API4.Controllers
             return Json(attrib.Command(new _006_invRefAttributeDomain(), "insert"));
         }
 
+        public IEnumerable<_006_invRefAttributeDomain> Get()
+        {
+            return attrib.Get();
+        }
 
 
 

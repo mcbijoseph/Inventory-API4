@@ -20,5 +20,10 @@ namespace Inventory_API4.Controllers
             return Json(cat3.Command(new _016_invRefItemCategoryDomain(), "insert"));
         }
 
+        public IEnumerable<_016_invRefItemCategoryDomain> Get()
+        {
+            return cat3.Get();
+        }
+
     }
 }

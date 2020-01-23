@@ -13,7 +13,6 @@ namespace InventoryBL
 
     public interface I_006_invRefAttributeBL<TEntity> : Common.IBaseBL<TEntity> where TEntity : class
     {
-
     }
 
 
