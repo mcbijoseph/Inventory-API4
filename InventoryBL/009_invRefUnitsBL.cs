@@ -45,7 +45,11 @@ namespace InventoryBL
 
         public IEnumerable<_009_invRefUnitsDomain> Get()
         {
-            throw new NotImplementedException();
+            return _dbHelper.GetRecords("sp009invRefUnitsSelect").Tables[0].AsEnumerable().Select(drow => new _009_invRefUnitsDomain
+            {
+                ID = drow.Field<int>("ID"),
+                Name = drow.Field<string>("Name")
+            }).ToList();
         }
 
         public _009_invRefUnitsDomain Get(int id)

@@ -45,7 +45,12 @@ namespace InventoryBL
 
         public IEnumerable<_002_invRefCategory2Domain> Get()
         {
-            throw new NotImplementedException();
+            return _dbHelper.GetRecords("sp002invRefCategory2Select").Tables[0].AsEnumerable().Select(drow => new _002_invRefCategory2Domain
+            {
+                ID = drow.Field<int>("ID"),
+                Name = drow.Field<string>("Name"),
+                Cat3ID_001 = drow.Field<int>("Cat3ID_001")
+            }).ToList();
         }
 
         public _002_invRefCategory2Domain Get(int id)

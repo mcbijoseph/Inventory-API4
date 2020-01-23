@@ -41,7 +41,12 @@ namespace InventoryBL
 
         public IEnumerable<_007_invRefDeliveryDateDomain> Get()
         {
-            throw new NotImplementedException();
+            return _dbHelper.GetRecords("sp007invRefDeliveryDateSelect").Tables[0].AsEnumerable().Select(drow => new _007_invRefDeliveryDateDomain
+            {
+                ID = drow.Field<int>("ID"),
+                Delivery_Date = drow.Field<DateTime>("Delivery_Date"),
+                IELID_013 = drow.Field<int>("IELID_013")
+            }).ToList();
         }
 
         public _007_invRefDeliveryDateDomain Get(int id)

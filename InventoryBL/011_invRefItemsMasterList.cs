@@ -45,7 +45,14 @@ namespace InventoryBL
 
         public IEnumerable<_011_invRefItemsMasterListDomain> Get()
         {
-            throw new NotImplementedException();
+            return _dbHelper.GetRecords("sp011invRefITemsMAsterListSelect").Tables[0].AsEnumerable().Select(drow => new _011_invRefItemsMasterListDomain
+            {
+                ID = drow.Field<int>("ID"),
+                Name = drow.Field<string>("Name"),
+                 Code = drow.Field<string>("Code"),
+                  has_Attribute = drow.Field<Boolean>("has_Attribute"),
+                   Tag = drow.Field<string>("")
+            }).ToList();
         }
 
         public _011_invRefItemsMasterListDomain Get(int id)
