@@ -3,49 +3,58 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
 using Inventory.DAL;
+using System.Data;
+using System.Data.SqlClient;
 using Inventory_Domain_Layer;
 
-namespace FormContBL
+
+namespace InventoryBL
 {
-    public interface IProjectBL<TEntity> : Common.IBaseBL<TEntity> where TEntity : class
+
+    public interface I_001_invRefCategory1BL<TEntity> : Common.IBaseBL<TEntity> where TEntity : class
     {
 
     }
 
-    public class ProjectBL : BaseBL, IProjectBL<ProjectDomainModel>
+
+    public class _001_invRefCategory1BL : Common.BaseBL, I_001_invRefCategory1BL<_001_invRefCategory1Domain>
     {
         private IDBHelper _dbHelper = new DBHelper();
 
-        public MessageViewDomainModel Command(ProjectDomainModel projectDomain, string commandType)
+        public MessageViewDomain Command(_001_invRefCategory1Domain projectDomain, string commandType)
         {
+
             var sqlParameters = new List<SqlParameter>()
             {
+                /***
+                //TOD:
                 new SqlParameter { ParameterName = "@ID", Value = projectDomain.ID, Direction = ParameterDirection.Input  },
                 new SqlParameter { ParameterName = "@ProjectName", Value = projectDomain.ProjectName, Direction = ParameterDirection.Input }
+                */
             };
 
             return this.GetMessage(_dbHelper.Command("spProjectCommand", commandType, sqlParameters).Tables[0]);
 
+            
         }
 
-        public MessageViewDomainModel Delete(int id)
+        public MessageViewDomain Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<ProjectDomainModel> Get()
+        public IEnumerable<_001_invRefCategory1Domain> Get()
         {
             throw new NotImplementedException();
         }
 
-        public ProjectDomainModel Get(int id)
+        public _001_invRefCategory1Domain Get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<ProjectDomainModel> Search(int offset, int limit, string orderBy)
+        public IEnumerable<_001_invRefCategory1Domain> Search(int offset, int limit, string orderBy)
         {
             throw new NotImplementedException();
         }

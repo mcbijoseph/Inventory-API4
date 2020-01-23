@@ -59,6 +59,7 @@
     <Compile Include="014_invRefItemImage.cs" />
     <Compile Include="015_invRefItemPropList.cs" />
     <Compile Include="016_invRefItemCategory.cs" />
+    <Compile Include="MessageViewDomain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

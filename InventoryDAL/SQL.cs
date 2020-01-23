@@ -24,12 +24,12 @@ namespace Inventory.DAL
             return Execute();
         }
 
-        public object Execute()
+        public DataSet Execute()
         {
             DataSet dat = new DataSet();
 
             //ADDING DICTIONARY CONNECTION BASED ON PREFIX
-            string ss = Properties.Settings.Default.connectionString;
+            string ss = InventoryDAL.Properties.Settings.Default.connectionString;
 
             using (SqlDataAdapter adap = new SqlDataAdapter(_SPName, ss))
             {
