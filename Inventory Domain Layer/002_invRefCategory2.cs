@@ -12,7 +12,7 @@ namespace Inventory_Domain_Layer
        [Range(0, int.MaxValue)]
         public int ID { get; set; }
         [Range(0, int.MaxValue)]
-        public int Cat3ID_001 { get; set; }
+        public int Cat1ID_001 { get; set; }
         [Required]
         public string Name { get; set; }
 
