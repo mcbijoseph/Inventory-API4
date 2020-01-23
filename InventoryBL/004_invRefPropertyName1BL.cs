@@ -17,7 +17,7 @@ namespace InventoryBL
     }
 
 
-    public class _004_invRefPropertyName1 : Common.BaseBL, I_004_invRefPropertyName1<_004_invRefPropertyName1Domain>
+    public class _004_invRefPropertyName1BL : Common.BaseBL, I_004_invRefPropertyName1<_004_invRefPropertyName1Domain>
     {
         private IDBHelper _dbHelper = new DBHelper();
 

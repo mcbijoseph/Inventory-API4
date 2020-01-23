@@ -23,5 +23,9 @@ namespace Inventory_API4.Controllers
         {
             return Json(attrib.Command(new _006_invRefAttributeDomain(), "insert"));
         }
+
+
+
+
     }
 }

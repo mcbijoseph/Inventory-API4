@@ -4,35 +4,21 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Inventory_Domain_Layer;
+using Inventory_API4.Filters;
+using InventoryBL;
 
 namespace Inventory_API4.Controllers
 {
     public class ItemCategoryController : ApiController
     {
-        public IEnumerable<string> Get()
+        I_016_invRefItemCategoryBL<_016_invRefItemCategoryDomain> cat3 = new _016_invRefItemCategoryBL();
+        [HttpPost]
+        [DomainValidatorFilter]
+        public object Post([FromBody]_016_invRefItemCategoryDomain body)
         {
-            return new string[] { "value1", "value2" };
+            return Json(cat3.Command(new _016_invRefItemCategoryDomain(), "insert"));
         }
 
-        // GET api/values/5
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/values
-        public void Post([FromBody]Inventory_Domain_Layer._016_invRefItemCategory value)
-        {
-        }
-
-        // PUT api/values/5
-        public void Put(int id, [FromBody]Inventory_Domain_Layer._016_invRefItemCategory value)
-        {
-        }
-
-        // DELETE api/values/5
-        public void Delete(int id)
-        {
-        }
     }
 }
