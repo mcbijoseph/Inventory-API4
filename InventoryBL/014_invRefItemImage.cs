@@ -25,11 +25,13 @@ namespace InventoryBL
 
             var sqlParameters = new List<SqlParameter>()
             {
-                /***
-                //TOD:
                 new SqlParameter { ParameterName = "@ID", Value = projectDomain.ID, Direction = ParameterDirection.Input  },
-                new SqlParameter { ParameterName = "@ProjectName", Value = projectDomain.ProjectName, Direction = ParameterDirection.Input }
-                */
+                new SqlParameter { ParameterName = "@Extension", Value = projectDomain.Extension, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@ImageName", Value = projectDomain.ImageName, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@isProfile", Value = projectDomain.isProfile, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@ItemID", Value = projectDomain.ItemID, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@Order", Value = projectDomain.Order, Direction = ParameterDirection.Input }
+
             };
 
             return this.GetMessage(_dbHelper.Command("spProjectCommand", commandType, sqlParameters).Tables[0]);

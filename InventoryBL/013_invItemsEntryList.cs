@@ -26,11 +26,17 @@ namespace InventoryBL
 
             var sqlParameters = new List<SqlParameter>()
             {
-                /***
-                //TOD:
                 new SqlParameter { ParameterName = "@ID", Value = projectDomain.ID, Direction = ParameterDirection.Input  },
-                new SqlParameter { ParameterName = "@ProjectName", Value = projectDomain.ProjectName, Direction = ParameterDirection.Input }
-                */
+                new SqlParameter { ParameterName = "@DelID_007", Value = projectDomain.DelID_007, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@Emp_Receive_ID", Value = projectDomain.Emp_Receive_ID, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@EntID_008", Value = projectDomain.EntID_008, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@ItemID_011", Value = projectDomain.ItemID_011, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@Qty", Value = projectDomain.Qty, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@Sup_ID", Value = projectDomain.Sup_ID, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@TDSID_010", Value = projectDomain.TDSID_010, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@UnitID_009", Value = projectDomain.UnitID_009, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@UnitPrice", Value = projectDomain.UnitPrice, Direction = ParameterDirection.Input }
+
             };
 
             return this.GetMessage(_dbHelper.Command("spProjectCommand", commandType, sqlParameters).Tables[0]);

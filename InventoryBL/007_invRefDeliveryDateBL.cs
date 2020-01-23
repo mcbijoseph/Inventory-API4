@@ -25,16 +25,13 @@ namespace InventoryBL
 
             var sqlParameters = new List<SqlParameter>()
             {
-                /***
-                //TOD:
                 new SqlParameter { ParameterName = "@ID", Value = projectDomain.ID, Direction = ParameterDirection.Input  },
-                new SqlParameter { ParameterName = "@ProjectName", Value = projectDomain.ProjectName, Direction = ParameterDirection.Input }
-                */
+                new SqlParameter { ParameterName = "@Delivery_Date", Value = projectDomain.Delivery_Date, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@IELID_013", Value = projectDomain.IELID_013, Direction = ParameterDirection.Input }
+
             };
 
             return this.GetMessage(_dbHelper.Command("spProjectCommand", commandType, sqlParameters).Tables[0]);
-
-
         }
 
         public MessageViewDomain Delete(int id)
