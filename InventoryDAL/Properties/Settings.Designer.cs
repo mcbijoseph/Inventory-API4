@@ -25,8 +25,8 @@ namespace InventoryDAL.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=mcbi-dev;password=MCBI_ITadmin;user=sa;connection timeout=0;Initial Catalo" +
-            "g = inventory_db_final;")]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=124.105.198.3;password=MCBI_ITadmin;user=sa;connection timeout=0;Initial C" +
+            "atalog = inventory_db_final;")]
         public string connectionString {
             get {
                 return ((string)(this["connectionString"]));
