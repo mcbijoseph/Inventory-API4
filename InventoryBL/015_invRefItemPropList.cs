@@ -43,7 +43,12 @@ namespace InventoryBL
 
         public IEnumerable<_015_invRefItemPropListDomain> Get()
         {
-            throw new NotImplementedException();
+            return _dbHelper.GetRecords("sp015RefImtePropListSelect").Tables[0].AsEnumerable().Select(drow => new _015_invRefItemPropListDomain
+            {
+                ID = drow.Field<int>("ID"),
+                 Cat3ID_003 = drow.Field<int>("Cat3ID_003"),
+                  Prop2ID_005 = drow.Field<int>("Prop2ID_005")
+            }).ToList();
         }
 
         public _015_invRefItemPropListDomain Get(int id)

@@ -46,7 +46,15 @@ namespace InventoryBL
 
         public IEnumerable<_014_invRefItemImageDomain> Get()
         {
-            throw new NotImplementedException();
+            return _dbHelper.GetRecords("sp014invRefItemImageSelect").Tables[0].AsEnumerable().Select(drow => new _014_invRefItemImageDomain
+            {
+                ID = drow.Field<int>("ID"),
+                Extension = drow.Field<string>("Extension"),
+                ImageName = drow.Field<string>("ImageName"),
+                isProfile = drow.Field<bool>("isProfile"),
+                ItemID = drow.Field<int>("ItemID"),
+                Order = drow.Field<int>("Order")
+            }).ToList();
         }
 
         public _014_invRefItemImageDomain Get(int id)
