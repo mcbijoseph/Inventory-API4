@@ -1,0 +1,6 @@
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\InventoryDAL\bin\Release\InventoryDAL.dll.config
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\InventoryDAL\bin\Release\InventoryDAL.dll
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\InventoryDAL\bin\Release\InventoryDAL.pdb
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\InventoryDAL\obj\Release\Inventory.DAL.csprojAssemblyReference.cache
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\InventoryDAL\obj\Release\InventoryDAL.dll
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\InventoryDAL\obj\Release\InventoryDAL.pdb

@@ -21,7 +21,7 @@ namespace Inventory_API4.Controllers
 
         [HttpPost]
         [DomainValidatorFilter]
-        public object Post([FromBody]_005_invRefPropertyName2Domain body)
+        public IHttpActionResult Post([FromBody]_005_invRefPropertyName2Domain body)
         {
             return Json(attrib.Command(new _005_invRefPropertyName2Domain(), "insert"));
         }

@@ -17,7 +17,7 @@ namespace Inventory_API4.Controllers
         I_014_invRefItemImageBL<_014_invRefItemImageDomain>  cat3 = new _014_invRefItemImageBL();
         [HttpPost]
         [DomainValidatorFilter]
-        public object Post([FromBody]_014_invRefItemImageDomain body)
+        public IHttpActionResult Post([FromBody]_014_invRefItemImageDomain body)
         {
             return Json(cat3.Command(new _014_invRefItemImageDomain(), "insert"));
         }

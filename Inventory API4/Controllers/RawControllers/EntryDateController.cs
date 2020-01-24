@@ -17,7 +17,7 @@ namespace Inventory_API4.Controllers
         I_008_invRefEntryDateBL<_008_invRefEntryDateDomain> cat3 = new _008_invRefEntryDateBL();
         [HttpPost]
         [DomainValidatorFilter]
-        public object Post([FromBody]_008_invRefEntryDateDomain body)
+        public IHttpActionResult Post([FromBody]_008_invRefEntryDateDomain body)
         {
             return Json(cat3.Command(new _008_invRefEntryDateDomain(), "insert"));
         }
