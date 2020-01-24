@@ -17,7 +17,7 @@ namespace Inventory_API4.Controllers
         I_011_invRefItemsMasterListBL<_011_invRefItemsMasterListDomain> cat3 = new _011_invRefItemsMasterListBL();
         [HttpPost]
         [DomainValidatorFilter]
-        public object Post([FromBody]_011_invRefItemsMasterListDomain body)
+        public IHttpActionResult Post([FromBody]_011_invRefItemsMasterListDomain body)
         {
             return Json(cat3.Command(new _011_invRefItemsMasterListDomain(), "insert"));
         }

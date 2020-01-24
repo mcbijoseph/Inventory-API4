@@ -1,0 +1,5 @@
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\Inventory Domain Layer\bin\Release\Inventory Domain Layer.dll
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\Inventory Domain Layer\bin\Release\Inventory Domain Layer.pdb
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\Inventory Domain Layer\obj\Release\Inventory.Domain.csprojAssemblyReference.cache
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\Inventory Domain Layer\obj\Release\Inventory Domain Layer.dll
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\Inventory Domain Layer\obj\Release\Inventory Domain Layer.pdb
