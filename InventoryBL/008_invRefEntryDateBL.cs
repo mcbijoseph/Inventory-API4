@@ -64,7 +64,7 @@ namespace InventoryBL
                 ID = drow.Field<int>("ID"),
                 EntryDate = drow.Field<DateTime>("EntryDate"),
                 IELID_013 = drow.Field<int>("IELID_013")
-            }).ToList();
+            });
         }
     }
 }

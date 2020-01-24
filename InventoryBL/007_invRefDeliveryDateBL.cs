@@ -63,7 +63,7 @@ namespace InventoryBL
                 ID = drow.Field<int>("ID"),
                 Delivery_Date = drow.Field<DateTime>("Delivery_Date"),
                 IELID_013 = drow.Field<int>("IELID_013")
-            }).ToList();
+            });
         }
     }
 }

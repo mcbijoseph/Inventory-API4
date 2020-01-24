@@ -68,7 +68,7 @@ namespace InventoryBL
                 Name = drow.Field<string>("Name"),
                 FullName = drow.Field<string>("FullName"),
                 Prop1ID_004 = drow.Field<int>("Prop1ID_004")
-            }).ToList();
+            });
         }
     }
 }

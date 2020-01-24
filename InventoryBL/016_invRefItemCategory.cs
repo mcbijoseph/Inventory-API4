@@ -65,7 +65,7 @@ namespace InventoryBL
                 ID = drow.Field<int>("ID"),
                 Cat3ID_003 = drow.Field<int>("Cat3ID_003"),
                 ItemID_011 = drow.Field<int>("ItemID_011")
-            }).ToList();
+            });
         }
     }
 }

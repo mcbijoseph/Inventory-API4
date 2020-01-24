@@ -65,7 +65,7 @@ namespace InventoryBL
             {
                 ID = drow.Field<int>("ID"),
                 Name = drow.Field<string>("Name")
-            }).ToList();
+            });
         }
     }
 }

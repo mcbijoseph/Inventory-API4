@@ -71,7 +71,7 @@ namespace InventoryBL
                 isProfile = drow.Field<bool>("isProfile"),
                 ItemID = drow.Field<int>("ItemID"),
                 Order = drow.Field<int>("Order")
-            }).ToList();
+            });
         }
     }
 }

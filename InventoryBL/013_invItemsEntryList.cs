@@ -80,7 +80,7 @@ namespace InventoryBL
                 TDSID_010 = drow.Field<int>("TDSID_010"),
                 UnitID_009 = drow.Field<int>("UnitID_009"),
                 UnitPrice = drow.Field<decimal>("UnitPrice")
-            }).ToList();
+            });
         }
     }
 }
