@@ -26,14 +26,24 @@ namespace Inventory_API4.Controllers
             return Json(attrib.Command(new _005_invRefPropertyName2Domain(), "insert"));
         }
 
-        public IEnumerable<_005_invRefPropertyName2Domain> Get()
+        public IHttpActionResult Get()
         {
-            return attrib.Get();
+            var result = attrib.Get();
+            /*
+             * 
+             */
+
+            return Ok(result);
         }
 
-        public _005_invRefPropertyName2Domain Get(int id)
+        public IHttpActionResult Get(int id)
         {
-            return attrib.Get(id);
+            var result = attrib.Get(id);
+            /*
+             *
+             */
+
+            return Ok(result);
         }
 
 

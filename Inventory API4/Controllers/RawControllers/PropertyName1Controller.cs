@@ -23,14 +23,24 @@ namespace Inventory_API4.Controllers
             return Json(cat3.Command(new _005_invRefPropertyName2Domain(), "insert"));
         }
 
-        public IEnumerable<_005_invRefPropertyName2Domain> Get()
+        public IHttpActionResult Get()
         {
-            return cat3.Get();
+            var result = cat3.Get();
+            /*
+             * 
+             */
+
+            return Ok(result);
         }
 
-        public _005_invRefPropertyName2Domain Get(int id)
+        public IHttpActionResult Get(int id)
         {
-            return cat3.Get(id);
+            var result = cat3.Get(id);
+            /*
+             *
+             */
+
+            return Ok(result);
         }
 
     }

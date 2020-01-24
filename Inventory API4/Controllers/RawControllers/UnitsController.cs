@@ -38,7 +38,7 @@ namespace Inventory_API4.Controllers
 
         public IHttpActionResult Get(int id)
         {
-            var result = attrib.Get();
+            var result = attrib.Get(id);
             /*
              *
              */

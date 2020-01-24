@@ -25,14 +25,24 @@ namespace Inventory_API4.Controllers
             return Json(attrib.Command(new _010_invRefTDSNoDomain(), "insert"));
         }
 
-        public IEnumerable<_010_invRefTDSNoDomain> Get()
+        public IHttpActionResult Get()
         {
-            return attrib.Get();
+            var result = attrib.Get();
+            /*
+             * 
+             */
+
+            return Ok(result);
         }
 
-        public _010_invRefTDSNoDomain Get(int id)
+        public IHttpActionResult Get(int id)
         {
-            return attrib.Get(id);
+            var result = attrib.Get(id);
+            /*
+             * 
+             */
+
+            return Ok(result);
         }
     }
 }
