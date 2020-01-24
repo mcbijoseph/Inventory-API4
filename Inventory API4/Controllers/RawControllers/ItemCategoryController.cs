@@ -7,9 +7,11 @@ using System.Web.Http;
 using Inventory_Domain_Layer;
 using Inventory_API4.Filters;
 using InventoryBL;
+using System.Web.Http.Cors;
 
 namespace Inventory_API4.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ItemCategoryController : ApiController
     {
         I_016_invRefItemCategoryBL<_016_invRefItemCategoryDomain> cat3 = new _016_invRefItemCategoryBL();

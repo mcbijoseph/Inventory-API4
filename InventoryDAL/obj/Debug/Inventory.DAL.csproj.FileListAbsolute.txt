@@ -4,3 +4,4 @@ C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryDAL\bin\Debug\Inventor
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryDAL\obj\Debug\Inventory.DAL.csproj.CoreCompileInputs.cache
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryDAL\obj\Debug\InventoryDAL.dll
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryDAL\obj\Debug\InventoryDAL.pdb
+C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryDAL\obj\Debug\Inventory.DAL.csprojAssemblyReference.cache
