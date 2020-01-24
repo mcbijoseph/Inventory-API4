@@ -26,6 +26,15 @@ namespace Inventory_API4.Controllers
             return Json(attrib.Command(body, "insert"));
         }
 
+        //Update
+        [HttpPut]
+        [DomainValidatorFilter]
+        public IHttpActionResult Put(int id, [FromBody]_001_invRefCategory1Domain body)
+        {
+            body.ID = id;
+            return Json(cat1.Command(body, "update"));
+        }
+
         public IHttpActionResult Get()
         {
             var result = attrib.Get();
