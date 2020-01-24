@@ -28,6 +28,9 @@ namespace Inventory_API4.Controllers
             return attrib.Get();
         }
 
-
+        public _010_invRefTDSNoDomain Get(int id)
+        {
+            return attrib.Get(id);
+        }
     }
 }

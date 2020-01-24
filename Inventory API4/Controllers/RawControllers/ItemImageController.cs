@@ -25,5 +25,9 @@ namespace Inventory_API4.Controllers
             return cat3.Get();
         }
 
+        public _014_invRefItemImageDomain Get(int id)
+        {
+            return cat3.Get(id);
+        }
     }
 }

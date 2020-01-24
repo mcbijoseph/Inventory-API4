@@ -25,6 +25,9 @@ namespace Inventory_API4.Controllers
             return cat3.Get();
         }
 
-
+        public _013_invItemsEntryListDomain Get(int id)
+        {
+            return cat3.Get(id);
+        }
     }
 }
