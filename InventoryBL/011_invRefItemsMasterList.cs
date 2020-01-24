@@ -27,7 +27,6 @@ namespace InventoryBL
             {
 
                 new SqlParameter { ParameterName = "@ID", Value = projectDomain.ID, Direction = ParameterDirection.Input  },
-                new SqlParameter { ParameterName = "@Name", Value = projectDomain.Name, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@Code", Value = projectDomain.Code, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@Tag", Value = projectDomain.Tag, Direction = ParameterDirection.Input }
 
@@ -65,10 +64,8 @@ namespace InventoryBL
             return _dbHelper.GetRecords("sp011invRefITemsMAsterListSelect", pars).Tables[0].AsEnumerable().Select(drow => new _011_invRefItemsMasterListDomain
             {
                 ID = drow.Field<int>("ID"),
-                Name = drow.Field<string>("Name"),
                 Code = drow.Field<string>("Code"),
-                has_Attribute = drow.Field<Boolean>("has_Attribute"),
-                Tag = drow.Field<string>("")
+                Tag = drow.Field<string>("Tag")
             }).ToList();
         }
     }

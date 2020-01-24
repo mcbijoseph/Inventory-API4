@@ -3,3 +3,7 @@ C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory Domain Layer\bin\Debu
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory Domain Layer\obj\Debug\Inventory.Domain.csproj.CoreCompileInputs.cache
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory Domain Layer\obj\Debug\Inventory Domain Layer.dll
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory Domain Layer\obj\Debug\Inventory Domain Layer.pdb
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\Inventory Domain Layer\bin\Debug\Inventory Domain Layer.dll
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\Inventory Domain Layer\bin\Debug\Inventory Domain Layer.pdb
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\Inventory Domain Layer\obj\Debug\Inventory Domain Layer.dll
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\Inventory Domain Layer\obj\Debug\Inventory Domain Layer.pdb
