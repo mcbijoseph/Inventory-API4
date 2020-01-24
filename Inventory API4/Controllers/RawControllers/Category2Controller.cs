@@ -20,7 +20,7 @@ namespace Inventory_API4.Controllers
         [DomainValidatorFilter]
         public IHttpActionResult Post([FromBody]_002_invRefCategory2Domain body)
         {
-            return Json(cat2.Command(new _002_invRefCategory2Domain(), "insert"));
+            return Json(cat2.Command(body, "insert"));
         }
 
         public IHttpActionResult Get()

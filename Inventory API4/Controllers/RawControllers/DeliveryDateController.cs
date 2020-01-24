@@ -19,7 +19,7 @@ namespace Inventory_API4.Controllers
         [DomainValidatorFilter]
         public IHttpActionResult Post([FromBody]_007_invRefDeliveryDateDomain body)
         {
-            return Json(cat3.Command(new _007_invRefDeliveryDateDomain(), "insert"));
+            return Json(cat3.Command(body, "insert"));
         }
 
         public IHttpActionResult Get()

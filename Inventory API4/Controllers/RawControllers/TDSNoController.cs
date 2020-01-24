@@ -22,7 +22,7 @@ namespace Inventory_API4.Controllers
         [DomainValidatorFilter]
         public IHttpActionResult Post([FromBody]_010_invRefTDSNoDomain body)
         {
-            return Json(attrib.Command(new _010_invRefTDSNoDomain(), "insert"));
+            return Json(attrib.Command(body, "insert"));
         }
 
         public IHttpActionResult Get()
