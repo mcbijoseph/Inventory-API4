@@ -31,7 +31,7 @@ namespace InventoryBL
                 new SqlParameter { ParameterName = "@Name", Value = projectDomain.Name, Direction = ParameterDirection.Input }
             };
 
-            return this.GetMessage(_dbHelper.Command("spProjectCommand", commandType, sqlParameters).Tables[0]);
+            return this.GetMessage(_dbHelper.Command("sp001invRefCategory1Command", commandType, sqlParameters).Tables[0]);
 
             
         }

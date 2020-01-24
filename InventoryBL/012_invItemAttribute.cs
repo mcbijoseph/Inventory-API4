@@ -30,7 +30,7 @@ namespace InventoryBL
         
             };
 
-            return this.GetMessage(_dbHelper.Command("spProjectCommand", commandType, sqlParameters).Tables[0]);
+            return this.GetMessage(_dbHelper.Command("sp012invItemAttributeCommand", commandType, sqlParameters).Tables[0]);
 
 
         }

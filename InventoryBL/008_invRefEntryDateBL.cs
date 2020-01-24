@@ -30,7 +30,7 @@ namespace InventoryBL
                 new SqlParameter { ParameterName = "@IELID_013", Value = projectDomain.IELID_013, Direction = ParameterDirection.Input }
             };
 
-            return this.GetMessage(_dbHelper.Command("spProjectCommand", commandType, sqlParameters).Tables[0]);
+            return this.GetMessage(_dbHelper.Command("sp008invRefEntryDateCommand", commandType, sqlParameters).Tables[0]);
 
 
         }

@@ -31,7 +31,7 @@ namespace InventoryBL
                 
             };
 
-            return this.GetMessage(_dbHelper.Command("spProjectCommand", commandType, sqlParameters).Tables[0]);
+            return this.GetMessage(_dbHelper.Command("sp004invRefPropertyName1Command", commandType, sqlParameters).Tables[0]);
 
 
         }

@@ -31,7 +31,7 @@ namespace InventoryBL
 
             };
 
-            return this.GetMessage(_dbHelper.Command("spProjectCommand", commandType, sqlParameters).Tables[0]);
+            return this.GetMessage(_dbHelper.Command("sp007invRefDeliveryDateCommand", commandType, sqlParameters).Tables[0]);
         }
 
         public MessageViewDomain Delete(int id)

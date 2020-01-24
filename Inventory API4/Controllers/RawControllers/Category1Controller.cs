@@ -16,11 +16,21 @@ namespace Inventory_API4.Controllers
     {
         I_001_invRefCategory1BL<_001_invRefCategory1Domain> cat1 = new _001_invRefCategory1BL();
         
+        //view
         [HttpPost]
         [DomainValidatorFilter]
         public IHttpActionResult Post([FromBody]_001_invRefCategory1Domain body)
         {
             return Json(cat1.Command(body, "insert"));
+        }
+
+        //Update
+        [HttpPut]
+        [DomainValidatorFilter]
+        public IHttpActionResult Put(int id, [FromBody]_001_invRefCategory1Domain body)
+        {
+            body.ID = id;
+            return Json(cat1.Command(body, "update"));
         }
 
         public IHttpActionResult Get()
