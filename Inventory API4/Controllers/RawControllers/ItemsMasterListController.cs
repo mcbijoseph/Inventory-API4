@@ -25,10 +25,10 @@ namespace Inventory_API4.Controllers
         //Update
         [HttpPut]
         [DomainValidatorFilter]
-        public IHttpActionResult Put(int id, [FromBody]_001_invRefCategory1Domain body)
+        public IHttpActionResult Put(int id, [FromBody]_011_invRefItemsMasterListDomain body)
         {
             body.ID = id;
-            return Json(cat1.Command(body, "update"));
+            return Json(cat3.Command(body, "update"));
         }
 
         public IHttpActionResult Get()
