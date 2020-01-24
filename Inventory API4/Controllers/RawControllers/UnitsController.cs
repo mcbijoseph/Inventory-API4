@@ -7,9 +7,11 @@ using System.Web.Http;
 using Inventory_Domain_Layer;
 using Inventory_API4.Filters;
 using InventoryBL;
+using System.Web.Http.Cors;
 
 namespace Inventory_API4.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class UnitsController : ApiController
     {
         //IProjectBL<ProjectDomainModel> _projectBL = new ProjectBL();
@@ -24,14 +26,24 @@ namespace Inventory_API4.Controllers
         }
 
 
-        public IEnumerable<_009_invRefUnitsDomain> Get()
+        public IHttpActionResult Get()
         {
-            return attrib.Get();
+            var result = attrib.Get();
+            /*
+             * 
+             */
+            
+            return Ok(result);
         }
 
-        public _009_invRefUnitsDomain Get(int id)
+        public IHttpActionResult Get(int id)
         {
-            return attrib.Get(id);
+            var result = attrib.Get();
+            /*
+             *
+             */
+
+            return Ok(result);
         }
     }
 }

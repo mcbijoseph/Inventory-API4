@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Web.Http.Cors;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -10,6 +11,7 @@ using InventoryBL;
 
 namespace Inventory_API4.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ItemsEntryListController : ApiController
     {
         I_013_invItemsEntryListBL<_013_invItemsEntryListDomain> cat3 = new _013_invItemsEntryListBL();
