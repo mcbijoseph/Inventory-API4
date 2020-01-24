@@ -46,7 +46,24 @@ namespace InventoryBL
 
         public IEnumerable<_014_invRefItemImageDomain> Get()
         {
-            return _dbHelper.GetRecords("sp014invRefItemImageSelect").Tables[0].AsEnumerable().Select(drow => new _014_invRefItemImageDomain
+            return GetData(0);
+        }
+
+        public _014_invRefItemImageDomain Get(int id)
+        {
+            return GetData(id).FirstOrDefault();
+        }
+
+        public IEnumerable<_014_invRefItemImageDomain> Search(int offset, int limit, string orderBy)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<_014_invRefItemImageDomain> GetData(int id)
+        {
+            List<SqlParameter> pars = new List<SqlParameter>();
+            pars.Add( new SqlParameter { ParameterName = "ID", Value = id, Direction = ParameterDirection.Input });
+            return _dbHelper.GetRecords("sp014invRefItemImageSelect", pars).Tables[0].AsEnumerable().Select(drow => new _014_invRefItemImageDomain
             {
                 ID = drow.Field<int>("ID"),
                 Extension = drow.Field<string>("Extension"),
@@ -55,16 +72,6 @@ namespace InventoryBL
                 ItemID = drow.Field<int>("ItemID"),
                 Order = drow.Field<int>("Order")
             }).ToList();
-        }
-
-        public _014_invRefItemImageDomain Get(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<_014_invRefItemImageDomain> Search(int offset, int limit, string orderBy)
-        {
-            throw new NotImplementedException();
         }
     }
 }

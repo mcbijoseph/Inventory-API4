@@ -44,21 +44,28 @@ namespace InventoryBL
 
         public IEnumerable<_010_invRefTDSNoDomain> Get()
         {
-            return _dbHelper.GetRecords("sp010invRefTDSNoSelect").Tables[0].AsEnumerable().Select(drow => new _010_invRefTDSNoDomain
-            {
-                ID = drow.Field<int>("ID"),
-                Name = drow.Field<string>("Name")
-            }).ToList();
+            return GetData(0);
         }
 
         public _010_invRefTDSNoDomain Get(int id)
         {
-            throw new NotImplementedException();
+            return GetData(id).FirstOrDefault();
         }
 
         public IEnumerable<_010_invRefTDSNoDomain> Search(int offset, int limit, string orderBy)
         {
             throw new NotImplementedException();
+        }
+
+        public IEnumerable<_010_invRefTDSNoDomain> GetData(int id)
+        {
+            List<SqlParameter> pars = new List<SqlParameter>();
+            pars.Add(new SqlParameter { ParameterName = "ID", Value = id, Direction = ParameterDirection.Input });
+            return _dbHelper.GetRecords("sp010invRefTDSNoSelect", pars).Tables[0].AsEnumerable().Select(drow => new _010_invRefTDSNoDomain
+            {
+                ID = drow.Field<int>("ID"),
+                Name = drow.Field<string>("Name")
+            }).ToList();
         }
     }
 }

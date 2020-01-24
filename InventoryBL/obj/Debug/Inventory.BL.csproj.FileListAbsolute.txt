@@ -10,3 +10,14 @@ C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryBL\obj\Debug\Inventory
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryBL\obj\Debug\Inventory.BL.csproj.CopyComplete
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryBL\obj\Debug\InventoryBL.dll
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryBL\obj\Debug\InventoryBL.pdb
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\InventoryBL\bin\Debug\InventoryBL.dll
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\InventoryBL\bin\Debug\InventoryBL.pdb
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\InventoryBL\bin\Debug\Inventory Domain Layer.dll
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\InventoryBL\bin\Debug\InventoryDAL.dll
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\InventoryBL\bin\Debug\Inventory Domain Layer.pdb
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\InventoryBL\bin\Debug\InventoryDAL.pdb
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\InventoryBL\bin\Debug\InventoryDAL.dll.config
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\InventoryBL\obj\Debug\Inventory.BL.csprojAssemblyReference.cache
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\InventoryBL\obj\Debug\Inventory.BL.csproj.CopyComplete
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\InventoryBL\obj\Debug\InventoryBL.dll
+C:\Users\Nico Romano\Desktop\Inventory\Inventory API\InventoryBL\obj\Debug\InventoryBL.pdb

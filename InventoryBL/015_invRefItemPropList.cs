@@ -43,22 +43,29 @@ namespace InventoryBL
 
         public IEnumerable<_015_invRefItemPropListDomain> Get()
         {
-            return _dbHelper.GetRecords("sp015invRefItemPropListSelect").Tables[0].AsEnumerable().Select(drow => new _015_invRefItemPropListDomain
-            {
-                ID = drow.Field<int>("ID"),
-                 Cat3ID_003 = drow.Field<int>("Cat3ID_003"),
-                  Prop2ID_005 = drow.Field<int>("Prop2ID_005")
-            }).ToList();
+            return GetData(0);
         }
 
         public _015_invRefItemPropListDomain Get(int id)
         {
-            throw new NotImplementedException();
+            return GetData(id).FirstOrDefault();
         }
 
         public IEnumerable<_015_invRefItemPropListDomain> Search(int offset, int limit, string orderBy)
         {
             throw new NotImplementedException();
+        }
+
+        public IEnumerable<_015_invRefItemPropListDomain> GetData(int id)
+        {
+            List<SqlParameter> pars = new List<SqlParameter>();
+            pars.Add( new SqlParameter { ParameterName = "ID", Value = id, Direction = ParameterDirection.Input });
+            return _dbHelper.GetRecords("sp015invRefItemPropListSelect", pars).Tables[0].AsEnumerable().Select(drow => new _015_invRefItemPropListDomain
+            {
+                ID = drow.Field<int>("ID"),
+                Cat3ID_003 = drow.Field<int>("Cat3ID_003"),
+                Prop2ID_005 = drow.Field<int>("Prop2ID_005")
+            }).ToList();
         }
     }
 }

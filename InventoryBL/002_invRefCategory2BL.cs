@@ -45,22 +45,29 @@ namespace InventoryBL
 
         public IEnumerable<_002_invRefCategory2Domain> Get()
         {
-            return _dbHelper.GetRecords("sp002invRefCategory2Select").Tables[0].AsEnumerable().Select(drow => new _002_invRefCategory2Domain
-            {
-                ID = drow.Field<int>("ID"),
-                Name = drow.Field<string>("Name"),
-                Cat1ID_001 = drow.Field<int>("Cat1ID_001")
-            }).ToList();
+            return GetData(0);
         }
 
         public _002_invRefCategory2Domain Get(int id)
         {
-            throw new NotImplementedException();
+            return GetData(id).FirstOrDefault();
         }
 
         public IEnumerable<_002_invRefCategory2Domain> Search(int offset, int limit, string orderBy)
         {
             throw new NotImplementedException();
+        }
+
+        public IEnumerable<_002_invRefCategory2Domain> GetData(int id)
+        {
+            List<SqlParameter> pars = new List<SqlParameter>();
+            pars.Add(new SqlParameter { ParameterName = "ID", Value = id, Direction = ParameterDirection.Input });
+            return _dbHelper.GetRecords("sp002invRefCategory2Select", pars).Tables[0].AsEnumerable().Select(drow => new _002_invRefCategory2Domain
+            {
+                ID = drow.Field<int>("ID"),
+                Name = drow.Field<string>("Name"),
+                Cat1ID_001 = drow.Field<int>("Cat1ID_001")
+            }).ToList();
         }
     }
 }

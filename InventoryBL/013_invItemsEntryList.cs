@@ -51,7 +51,24 @@ namespace InventoryBL
 
         public IEnumerable<_013_invItemsEntryListDomain> Get()
         {
-            return _dbHelper.GetRecords("sp013invItemsEntryListSelect").Tables[0].AsEnumerable().Select(drow => new _013_invItemsEntryListDomain
+            return GetData(0);
+        }
+
+        public _013_invItemsEntryListDomain Get(int id)
+        {
+            return GetData(id).FirstOrDefault();
+        }
+
+        public IEnumerable<_013_invItemsEntryListDomain> Search(int offset, int limit, string orderBy)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<_013_invItemsEntryListDomain> GetData(int id)
+        {
+            List<SqlParameter> pars = new List<SqlParameter>();
+            pars.Add( new SqlParameter { ParameterName = "ID", Value = id, Direction = ParameterDirection.Input });
+            return _dbHelper.GetRecords("sp013invItemsEntryListSelect", pars).Tables[0].AsEnumerable().Select(drow => new _013_invItemsEntryListDomain
             {
                 ID = drow.Field<int>("ID"),
                 DelID_007 = drow.Field<int>("DelID_007"),
@@ -65,17 +82,5 @@ namespace InventoryBL
                 UnitPrice = drow.Field<decimal>("UnitPrice")
             }).ToList();
         }
-
-        public _013_invItemsEntryListDomain Get(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<_013_invItemsEntryListDomain> Search(int offset, int limit, string orderBy)
-        {
-            throw new NotImplementedException();
-        }
-
-        
     }
 }

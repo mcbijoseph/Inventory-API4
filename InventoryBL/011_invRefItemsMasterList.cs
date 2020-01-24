@@ -45,24 +45,31 @@ namespace InventoryBL
 
         public IEnumerable<_011_invRefItemsMasterListDomain> Get()
         {
-            return _dbHelper.GetRecords("sp011invRefITemsMAsterListSelect").Tables[0].AsEnumerable().Select(drow => new _011_invRefItemsMasterListDomain
-            {
-                ID = drow.Field<int>("ID"),
-                Name = drow.Field<string>("Name"),
-                 Code = drow.Field<string>("Code"),
-                  has_Attribute = drow.Field<Boolean>("has_Attribute"),
-                   Tag = drow.Field<string>("")
-            }).ToList();
+            return GetData(0);
         }
 
         public _011_invRefItemsMasterListDomain Get(int id)
         {
-            throw new NotImplementedException();
+            return GetData(id).FirstOrDefault();
         }
 
         public IEnumerable<_011_invRefItemsMasterListDomain> Search(int offset, int limit, string orderBy)
         {
             throw new NotImplementedException();
+        }
+
+        public IEnumerable<_011_invRefItemsMasterListDomain> GetData(int id)
+        {
+            List<SqlParameter> pars = new List<SqlParameter>();
+            pars.Add(new SqlParameter { ParameterName = "ID", Value = id, Direction = ParameterDirection.Input });
+            return _dbHelper.GetRecords("sp011invRefITemsMAsterListSelect", pars).Tables[0].AsEnumerable().Select(drow => new _011_invRefItemsMasterListDomain
+            {
+                ID = drow.Field<int>("ID"),
+                Name = drow.Field<string>("Name"),
+                Code = drow.Field<string>("Code"),
+                has_Attribute = drow.Field<Boolean>("has_Attribute"),
+                Tag = drow.Field<string>("")
+            }).ToList();
         }
     }
 }

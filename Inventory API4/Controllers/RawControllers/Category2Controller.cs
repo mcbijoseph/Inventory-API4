@@ -25,5 +25,10 @@ namespace Inventory_API4.Controllers
         {
             return cat2.Get();
         }
+
+        public _002_invRefCategory2Domain Get(int id)
+        {
+            return cat2.Get(id);
+        }
     }
 }
