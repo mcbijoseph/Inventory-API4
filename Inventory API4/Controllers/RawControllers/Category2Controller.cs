@@ -13,11 +13,17 @@ namespace Inventory_API4.Controllers
     public class Category2Controller : ApiController
     {
         I_002_invRefCategory2BL<_002_invRefCategory2Domain> cat2 = new _002_invRefCategory2BL();
+
         [HttpPost]
         [DomainValidatorFilter]
         public object Post([FromBody]_002_invRefCategory2Domain body)
         {
             return Json(cat2.Command(new _002_invRefCategory2Domain(), "insert"));
+        }
+
+        public IEnumerable<_002_invRefCategory2Domain> Get()
+        {
+            return cat2.Get();
         }
     }
 }

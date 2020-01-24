@@ -19,5 +19,12 @@ namespace Inventory_API4.Controllers
         {
             return Json(cat3.Command(new _007_invRefDeliveryDateDomain(), "insert"));
         }
+
+        public IEnumerable<_007_invRefDeliveryDateDomain> Get()
+        {
+            return cat3.Get();
+        }
+
+
     }
 }

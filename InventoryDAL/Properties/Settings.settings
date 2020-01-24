@@ -2,8 +2,8 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="InventoryDAL.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="connectionString" Type="System.String" Scope="User">
-      <Value Profile="(Default)">server=mcbi-dev;password=MCBI_ITadmin;user=sa;connection timeout=0;Initial Catalog = inventory_db_final;</Value>
+    <Setting Name="connectionString" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">server=124.105.198.3;password=MCBI_ITadmin;user=sa;connection timeout=0;Initial Catalog = inventory_db_final;</Value>
     </Setting>
   </Settings>
 </SettingsFile>

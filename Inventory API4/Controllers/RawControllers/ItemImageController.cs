@@ -19,5 +19,11 @@ namespace Inventory_API4.Controllers
         {
             return Json(cat3.Command(new _014_invRefItemImageDomain(), "insert"));
         }
+
+        public IEnumerable<_014_invRefItemImageDomain> Get()
+        {
+            return cat3.Get();
+        }
+
     }
 }

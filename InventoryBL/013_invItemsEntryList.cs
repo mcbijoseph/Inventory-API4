@@ -51,7 +51,19 @@ namespace InventoryBL
 
         public IEnumerable<_013_invItemsEntryListDomain> Get()
         {
-            throw new NotImplementedException();
+            return _dbHelper.GetRecords("sp013invItemsEntryListSelect").Tables[0].AsEnumerable().Select(drow => new _013_invItemsEntryListDomain
+            {
+                ID = drow.Field<int>("ID"),
+                DelID_007 = drow.Field<int>("DelID_007"),
+                Emp_Receive_ID = drow.Field<int>("Emp_Receive_ID"),
+                EntID_008 = drow.Field<int>("EntID_008"),
+                ItemID_011 = drow.Field<int>("ItemID_011"),
+                Qty = drow.Field<decimal>("Qty"),
+                Sup_ID = drow.Field<int>("Sup_ID"),
+                TDSID_010 = drow.Field<int>("TDSID_010"),
+                UnitID_009 = drow.Field<int>("UnitID_009"),
+                UnitPrice = drow.Field<decimal>("UnitPrice")
+            }).ToList();
         }
 
         public _013_invItemsEntryListDomain Get(int id)

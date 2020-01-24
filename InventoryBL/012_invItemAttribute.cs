@@ -42,7 +42,12 @@ namespace InventoryBL
 
         public IEnumerable<_012_invItemAttributeDomain> Get()
         {
-            throw new NotImplementedException();
+            return _dbHelper.GetRecords("sp012invItemAttributeSelect").Tables[0].AsEnumerable().Select(drow => new _012_invItemAttributeDomain
+            {
+                ID = drow.Field<int>("ID"),
+                Attribute_ID = drow.Field<int>("Attribute_ID"),
+                ItemID_011 = drow.Field<int>("ItemID_011")
+            }).ToList();
         }
 
         public _012_invItemAttributeDomain Get(int id)

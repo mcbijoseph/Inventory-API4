@@ -4,12 +4,6 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
 using Inventory_Domain_Layer;
 using Inventory_API4.Filters;
 using InventoryBL;
@@ -28,5 +22,12 @@ namespace Inventory_API4.Controllers
         {
             return Json(attrib.Command(new _010_invRefTDSNoDomain(), "insert"));
         }
+
+        public IEnumerable<_010_invRefTDSNoDomain> Get()
+        {
+            return attrib.Get();
+        }
+
+
     }
 }
