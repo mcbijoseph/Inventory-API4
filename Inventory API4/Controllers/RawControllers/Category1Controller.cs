@@ -23,6 +23,8 @@ namespace Inventory_API4.Controllers
 
         public IEnumerable<_001_invRefCategory1Domain> Get()
         {
+            
+
             return cat1.Get();
         }
 
