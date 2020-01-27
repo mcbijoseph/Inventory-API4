@@ -9,3 +9,14 @@ C:\Users\Nico Romano\Desktop\Inventory\Inventory API\InventoryBL\obj\Release\Inv
 C:\Users\Nico Romano\Desktop\Inventory\Inventory API\InventoryBL\obj\Release\Inventory.BL.csproj.CopyComplete
 C:\Users\Nico Romano\Desktop\Inventory\Inventory API\InventoryBL\obj\Release\InventoryBL.dll
 C:\Users\Nico Romano\Desktop\Inventory\Inventory API\InventoryBL\obj\Release\InventoryBL.pdb
+C:\Users\LENOVO\Source\Repos\Inventory-API4\InventoryBL\bin\Release\InventoryBL.dll
+C:\Users\LENOVO\Source\Repos\Inventory-API4\InventoryBL\bin\Release\InventoryBL.pdb
+C:\Users\LENOVO\Source\Repos\Inventory-API4\InventoryBL\bin\Release\Inventory Domain Layer.dll
+C:\Users\LENOVO\Source\Repos\Inventory-API4\InventoryBL\bin\Release\InventoryDAL.dll
+C:\Users\LENOVO\Source\Repos\Inventory-API4\InventoryBL\bin\Release\Inventory Domain Layer.pdb
+C:\Users\LENOVO\Source\Repos\Inventory-API4\InventoryBL\bin\Release\InventoryDAL.pdb
+C:\Users\LENOVO\Source\Repos\Inventory-API4\InventoryBL\bin\Release\InventoryDAL.dll.config
+C:\Users\LENOVO\Source\Repos\Inventory-API4\InventoryBL\obj\Release\Inventory.BL.csprojAssemblyReference.cache
+C:\Users\LENOVO\Source\Repos\Inventory-API4\InventoryBL\obj\Release\Inventory.BL.csproj.CopyComplete
+C:\Users\LENOVO\Source\Repos\Inventory-API4\InventoryBL\obj\Release\InventoryBL.dll
+C:\Users\LENOVO\Source\Repos\Inventory-API4\InventoryBL\obj\Release\InventoryBL.pdb

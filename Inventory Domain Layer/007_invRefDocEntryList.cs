@@ -7,13 +7,19 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Inventory_Domain_Layer
 {
-    public class _008_invRefEntryDateDomain
+    public class _007_invRefDocEntryListDomain
     {
         [Range(0, int.MaxValue)]
         public int ID { get; set; }
         [Required]
+        [Range(0, int.MaxValue)]
+        public int SupID_VendorDB { get; set; }
+        [Range(0, int.MaxValue)]
+        public int ProjectID_EnggDB { get; set; }
+        public string DocumentNumber { get; set; }
+        public DateTime DeliveryDate { get; set; }
         public DateTime EntryDate { get; set; }
         [Range(0, int.MaxValue)]
-        public int IELID_013 { get; set; }
+        public int ReceiverID_HRDB { get; set; }
     }
 }

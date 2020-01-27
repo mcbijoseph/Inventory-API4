@@ -12,12 +12,12 @@ using System.Web.Http.Cors;
 namespace Inventory_API4.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class EntryDateController : ApiController
+    public class DelMethodAttributeController : ApiController
     {
-        I_008_invRefEntryDateBL<_008_invRefEntryDateDomain> cat3 = new _008_invRefEntryDateBL();
+        I_008_invRefDelMethodAttributeBL<_008_invRefDelMethodAttributeDomain> cat3 = new _008_invRefDelMethodAttributeBL();
         [HttpPost]
         [DomainValidatorFilter]
-        public IHttpActionResult Post([FromBody]_008_invRefEntryDateDomain body)
+        public IHttpActionResult Post([FromBody]_008_invRefDelMethodAttributeDomain body)
         {
             return Json(cat3.Command(body, "insert"));
         }
@@ -25,7 +25,7 @@ namespace Inventory_API4.Controllers
         //Update
         [HttpPut]
         [DomainValidatorFilter]
-        public IHttpActionResult Put(int id, [FromBody]_008_invRefEntryDateDomain body)
+        public IHttpActionResult Put(int id, [FromBody]_008_invRefDelMethodAttributeDomain body)
         {
             body.ID = id;
             return Json(cat3.Command(body, "update"));

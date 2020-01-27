@@ -12,31 +12,28 @@ using System.Web.Http.Cors;
 namespace Inventory_API4.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class TDSNoController : ApiController
+    public class DocEntryListController : ApiController
     {
-        //IProjectBL<ProjectDomainModel> _projectBL = new ProjectBL();
-        //attributeDo<_001_invRefCategory1Domain> cat1 = new _001_invRefCategory1BL();
-        I_010_invRefTDSNoBL<_010_invRefTDSNoDomain> attrib = new _010_invRefTDSNoBL();
-
+        I_007_invRefDocEntryListBL<_007_invRefDocEntryListDomain> cat3 = new _007_invRefDocEntryListBL();
         [HttpPost]
         [DomainValidatorFilter]
-        public IHttpActionResult Post([FromBody]_010_invRefTDSNoDomain body)
+        public IHttpActionResult Post([FromBody]_007_invRefDocEntryListDomain body)
         {
-            return Json(attrib.Command(body, "insert"));
+            return Json(cat3.Command(body, "insert"));
         }
 
         //Update
         [HttpPut]
         [DomainValidatorFilter]
-        public IHttpActionResult Put(int id, [FromBody]_010_invRefTDSNoDomain body)
+        public IHttpActionResult Put(int id, [FromBody]_007_invRefDocEntryListDomain body)
         {
             body.ID = id;
-            return Json(attrib.Command(body, "update"));
+            return Json(cat3.Command(body, "update"));
         }
 
         public IHttpActionResult Get()
         {
-            var result = attrib.Get();
+            var result = cat3.Get();
             /*
              * 
              */
@@ -46,9 +43,9 @@ namespace Inventory_API4.Controllers
 
         public IHttpActionResult Get(int id)
         {
-            var result = attrib.Get(id);
+            var result = cat3.Get(id);
             /*
-             * 
+             *
              */
 
             return Ok(result);

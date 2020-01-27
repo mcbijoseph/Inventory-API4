@@ -11,30 +11,19 @@ namespace Inventory_Domain_Layer
     {
         [Range(0, int.MaxValue)]
         public int ID { get; set; }
+        public int DocEntryId_007 { get; set; }
 
         [Range(0, int.MaxValue)]
         public int ItemID_011 { get; set; }
 
-        public decimal Qty { get; set; }
-
-        public decimal UnitPrice { get; set; }
-
         [Range(0, int.MaxValue)]
         public int UnitID_009 { get; set; }
+        public decimal UnitPrice { get; set; }
+        public decimal Quantity { get; set; }
 
         [Range(0, int.MaxValue)]
-        public int TDSID_010 { get; set; }
+        public int ItemConditionID_018 { get; set; }
 
-        [Range(0, int.MaxValue)]
-        public int DelID_007 { get; set; }
-
-        [Range(0, int.MaxValue)]
-        public int EntID_008 { get; set; }
-
-        [Range(0, int.MaxValue)]
-        public int Sup_ID { get; set; }
-
-        [Range(0, int.MaxValue)]
-        public int Emp_Receive_ID { get; set; }
+       
     }
 }

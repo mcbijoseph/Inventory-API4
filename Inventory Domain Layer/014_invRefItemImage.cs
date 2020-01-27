@@ -21,7 +21,6 @@ namespace Inventory_Domain_Layer
         [Required]
         public String Extension { get; set; }
 
-
         public int Order { get; set; }
 
         public Boolean isProfile { get; set; }
