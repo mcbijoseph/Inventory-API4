@@ -26,8 +26,10 @@ namespace InventoryBL
             var sqlParameters = new List<SqlParameter>()
             {
                 new SqlParameter { ParameterName = "@ID", Value = projectDomain.ID, Direction = ParameterDirection.Input  },
+                new SqlParameter { ParameterName = "@MasterListID_011", Value = projectDomain.MasterListID_011, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@Cat3ID_003", Value = projectDomain.Cat3ID_003, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@Prop2ID_005", Value = projectDomain.Prop2ID_005, Direction = ParameterDirection.Input }
+                new SqlParameter { ParameterName = "@Prop2ID_005", Value = projectDomain.Prop2ID_005, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@PropValue", Value = projectDomain.PropValue, Direction = ParameterDirection.Input }
 
             };
 
@@ -63,8 +65,10 @@ namespace InventoryBL
             return _dbHelper.GetRecords("sp015invRefItemPropListSelect", pars).Tables[0].AsEnumerable().Select(drow => new _015_invRefItemPropListDomain
             {
                 ID = drow.Field<int>("ID"),
+                MasterListID_011 = drow.Field<int>("MasterListID_011"),
                 Cat3ID_003 = drow.Field<int>("Cat3ID_003"),
-                Prop2ID_005 = drow.Field<int>("Prop2ID_005")
+                Prop2ID_005 = drow.Field<int>("Prop2ID_005"),
+                PropValue = drow.Field<string>("PropValue")
             });
         }
     }

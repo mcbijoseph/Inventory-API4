@@ -27,16 +27,12 @@ namespace InventoryBL
             var sqlParameters = new List<SqlParameter>()
             {
                 new SqlParameter { ParameterName = "@ID", Value = projectDomain.ID, Direction = ParameterDirection.Input  },
-                new SqlParameter { ParameterName = "@DelID_007", Value = projectDomain.DelID_007, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@Emp_Receive_ID", Value = projectDomain.Emp_Receive_ID, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@EntID_008", Value = projectDomain.EntID_008, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@DocEntryId_007", Value = projectDomain.DocEntryId_007, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@ItemID_011", Value = projectDomain.ItemID_011, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@Qty", Value = projectDomain.Qty, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@Sup_ID", Value = projectDomain.Sup_ID, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@TDSID_010", Value = projectDomain.TDSID_010, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@UnitID_009", Value = projectDomain.UnitID_009, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@UnitPrice", Value = projectDomain.UnitPrice, Direction = ParameterDirection.Input }
-
+                new SqlParameter { ParameterName = "@UnitPrice", Value = projectDomain.UnitPrice, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@Quantity", Value = projectDomain.Quantity, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@ItemConditionID_018", Value = projectDomain.ItemConditionID_018, Direction = ParameterDirection.Input }
             };
 
             return this.GetMessage(_dbHelper.Command("sp013invItemsEntryListCommand", commandType, sqlParameters).Tables[0]);
@@ -71,15 +67,12 @@ namespace InventoryBL
             return _dbHelper.GetRecords("sp013invItemsEntryListSelect", pars).Tables[0].AsEnumerable().Select(drow => new _013_invItemsEntryListDomain
             {
                 ID = drow.Field<int>("ID"),
-                DelID_007 = drow.Field<int>("DelID_007"),
-                Emp_Receive_ID = drow.Field<int>("Emp_Receive_ID"),
-                EntID_008 = drow.Field<int>("EntID_008"),
-                ItemID_011 = drow.Field<int>("ItemID_011"),
-                Qty = drow.Field<decimal>("Qty"),
-                Sup_ID = drow.Field<int>("Sup_ID"),
-                TDSID_010 = drow.Field<int>("TDSID_010"),
-                UnitID_009 = drow.Field<int>("UnitID_009"),
-                UnitPrice = drow.Field<decimal>("UnitPrice")
+                DocEntryId_007 = drow.Field<int>("DelID_007"),
+                ItemID_011 = drow.Field<int>("Emp_Receive_ID"),
+                UnitID_009 = drow.Field<int>("EntID_008"),
+                UnitPrice = drow.Field<decimal>("ItemID_011"),
+                Quantity = drow.Field<decimal>("Qty"),
+                ItemConditionID_018 = drow.Field<int>("Sup_ID")
             });
         }
     }

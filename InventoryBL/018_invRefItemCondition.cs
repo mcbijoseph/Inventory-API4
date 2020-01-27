@@ -10,29 +10,27 @@ using Inventory_Domain_Layer;
 
 namespace InventoryBL
 {
-    public interface I_010_invRefTDSNoBL<TEntity> : Common.IBaseBL<TEntity> where TEntity : class
+    public interface I_018_invRefItemConditiontBL<TEntity> : Common.IBaseBL<TEntity> where TEntity : class
     {
 
     }
 
 
-    public class _010_invRefTDSNoBL : Common.BaseBL, I_010_invRefTDSNoBL<_010_invRefTDSNoDomain>
+    public class _018_invRefItemConditiontBL : Common.BaseBL, I_018_invRefItemConditiontBL<_018_invRefItemConditionDomain>
     {
         private IDBHelper _dbHelper = new DBHelper();
 
-        public MessageViewDomain Command(_010_invRefTDSNoDomain projectDomain, string commandType)
+        public MessageViewDomain Command(_018_invRefItemConditionDomain projectDomain, string commandType)
         {
 
             var sqlParameters = new List<SqlParameter>()
             {
-                
-                //TOD:
                 new SqlParameter { ParameterName = "@ID", Value = projectDomain.ID, Direction = ParameterDirection.Input  },
-                new SqlParameter { ParameterName = "@Name", Value = projectDomain.Name, Direction = ParameterDirection.Input }
+                new SqlParameter { ParameterName = "@StatusName", Value = projectDomain.StatusName, Direction = ParameterDirection.Input }
 
             };
 
-            return this.GetMessage(_dbHelper.Command("sp010invRefTDSNoCommand", commandType, sqlParameters).Tables[0]);
+            return this.GetMessage(_dbHelper.Command("sp017invRefItemConditionCommand", commandType, sqlParameters).Tables[0]);
 
 
         }
@@ -42,29 +40,29 @@ namespace InventoryBL
             throw new NotImplementedException();
         }
 
-        public IEnumerable<_010_invRefTDSNoDomain> Get()
+        public IEnumerable<_018_invRefItemConditionDomain> Get()
         {
             return GetData(0);
         }
 
-        public _010_invRefTDSNoDomain Get(int id)
+        public _018_invRefItemConditionDomain Get(int id)
         {
             return GetData(id).FirstOrDefault();
         }
 
-        public IEnumerable<_010_invRefTDSNoDomain> Search(int offset, int limit, string orderBy)
+        public IEnumerable<_018_invRefItemConditionDomain> Search(int offset, int limit, string orderBy)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<_010_invRefTDSNoDomain> GetData(int id)
+        public IEnumerable<_018_invRefItemConditionDomain> GetData(int id)
         {
             List<SqlParameter> pars = new List<SqlParameter>();
             pars.Add(new SqlParameter { ParameterName = "ID", Value = id, Direction = ParameterDirection.Input });
-            return _dbHelper.GetRecords("sp010invRefTDSNoSelect", pars).Tables[0].AsEnumerable().Select(drow => new _010_invRefTDSNoDomain
+            return _dbHelper.GetRecords("sp016invRefItemConditionSelect", pars).Tables[0].AsEnumerable().Select(drow => new _018_invRefItemConditionDomain
             {
                 ID = drow.Field<int>("ID"),
-                Name = drow.Field<string>("Name")
+                StatusName = drow.Field<string>("StatusName")
             });
         }
     }

@@ -26,8 +26,10 @@ namespace InventoryBL
             var sqlParameters = new List<SqlParameter>()
             {
                 new SqlParameter { ParameterName = "@ID", Value = projectDomain.ID, Direction = ParameterDirection.Input  },
-                new SqlParameter { ParameterName = "@ItemID_011", Value = projectDomain.ItemID_011, Direction = ParameterDirection.Input }
-        
+                new SqlParameter { ParameterName = "@ItemID_011", Value = projectDomain.ItemID_011, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@AttID_006", Value = projectDomain.AttID_006, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@AttributeValue_006", Value = projectDomain.AttributeValue_006, Direction = ParameterDirection.Input }
+
             };
 
             return this.GetMessage(_dbHelper.Command("sp012invItemAttributeCommand", commandType, sqlParameters).Tables[0]);
@@ -62,8 +64,9 @@ namespace InventoryBL
             return _dbHelper.GetRecords("sp012invItemAttributeSelect", pars).Tables[0].AsEnumerable().Select(drow => new _012_invItemAttributeDomain
             {
                 ID = drow.Field<int>("ID"),
-                Attribute_ID = drow.Field<int>("Attribute_ID"),
-                ItemID_011 = drow.Field<int>("ItemID_011")
+                AttID_006 = drow.Field<int>("AttID_006"),
+                ItemID_011 = drow.Field<int>("ItemID_011"),
+                AttributeValue_006 = drow.Field<string>("AttributeValue_006")
             });
         }
     }

@@ -12,7 +12,7 @@ namespace Inventory_Domain_Layer
         [Range(0, int.MaxValue)]
         public int ID { get; set; }
         [Required]
-        public string Name { get; set;}
+        public string AttributeName { get; set;}
 
     }
 }

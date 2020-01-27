@@ -29,7 +29,8 @@ namespace InventoryBL
                 
                 //TOD:
                 new SqlParameter { ParameterName = "@ID", Value = projectDomain.ID, Direction = ParameterDirection.Input  },
-                new SqlParameter { ParameterName = "@ProjectName", Value = projectDomain.Name, Direction = ParameterDirection.Input }
+                new SqlParameter { ParameterName = "@ShortName", Value = projectDomain.ShortName, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@FullName", Value = projectDomain.FullName, Direction = ParameterDirection.Input }
 
             };
 
@@ -65,7 +66,8 @@ namespace InventoryBL
             return _dbHelper.GetRecords("sp009invRefUnitsSelect", pars).Tables[0].AsEnumerable().Select(drow => new _009_invRefUnitsDomain
             {
                 ID = drow.Field<int>("ID"),
-                Name = drow.Field<string>("Name")
+                ShortName = drow.Field<string>("ShortName"),
+                FullName = drow.Field<string>("FullName")
             });
         }
     }

@@ -15,6 +15,7 @@ namespace Inventory_Domain_Layer
         [Range(0, int.MaxValue)]
         public int ItemID_011 { get; set; }
 
-        public int Attribute_ID { get; set; }
+        public int AttID_006 { get; set; }
+        public string AttributeValue_006 { get; set; }
     }
 }

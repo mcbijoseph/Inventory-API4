@@ -9,31 +9,34 @@ using Inventory_API4.Filters;
 using InventoryBL;
 using System.Web.Http.Cors;
 
-namespace Inventory_API4.Controllers
+namespace Inventory_API4.Controllers.RawControllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class DeliveryDateController : ApiController
+    public class ItemConditionController : ApiController
     {
-        I_007_invRefDeliveryDateBL<_007_invRefDeliveryDateDomain> cat3 = new _007_invRefDeliveryDateBL();
+        //IProjectBL<ProjectDomainModel> _projectBL = new ProjectBL();
+        //attributeDo<_001_invRefCategory1Domain> cat1 = new _001_invRefCategory1BL();
+        I_018_invRefItemConditiontBL<_018_invRefItemConditionDomain> attrib = new _018_invRefItemConditiontBL();
+
         [HttpPost]
         [DomainValidatorFilter]
-        public IHttpActionResult Post([FromBody]_007_invRefDeliveryDateDomain body)
+        public IHttpActionResult Post([FromBody]_018_invRefItemConditionDomain body)
         {
-            return Json(cat3.Command(body, "insert"));
+            return Json(attrib.Command(body, "insert"));
         }
 
         //Update
         [HttpPut]
         [DomainValidatorFilter]
-        public IHttpActionResult Put(int id, [FromBody]_007_invRefDeliveryDateDomain body)
+        public IHttpActionResult Put(int id, [FromBody]_018_invRefItemConditionDomain body)
         {
             body.ID = id;
-            return Json(cat3.Command(body, "update"));
+            return Json(attrib.Command(body, "update"));
         }
 
         public IHttpActionResult Get()
         {
-            var result = cat3.Get();
+            var result = attrib.Get();
             /*
              * 
              */
@@ -43,9 +46,9 @@ namespace Inventory_API4.Controllers
 
         public IHttpActionResult Get(int id)
         {
-            var result = cat3.Get(id);
+            var result = attrib.Get(id);
             /*
-             *
+             * 
              */
 
             return Ok(result);

@@ -12,8 +12,10 @@ namespace Inventory_Domain_Layer
         [Range(0, int.MaxValue)]
         public int ID { get; set; }
         [Range(0, int.MaxValue)]
+        public int MasterListID_011 { get; set; }
         public int Cat3ID_003 { get; set; }
         [Range(0, int.MaxValue)]
         public int Prop2ID_005 { get; set; }
+        public string PropValue { get; set; }
     }
 }

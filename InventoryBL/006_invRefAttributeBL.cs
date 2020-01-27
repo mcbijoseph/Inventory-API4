@@ -26,11 +26,11 @@ namespace InventoryBL
             var sqlParameters = new List<SqlParameter>()
             {
                 new SqlParameter { ParameterName = "@ID", Value = projectDomain.ID, Direction = ParameterDirection.Input  },
-                new SqlParameter { ParameterName = "@Name", Value = projectDomain.Name, Direction = ParameterDirection.Input }
+                new SqlParameter { ParameterName = "@AttributeName", Value = projectDomain.AttributeName, Direction = ParameterDirection.Input }
                 
             };
 
-            return this.GetMessage(_dbHelper.Command("spProjectCommand", commandType, sqlParameters).Tables[0]);
+            return this.GetMessage(_dbHelper.Command("sp006invrefAttributeCommand", commandType, sqlParameters).Tables[0]);
 
 
         }
@@ -45,7 +45,7 @@ namespace InventoryBL
             return _dbHelper.GetRecords("sp006invRefAttributeSelect").Tables[0].AsEnumerable().Select(drow => new _006_invRefAttributeDomain
             {
                 ID = drow.Field<int>("ID"),
-                Name = drow.Field<string>("Name")
+                AttributeName = drow.Field<string>("Name")
             }).ToList();
         }
 
