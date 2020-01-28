@@ -11,6 +11,9 @@ using System.Web.Http.Cors;
 
 namespace Inventory_API4.Controllers.RawControllers
 {
+    /// <summary>
+    /// Delivery Method Entry List
+    /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class DeliveryMethodEntryListController : ApiController
     {
@@ -18,6 +21,11 @@ namespace Inventory_API4.Controllers.RawControllers
         //attributeDo<_001_invRefCategory1Domain> cat1 = new _001_invRefCategory1BL();
         I_017_invDeliveryMethodEntryListBL<_017_invDeliveryMethodEntryListDomain> attrib = new _017_invDeliveryMethodEntryListBL();
 
+        /// <summary>
+        /// Add new Delivery Method Entry List
+        /// </summary>
+        /// <param name="body"></param>
+        /// <returns></returns>
         [HttpPost]
         [DomainValidatorFilter]
         public IHttpActionResult Post([FromBody]_017_invDeliveryMethodEntryListDomain body)
@@ -26,6 +34,12 @@ namespace Inventory_API4.Controllers.RawControllers
         }
 
         //Update
+        /// <summary>
+        /// Update Delivery Method Entry List by ID with JSON Body
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="body"></param>
+        /// <returns></returns>
         [HttpPut]
         [DomainValidatorFilter]
         public IHttpActionResult Put(int id, [FromBody]_017_invDeliveryMethodEntryListDomain body)
@@ -34,6 +48,10 @@ namespace Inventory_API4.Controllers.RawControllers
             return Json(attrib.Command(body, "update"));
         }
 
+        /// <summary>
+        /// Get List of Delivery Method Entry List
+        /// </summary>
+        /// <returns>List</returns>
         public IHttpActionResult Get()
         {
             var result = attrib.Get();
@@ -44,6 +62,11 @@ namespace Inventory_API4.Controllers.RawControllers
             return Ok(result);
         }
 
+        /// <summary>
+        /// Get Specific Delivery Method Entry List
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>1 JSON or NULL</returns>
         public IHttpActionResult Get(int id)
         {
             var result = attrib.Get(id);

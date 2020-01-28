@@ -59,7 +59,7 @@ namespace InventoryBL
         {
             List<SqlParameter> pars = new List<SqlParameter>();
             pars.Add(new SqlParameter { ParameterName = "ID", Value = id, Direction = ParameterDirection.Input });
-            return _dbHelper.GetRecords("sp016invRefItemConditionSelect", pars).Tables[0].AsEnumerable().Select(drow => new _018_invRefItemConditionDomain
+            return _dbHelper.GetRecords("sp018invRefItemConditionSelect", pars).Tables[0].AsEnumerable().Select(drow => new _018_invRefItemConditionDomain
             {
                 ID = drow.Field<int>("ID"),
                 StatusName = drow.Field<string>("StatusName")
