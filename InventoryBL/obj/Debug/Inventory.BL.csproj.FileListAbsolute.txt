@@ -21,3 +21,5 @@ C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryBL\obj\Debug\Inventory
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryBL\obj\Debug\Inventory.BL.csproj.CopyComplete
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryBL\obj\Debug\InventoryBL.dll
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryBL\obj\Debug\InventoryBL.pdb
+C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryBL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryBL\bin\Debug\Newtonsoft.Json.xml

@@ -61,6 +61,7 @@
     <Compile Include="016_invRefItemCategory.cs" />
     <Compile Include="017_invDeliveryMethodEntryList.cs" />
     <Compile Include="018_invRefItemCondition.cs" />
+    <Compile Include="Derived\StockEntryDomain.cs" />
     <Compile Include="MessageViewDomain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

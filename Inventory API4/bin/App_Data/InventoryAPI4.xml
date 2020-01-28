@@ -481,6 +481,39 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="T:Inventory_API4.Controllers.DeriveControllers.StockEntryController">
+            <summary>
+            StockEntry
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DeriveControllers.StockEntryController.Post(Inventory_Domain_Layer.Derived.StockEntryDomain)">
+            <summary>
+            Add new Attribute
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DeriveControllers.StockEntryController.Put(System.Int32,Inventory_Domain_Layer.Derived.StockEntryDomain)">
+            <summary>
+            Update Attribute by ID with JSON BODY
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DeriveControllers.StockEntryController.Get">
+            <summary>
+            Get List of Item Attribute
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DeriveControllers.StockEntryController.Get(System.Int32)">
+            <summary>
+            Get Specific Item Attribute
+            </summary>
+            <param name="id">ID of target</param>
+            <returns>1 JSON or NULL</returns>
+        </member>
         <member name="T:Inventory_API4.Controllers.AttributeController">
             <summary>
             Items Attribute
@@ -513,6 +546,18 @@
             </summary>
             <param name="id">ID of target</param>
             <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.PropertyName2Controller">
+            <summary>
+            PropertyName2
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.PropertyName2Controller.Post(Inventory_Domain_Layer._005_invRefPropertyName2Domain)">
+            <summary>
+            Insert new specificPropertyName2
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
         </member>
     </members>
 </doc>
