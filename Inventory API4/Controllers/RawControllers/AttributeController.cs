@@ -19,27 +19,43 @@ namespace Inventory_API4.Controllers
     [EnableCors(origins:"*",headers:"*", methods:"*")]
     public class AttributeController : ApiController
     {
-        //IProjectBL<ProjectDomainModel> _projectBL = new ProjectBL();
-        //attributeDo<_001_invRefCategory1Domain> cat1 = new _001_invRefCategory1BL();
-        I_006_invRefAttributeBL<_006_invRefAttributeDomain> attrib = new _006_invRefAttributeBL();
-
-        /// <summary>
-        /// Insert a New Attribute for Item
-        /// </summary>
-        /// <param name="body">JSON Content </param>
-        /// <returns></returns>
+        I_006_invRefAttributeBL<_006_invRefAttributeDomain> cat1 = new _006_invRefAttributeBL();
+        //view
         [HttpPost]
         [DomainValidatorFilter]
-        public object Post([FromBody]_006_invRefAttributeDomain body)
+        public IHttpActionResult Post([FromBody]_006_invRefAttributeDomain body)
         {
-            return Json(attrib.Command(new _006_invRefAttributeDomain(), "insert"));
+            return Json(cat1.Command(body, "insert"));
         }
 
-        public IEnumerable<_006_invRefAttributeDomain> Get()
+        //Update
+        [HttpPut]
+        [DomainValidatorFilter]
+        public IHttpActionResult Put(int id, [FromBody]_006_invRefAttributeDomain body)
         {
-            return attrib.Get();
+            body.ID = id;
+            return Json(cat1.Command(body, "update"));
         }
 
+        public IHttpActionResult Get()
+        {
+            var result = cat1.Get();
+            /*
+             * 
+             */
+
+            return Ok(result);
+        }
+
+        public IHttpActionResult Get(int id)
+        {
+            var result = cat1.Get(id);
+            /*
+             *
+             */
+
+            return Ok(result);
+        }
 
 
     }
