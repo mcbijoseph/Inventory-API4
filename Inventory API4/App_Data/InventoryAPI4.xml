@@ -481,5 +481,17 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="T:Inventory_API4.Controllers.AttributeController">
+            <summary>
+            Items Attribute
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.AttributeController.Post(Inventory_Domain_Layer._006_invRefAttributeDomain)">
+            <summary>
+            Insert a New Attribute for Item
+            </summary>
+            <param name="body">JSON Content </param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

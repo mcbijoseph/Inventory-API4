@@ -13,6 +13,9 @@ using System.Web.Http.Cors;
 
 namespace Inventory_API4.Controllers
 {
+    /// <summary>
+    /// Items Attribute
+    /// </summary>
     [EnableCors(origins:"*",headers:"*", methods:"*")]
     public class AttributeController : ApiController
     {
@@ -20,6 +23,11 @@ namespace Inventory_API4.Controllers
         //attributeDo<_001_invRefCategory1Domain> cat1 = new _001_invRefCategory1BL();
         I_006_invRefAttributeBL<_006_invRefAttributeDomain> attrib = new _006_invRefAttributeBL();
 
+        /// <summary>
+        /// Insert a New Attribute for Item
+        /// </summary>
+        /// <param name="body">JSON Content </param>
+        /// <returns></returns>
         [HttpPost]
         [DomainValidatorFilter]
         public object Post([FromBody]_006_invRefAttributeDomain body)
