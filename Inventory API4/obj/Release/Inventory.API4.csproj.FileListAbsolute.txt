@@ -173,14 +173,11 @@ C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory API4\bin\System.Web.WebPag
 C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory API4\bin\System.Web.WebPages.Razor.dll
 C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory API4\bin\WebGrease.dll
 C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory API4\bin\InventoryDAL.dll
-C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory API4\bin\DAL.dll
 C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory API4\bin\Inventory Domain Layer.pdb
 C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory API4\bin\InventoryBL.pdb
 C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory API4\bin\Autofac.xml
 C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory API4\bin\Autofac.Integration.WebApi.pdb
 C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory API4\bin\Autofac.Integration.WebApi.xml
-C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory API4\bin\BL.pdb
-C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory API4\bin\BL.dll.config
 C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory API4\bin\System.Net.Http.Formatting.xml
 C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory API4\bin\System.Web.Http.xml
 C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory API4\bin\System.Web.Http.Cors.xml
@@ -197,8 +194,6 @@ C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory API4\bin\Antlr3.Runtime.pd
 C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory API4\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory API4\bin\InventoryDAL.pdb
 C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory API4\bin\InventoryDAL.dll.config
-C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory API4\bin\DAL.pdb
-C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory API4\bin\DAL.dll.config
 C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory API4\obj\Release\Inventory.API4.csproj.CopyComplete
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\bin\Inventory API4.dll.config
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\bin\Inventory API4.dll
@@ -297,3 +292,4 @@ C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\obj\Release\Inve
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\obj\Release\Inventory.API4.csproj.CopyComplete
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\obj\Release\Inventory API4.dll
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\obj\Release\Inventory API4.pdb
+C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory API4\bin\App_Data\InventoryAPI4.xml

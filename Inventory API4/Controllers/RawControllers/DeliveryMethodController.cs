@@ -11,6 +11,9 @@ using System.Web.Http.Cors;
 
 namespace Inventory_API4.Controllers
 {
+    /// <summary>
+    /// Delivery Method
+    /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class DeliveryMethodController : ApiController
     {
@@ -18,6 +21,11 @@ namespace Inventory_API4.Controllers
         //attributeDo<_001_invRefCategory1Domain> cat1 = new _001_invRefCategory1BL();
         I_010_invRefDeliveryMethodBL<_010_invRefDeliveryMethodDomain> attrib = new _010_invRefDeliveryMethodBL();
 
+        /// <summary>
+        /// Add new Delivery Method
+        /// </summary>
+        /// <param name="body"></param>
+        /// <returns></returns>
         [HttpPost]
         [DomainValidatorFilter]
         public IHttpActionResult Post([FromBody]_010_invRefDeliveryMethodDomain body)
@@ -26,6 +34,12 @@ namespace Inventory_API4.Controllers
         }
 
         //Update
+        /// <summary>
+        /// Update Delivery Method by ID with JSON BODY
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="body"></param>
+        /// <returns></returns>
         [HttpPut]
         [DomainValidatorFilter]
         public IHttpActionResult Put(int id, [FromBody]_010_invRefDeliveryMethodDomain body)
@@ -34,6 +48,10 @@ namespace Inventory_API4.Controllers
             return Json(attrib.Command(body, "update"));
         }
 
+        /// <summary>
+        /// Get List of Delivery Method
+        /// </summary>
+        /// <returns>List</returns>
         public IHttpActionResult Get()
         {
             var result = attrib.Get();
@@ -44,6 +62,11 @@ namespace Inventory_API4.Controllers
             return Ok(result);
         }
 
+        /// <summary>
+        /// Get Specific Delivery Method by ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>1 JSON or NULL</returns>
         public IHttpActionResult Get(int id)
         {
             var result = attrib.Get(id);
