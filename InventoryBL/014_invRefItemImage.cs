@@ -29,7 +29,7 @@ namespace InventoryBL
                 new SqlParameter { ParameterName = "@Extension", Value = projectDomain.Extension, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@ImageName", Value = projectDomain.ImageName, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@isProfile", Value = projectDomain.isProfile, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@ItemID", Value = projectDomain.ItemID, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@ItemID_011", Value = projectDomain.ItemID_011, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@Order", Value = projectDomain.Order, Direction = ParameterDirection.Input }
 
             };
@@ -69,7 +69,7 @@ namespace InventoryBL
                 Extension = drow.Field<string>("Extension"),
                 ImageName = drow.Field<string>("ImageName"),
                 isProfile = drow.Field<bool>("isProfile"),
-                ItemID = drow.Field<int>("ItemID"),
+                ItemID_011 = drow.Field<int>("ItemID_011"),
                 Order = drow.Field<int>("Order")
             });
         }

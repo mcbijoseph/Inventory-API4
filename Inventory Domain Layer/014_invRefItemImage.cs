@@ -13,7 +13,7 @@ namespace Inventory_Domain_Layer
         public int ID { get; set; }
 
         [Range(0, int.MaxValue)]
-        public int ItemID { get; set; }
+        public int ItemID_011 { get; set; }
 
         [Required]
         public String ImageName { get; set; }
