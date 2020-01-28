@@ -9,8 +9,6 @@ using Inventory_API4.Filters;
 using InventoryBL;
 using System.Web.Http.Cors;
 
-
-
 namespace Inventory_API4.Controllers
 {
     /// <summary>
