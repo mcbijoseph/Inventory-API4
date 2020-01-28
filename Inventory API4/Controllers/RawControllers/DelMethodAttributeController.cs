@@ -61,7 +61,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get Specific Delivery Method Attribute
+        /// Get Specific Delivery Method Attribute by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>

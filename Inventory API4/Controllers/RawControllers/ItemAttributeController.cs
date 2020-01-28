@@ -62,7 +62,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get Specific Item Attribute
+        /// Get Specific Item Attribute by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON OR </returns>

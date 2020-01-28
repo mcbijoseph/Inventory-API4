@@ -62,7 +62,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get Specific Category1
+        /// Get Specific Category1 by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>

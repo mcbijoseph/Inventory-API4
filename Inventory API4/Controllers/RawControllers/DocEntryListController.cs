@@ -61,7 +61,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get Specific Documents Entry List
+        /// Get Specific Documents Entry List by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>

@@ -63,7 +63,7 @@ namespace Inventory_API4.Controllers.RawControllers
         }
 
         /// <summary>
-        /// Get Specific Delivery Method Entry List
+        /// Get Specific Delivery Method Entry List by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
