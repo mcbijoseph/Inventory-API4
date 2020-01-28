@@ -30,7 +30,7 @@ namespace InventoryBL
 
             };
 
-            return this.GetMessage(_dbHelper.Command("sp017invRefItemConditionCommand", commandType, sqlParameters).Tables[0]);
+            return this.GetMessage(_dbHelper.Command("sp018invRefItemConditionCommand", commandType, sqlParameters).Tables[0]);
 
 
         }
