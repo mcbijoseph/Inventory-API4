@@ -514,5 +514,298 @@
             <param name="id">ID of target</param>
             <returns>1 JSON or NULL</returns>
         </member>
+        <member name="T:Inventory_API4.Controllers.Category1Controller">
+            <summary>
+            Category1
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category1Controller.Post(Inventory_Domain_Layer._001_invRefCategory1Domain)">
+            <summary>
+            Add new Category1
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category1Controller.Put(System.Int32,Inventory_Domain_Layer._001_invRefCategory1Domain)">
+            <summary>
+            Update Category1 by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category1Controller.Get">
+            <summary>
+            Get List of Category1
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category1Controller.Get(System.Int32)">
+            <summary>
+            Get Specific Category1
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.Category2Controller">
+            <summary>
+            Category2
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category2Controller.Post(Inventory_Domain_Layer._002_invRefCategory2Domain)">
+            <summary>
+            Add new Category2
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category2Controller.Put(System.Int32,Inventory_Domain_Layer._002_invRefCategory2Domain)">
+            <summary>
+            Update Category2 by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category2Controller.Get">
+            <summary>
+            Get List of Category2
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category2Controller.Get(System.Int32)">
+            <summary>
+            Get Specific Category2
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.Category3Controller">
+            <summary>
+            Category3
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category3Controller.Post(Inventory_Domain_Layer._003_invRefCategory3Domain)">
+            <summary>
+            Add new Category3
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category3Controller.Put(System.Int32,Inventory_Domain_Layer._003_invRefCategory3Domain)">
+            <summary>
+            Update Category3 by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category3Controller.Get">
+            <summary>
+            Get List of Category3
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category3Controller.Get(System.Int32)">
+            <summary>
+            Get Specific Category3
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.RawControllers.DeliveryMethodEntryListController">
+            <summary>
+            Delivery Method Entry List
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.DeliveryMethodEntryListController.Post(Inventory_Domain_Layer._017_invDeliveryMethodEntryListDomain)">
+            <summary>
+            Add new Delivery Method Entry List
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.DeliveryMethodEntryListController.Put(System.Int32,Inventory_Domain_Layer._017_invDeliveryMethodEntryListDomain)">
+            <summary>
+            Update Delivery Method Entry List by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.DeliveryMethodEntryListController.Get">
+            <summary>
+            Get List of Delivery Method Entry List
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.DeliveryMethodEntryListController.Get(System.Int32)">
+            <summary>
+            Get Specific Delivery Method Entry List
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.RawControllers.ItemConditionController">
+            <summary>
+            ItemCondition
+            </summary>
+        </member>
+        <member name="T:Inventory_API4.Controllers.DocEntryListController">
+            <summary>
+            Documents Entry List
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DocEntryListController.Post(Inventory_Domain_Layer._007_invRefDocEntryListDomain)">
+            <summary>
+            Add new Documents Entry List
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DocEntryListController.Put(System.Int32,Inventory_Domain_Layer._007_invRefDocEntryListDomain)">
+            <summary>
+            Update Documents Entry List by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DocEntryListController.Get">
+            <summary>
+            Get List of Documents Entry List
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DocEntryListController.Get(System.Int32)">
+            <summary>
+            Get Specific Documents Entry List
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.DelMethodAttributeController">
+            <summary>
+            Delivery Method Attribute
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DelMethodAttributeController.Post(Inventory_Domain_Layer._008_invRefDelMethodAttributeDomain)">
+            <summary>
+            Add new Delivery Method Attribute
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DelMethodAttributeController.Put(System.Int32,Inventory_Domain_Layer._008_invRefDelMethodAttributeDomain)">
+            <summary>
+            Update Delivery Method Attribute by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DelMethodAttributeController.Get">
+            <summary>
+            Get List of Delivery Method Attribute 
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DelMethodAttributeController.Get(System.Int32)">
+            <summary>
+            Get Specific Delivery Method Attribute
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.ItemAttributeController">
+            <summary>
+            Item Attribute
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ItemAttributeController.Post(Inventory_Domain_Layer._012_invItemAttributeDomain)">
+            <summary>
+            Add new Item Attribute
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ItemAttributeController.Put(System.Int32,Inventory_Domain_Layer._012_invItemAttributeDomain)">
+            <summary>
+            Update Item Attribute by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ItemAttributeController.Get">
+            <summary>
+            Get List of Item Attribute
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ItemAttributeController.Get(System.Int32)">
+            <summary>
+            Get Specific Item Attribute
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON OR </returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.ItemCategoryController">
+            <summary>
+            ItemCategory
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ItemCategoryController.Post(Inventory_Domain_Layer._016_invRefItemCategoryDomain)">
+            <summary>
+            Add new Item Category
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.PropertyName2Controller">
+            <summary>
+            PropertyName2
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.PropertyName2Controller.Post(Inventory_Domain_Layer._005_invRefPropertyName2Domain)">
+            <summary>
+            Insert new specificPropertyName2
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.DeliveryMethodController">
+            <summary>
+            Delivery Method
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DeliveryMethodController.Post(Inventory_Domain_Layer._010_invRefDeliveryMethodDomain)">
+            <summary>
+            Add new Delivery Method
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DeliveryMethodController.Put(System.Int32,Inventory_Domain_Layer._010_invRefDeliveryMethodDomain)">
+            <summary>
+            Update Delivery Method by ID with JSON BODY
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DeliveryMethodController.Get">
+            <summary>
+            Get List of Delivery Method
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DeliveryMethodController.Get(System.Int32)">
+            <summary>
+            Get Specific Delivery Method by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
     </members>
 </doc>

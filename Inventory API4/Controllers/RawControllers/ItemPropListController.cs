@@ -11,10 +11,19 @@ using System.Web.Http.Cors;
 
 namespace Inventory_API4.Controllers
 {
+    /// <summary>
+    /// Item Property List
+    /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ItemPropListController : ApiController
     {
         I_015_invRefItemPropListBL<_015_invRefItemPropListDomain> cat3 = new _015_invRefItemPropListBL();
+
+        /// <summary>
+        /// Add new Item Property List
+        /// </summary>
+        /// <param name="body"></param>
+        /// <returns></returns>
         [HttpPost]
         [DomainValidatorFilter]
         public IHttpActionResult Post([FromBody]_015_invRefItemPropListDomain body)
@@ -23,6 +32,12 @@ namespace Inventory_API4.Controllers
         }
 
         //Update
+        /// <summary>
+        /// Update Item Property List by ID with JSON Body
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="body"></param>
+        /// <returns></returns>
         [HttpPut]
         [DomainValidatorFilter]
         public IHttpActionResult Put(int id, [FromBody]_015_invRefItemPropListDomain body)
@@ -31,6 +46,10 @@ namespace Inventory_API4.Controllers
             return Json(cat3.Command(body, "update"));
         }
 
+        /// <summary>
+        /// Get List of Item Property List
+        /// </summary>
+        /// <returns>List</returns>
         public IHttpActionResult Get()
         {
             var result = cat3.Get();
@@ -41,6 +60,11 @@ namespace Inventory_API4.Controllers
             return Ok(result);
         }
 
+        /// <summary>
+        /// Get Specific Item Property List
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>1 JSON or NULL</returns>
         public IHttpActionResult Get(int id)
         {
             var result = cat3.Get(id);
