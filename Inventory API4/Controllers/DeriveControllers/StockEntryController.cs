@@ -9,5 +9,6 @@ namespace Inventory_API4.Controllers.DeriveControllers
 {
     public class StockEntryController : ApiController
     {
+
     }
 }
