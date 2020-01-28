@@ -66,7 +66,7 @@ namespace InventoryBL
                 ID = drow.Field<int>("ID"),
                 DocEntryListID_007= drow.Field<int>("DocEntryListID_007"),
                 DelMethodAttrID_008 = drow.Field<int>("DelMethodAttrID_008"),
-                AttributeValue = drow.Field<int>("AttributeValue")
+                AttributeValue = drow.Field<string>("AttributeValue")
             });
         }
     }
