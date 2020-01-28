@@ -3,7 +3,6 @@ using System.Web.Mvc;
 using Autofac;
 using System.Web.Http;
 using Autofac.Integration.WebApi;
-using BL;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -24,7 +23,7 @@ namespace Inventory_API4.App_Start
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
 
             /*Item Data Registering.....*/
-            builder.RegisterType<SQLBL>().As<ISQLBL>().WithParameter("connectionString", Properties.Settings.Default.connectionString);
+            //builder.RegisterType<SQLBL>().As<ISQLBL>().WithParameter("connectionString", Properties.Settings.Default.connectionString);
 
 
             List<Autofac.Core.Parameter> pars = new List<Autofac.Core.Parameter>();
