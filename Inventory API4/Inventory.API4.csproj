@@ -36,7 +36,7 @@
     <WarningLevel>4</WarningLevel>
     <DeployEncryptKey>Encryption password is used only if any deployment setting is marked as secure</DeployEncryptKey>
     <LegacyPublishPropertiesPageEnabled>true</LegacyPublishPropertiesPageEnabled>
-    <DocumentationFile>App_Data/InventoryAPI4.xml</DocumentationFile>
+    <DocumentationFile>App_Data\InventoryAPI4.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -207,7 +207,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\InventoryAPI4.xml" />
+    <Content Include="App_Data\InventoryAPI4.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />

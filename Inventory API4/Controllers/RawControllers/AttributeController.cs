@@ -20,6 +20,12 @@ namespace Inventory_API4.Controllers
     public class AttributeController : ApiController
     {
         I_006_invRefAttributeBL<_006_invRefAttributeDomain> cat1 = new _006_invRefAttributeBL();
+
+        /// <summary>
+        /// Add new Attribute
+        /// </summary>
+        /// <param name="body"></param>
+        /// <returns></returns>
         //view
         [HttpPost]
         [DomainValidatorFilter]
@@ -28,6 +34,12 @@ namespace Inventory_API4.Controllers
             return Json(cat1.Command(body, "insert"));
         }
 
+        /// <summary>
+        /// Update Attribute by ID with JSON BODY
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="body"></param>
+        /// <returns></returns>
         //Update
         [HttpPut]
         [DomainValidatorFilter]
@@ -37,6 +49,10 @@ namespace Inventory_API4.Controllers
             return Json(cat1.Command(body, "update"));
         }
 
+        /// <summary>
+        /// Get List of Item Attribute
+        /// </summary>
+        /// <returns>List</returns>
         public IHttpActionResult Get()
         {
             var result = cat1.Get();
@@ -47,6 +63,11 @@ namespace Inventory_API4.Controllers
             return Ok(result);
         }
 
+        /// <summary>
+        /// Get Specific Item Attribute
+        /// </summary>
+        /// <param name="id">ID of target</param>
+        /// <returns>1 JSON or NULL</returns>
         public IHttpActionResult Get(int id)
         {
             var result = cat1.Get(id);
