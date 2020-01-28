@@ -28,7 +28,7 @@ namespace InventoryBL
                 new SqlParameter { ParameterName = "@ID", Value = projectDomain.ID, Direction = ParameterDirection.Input  },
                 new SqlParameter { ParameterName = "@ItemID_011", Value = projectDomain.ItemID_011, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@AttID_006", Value = projectDomain.AttID_006, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@AttributeValue_006", Value = projectDomain.AttributeValue_006, Direction = ParameterDirection.Input }
+                new SqlParameter { ParameterName = "@AttributeValue", Value = projectDomain.AttributeValue, Direction = ParameterDirection.Input }
 
             };
 
@@ -66,7 +66,7 @@ namespace InventoryBL
                 ID = drow.Field<int>("ID"),
                 AttID_006 = drow.Field<int>("AttID_006"),
                 ItemID_011 = drow.Field<int>("ItemID_011"),
-                AttributeValue_006 = drow.Field<string>("AttributeValue_006")
+                AttributeValue = drow.Field<string>("AttributeValue")
             });
         }
     }

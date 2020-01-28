@@ -16,6 +16,6 @@ namespace Inventory_Domain_Layer
         public int ItemID_011 { get; set; }
 
         public int AttID_006 { get; set; }
-        public string AttributeValue_006 { get; set; }
+        public string AttributeValue { get; set; }
     }
 }
