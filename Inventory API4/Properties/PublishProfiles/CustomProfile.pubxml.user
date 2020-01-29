@@ -11,7 +11,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="App_Data/InventoryAPI4.xml">
-      <publishTime>01/29/2020 09:52:47</publishTime>
+      <publishTime>01/29/2020 11:07:34</publishTime>
     </File>
     <File Include="Areas/HelpPage/HelpPage.css">
       <publishTime>01/22/2020 11:42:09</publishTime>
@@ -83,7 +83,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/10/2013 16:29:20</publishTime>
     </File>
     <File Include="bin/App_Data/InventoryAPI4.xml">
-      <publishTime>01/29/2020 09:52:47</publishTime>
+      <publishTime>01/29/2020 11:07:34</publishTime>
     </File>
     <File Include="bin/Autofac.dll">
       <publishTime>06/16/2014 17:41:22</publishTime>
@@ -113,10 +113,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/27/2020 09:09:08</publishTime>
     </File>
     <File Include="bin/Inventory API4.dll">
-      <publishTime>01/29/2020 09:52:47</publishTime>
+      <publishTime>01/29/2020 11:07:34</publishTime>
     </File>
     <File Include="bin/Inventory API4.pdb">
-      <publishTime>01/29/2020 09:52:47</publishTime>
+      <publishTime>01/29/2020 11:07:34</publishTime>
     </File>
     <File Include="bin/Inventory Domain Layer.dll">
       <publishTime>01/28/2020 16:53:54</publishTime>
@@ -125,13 +125,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/28/2020 16:53:54</publishTime>
     </File>
     <File Include="bin/InventoryAPI4.xml">
-      <publishTime>01/29/2020 09:52:47</publishTime>
+      <publishTime>01/29/2020 11:07:34</publishTime>
     </File>
     <File Include="bin/InventoryBL.dll">
-      <publishTime>01/28/2020 16:53:56</publishTime>
+      <publishTime>01/29/2020 11:07:33</publishTime>
     </File>
     <File Include="bin/InventoryBL.pdb">
-      <publishTime>01/28/2020 16:53:56</publishTime>
+      <publishTime>01/29/2020 11:07:33</publishTime>
     </File>
     <File Include="bin/InventoryDAL.dll">
       <publishTime>01/28/2020 16:53:55</publishTime>
