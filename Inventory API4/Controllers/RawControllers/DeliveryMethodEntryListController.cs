@@ -12,7 +12,7 @@ using System.Web.Http.Cors;
 namespace Inventory_API4.Controllers.RawControllers
 {
     /// <summary>
-    /// Delivery Method Entry List
+    /// DeliveryMethodEntryList
     /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class DeliveryMethodEntryListController : ApiController
@@ -22,7 +22,7 @@ namespace Inventory_API4.Controllers.RawControllers
         I_017_invDeliveryMethodEntryListBL<_017_invDeliveryMethodEntryListDomain> attrib = new _017_invDeliveryMethodEntryListBL();
 
         /// <summary>
-        /// Add new Delivery Method Entry List
+        /// Add new DeliveryMethodEntryList
         /// </summary>
         /// <param name="body"></param>
         /// <returns></returns>
@@ -35,7 +35,7 @@ namespace Inventory_API4.Controllers.RawControllers
 
         //Update
         /// <summary>
-        /// Update Delivery Method Entry List by ID with JSON Body
+        /// Update DeliveryMethodEntryList by ID with JSON Body
         /// </summary>
         /// <param name="id"></param>
         /// <param name="body"></param>
@@ -49,7 +49,7 @@ namespace Inventory_API4.Controllers.RawControllers
         }
 
         /// <summary>
-        /// Get List of Delivery Method Entry List
+        /// Get List of DeliveryMethodEntryList
         /// </summary>
         /// <returns>List</returns>
         public IHttpActionResult Get()
@@ -63,7 +63,7 @@ namespace Inventory_API4.Controllers.RawControllers
         }
 
         /// <summary>
-        /// Get Specific Delivery Method Entry List by ID
+        /// Get Specific DeliveryMethodEntryList by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>

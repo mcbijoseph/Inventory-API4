@@ -12,7 +12,7 @@ namespace InventoryBL
 {
     public interface I_008_invRefDelMethodAttributeBL<TEntity> : Common.IBaseBL<TEntity> where TEntity : class
     {
-
+        IEnumerable<_008_invRefDelMethodAttributeDomain> GetDelMethod(int DelMethod);
     }
 
 
@@ -42,12 +42,17 @@ namespace InventoryBL
 
         public IEnumerable<_008_invRefDelMethodAttributeDomain> Get()
         {
-            return GetData(0);
+            return GetData(0, 0);
         }
 
         public _008_invRefDelMethodAttributeDomain Get(int id)
         {
-            return GetData(id).FirstOrDefault();
+            return GetData(id, 0).FirstOrDefault();
+        }
+
+        public IEnumerable<_008_invRefDelMethodAttributeDomain> GetDelMethod(int DelMethod)
+        {
+            return GetData(0, DelMethod);
         }
 
         public IEnumerable<_008_invRefDelMethodAttributeDomain> Search(int offset, int limit, string orderBy)
@@ -55,10 +60,11 @@ namespace InventoryBL
             throw new NotImplementedException();
         }
 
-        public IEnumerable<_008_invRefDelMethodAttributeDomain> GetData(int id)
+        public IEnumerable<_008_invRefDelMethodAttributeDomain> GetData(int id, int DelMethod)
         {
             List<SqlParameter> pars = new List<SqlParameter>();
             pars.Add( new SqlParameter { ParameterName = "ID", Value = id, Direction = ParameterDirection.Input });
+            pars.Add(new SqlParameter { ParameterName = "DelMethod", Value = DelMethod, Direction = ParameterDirection.Input });
             return _dbHelper.GetRecords("sp008invRefDelMethodAttributeSelect", pars).Tables[0].AsEnumerable().Select(drow => new _008_invRefDelMethodAttributeDomain
             {
                 ID = drow.Field<int>("ID"),

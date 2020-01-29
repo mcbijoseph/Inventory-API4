@@ -12,7 +12,7 @@ using InventoryBL;
 namespace Inventory_API4.Controllers
 {
     /// <summary>
-    /// Items Entry List
+    /// ItemsEntryList
     /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ItemsEntryListController : ApiController
@@ -20,7 +20,7 @@ namespace Inventory_API4.Controllers
         I_013_invItemsEntryListBL<_013_invItemsEntryListDomain> cat3 = new _013_invItemsEntryListBL();
 
         /// <summary>
-        /// Add new Items Entry List
+        /// Add new ItemsEntryList
         /// </summary>
         /// <param name="body"></param>
         /// <returns></returns>
@@ -33,7 +33,7 @@ namespace Inventory_API4.Controllers
 
         //Update
         /// <summary>
-        /// Update Items Entry List by ID with JSON Body
+        /// Update ItemsEntryList by ID with JSON Body
         /// </summary>
         /// <param name="id"></param>
         /// <param name="body"></param>
@@ -47,7 +47,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get List of Items Entry List
+        /// Get List of ItemsEntryList
         /// </summary>
         /// <returns>List</returns>
         public IHttpActionResult Get()
@@ -61,7 +61,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get Specific Items Entry List by ID
+        /// Get Specific ItemsEntryList by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>

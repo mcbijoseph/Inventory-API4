@@ -12,7 +12,7 @@ using System.Web.Http.Cors;
 namespace Inventory_API4.Controllers
 {
     /// <summary>
-    /// Delivery Method
+    /// DeliveryMethod
     /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class DeliveryMethodController : ApiController
@@ -22,7 +22,7 @@ namespace Inventory_API4.Controllers
         I_010_invRefDeliveryMethodBL<_010_invRefDeliveryMethodDomain> attrib = new _010_invRefDeliveryMethodBL();
 
         /// <summary>
-        /// Add new Delivery Method
+        /// Add new DeliveryMethod
         /// </summary>
         /// <param name="body"></param>
         /// <returns></returns>
@@ -35,7 +35,7 @@ namespace Inventory_API4.Controllers
 
         //Update
         /// <summary>
-        /// Update Delivery Method by ID with JSON BODY
+        /// Update DeliveryMethod by ID with JSON BODY
         /// </summary>
         /// <param name="id"></param>
         /// <param name="body"></param>
@@ -49,7 +49,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get List of Delivery Method
+        /// Get List of DeliveryMethod
         /// </summary>
         /// <returns>List</returns>
         public IHttpActionResult Get()
@@ -63,7 +63,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get Specific Delivery Method by ID
+        /// Get Specific DeliveryMethod by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>

@@ -18,6 +18,7 @@ namespace Inventory_API4.Controllers
     public class Category3Controller : ApiController
     {
         I_003_invRefCategory3BL<_003_invRefCategory3Domain> cat3 = new _003_invRefCategory3BL();
+
         /// <summary>
         /// Add new Category3
         /// </summary>

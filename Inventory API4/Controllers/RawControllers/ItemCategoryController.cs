@@ -20,7 +20,7 @@ namespace Inventory_API4.Controllers
         I_016_invRefItemCategoryBL<_016_invRefItemCategoryDomain> cat3 = new _016_invRefItemCategoryBL();
 
         /// <summary>
-        /// Add new Item Category
+        /// Add new ItemCategory
         /// </summary>
         /// <param name="body"></param>
         /// <returns></returns>
@@ -33,7 +33,7 @@ namespace Inventory_API4.Controllers
 
         //Update
         /// <summary>
-        /// Update Item Category by ID with JSON Body
+        /// Update ItemCategory by ID with JSON Body
         /// </summary>
         /// <param name="id"></param>
         /// <param name="body"></param>
@@ -47,7 +47,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get List of Item Category
+        /// Get List of ItemCategory
         /// </summary>
         /// <returns>List</returns>
         public IHttpActionResult Get()
@@ -61,7 +61,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get Specific Item Category by ID
+        /// Get Specific ItemCategory by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>

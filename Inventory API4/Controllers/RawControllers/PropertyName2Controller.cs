@@ -23,7 +23,7 @@ namespace Inventory_API4.Controllers
         I_005_invRefPropertyName2BL<_005_invRefPropertyName2Domain> attrib = new _005_invRefPropertyName2BL();
 
         /// <summary>
-        /// Add new Property Name2
+        /// Add new PropertyName2
         /// </summary>
         /// <param name="body"></param>
         /// <returns></returns>
@@ -36,7 +36,7 @@ namespace Inventory_API4.Controllers
 
         //Update
         /// <summary>
-        /// Update Property Name2 by ID with JSON Body
+        /// Update PropertyName2 by ID with JSON Body
         /// </summary>
         /// <param name="id"></param>
         /// <param name="body"></param>
@@ -50,7 +50,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get List of Property Name2
+        /// Get List of PropertyName2
         /// </summary>
         /// <returns>List</returns>
         public IHttpActionResult Get()
@@ -64,7 +64,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get Specific Property Name2 by ID
+        /// Get Specific PropertyName2 by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
