@@ -83,7 +83,7 @@ namespace Inventory_API4.Controllers
         /// <returns>1/Many Json or NULL</returns>
         public IHttpActionResult Get(int id, int DelMethod)
         {
-            var result = cat3.GetDelMethod(DelMethod);
+            var result = cat3.GetData(id, DelMethod);
             /*
              *
              */
