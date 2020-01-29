@@ -39,7 +39,8 @@ namespace InventoryBL
 
         public MessageViewDomain Delete(int id)
         {
-            throw new NotImplementedException();
+            ///throw new NotImplementedException();
+            return Command(new _012_invItemAttributeDomain() { ID = id }, "delete");
         }
 
         public IEnumerable<_012_invItemAttributeDomain> Get()

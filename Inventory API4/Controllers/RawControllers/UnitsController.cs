@@ -49,6 +49,17 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
+        /// Delete Specific Units
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public IHttpActionResult Delete(int id)
+        {
+            ///body.ID = id;
+            return Json(attrib.Delete(id));
+        }
+
+        /// <summary>
         /// Get List of Units
         /// </summary>
         /// <returns>List</returns>

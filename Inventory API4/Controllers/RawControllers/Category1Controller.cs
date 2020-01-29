@@ -48,6 +48,17 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
+        /// Delete Specific Category1
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public IHttpActionResult Delete(int id)
+        {
+            ///body.ID = id;
+            return Json(cat1.Delete(id));
+        }
+
+        /// <summary>
         /// Get List of Category1
         /// </summary>
         /// <returns>List</returns>

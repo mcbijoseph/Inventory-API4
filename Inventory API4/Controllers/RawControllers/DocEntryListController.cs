@@ -47,6 +47,17 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
+        /// Delete Specific DocumentsEntryList
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public IHttpActionResult Delete(int id)
+        {
+            ///body.ID = id;
+            return Json(cat3.Delete(id));
+        }
+
+        /// <summary>
         /// Get List of DocumentsEntryList
         /// </summary>
         /// <returns>List</returns>
