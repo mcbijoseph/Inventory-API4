@@ -24,8 +24,7 @@ namespace Inventory_API4.Filters
                 {
                     foreach (var modelError in modelState.Errors)
                     {
-                        modelErrors.Append(modelError.ErrorMessage + "<br>");
-
+                        modelErrors.Append(modelError.ToString() + "<br>");
                     }
                 }
                 actionContext.Response = new HttpResponseMessage
