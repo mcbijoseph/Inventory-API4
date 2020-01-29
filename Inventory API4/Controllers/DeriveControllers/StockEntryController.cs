@@ -13,7 +13,7 @@ using InventoryBL.Derived;
 namespace Inventory_API4.Controllers.DeriveControllers
 {
     /*
-     
+     POST
      {
 	"DocEntry":{
 		"ID":1,
@@ -41,9 +41,15 @@ namespace Inventory_API4.Controllers.DeriveControllers
 			"UnitPrice":3,
 			"Quantity":2,
 			"ItemConditionID_018":1
+		}],
+	"DeliveryEntry":[
+		{
+			"ID":1,
+			"DocEntryListID_007":1,
+			"DelMethodAttrID_008":1,
+			"AttributeValue":"AttrValue"
 		}]
-    }
-         
+    }         
      */
     /// <summary>
     /// StockEntry
@@ -55,7 +61,7 @@ namespace Inventory_API4.Controllers.DeriveControllers
 
 
         /// <summary>
-        /// Add new Attribute
+        /// Add new STOCK with ItemEntryList[], DocEntry, DeliveryEntry[]
         /// </summary>
         /// <param name="body"></param>
         /// <returns></returns>
@@ -68,7 +74,7 @@ namespace Inventory_API4.Controllers.DeriveControllers
         }
 
         /// <summary>
-        /// Update Attribute by ID with JSON BODY
+        /// Update StockEntry by ID with JSON BODY
         /// </summary>
         /// <param name="id"></param>
         /// <param name="body"></param>
@@ -83,7 +89,7 @@ namespace Inventory_API4.Controllers.DeriveControllers
         }
 
         /// <summary>
-        /// Get List of Item Attribute
+        /// Get List of All StockEntry
         /// </summary>
         /// <returns>List</returns>
         public IHttpActionResult Get()
@@ -97,7 +103,7 @@ namespace Inventory_API4.Controllers.DeriveControllers
         }
 
         /// <summary>
-        /// Get Specific Item Attribute
+        /// Get Specific StockEntry
         /// </summary>
         /// <param name="id">ID of target</param>
         /// <returns>1 JSON or NULL</returns>

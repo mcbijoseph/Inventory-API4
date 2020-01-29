@@ -648,19 +648,19 @@
         </member>
         <member name="T:Inventory_API4.Controllers.RawControllers.DeliveryMethodEntryListController">
             <summary>
-            DeliveryMethodEntryList
+            Delivery Method Entry List
             </summary>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.DeliveryMethodEntryListController.Post(Inventory_Domain_Layer._017_invDeliveryMethodEntryListDomain)">
             <summary>
-            Add new DeliveryMethodEntryList
+            Add new Delivery Method Entry List
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.DeliveryMethodEntryListController.Put(System.Int32,Inventory_Domain_Layer._017_invDeliveryMethodEntryListDomain)">
             <summary>
-            Update DeliveryMethodEntryList by ID with JSON Body
+            Update Delivery Method Entry List by ID with JSON Body
             </summary>
             <param name="id"></param>
             <param name="body"></param>
@@ -668,32 +668,32 @@
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.DeliveryMethodEntryListController.Get">
             <summary>
-            Get List of DeliveryMethodEntryList
+            Get List of Delivery Method Entry List
             </summary>
             <returns>List</returns>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.DeliveryMethodEntryListController.Get(System.Int32)">
             <summary>
-            Get Specific DeliveryMethodEntryList by ID
+            Get Specific Delivery Method Entry List by ID
             </summary>
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
         </member>
         <member name="T:Inventory_API4.Controllers.RawControllers.ItemConditionController">
             <summary>
-            ItemCondition
+            Item Condition
             </summary>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.ItemConditionController.Post(Inventory_Domain_Layer._018_invRefItemConditionDomain)">
             <summary>
-            Add new ItemCondition
+            Add new Item Condition
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.ItemConditionController.Put(System.Int32,Inventory_Domain_Layer._018_invRefItemConditionDomain)">
             <summary>
-            Update ItemCondition by ID with JSON Body
+            Update Item Condition by ID with JSON Body
             </summary>
             <param name="id"></param>
             <param name="body"></param>
@@ -701,32 +701,32 @@
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.ItemConditionController.Get">
             <summary>
-            Get List of ItemCondition
+            Get List of Item Condition
             </summary>
             <returns>List</returns>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.ItemConditionController.Get(System.Int32)">
             <summary>
-            Get Specific ItemCondition by ID
+            Get Specific Item Condition by ID
             </summary>
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
         </member>
         <member name="T:Inventory_API4.Controllers.DocEntryListController">
             <summary>
-            DocumentsEntryList
+            Documents Entry List
             </summary>
         </member>
         <member name="M:Inventory_API4.Controllers.DocEntryListController.Post(Inventory_Domain_Layer._007_invRefDocEntryListDomain)">
             <summary>
-            Add new DocumentsEntryList
+            Add new Documents Entry List
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.DocEntryListController.Put(System.Int32,Inventory_Domain_Layer._007_invRefDocEntryListDomain)">
             <summary>
-            Update DocumentsEntryList by ID with JSON Body
+            Update Documents Entry List by ID with JSON Body
             </summary>
             <param name="id"></param>
             <param name="body"></param>
@@ -734,32 +734,32 @@
         </member>
         <member name="M:Inventory_API4.Controllers.DocEntryListController.Get">
             <summary>
-            Get List of DocumentsEntryList
+            Get List of Documents Entry List
             </summary>
             <returns>List</returns>
         </member>
         <member name="M:Inventory_API4.Controllers.DocEntryListController.Get(System.Int32)">
             <summary>
-            Get Specific DocumentsEntryList by ID
+            Get Specific Documents Entry List by ID
             </summary>
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
         </member>
         <member name="T:Inventory_API4.Controllers.DelMethodAttributeController">
             <summary>
-            DeliveryMethodAttribute
+            Delivery Method Attribute
             </summary>
         </member>
         <member name="M:Inventory_API4.Controllers.DelMethodAttributeController.Post(Inventory_Domain_Layer._008_invRefDelMethodAttributeDomain)">
             <summary>
-            Add new DeliveryMethodAttribute
+            Add new Delivery Method Attribute
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.DelMethodAttributeController.Put(System.Int32,Inventory_Domain_Layer._008_invRefDelMethodAttributeDomain)">
             <summary>
-            Update DeliveryMethodAttribute by ID with JSON Body
+            Update Delivery Method Attribute by ID with JSON Body
             </summary>
             <param name="id"></param>
             <param name="body"></param>
@@ -767,40 +767,32 @@
         </member>
         <member name="M:Inventory_API4.Controllers.DelMethodAttributeController.Get">
             <summary>
-            Get List of DeliveryMethodAttribute 
+            Get List of Delivery Method Attribute 
             </summary>
             <returns>List</returns>
         </member>
         <member name="M:Inventory_API4.Controllers.DelMethodAttributeController.Get(System.Int32)">
             <summary>
-            Get Specific DeliveryMethodAttribute by ID
+            Get Specific Delivery Method Attribute by ID
             </summary>
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
         </member>
-        <member name="M:Inventory_API4.Controllers.DelMethodAttributeController.Get(System.Int32,System.Int32)">
-            <summary>
-            Get Specific DeliveryMethodAttribute by DelMethodID_010
-            </summary>
-            <param name="id"></param>
-            <param name="DelMethod"></param>
-            <returns>1/Many Json or NULL</returns>
-        </member>
         <member name="T:Inventory_API4.Controllers.ItemAttributeController">
             <summary>
-            ItemAttribute
+            Item Attribute
             </summary>
         </member>
         <member name="M:Inventory_API4.Controllers.ItemAttributeController.Post(Inventory_Domain_Layer._012_invItemAttributeDomain)">
             <summary>
-            Add new ItemAttribute
+            Add new Item Attribute
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.ItemAttributeController.Put(System.Int32,Inventory_Domain_Layer._012_invItemAttributeDomain)">
             <summary>
-            Update ItemAttribute by ID with JSON Body
+            Update Item Attribute by ID with JSON Body
             </summary>
             <param name="id"></param>
             <param name="body"></param>
@@ -808,16 +800,16 @@
         </member>
         <member name="M:Inventory_API4.Controllers.ItemAttributeController.Get">
             <summary>
-            Get List of ItemAttribute
+            Get List of Item Attribute
             </summary>
             <returns>List</returns>
         </member>
         <member name="M:Inventory_API4.Controllers.ItemAttributeController.Get(System.Int32)">
             <summary>
-            Get Specific ItemAttribute by ID
+            Get Specific Item Attribute by ID
             </summary>
             <param name="id"></param>
-            <returns>1 JSON OR NULL</returns>
+            <returns>1 JSON OR </returns>
         </member>
         <member name="T:Inventory_API4.Controllers.ItemCategoryController">
             <summary>
@@ -826,14 +818,14 @@
         </member>
         <member name="M:Inventory_API4.Controllers.ItemCategoryController.Post(Inventory_Domain_Layer._016_invRefItemCategoryDomain)">
             <summary>
-            Add new ItemCategory
+            Add new Item Category
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.ItemCategoryController.Put(System.Int32,Inventory_Domain_Layer._016_invRefItemCategoryDomain)">
             <summary>
-            Update ItemCategory by ID with JSON Body
+            Update Item Category by ID with JSON Body
             </summary>
             <param name="id"></param>
             <param name="body"></param>
@@ -841,32 +833,32 @@
         </member>
         <member name="M:Inventory_API4.Controllers.ItemCategoryController.Get">
             <summary>
-            Get List of ItemCategory
+            Get List of Item Category
             </summary>
             <returns>List</returns>
         </member>
         <member name="M:Inventory_API4.Controllers.ItemCategoryController.Get(System.Int32)">
             <summary>
-            Get Specific ItemCategory by ID
+            Get Specific Item Category by ID
             </summary>
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
         </member>
         <member name="T:Inventory_API4.Controllers.ItemImageController">
             <summary>
-            ItemImage
+            Item Image
             </summary>
         </member>
         <member name="M:Inventory_API4.Controllers.ItemImageController.Post(Inventory_Domain_Layer._014_invRefItemImageDomain)">
             <summary>
-            Add new ItemImage
+            Add new Item Image
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.ItemImageController.Put(System.Int32,Inventory_Domain_Layer._014_invRefItemImageDomain)">
             <summary>
-            Update ItemImage by ID with JSON Body
+            Update Item Image by ID with JSON Body
             </summary>
             <param name="id"></param>
             <param name="body"></param>
@@ -874,13 +866,13 @@
         </member>
         <member name="M:Inventory_API4.Controllers.ItemImageController.Get">
             <summary>
-            Get List of ItemImage
+            Get List of Item Image
             </summary>
             <returns>List</returns>
         </member>
         <member name="M:Inventory_API4.Controllers.ItemImageController.Get(System.Int32)">
             <summary>
-            Get Specific ItemImage by ID
+            Get Specific Item Image by ID
             </summary>
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
@@ -920,19 +912,19 @@
         </member>
         <member name="T:Inventory_API4.Controllers.ItemsEntryListController">
             <summary>
-            ItemsEntryList
+            Items Entry List
             </summary>
         </member>
         <member name="M:Inventory_API4.Controllers.ItemsEntryListController.Post(Inventory_Domain_Layer._013_invItemsEntryListDomain)">
             <summary>
-            Add new ItemsEntryList
+            Add new Items Entry List
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.ItemsEntryListController.Put(System.Int32,Inventory_Domain_Layer._013_invItemsEntryListDomain)">
             <summary>
-            Update ItemsEntryList by ID with JSON Body
+            Update Items Entry List by ID with JSON Body
             </summary>
             <param name="id"></param>
             <param name="body"></param>
@@ -940,32 +932,32 @@
         </member>
         <member name="M:Inventory_API4.Controllers.ItemsEntryListController.Get">
             <summary>
-            Get List of ItemsEntryList
+            Get List of Items Entry List
             </summary>
             <returns>List</returns>
         </member>
         <member name="M:Inventory_API4.Controllers.ItemsEntryListController.Get(System.Int32)">
             <summary>
-            Get Specific ItemsEntryList by ID
+            Get Specific Items Entry List by ID
             </summary>
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
         </member>
         <member name="T:Inventory_API4.Controllers.ItemsMasterListController">
             <summary>
-            ItemsMasterList
+            Items Master List
             </summary>
         </member>
         <member name="M:Inventory_API4.Controllers.ItemsMasterListController.Post(Inventory_Domain_Layer._011_invRefItemsMasterListDomain)">
             <summary>
-            Add new ItemsMasterList
+            Add new Items Master List
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.ItemsMasterListController.Put(System.Int32,Inventory_Domain_Layer._011_invRefItemsMasterListDomain)">
             <summary>
-            Update ItemsMasterList by ID with JSON Body
+            Update Items Master List by ID with JSON Body
             </summary>
             <param name="id"></param>
             <param name="body"></param>
@@ -973,32 +965,32 @@
         </member>
         <member name="M:Inventory_API4.Controllers.ItemsMasterListController.Get">
             <summary>
-            Get List of ItemsMasterList
+            Get List of Items Master List
             </summary>
             <returns>List</returns>
         </member>
         <member name="M:Inventory_API4.Controllers.ItemsMasterListController.Get(System.Int32)">
             <summary>
-            Get Specific ItemsMasterList by ID
+            Get Specific Items Master List by ID
             </summary>
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
         </member>
         <member name="T:Inventory_API4.Controllers.PropertyName1Controller">
             <summary>
-            PropertyName1
+            Property Name1
             </summary>
         </member>
         <member name="M:Inventory_API4.Controllers.PropertyName1Controller.Post(Inventory_Domain_Layer._005_invRefPropertyName2Domain)">
             <summary>
-            Add new PropertyName1
+            Add new Property Name1
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.PropertyName1Controller.Put(System.Int32,Inventory_Domain_Layer._005_invRefPropertyName2Domain)">
             <summary>
-            Update PropertyName1 by ID with JSON Body
+            Update Property Name1 by ID with JSON Body
             </summary>
             <param name="id"></param>
             <param name="body"></param>
@@ -1006,13 +998,13 @@
         </member>
         <member name="M:Inventory_API4.Controllers.PropertyName1Controller.Get">
             <summary>
-            Get List of PropertyName1
+            Get List of Property Name1
             </summary>
             <returns>List</returns>
         </member>
         <member name="M:Inventory_API4.Controllers.PropertyName1Controller.Get(System.Int32)">
             <summary>
-            Get Specifc PropertyName1 by ID
+            Get Specifc Property Name1 by ID
             </summary>
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
@@ -1024,14 +1016,14 @@
         </member>
         <member name="M:Inventory_API4.Controllers.PropertyName2Controller.Post(Inventory_Domain_Layer._005_invRefPropertyName2Domain)">
             <summary>
-            Add new PropertyName2
+            Add new Property Name2
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.PropertyName2Controller.Put(System.Int32,Inventory_Domain_Layer._005_invRefPropertyName2Domain)">
             <summary>
-            Update PropertyName2 by ID with JSON Body
+            Update Property Name2 by ID with JSON Body
             </summary>
             <param name="id"></param>
             <param name="body"></param>
@@ -1039,32 +1031,32 @@
         </member>
         <member name="M:Inventory_API4.Controllers.PropertyName2Controller.Get">
             <summary>
-            Get List of PropertyName2
+            Get List of Property Name2
             </summary>
             <returns>List</returns>
         </member>
         <member name="M:Inventory_API4.Controllers.PropertyName2Controller.Get(System.Int32)">
             <summary>
-            Get Specific PropertyName2 by ID
+            Get Specific Property Name2 by ID
             </summary>
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
         </member>
         <member name="T:Inventory_API4.Controllers.DeliveryMethodController">
             <summary>
-            DeliveryMethod
+            Delivery Method
             </summary>
         </member>
         <member name="M:Inventory_API4.Controllers.DeliveryMethodController.Post(Inventory_Domain_Layer._010_invRefDeliveryMethodDomain)">
             <summary>
-            Add new DeliveryMethod
+            Add new Delivery Method
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.DeliveryMethodController.Put(System.Int32,Inventory_Domain_Layer._010_invRefDeliveryMethodDomain)">
             <summary>
-            Update DeliveryMethod by ID with JSON BODY
+            Update Delivery Method by ID with JSON BODY
             </summary>
             <param name="id"></param>
             <param name="body"></param>
@@ -1072,13 +1064,13 @@
         </member>
         <member name="M:Inventory_API4.Controllers.DeliveryMethodController.Get">
             <summary>
-            Get List of DeliveryMethod
+            Get List of Delivery Method
             </summary>
             <returns>List</returns>
         </member>
         <member name="M:Inventory_API4.Controllers.DeliveryMethodController.Get(System.Int32)">
             <summary>
-            Get Specific DeliveryMethod by ID
+            Get Specific Delivery Method by ID
             </summary>
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
