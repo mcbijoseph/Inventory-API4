@@ -12,7 +12,7 @@ using System.Web.Http.Cors;
 namespace Inventory_API4.Controllers
 {
     /// <summary>
-    /// Item Image
+    /// ItemImage
     /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ItemImageController : ApiController
@@ -20,7 +20,7 @@ namespace Inventory_API4.Controllers
         I_014_invRefItemImageBL<_014_invRefItemImageDomain>  cat3 = new _014_invRefItemImageBL();
 
         /// <summary>
-        /// Add new Item Image
+        /// Add new ItemImage
         /// </summary>
         /// <param name="body"></param>
         /// <returns></returns>
@@ -33,7 +33,7 @@ namespace Inventory_API4.Controllers
 
         //Update
         /// <summary>
-        /// Update Item Image by ID with JSON Body
+        /// Update ItemImage by ID with JSON Body
         /// </summary>
         /// <param name="id"></param>
         /// <param name="body"></param>
@@ -47,7 +47,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get List of Item Image
+        /// Get List of ItemImage
         /// </summary>
         /// <returns>List</returns>
         public IHttpActionResult Get()
@@ -61,7 +61,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get Specific Item Image by ID
+        /// Get Specific ItemImage by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>

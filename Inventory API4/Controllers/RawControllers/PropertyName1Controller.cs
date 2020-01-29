@@ -12,7 +12,7 @@ using System.Web.Http.Cors;
 namespace Inventory_API4.Controllers
 {
     /// <summary>
-    /// Property Name1
+    /// PropertyName1
     /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class PropertyName1Controller : ApiController
@@ -20,7 +20,7 @@ namespace Inventory_API4.Controllers
         I_005_invRefPropertyName2BL<_005_invRefPropertyName2Domain> cat3 = new _005_invRefPropertyName2BL();
 
         /// <summary>
-        /// Add new Property Name1
+        /// Add new PropertyName1
         /// </summary>
         /// <param name="body"></param>
         /// <returns></returns>
@@ -33,7 +33,7 @@ namespace Inventory_API4.Controllers
 
         //Update
         /// <summary>
-        /// Update Property Name1 by ID with JSON Body
+        /// Update PropertyName1 by ID with JSON Body
         /// </summary>
         /// <param name="id"></param>
         /// <param name="body"></param>
@@ -47,7 +47,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get List of Property Name1
+        /// Get List of PropertyName1
         /// </summary>
         /// <returns>List</returns>
         public IHttpActionResult Get()
@@ -61,7 +61,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get Specifc Property Name1 by ID
+        /// Get Specifc PropertyName1 by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>

@@ -12,7 +12,7 @@ using System.Web.Http.Cors;
 namespace Inventory_API4.Controllers
 {
     /// <summary>
-    /// Documents Entry List
+    /// DocumentsEntryList
     /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class DocEntryListController : ApiController
@@ -20,7 +20,7 @@ namespace Inventory_API4.Controllers
         I_007_invRefDocEntryListBL<_007_invRefDocEntryListDomain> cat3 = new _007_invRefDocEntryListBL();
 
         /// <summary>
-        /// Add new Documents Entry List
+        /// Add new DocumentsEntryList
         /// </summary>
         /// <param name="body"></param>
         /// <returns></returns>
@@ -33,7 +33,7 @@ namespace Inventory_API4.Controllers
 
         //Update
         /// <summary>
-        /// Update Documents Entry List by ID with JSON Body
+        /// Update DocumentsEntryList by ID with JSON Body
         /// </summary>
         /// <param name="id"></param>
         /// <param name="body"></param>
@@ -47,7 +47,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get List of Documents Entry List
+        /// Get List of DocumentsEntryList
         /// </summary>
         /// <returns>List</returns>
         public IHttpActionResult Get()
@@ -61,7 +61,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get Specific Documents Entry List by ID
+        /// Get Specific DocumentsEntryList by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>

@@ -12,7 +12,7 @@ using System.Web.Http.Cors;
 namespace Inventory_API4.Controllers
 {
     /// <summary>
-    /// Item Attribute
+    /// ItemAttribute
     /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ItemAttributeController : ApiController
@@ -21,7 +21,7 @@ namespace Inventory_API4.Controllers
         I_012_invItemAttributeBL<_012_invItemAttributeDomain> cat3 = new _012_invItemAttrivbuteBL();
 
         /// <summary>
-        /// Add new Item Attribute
+        /// Add new ItemAttribute
         /// </summary>
         /// <param name="body"></param>
         /// <returns></returns>
@@ -34,7 +34,7 @@ namespace Inventory_API4.Controllers
 
         //Update
         /// <summary>
-        /// Update Item Attribute by ID with JSON Body
+        /// Update ItemAttribute by ID with JSON Body
         /// </summary>
         /// <param name="id"></param>
         /// <param name="body"></param>
@@ -48,7 +48,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get List of Item Attribute
+        /// Get List of ItemAttribute
         /// </summary>
         /// <returns>List</returns>
         public IHttpActionResult Get()
@@ -62,10 +62,10 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get Specific Item Attribute by ID
+        /// Get Specific ItemAttribute by ID
         /// </summary>
         /// <param name="id"></param>
-        /// <returns>1 JSON OR </returns>
+        /// <returns>1 JSON OR NULL</returns>
         public IHttpActionResult Get(int id)
         {
             var result = cat3.Get(id);

@@ -12,7 +12,7 @@ using System.Web.Http.Cors;
 namespace Inventory_API4.Controllers
 {
     /// <summary>
-    /// Items Master List
+    /// ItemsMasterList
     /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ItemsMasterListController : ApiController
@@ -20,7 +20,7 @@ namespace Inventory_API4.Controllers
         I_011_invRefItemsMasterListBL<_011_invRefItemsMasterListDomain> cat3 = new _011_invRefItemsMasterListBL();
 
         /// <summary>
-        /// Add new Items Master List
+        /// Add new ItemsMasterList
         /// </summary>
         /// <param name="body"></param>
         /// <returns></returns>
@@ -33,7 +33,7 @@ namespace Inventory_API4.Controllers
 
         //Update
         /// <summary>
-        /// Update Items Master List by ID with JSON Body
+        /// Update ItemsMasterList by ID with JSON Body
         /// </summary>
         /// <param name="id"></param>
         /// <param name="body"></param>
@@ -47,7 +47,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get List of Items Master List
+        /// Get List of ItemsMasterList
         /// </summary>
         /// <returns>List</returns>
         public IHttpActionResult Get()
@@ -61,7 +61,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get Specific Items Master List by ID
+        /// Get Specific ItemsMasterList by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>

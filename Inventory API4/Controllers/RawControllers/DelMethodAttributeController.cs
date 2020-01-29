@@ -12,7 +12,7 @@ using System.Web.Http.Cors;
 namespace Inventory_API4.Controllers
 {
     /// <summary>
-    /// Delivery Method Attribute
+    /// DeliveryMethodAttribute
     /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class DelMethodAttributeController : ApiController
@@ -20,7 +20,7 @@ namespace Inventory_API4.Controllers
         I_008_invRefDelMethodAttributeBL<_008_invRefDelMethodAttributeDomain> cat3 = new _008_invRefDelMethodAttributeBL();
 
         /// <summary>
-        /// Add new Delivery Method Attribute
+        /// Add new DeliveryMethodAttribute
         /// </summary>
         /// <param name="body"></param>
         /// <returns></returns>
@@ -33,7 +33,7 @@ namespace Inventory_API4.Controllers
 
         //Update
         /// <summary>
-        /// Update Delivery Method Attribute by ID with JSON Body
+        /// Update DeliveryMethodAttribute by ID with JSON Body
         /// </summary>
         /// <param name="id"></param>
         /// <param name="body"></param>
@@ -47,7 +47,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get List of Delivery Method Attribute 
+        /// Get List of DeliveryMethodAttribute 
         /// </summary>
         /// <returns>List</returns>
         public IHttpActionResult Get()
@@ -61,13 +61,29 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get Specific Delivery Method Attribute by ID
+        /// Get Specific DeliveryMethodAttribute by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
         public IHttpActionResult Get(int id)
         {
             var result = cat3.Get(id);
+            /*
+             *
+             */
+
+            return Ok(result);
+        }
+
+        /// <summary>
+        /// Get Specific DeliveryMethodAttribute by DelMethodID_010
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="DelMethod"></param>
+        /// <returns>1/Many Json or NULL</returns>
+        public IHttpActionResult Get(int id, int DelMethod)
+        {
+            var result = cat3.GetDelMethod(DelMethod);
             /*
              *
              */
