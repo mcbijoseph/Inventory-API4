@@ -32,3 +32,5 @@ C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryBL\obj\Release\Invento
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryBL\obj\Release\Inventory.BL.csproj.CopyComplete
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryBL\obj\Release\InventoryBL.dll
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryBL\obj\Release\InventoryBL.pdb
+C:\Users\LENOVO\Source\Repos\Inventory-API4\InventoryBL\bin\Release\Newtonsoft.Json.dll
+C:\Users\LENOVO\Source\Repos\Inventory-API4\InventoryBL\bin\Release\Newtonsoft.Json.xml
