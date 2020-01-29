@@ -12,7 +12,7 @@ namespace InventoryBL
 {
     public interface I_008_invRefDelMethodAttributeBL<TEntity> : Common.IBaseBL<TEntity> where TEntity : class
     {
-        IEnumerable<_008_invRefDelMethodAttributeDomain> GetDelMethod(int DelMethod);
+        IEnumerable<_008_invRefDelMethodAttributeDomain> GetData(int id, int DelMethod);
     }
 
 
