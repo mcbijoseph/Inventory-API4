@@ -8,6 +8,7 @@ using Inventory_Domain_Layer;
 using Inventory_API4.Filters;
 using InventoryBL;
 using System.Web.Http.Cors;
+using System.Web.Http.Description;
 
 namespace Inventory_API4.Controllers.RawControllers
 {
@@ -28,6 +29,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// <returns></returns>
         [HttpPost]
         [DomainValidatorFilter]
+        [ResponseType(typeof(MessageViewDomain))]
         public IHttpActionResult Post([FromBody]_018_invRefItemConditionDomain body)
         {
             return Json(attrib.Command(body, "insert"));
@@ -42,6 +44,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// <returns></returns>
         [HttpPut]
         [DomainValidatorFilter]
+        [ResponseType(typeof(MessageViewDomain))]
         public IHttpActionResult Put(int id, [FromBody]_018_invRefItemConditionDomain body)
         {
             body.ID = id;
@@ -53,6 +56,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
+        [ResponseType(typeof(MessageViewDomain))]
         public IHttpActionResult Delete(int id)
         {
             ///body.ID = id;
@@ -63,6 +67,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// Get List of ItemCondition
         /// </summary>
         /// <returns>List</returns>
+        [ResponseType(typeof(IEnumerable<_001_invRefCategory1Domain>))]
         public IHttpActionResult Get()
         {
             var result = attrib.Get();
@@ -78,6 +83,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
+        [ResponseType(typeof(_001_invRefCategory1Domain))]
         public IHttpActionResult Get(int id)
         {
             var result = attrib.Get(id);

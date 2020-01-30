@@ -8,6 +8,7 @@ using Inventory_Domain_Layer;
 using Inventory_API4.Filters;
 using InventoryBL;
 using System.Web.Http.Cors;
+using System.Web.Http.Description;
 
 namespace Inventory_API4.Controllers
 {
@@ -26,6 +27,7 @@ namespace Inventory_API4.Controllers
         /// <returns></returns>
         [HttpPost]
         [DomainValidatorFilter]
+        [ResponseType(typeof(MessageViewDomain))]
         public IHttpActionResult Post([FromBody]_002_invRefCategory2Domain body)
         {
             return Json(cat2.Command(body, "insert"));
@@ -40,6 +42,7 @@ namespace Inventory_API4.Controllers
         /// <returns></returns>
         [HttpPut]
         [DomainValidatorFilter]
+        [ResponseType(typeof(MessageViewDomain))]
         public IHttpActionResult Put(int id, [FromBody]_002_invRefCategory2Domain body)
         {
             body.ID = id;
@@ -51,6 +54,7 @@ namespace Inventory_API4.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
+        [ResponseType(typeof(MessageViewDomain))]
         public IHttpActionResult Delete(int id)
         {
             ///body.ID = id;
@@ -61,6 +65,7 @@ namespace Inventory_API4.Controllers
         /// Get List of Category2
         /// </summary>
         /// <returns>List</returns>
+        [ResponseType(typeof(IEnumerable<_001_invRefCategory1Domain>))]
         public IHttpActionResult Get()
         {
             var result = cat2.Get();
@@ -76,6 +81,7 @@ namespace Inventory_API4.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
+        [ResponseType(typeof(_001_invRefCategory1Domain))]
         public IHttpActionResult Get(int id)
         {
             var result = cat2.Get(id);
