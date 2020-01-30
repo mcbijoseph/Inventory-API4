@@ -20,7 +20,12 @@ namespace Inventory_API4.Controllers
     {
         //IProjectBL<ProjectDomainModel> _projectBL = new ProjectBL();
         //attributeDo<_001_invRefCategory1Domain> cat1 = new _001_invRefCategory1BL();
-        I_009_invRefUnitsBL<_009_invRefUnitsDomain> attrib = new _009_invRefUnitsBL();
+        I_009_invRefUnitsBL<_009_invRefUnitsDomain> attrib;
+
+        public UnitsController(I_009_invRefUnitsBL<_009_invRefUnitsDomain> _attrib)
+        {
+            attrib = _attrib;
+        }
 
         /// <summary>
         /// Add new Units

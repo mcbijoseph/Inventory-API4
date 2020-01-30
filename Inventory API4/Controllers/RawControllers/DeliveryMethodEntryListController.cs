@@ -20,7 +20,12 @@ namespace Inventory_API4.Controllers.RawControllers
     {
         //IProjectBL<ProjectDomainModel> _projectBL = new ProjectBL();
         //attributeDo<_001_invRefCategory1Domain> cat1 = new _001_invRefCategory1BL();
-        I_017_invDeliveryMethodEntryListBL<_017_invDeliveryMethodEntryListDomain> attrib = new _017_invDeliveryMethodEntryListBL();
+        I_017_invDeliveryMethodEntryListBL<_017_invDeliveryMethodEntryListDomain> attrib;
+
+        public DeliveryMethodEntryListController(I_017_invDeliveryMethodEntryListBL<_017_invDeliveryMethodEntryListDomain> _attrib) 
+        {
+            attrib = _attrib;
+        }
 
         /// <summary>
         /// Add new DeliveryMethodEntryList

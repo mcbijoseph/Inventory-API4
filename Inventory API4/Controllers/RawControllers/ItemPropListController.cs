@@ -18,7 +18,12 @@ namespace Inventory_API4.Controllers
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ItemPropListController : ApiController
     {
-        I_015_invRefItemPropListBL<_015_invRefItemPropListDomain> cat3 = new _015_invRefItemPropListBL();
+        I_015_invRefItemPropListBL<_015_invRefItemPropListDomain> cat3;
+
+        public ItemPropListController(I_015_invRefItemPropListBL<_015_invRefItemPropListDomain> _cat3)
+        {
+            cat3 = _cat3;
+        }
 
         /// <summary>
         /// Add new ItemPropertyList

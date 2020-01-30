@@ -18,7 +18,12 @@ namespace Inventory_API4.Controllers
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ItemImageController : ApiController
     {
-        I_014_invRefItemImageBL<_014_invRefItemImageDomain>  cat3 = new _014_invRefItemImageBL();
+        I_014_invRefItemImageBL<_014_invRefItemImageDomain>  cat3;
+
+        public ItemImageController(I_014_invRefItemImageBL<_014_invRefItemImageDomain> _cat3)
+        {
+            cat3 = _cat3;
+        }
 
         /// <summary>
         /// Add new ItemImage

@@ -20,7 +20,12 @@ namespace Inventory_API4.Controllers.RawControllers
     {
         //IProjectBL<ProjectDomainModel> _projectBL = new ProjectBL();
         //attributeDo<_001_invRefCategory1Domain> cat1 = new _001_invRefCategory1BL();
-        I_018_invRefItemConditiontBL<_018_invRefItemConditionDomain> attrib = new _018_invRefItemConditiontBL();
+        I_018_invRefItemConditiontBL<_018_invRefItemConditionDomain> attrib;
+
+        public ItemConditionController(I_018_invRefItemConditiontBL<_018_invRefItemConditionDomain> _attrib)
+        {
+            attrib = _attrib;
+        }
 
         /// <summary>
         /// Add new ItemCondition

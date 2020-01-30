@@ -18,7 +18,12 @@ namespace Inventory_API4.Controllers
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ItemsEntryListController : ApiController
     {
-        I_013_invItemsEntryListBL<_013_invItemsEntryListDomain> cat3 = new _013_invItemsEntryListBL();
+        I_013_invItemsEntryListBL<_013_invItemsEntryListDomain> cat3;
+
+        public ItemsEntryListController(I_013_invItemsEntryListBL<_013_invItemsEntryListDomain> _cat3)
+        {
+            cat3 = _cat3;
+        }
 
         /// <summary>
         /// Add new ItemsEntryList

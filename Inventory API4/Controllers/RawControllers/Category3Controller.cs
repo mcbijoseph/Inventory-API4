@@ -18,7 +18,12 @@ namespace Inventory_API4.Controllers
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class Category3Controller : ApiController
     {
-        I_003_invRefCategory3BL<_003_invRefCategory3Domain> cat3 = new _003_invRefCategory3BL();
+        I_003_invRefCategory3BL<_003_invRefCategory3Domain> cat3;
+
+        public Category3Controller(I_003_invRefCategory3BL<_003_invRefCategory3Domain> _cat3)
+        {
+            cat3 = _cat3;
+        }
 
         /// <summary>
         /// Add new Category3

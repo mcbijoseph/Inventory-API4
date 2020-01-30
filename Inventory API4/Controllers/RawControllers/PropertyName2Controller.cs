@@ -21,7 +21,12 @@ namespace Inventory_API4.Controllers
         //IProjectBL<ProjectDomainModel> _projectBL = new ProjectBL();
         //attributeDo<_001_invRefCategory1Domain> cat1 = new _001_invRefCategory1BL();
         //I_006_invRefAttributeBL<_006_invRefAttributeDomain> attrib = new _006_invRefAttributeBL();
-        I_005_invRefPropertyName2BL<_005_invRefPropertyName2Domain> attrib = new _005_invRefPropertyName2BL();
+        I_005_invRefPropertyName2BL<_005_invRefPropertyName2Domain> attrib;
+
+        public PropertyName2Controller(I_005_invRefPropertyName2BL<_005_invRefPropertyName2Domain> _attrib)
+        {
+            attrib = _attrib;
+        }
 
         /// <summary>
         /// Add new PropertyName2

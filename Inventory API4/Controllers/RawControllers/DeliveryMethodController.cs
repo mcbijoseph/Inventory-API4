@@ -20,7 +20,12 @@ namespace Inventory_API4.Controllers
     {
         //IProjectBL<ProjectDomainModel> _projectBL = new ProjectBL();
         //attributeDo<_001_invRefCategory1Domain> cat1 = new _001_invRefCategory1BL();
-        I_010_invRefDeliveryMethodBL<_010_invRefDeliveryMethodDomain> attrib = new _010_invRefDeliveryMethodBL();
+        I_010_invRefDeliveryMethodBL<_010_invRefDeliveryMethodDomain> attrib;
+
+        public DeliveryMethodController(I_010_invRefDeliveryMethodBL<_010_invRefDeliveryMethodDomain> _attrib)
+        {
+            attrib = _attrib;
+        }
 
         /// <summary>
         /// Add new DeliveryMethod

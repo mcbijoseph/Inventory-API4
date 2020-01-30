@@ -18,7 +18,12 @@ namespace Inventory_API4.Controllers
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ItemsMasterListController : ApiController
     {
-        I_011_invRefItemsMasterListBL<_011_invRefItemsMasterListDomain> cat3 = new _011_invRefItemsMasterListBL();
+        I_011_invRefItemsMasterListBL<_011_invRefItemsMasterListDomain> cat3;
+
+        public ItemsMasterListController(I_011_invRefItemsMasterListBL<_011_invRefItemsMasterListDomain> _cat3)
+        {
+            cat3 = _cat3;
+        }
 
         /// <summary>
         /// Add new ItemsMasterList

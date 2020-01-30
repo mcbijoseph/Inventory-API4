@@ -18,7 +18,12 @@ namespace Inventory_API4.Controllers
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class PropertyName1Controller : ApiController
     {
-        I_005_invRefPropertyName2BL<_005_invRefPropertyName2Domain> cat3 = new _005_invRefPropertyName2BL();
+        I_005_invRefPropertyName2BL<_005_invRefPropertyName2Domain> cat3;
+
+        public PropertyName1Controller(I_005_invRefPropertyName2BL<_005_invRefPropertyName2Domain> _cat3)
+        {
+            cat3 = _cat3;
+        }
 
         /// <summary>
         /// Add new PropertyName1

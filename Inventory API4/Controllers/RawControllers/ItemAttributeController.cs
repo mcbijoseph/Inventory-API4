@@ -19,7 +19,12 @@ namespace Inventory_API4.Controllers
     public class ItemAttributeController : ApiController
     {
 
-        I_012_invItemAttributeBL<_012_invItemAttributeDomain> cat3 = new _012_invItemAttrivbuteBL();
+        I_012_invItemAttributeBL<_012_invItemAttributeDomain> cat3;
+
+        public ItemAttributeController(I_012_invItemAttributeBL<_012_invItemAttributeDomain> _cat3)
+        {
+            cat3 = _cat3;
+        }
 
         /// <summary>
         /// Add new ItemAttribute

@@ -18,7 +18,12 @@ namespace Inventory_API4.Controllers
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class DelMethodAttributeController : ApiController
     {
-        I_008_invRefDelMethodAttributeBL<_008_invRefDelMethodAttributeDomain> cat3 = new _008_invRefDelMethodAttributeBL();
+        I_008_invRefDelMethodAttributeBL<_008_invRefDelMethodAttributeDomain> cat3;
+
+        public DelMethodAttributeController(I_008_invRefDelMethodAttributeBL<_008_invRefDelMethodAttributeDomain> _cat3)
+        {
+            cat3 = _cat3;
+        }
 
         /// <summary>
         /// Add new DeliveryMethodAttribute
