@@ -22,7 +22,7 @@ namespace InventoryBL
     {
         private IDBHelper _dbHelper = new DBHelper();
 
-        public MessageViewDomain Command(_003_invRefCategory3Domain projectDomain, string commandType)
+        public MessageViewDomain Command(_003_invRefCategory3Domain projectDomain, Command commandType)
         {
 
             var sqlParameters = new List<SqlParameter>()

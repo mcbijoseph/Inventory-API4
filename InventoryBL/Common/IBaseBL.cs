@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Inventory_Domain_Layer;
 using System.Data;
+using Inventory.DAL;
 
 namespace InventoryBL.Common
 {
@@ -14,7 +15,7 @@ namespace InventoryBL.Common
         IEnumerable<TEntity> Get();
         TEntity Get(int id);
         IEnumerable<TEntity> Search(int offset, int limit, string orderBy);
-        MessageViewDomain Command(TEntity entity, string commandType);
+        MessageViewDomain Command(TEntity entity, Command commandType);
         MessageViewDomain Delete(int id);
     }
     public class BaseBL

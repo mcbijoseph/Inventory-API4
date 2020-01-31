@@ -514,6 +514,39 @@
             <param name="id">ID of target</param>
             <returns>1 JSON or NULL</returns>
         </member>
+        <member name="T:Inventory_API4.Controllers.DeriveControllers.TestController">
+            <summary>
+            StockEntry
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DeriveControllers.TestController.Post(Inventory_Domain_Layer.Test._007_invRefDocEntryListDomainSample)">
+            <summary>
+            Add new STOCK with ItemEntryList[], DocEntry, DeliveryEntry[]
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DeriveControllers.TestController.Put(System.Int32,Inventory_Domain_Layer.Test._007_invRefDocEntryListDomainSample)">
+            <summary>
+            Update StockEntry by ID with JSON BODY
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DeriveControllers.TestController.Get">
+            <summary>
+            Get List of All StockEntry
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DeriveControllers.TestController.Get(System.Int32)">
+            <summary>
+            Get Specific StockEntry
+            </summary>
+            <param name="id">ID of target</param>
+            <returns>1 JSON or NULL</returns>
+        </member>
         <member name="T:Inventory_API4.Controllers.AttributeController">
             <summary>
             Items Attribute

@@ -194,6 +194,7 @@
     <Compile Include="Controllers\RawControllers\PropertyName2Controller.cs" />
     <Compile Include="Controllers\RawControllers\DeliveryMethodController.cs" />
     <Compile Include="Controllers\RawControllers\UnitsController.cs" />
+    <Compile Include="Controllers\Test\TestController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Filters\DomainValidatorFilter.cs" />
     <Compile Include="Global.asax.cs">
