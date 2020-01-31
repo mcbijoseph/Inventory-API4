@@ -20,7 +20,7 @@ namespace InventoryBL
     {
         private IDBHelper _dbHelper = new DBHelper();
 
-        public MessageViewDomain Command(_017_invDeliveryMethodEntryListDomain projectDomain, string commandType)
+        public MessageViewDomain Command(_017_invDeliveryMethodEntryListDomain projectDomain, Command commandType)
         {
 
             var sqlParameters = new List<SqlParameter>()
@@ -32,7 +32,7 @@ namespace InventoryBL
 
             };
 
-            return this.GetMessage(_dbHelper.Command("sp017invDeliveryMethodEntryListCommand", commandType, sqlParameters).Tables[0]);
+            return this.GetMessage(_dbHelper.Command("sp017invDeliveryMethodEntryListCommand", commandType.ToString(), sqlParameters).Tables[0]);
 
 
         }
@@ -40,7 +40,7 @@ namespace InventoryBL
         public MessageViewDomain Delete(int id)
         {
             //throw new NotImplementedException();
-            return Command(new _017_invDeliveryMethodEntryListDomain() { ID = id }, "delete");
+            return Command(new _017_invDeliveryMethodEntryListDomain() { ID = id }, Inventory_Domain_Layer.Command.Delete);
         }
 
         public IEnumerable<_017_invDeliveryMethodEntryListDomain> Get()

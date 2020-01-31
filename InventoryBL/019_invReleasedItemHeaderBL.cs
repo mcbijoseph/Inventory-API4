@@ -19,7 +19,7 @@ namespace InventoryBL
     {
         private IDBHelper _dbHelper = new DBHelper();
 
-        public MessageViewDomain Command(_019_invReleasedItemHeaderDomain projectDomain, string commandType)
+        public MessageViewDomain Command(_019_invReleasedItemHeaderDomain projectDomain, Command commandType)
         {
 
             var sqlParameters = new List<SqlParameter>()
@@ -34,7 +34,7 @@ namespace InventoryBL
                 new SqlParameter { ParameterName = "@ReceivedDate", Value = projectDomain.ReceivedDate, Direction = ParameterDirection.Input }
             };
 
-            return this.GetMessage(_dbHelper.Command("sp019invReleasedItemHeaderCommand", commandType, sqlParameters).Tables[0]);
+            return this.GetMessage(_dbHelper.Command("sp019invReleasedItemHeaderCommand", commandType.ToString(), sqlParameters).Tables[0]);
 
 
         }
@@ -42,7 +42,7 @@ namespace InventoryBL
         public MessageViewDomain Delete(int id)
         {
             //throw new NotImplementedException();
-            return Command(new _019_invReleasedItemHeaderDomain() { ID = id }, "delete");
+            return Command(new _019_invReleasedItemHeaderDomain() { ID = id }, Inventory_Domain_Layer.Command.Delete);
         }
 
         public IEnumerable<_019_invReleasedItemHeaderDomain> Get()

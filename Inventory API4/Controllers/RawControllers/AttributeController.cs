@@ -29,7 +29,7 @@ namespace Inventory_API4.Controllers
         [DomainValidatorFilter]
         public IHttpActionResult Post([FromBody]_006_invRefAttributeDomain body)
         {
-            return Json(cat1.Command(body, "insert"));
+            return Json(cat1.Command(body, Command.Insert));
         }
 
         /// <summary>
@@ -44,7 +44,7 @@ namespace Inventory_API4.Controllers
         public IHttpActionResult Put(int id, [FromBody]_006_invRefAttributeDomain body)
         {
             body.ID = id;
-            return Json(cat1.Command(body, "update"));
+            return Json(cat1.Command(body, Command.Update));
         }
 
         /// <summary>

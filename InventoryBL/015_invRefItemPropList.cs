@@ -20,7 +20,7 @@ namespace InventoryBL
     {
         private IDBHelper _dbHelper = new DBHelper();
 
-        public MessageViewDomain Command(_015_invRefItemPropListDomain projectDomain, string commandType)
+        public MessageViewDomain Command(_015_invRefItemPropListDomain projectDomain, Command commandType)
         {
 
             var sqlParameters = new List<SqlParameter>()
@@ -33,7 +33,7 @@ namespace InventoryBL
 
             };
 
-            return this.GetMessage(_dbHelper.Command("sp015invRefItemPropListCommand", commandType, sqlParameters).Tables[0]);
+            return this.GetMessage(_dbHelper.Command("sp015invRefItemPropListCommand", commandType.ToString(), sqlParameters).Tables[0]);
 
 
         }
@@ -41,7 +41,7 @@ namespace InventoryBL
         public MessageViewDomain Delete(int id)
         {
             ///throw new NotImplementedException();
-            return Command(new _015_invRefItemPropListDomain() { ID = id }, "delete");
+            return Command(new _015_invRefItemPropListDomain() { ID = id }, Inventory_Domain_Layer.Command.Delete);
         }
 
         public IEnumerable<_015_invRefItemPropListDomain> Get()

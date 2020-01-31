@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 namespace Inventory_Domain_Layer
 {
-    public enum Command { Insert, Update = 2, Delete = 0 }
+    public enum Command { Insert, Update, Delete}
 }

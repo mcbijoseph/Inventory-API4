@@ -38,7 +38,7 @@ namespace Inventory_API4.Controllers
         [ResponseType(typeof(MessageViewDomain))]
         public IHttpActionResult Post([FromBody]_005_invRefPropertyName2Domain body)
         {
-            return Json(attrib.Command(body, "insert"));
+            return Json(attrib.Command(body, Command.Insert));
         }
 
         //Update
@@ -54,7 +54,7 @@ namespace Inventory_API4.Controllers
         public IHttpActionResult Put(int id, [FromBody]_005_invRefPropertyName2Domain body)
         {
             body.ID = id;
-            return Json(attrib.Command(body, "update"));
+            return Json(attrib.Command(body, Command.Update));
         }
 
         /// <summary>

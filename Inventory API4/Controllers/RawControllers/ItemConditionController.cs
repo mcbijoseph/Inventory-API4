@@ -37,7 +37,7 @@ namespace Inventory_API4.Controllers.RawControllers
         [ResponseType(typeof(MessageViewDomain))]
         public IHttpActionResult Post([FromBody]_018_invRefItemConditionDomain body)
         {
-            return Json(attrib.Command(body, "insert"));
+            return Json(attrib.Command(body, Command.Insert));
         }
 
         //Update
@@ -53,7 +53,7 @@ namespace Inventory_API4.Controllers.RawControllers
         public IHttpActionResult Put(int id, [FromBody]_018_invRefItemConditionDomain body)
         {
             body.ID = id;
-            return Json(attrib.Command(body, "update"));
+            return Json(attrib.Command(body, Command.Update));
         }
 
         /// <summary>

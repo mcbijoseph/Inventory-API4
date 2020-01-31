@@ -19,7 +19,7 @@ namespace InventoryBL
     {
         private IDBHelper _dbHelper = new DBHelper();
 
-        public MessageViewDomain Command(_022_invTransferedItemsDetailsDomain projectDomain, string commandType)
+        public MessageViewDomain Command(_022_invTransferedItemsDetailsDomain projectDomain, Command commandType)
         {
 
             var sqlParameters = new List<SqlParameter>()
@@ -33,7 +33,7 @@ namespace InventoryBL
 
             };
 
-            return this.GetMessage(_dbHelper.Command("sp022invTransferedItemsDetailsCommand", commandType, sqlParameters).Tables[0]);
+            return this.GetMessage(_dbHelper.Command("sp022invTransferedItemsDetailsCommand", commandType.ToString(), sqlParameters).Tables[0]);
 
 
         }
@@ -41,7 +41,7 @@ namespace InventoryBL
         public MessageViewDomain Delete(int id)
         {
             //throw new NotImplementedException();
-            return Command(new _022_invTransferedItemsDetailsDomain() { ID = id }, "delete");
+            return Command(new _022_invTransferedItemsDetailsDomain() { ID = id }, Inventory_Domain_Layer.Command.Delete);
         }
 
         public IEnumerable<_022_invTransferedItemsDetailsDomain> Get()

@@ -33,7 +33,7 @@ namespace InventoryBL
                 
             };
 
-            return this.GetMessage(_dbHelper.Command("sp002invRefCategory2Command", commandType, sqlParameters).Tables[0]);
+            return this.GetMessage(_dbHelper.Command("sp002invRefCategory2Command", commandType.ToString(), sqlParameters).Tables[0]);
 
 
         }
