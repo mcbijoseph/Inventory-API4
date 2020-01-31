@@ -31,7 +31,7 @@ namespace InventoryBL
                 new SqlParameter { ParameterName = "@Name", Value = projectDomain.Name, Direction = ParameterDirection.Input }
             };
 
-            return this.GetMessage(_dbHelper.Command("sp001invRefCategory1Command", commandType, sqlParameters).Tables[0]);
+            return this.GetMessage(_dbHelper.Command("sp001invRefCategory1Command", commandType.ToString(), sqlParameters).Tables[0]);
 
             
         }
@@ -39,7 +39,7 @@ namespace InventoryBL
         public MessageViewDomain Delete(int id)
         {
             // throw new NotImplementedException();
-            return Command(new _001_invRefCategory1Domain() { ID = id },Inventory.DAL.Command.Delete);
+            return Command(new _001_invRefCategory1Domain() { ID = id }, Inventory_Domain_Layer.Command.Delete);
         }
 
         public IEnumerable<_001_invRefCategory1Domain> Get()
