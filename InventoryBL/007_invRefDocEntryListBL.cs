@@ -7,6 +7,7 @@ using Inventory.DAL;
 using System.Data;
 using System.Data.SqlClient;
 using Inventory_Domain_Layer;
+using Newtonsoft.Json;
 
 namespace InventoryBL
 {
@@ -82,8 +83,14 @@ namespace InventoryBL
                 DocumentNumber = drow.Field<string>("DocumentNumber"),
                 DeliveryDate = drow.Field<DateTime>("DeliveryDate"),
                 EntryDate = drow.Field<DateTime>("EntryDate"),
-                ReceiverID_HRDB = drow.Field<int>("ReceiverID_HRDB")
+                ReceiverID_HRDB = drow.Field<int>("ReceiverID_HRDB"),
+                ItemEntryList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<_013_invItemsEntryListDomain>>(drow.Field<string>("ItemEntryList")??"[]"),
+                 DeliveryEntry = Newtonsoft.Json.JsonConvert.DeserializeObject<List<_017_invDeliveryMethodEntryListDomain>>(drow.Field<string>("DeliveryEntry")??"[]")
             });
+            
+            //string tabledata = JsonConvert.SerializeObject(_dbHelper.GetRecords("sp007invRefDocEntryListSelect", pars).Tables[0], Newtonsoft.Json.Formatting.None);
+            //return JsonConvert.DeserializeObject<List<_007_invRefDocEntryListDomain>>(tabledata );
+
         }
     }
 }

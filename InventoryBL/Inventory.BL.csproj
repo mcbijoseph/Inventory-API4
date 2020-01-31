@@ -68,9 +68,7 @@
     <Compile Include="022_invTransferedItemsDetailsBL.cs" />
     <Compile Include="023_invTransItemsDelMethodAttributeBL.cs" />
     <Compile Include="Common\IBaseBL.cs" />
-    <Compile Include="Derived\StockEntryBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Test\007_invRefDocEntryListSampleBL.cs" />
     <Content Include="Sample.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -67,10 +67,8 @@
     <Compile Include="022_invTransferedItemsDetails.cs" />
     <Compile Include="023_invTransItemsDelMethodAttribute.cs" />
     <Compile Include="Command.cs" />
-    <Compile Include="Derived\StockEntryDomain.cs" />
     <Compile Include="MessageViewDomain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Test\_007_invRefDocEntryListDomainSample.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
