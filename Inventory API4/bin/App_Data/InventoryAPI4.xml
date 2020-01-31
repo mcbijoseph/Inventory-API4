@@ -747,6 +747,166 @@
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
         </member>
+        <member name="T:Inventory_API4.Controllers.RawControllers.ReleasedItemDetailsController">
+            <summary>
+            ReleasedItemDetails
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.ReleasedItemDetailsController.Post(Inventory_Domain_Layer._020_invReleasedItemDetailsDomain)">
+            <summary>
+            Add new ReleasedItemDetails
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.ReleasedItemDetailsController.Put(System.Int32,Inventory_Domain_Layer._020_invReleasedItemDetailsDomain)">
+            <summary>
+            Update ReleasedItemDetails by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.ReleasedItemDetailsController.Delete(System.Int32)">
+            <summary>
+            Delete Specific ReleasedItemDetails
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.ReleasedItemDetailsController.Get">
+            <summary>
+            Get List of ReleasedItemDetails
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.ReleasedItemDetailsController.Get(System.Int32)">
+            <summary>
+            Get Specific ReleasedItemDetails by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.RawControllers.TransferedItemsDetailsController">
+            <summary>
+            TransferedItemsDetails
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransferedItemsDetailsController.Post(Inventory_Domain_Layer._022_invTransferedItemsDetailsDomain)">
+            <summary>
+            Add new TransferedItemsDetails
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransferedItemsDetailsController.Put(System.Int32,Inventory_Domain_Layer._022_invTransferedItemsDetailsDomain)">
+            <summary>
+            Update TransferedItemsDetails by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransferedItemsDetailsController.Delete(System.Int32)">
+            <summary>
+            Delete Specific TransferedItemsDetails
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransferedItemsDetailsController.Get">
+            <summary>
+            Get List of TransferedItemsDetails
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransferedItemsDetailsController.Get(System.Int32)">
+            <summary>
+            Get Specific TransferedItemsDetails by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.RawControllers.TransferedItemsHeaderController">
+            <summary>
+            TransferedItemsHeader
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransferedItemsHeaderController.Post(Inventory_Domain_Layer._021_invTransferedItemsHeaderDomain)">
+            <summary>
+            Add new TransferedItemsHeader
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransferedItemsHeaderController.Put(System.Int32,Inventory_Domain_Layer._021_invTransferedItemsHeaderDomain)">
+            <summary>
+            Update TransferedItemsHeader by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransferedItemsHeaderController.Delete(System.Int32)">
+            <summary>
+            Delete Specific TransferedItemsHeader
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransferedItemsHeaderController.Get">
+            <summary>
+            Get List of TransferedItemsHeader
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransferedItemsHeaderController.Get(System.Int32)">
+            <summary>
+            Get Specific TransferedItemsHeader by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.RawControllers.TransItemsDelMethodAttributeController">
+            <summary>
+            TransferedItemsDetails
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransItemsDelMethodAttributeController.Post(Inventory_Domain_Layer._023_invTransItemsDelMethodAttributeDomain)">
+            <summary>
+            Add new TransferedItemsDetails
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransItemsDelMethodAttributeController.Put(System.Int32,Inventory_Domain_Layer._023_invTransItemsDelMethodAttributeDomain)">
+            <summary>
+            Update TransferedItemsDetails by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransItemsDelMethodAttributeController.Delete(System.Int32)">
+            <summary>
+            Delete Specific TransferedItemsDetails
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransItemsDelMethodAttributeController.Get">
+            <summary>
+            Get List of TransferedItemsDetails
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransItemsDelMethodAttributeController.Get(System.Int32)">
+            <summary>
+            Get Specific TransferedItemsDetails by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
         <member name="T:Inventory_API4.Controllers.DocEntryListController">
             <summary>
             DocumentsEntryList
@@ -1191,6 +1351,46 @@
         <member name="M:Inventory_API4.Controllers.DeliveryMethodController.Get(System.Int32)">
             <summary>
             Get Specific DeliveryMethod by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.ReleasedItemHeaderController">
+            <summary>
+            ReleasedItemHeader
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ReleasedItemHeaderController.Post(Inventory_Domain_Layer._019_invReleasedItemHeaderDomain)">
+            <summary>
+            Add new ReleasedItemHeader
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ReleasedItemHeaderController.Put(System.Int32,Inventory_Domain_Layer._019_invReleasedItemHeaderDomain)">
+            <summary>
+            Update ReleasedItemHeader by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ReleasedItemHeaderController.Delete(System.Int32)">
+            <summary>
+            Delete Specific ReleasedItemHeader
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ReleasedItemHeaderController.Get">
+            <summary>
+            Get List of ReleasedItemHeader
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ReleasedItemHeaderController.Get(System.Int32)">
+            <summary>
+            Get Specific ReleasedItemHeader by ID
             </summary>
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>

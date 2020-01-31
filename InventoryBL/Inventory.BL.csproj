@@ -62,6 +62,11 @@
     <Compile Include="016_invRefItemCategory.cs" />
     <Compile Include="017_invDeliveryMethodEntryListBL.cs" />
     <Compile Include="018_invRefItemCondition.cs" />
+    <Compile Include="019_invReleasedItemHeaderBL.cs" />
+    <Compile Include="020_invReleasedItemDetailsBL.cs" />
+    <Compile Include="021_invTransferedItemsHeaderBL.cs" />
+    <Compile Include="022_invTransferedItemsDetailsBL.cs" />
+    <Compile Include="023_invTransItemsDelMethodAttributeBL.cs" />
     <Compile Include="Common\IBaseBL.cs" />
     <Compile Include="Derived\StockEntryBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

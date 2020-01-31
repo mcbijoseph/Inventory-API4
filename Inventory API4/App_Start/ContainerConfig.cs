@@ -44,7 +44,11 @@ namespace Inventory_API4.App_Start
             builder.RegisterType<InventoryBL._016_invRefItemCategoryBL>().As<InventoryBL.I_016_invRefItemCategoryBL<Inventory_Domain_Layer._016_invRefItemCategoryDomain>>();
             builder.RegisterType<InventoryBL._017_invDeliveryMethodEntryListBL>().As<InventoryBL.I_017_invDeliveryMethodEntryListBL<Inventory_Domain_Layer._017_invDeliveryMethodEntryListDomain>>();
             builder.RegisterType<InventoryBL._018_invRefItemConditiontBL>().As<InventoryBL.I_018_invRefItemConditiontBL<Inventory_Domain_Layer._018_invRefItemConditionDomain>>();
-
+            builder.RegisterType<InventoryBL._019_invReleasedItemHeaderBL>().As<InventoryBL.I_019_invReleasedItemHeaderBL<Inventory_Domain_Layer._019_invReleasedItemHeaderDomain>>();
+            builder.RegisterType<InventoryBL._020_invReleasedItemDetailsBL>().As<InventoryBL.I_020_invReleasedItemDetailsBL<Inventory_Domain_Layer._020_invReleasedItemDetailsDomain>>();
+            builder.RegisterType<InventoryBL._021_invTransferedItemsHeaderBL>().As<InventoryBL.I_021_invTransferedItemsHeaderBL<Inventory_Domain_Layer._021_invTransferedItemsHeaderDomain>>();
+            builder.RegisterType<InventoryBL._022_invTransferedItemsDetailsBL>().As<InventoryBL.I_022_invTransferedItemsDetailsBL<Inventory_Domain_Layer._022_invTransferedItemsDetailsDomain>>();
+            builder.RegisterType<InventoryBL._023_invTransItemsDelMethodAttributeBL>().As<InventoryBL.I_023_invTransItemsDelMethodAttributeBL<Inventory_Domain_Layer._023_invTransItemsDelMethodAttributeDomain>>();
 
             List<Autofac.Core.Parameter> pars = new List<Autofac.Core.Parameter>();
             //pars.Add( new Autofac.Core.Parameter(""))

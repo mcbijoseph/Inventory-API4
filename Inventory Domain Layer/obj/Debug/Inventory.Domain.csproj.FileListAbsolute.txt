@@ -7,3 +7,8 @@ C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory Domain Layer\bin\Debu
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory Domain Layer\obj\Debug\Inventory.Domain.csproj.CoreCompileInputs.cache
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory Domain Layer\obj\Debug\Inventory Domain Layer.dll
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory Domain Layer\obj\Debug\Inventory Domain Layer.pdb
+C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory Domain Layer\bin\Debug\Inventory Domain Layer.dll
+C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory Domain Layer\bin\Debug\Inventory Domain Layer.pdb
+C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory Domain Layer\obj\Debug\Inventory.Domain.csprojAssemblyReference.cache
+C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory Domain Layer\obj\Debug\Inventory Domain Layer.dll
+C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory Domain Layer\obj\Debug\Inventory Domain Layer.pdb

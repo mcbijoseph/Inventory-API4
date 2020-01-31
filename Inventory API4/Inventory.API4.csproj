@@ -193,6 +193,11 @@
     <Compile Include="Controllers\RawControllers\PropertyName1Controller.cs" />
     <Compile Include="Controllers\RawControllers\PropertyName2Controller.cs" />
     <Compile Include="Controllers\RawControllers\DeliveryMethodController.cs" />
+    <Compile Include="Controllers\RawControllers\ReleasedItemDetailsController.cs" />
+    <Compile Include="Controllers\RawControllers\ReleasedItemHeaderController.cs" />
+    <Compile Include="Controllers\RawControllers\TransferedItemsDetailsController.cs" />
+    <Compile Include="Controllers\RawControllers\TransferedItemsHeaderController.cs" />
+    <Compile Include="Controllers\RawControllers\TransItemsDelMethodAttributeController.cs" />
     <Compile Include="Controllers\RawControllers\UnitsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Filters\DomainValidatorFilter.cs" />
