@@ -75,6 +75,7 @@ namespace InventoryBL
         {
             List<SqlParameter> pars = new List<SqlParameter>();
             pars.Add(new SqlParameter { ParameterName = "ID", Value = id, Direction = ParameterDirection.Input });
+            /*
             return _dbHelper.GetRecords("sp007invRefDocEntryListSelect", pars).Tables[0].AsEnumerable().Select(drow => new _007_invRefDocEntryListDomain
             {
                 ID = drow.Field<int>("ID"),
@@ -87,9 +88,10 @@ namespace InventoryBL
                 ItemEntryList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<_013_invItemsEntryListDomain>>(drow.Field<string>("ItemEntryList")??"[]"),
                  DeliveryEntry = Newtonsoft.Json.JsonConvert.DeserializeObject<List<_017_invDeliveryMethodEntryListDomain>>(drow.Field<string>("DeliveryEntry")??"[]")
             });
-            
-            //string tabledata = JsonConvert.SerializeObject(_dbHelper.GetRecords("sp007invRefDocEntryListSelect", pars).Tables[0], Newtonsoft.Json.Formatting.None);
-            //return JsonConvert.DeserializeObject<List<_007_invRefDocEntryListDomain>>(tabledata );
+            */
+
+            string tabledata = _dbHelper.GetRecords("sp007invRefDocEntryListSelect", pars).Tables[0].Rows[0]["RESULT"].ToString();//, Newtonsoft.Json.Formatting.None);
+            return JsonConvert.DeserializeObject<List<_007_invRefDocEntryListDomain>>(tabledata );
 
         }
     }
