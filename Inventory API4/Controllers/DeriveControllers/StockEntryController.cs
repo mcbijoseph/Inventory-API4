@@ -70,7 +70,7 @@ namespace Inventory_API4.Controllers.DeriveControllers
         [DomainValidatorFilter]
         public IHttpActionResult Post([FromBody]Inventory_Domain_Layer.Derived.StockEntryDomain body)
         {
-            return Json(stockEntryBL.Command(body, "insert"));
+            return Json(stockEntryBL.Command(body, Command.Insert));
         }
 
         /// <summary>
@@ -85,7 +85,7 @@ namespace Inventory_API4.Controllers.DeriveControllers
         public IHttpActionResult Put(int id, [FromBody]Inventory_Domain_Layer.Derived.StockEntryDomain body)
         {
             //body.ID = id;
-            return Json(stockEntryBL.Command(body, "update"));
+            return Json(stockEntryBL.Command(body, Command.Update));
         }
 
         /// <summary>

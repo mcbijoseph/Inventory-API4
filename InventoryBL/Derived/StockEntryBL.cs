@@ -19,7 +19,7 @@ namespace InventoryBL.Derived
     public class StockEntryBL : Common.BaseBL, IStockEntryBL<Inventory_Domain_Layer.Derived.StockEntryDomain>
     {
         private IDBHelper _dbHelper = new DBHelper();
-        public MessageViewDomain Command(StockEntryDomain entity, string commandType)
+        public MessageViewDomain Command(StockEntryDomain entity, Command commandType)
         {
             //throw new NotImplementedException();
             var sqlParameters = new List<SqlParameter>()
@@ -44,7 +44,7 @@ namespace InventoryBL.Derived
                 }
             };
 
-            return this.GetMessage(_dbHelper.Command("spDeriveStockEntryCommand", commandType, sqlParameters).Tables[0]);
+            return this.GetMessage(_dbHelper.Command("spDeriveStockEntryCommand", commandType.ToString(), sqlParameters).Tables[0]);
 
         }
 

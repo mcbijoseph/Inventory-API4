@@ -74,7 +74,7 @@ namespace Inventory_API4.Controllers.DeriveControllers
         public IHttpActionResult Post([FromBody]Inventory_Domain_Layer.Test._007_invRefDocEntryListDomainSample body)
         {
             var j = body;
-            return Json(stockEntryBL.Command(body, "insert"));
+            return Json(stockEntryBL.Command(body, Command.Insert));
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace Inventory_API4.Controllers.DeriveControllers
         public IHttpActionResult Put(int id, [FromBody]Inventory_Domain_Layer.Test._007_invRefDocEntryListDomainSample body)
         {
             //body.ID = id;
-            return Json(stockEntryBL.Command(body, "update"));
+            return Json(stockEntryBL.Command(body, Command.Delete));
         }
 
         /// <summary>

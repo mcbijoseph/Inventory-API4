@@ -20,7 +20,7 @@ namespace InventoryBL.Test
     public class _007_invRefDocEntryListSampleBL : Common.BaseBL, I_007_invRefDocEntryListSampleBL<Inventory_Domain_Layer.Test._007_invRefDocEntryListDomainSample>
     {
         private IDBHelper _dbHelper = new DBHelper();
-        public MessageViewDomain Command(Inventory_Domain_Layer.Test._007_invRefDocEntryListDomainSample entity, string commandType)
+        public MessageViewDomain Command(Inventory_Domain_Layer.Test._007_invRefDocEntryListDomainSample entity, Command commandType)
         {
             //throw new NotImplementedException();
             var sqlParameters = new List<SqlParameter>()
@@ -45,7 +45,7 @@ namespace InventoryBL.Test
                 }
             };
 
-            return this.GetMessage(_dbHelper.Command("spDeriveStockEntryCommand", commandType, sqlParameters).Tables[0]);
+            return this.GetMessage(_dbHelper.Command("spDeriveStockEntryCommand", commandType.ToString(), sqlParameters).Tables[0]);
 
         }
 
