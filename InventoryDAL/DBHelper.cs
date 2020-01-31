@@ -24,7 +24,7 @@ namespace Inventory.DAL
 
         DataSet GetRecords(string sp, List<SqlParameter> sqlParameters);
 
-        DataSet Command(string sp, Command commandType, List<SqlParameter> sqlParameters);
+        DataSet Command(string sp, string commandType, List<SqlParameter> sqlParameters);
 
         DataSet GetRecords(string sp);
 
@@ -38,7 +38,7 @@ namespace Inventory.DAL
             get { return InventoryDAL.Properties.Settings.Default.connectionString; }
         }
 
-        public DataSet Command(string sp, Command commandType, List<SqlParameter> sqlParameters)
+        public DataSet Command(string sp, string commandType, List<SqlParameter> sqlParameters)
         {
             sqlParameters.Add(new SqlParameter { ParameterName = "@command", Value = commandType.ToString() });
 
