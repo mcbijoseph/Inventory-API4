@@ -21,5 +21,8 @@ namespace Inventory_Domain_Layer
         public DateTime EntryDate { get; set; }
         [Range(0, int.MaxValue)]
         public int ReceiverID_HRDB { get; set; }
+
+        public _013_invItemsEntryListDomain[] ItemEntryList { get; set; }
+        public _017_invDeliveryMethodEntryListDomain[] DeliveryEntry { get; set; }
     }
 }

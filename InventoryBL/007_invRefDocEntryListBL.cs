@@ -20,22 +20,33 @@ namespace InventoryBL
     {
         private IDBHelper _dbHelper = new DBHelper();
 
-        public MessageViewDomain Command(_007_invRefDocEntryListDomain projectDomain, Command commandType)
+        public MessageViewDomain Command(_007_invRefDocEntryListDomain entity, Command commandType)
         {
 
             var sqlParameters = new List<SqlParameter>()
             {
-                new SqlParameter { ParameterName = "@ID", Value = projectDomain.ID, Direction = ParameterDirection.Input  },
-                new SqlParameter { ParameterName = "@SupID_VendorDB", Value = projectDomain.SupID_VendorDB, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@ProjectID_EnggDB", Value = projectDomain.ProjectID_EnggDB, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@DocumentNumber", Value = projectDomain.DocumentNumber, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@DeliveryDate", Value = projectDomain.DeliveryDate, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@EntryDate", Value = projectDomain.EntryDate, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@ReceiverID_HRDB", Value = projectDomain.ReceiverID_HRDB, Direction = ParameterDirection.Input }
-
+                new SqlParameter
+                {
+                    ParameterName = "@DocEntry",
+                    Value = Newtonsoft.Json.JsonConvert.SerializeObject( entity),// projectDomain.ID,
+                    Direction = ParameterDirection.Input
+                },
+                new SqlParameter
+                {
+                    ParameterName = "@ItemsEntry",
+                    Value = Newtonsoft.Json.JsonConvert.SerializeObject( entity.ItemEntryList),// projectDomain.Name,
+                    Direction = ParameterDirection.Input
+                },
+                new SqlParameter
+                {
+                    ParameterName = "@DeliveryEntry",
+                    Value = Newtonsoft.Json.JsonConvert.SerializeObject( entity.DeliveryEntry ),// projectDomain.Name,
+                    Direction = ParameterDirection.Input
+                }
             };
 
-            return this.GetMessage(_dbHelper.Command("sp007RefDocEntryListCommand", commandType.ToString(), sqlParameters).Tables[0]);
+            return this.GetMessage(_dbHelper.Command("spDeriveStockEntryCommand", commandType.ToString(), sqlParameters).Tables[0]);
+
         }
 
         public MessageViewDomain Delete(int id)
