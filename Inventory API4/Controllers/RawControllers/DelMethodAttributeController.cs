@@ -8,6 +8,7 @@ using Inventory_Domain_Layer;
 using Inventory_API4.Filters;
 using InventoryBL;
 using System.Web.Http.Cors;
+using System.Web.Http.Description;
 
 namespace Inventory_API4.Controllers
 {
@@ -17,7 +18,12 @@ namespace Inventory_API4.Controllers
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class DelMethodAttributeController : ApiController
     {
-        I_008_invRefDelMethodAttributeBL<_008_invRefDelMethodAttributeDomain> cat3 = new _008_invRefDelMethodAttributeBL();
+        I_008_invRefDelMethodAttributeBL<_008_invRefDelMethodAttributeDomain> cat3;
+
+        public DelMethodAttributeController(I_008_invRefDelMethodAttributeBL<_008_invRefDelMethodAttributeDomain> _cat3)
+        {
+            cat3 = _cat3;
+        }
 
         /// <summary>
         /// Add new DeliveryMethodAttribute
@@ -26,6 +32,7 @@ namespace Inventory_API4.Controllers
         /// <returns></returns>
         [HttpPost]
         [DomainValidatorFilter]
+        [ResponseType(typeof(MessageViewDomain))]
         public IHttpActionResult Post([FromBody]_008_invRefDelMethodAttributeDomain body)
         {
             return Json(cat3.Command(body, "insert"));
@@ -40,6 +47,7 @@ namespace Inventory_API4.Controllers
         /// <returns></returns>
         [HttpPut]
         [DomainValidatorFilter]
+        [ResponseType(typeof(MessageViewDomain))]
         public IHttpActionResult Put(int id, [FromBody]_008_invRefDelMethodAttributeDomain body)
         {
             body.ID = id;
@@ -51,6 +59,7 @@ namespace Inventory_API4.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
+        [ResponseType(typeof(MessageViewDomain))]
         public IHttpActionResult Delete(int id)
         {
             ///body.ID = id;
@@ -61,6 +70,7 @@ namespace Inventory_API4.Controllers
         /// Get List of DeliveryMethodAttribute 
         /// </summary>
         /// <returns>List</returns>
+        [ResponseType(typeof(IEnumerable<_001_invRefCategory1Domain>))]
         public IHttpActionResult Get()
         {
             var result = cat3.Get();
@@ -76,6 +86,7 @@ namespace Inventory_API4.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
+        [ResponseType(typeof(_001_invRefCategory1Domain))]
         public IHttpActionResult Get(int id)
         {
             var result = cat3.Get(id);
@@ -92,6 +103,7 @@ namespace Inventory_API4.Controllers
         /// <param name="id"></param>
         /// <param name="DelMethod"></param>
         /// <returns>1/Many Json or NULL</returns>
+        [ResponseType(typeof(_001_invRefCategory1Domain))]
         public IHttpActionResult Get(int id, int DelMethod)
         {
             var result = cat3.GetData(id, DelMethod);

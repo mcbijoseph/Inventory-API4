@@ -8,6 +8,7 @@ using Inventory_Domain_Layer;
 using Inventory_API4.Filters;
 using InventoryBL;
 using System.Web.Http.Cors;
+using System.Web.Http.Description;
 
 namespace Inventory_API4.Controllers
 {
@@ -17,7 +18,12 @@ namespace Inventory_API4.Controllers
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class PropertyName1Controller : ApiController
     {
-        I_005_invRefPropertyName2BL<_005_invRefPropertyName2Domain> cat3 = new _005_invRefPropertyName2BL();
+        I_005_invRefPropertyName2BL<_005_invRefPropertyName2Domain> cat3;
+
+        public PropertyName1Controller(I_005_invRefPropertyName2BL<_005_invRefPropertyName2Domain> _cat3)
+        {
+            cat3 = _cat3;
+        }
 
         /// <summary>
         /// Add new PropertyName1
@@ -26,6 +32,7 @@ namespace Inventory_API4.Controllers
         /// <returns></returns>
         [HttpPost]
         [DomainValidatorFilter]
+        [ResponseType(typeof(MessageViewDomain))]
         public IHttpActionResult Post([FromBody]_005_invRefPropertyName2Domain body)
         {
             return Json(cat3.Command(body, "insert"));
@@ -40,6 +47,7 @@ namespace Inventory_API4.Controllers
         /// <returns></returns>
         [HttpPut]
         [DomainValidatorFilter]
+        [ResponseType(typeof(MessageViewDomain))]
         public IHttpActionResult Put(int id, [FromBody]_005_invRefPropertyName2Domain body)
         {
             body.ID = id;
@@ -51,6 +59,7 @@ namespace Inventory_API4.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
+        [ResponseType(typeof(MessageViewDomain))]
         public IHttpActionResult Delete(int id)
         {
             ///body.ID = id;
@@ -61,6 +70,7 @@ namespace Inventory_API4.Controllers
         /// Get List of PropertyName1
         /// </summary>
         /// <returns>List</returns>
+        [ResponseType(typeof(IEnumerable<_001_invRefCategory1Domain>))]
         public IHttpActionResult Get()
         {
             var result = cat3.Get();
@@ -76,6 +86,7 @@ namespace Inventory_API4.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
+        [ResponseType(typeof(_001_invRefCategory1Domain))]
         public IHttpActionResult Get(int id)
         {
             var result = cat3.Get(id);

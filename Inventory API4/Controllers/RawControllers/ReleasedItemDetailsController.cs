@@ -10,36 +10,36 @@ using InventoryBL;
 using System.Web.Http.Cors;
 using System.Web.Http.Description;
 
-namespace Inventory_API4.Controllers
+namespace Inventory_API4.Controllers.RawControllers
 {
     /// <summary>
-    /// Category1
+    /// ReleasedItemDetails
     /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class Category1Controller : ApiController
+    public class ReleasedItemDetailsController : ApiController
     {
-        I_001_invRefCategory1BL<_001_invRefCategory1Domain> cat1;
-        
-        public Category1Controller(I_001_invRefCategory1BL<_001_invRefCategory1Domain> _001)
+        I_020_invReleasedItemDetailsBL<_020_invReleasedItemDetailsDomain> attrib;
+
+        public ReleasedItemDetailsController(I_020_invReleasedItemDetailsBL<_020_invReleasedItemDetailsDomain> _attrib)
         {
-            cat1 = _001;
+            attrib = _attrib;
         }
         /// <summary>
-        /// Add new Category1
+        /// Add new ReleasedItemDetails
         /// </summary>
         /// <param name="body"></param>
         /// <returns></returns>
         [HttpPost]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        public IHttpActionResult Post([FromBody]_001_invRefCategory1Domain body)
+        public IHttpActionResult Post([FromBody]_020_invReleasedItemDetailsDomain body)
         {
-            return Json(cat1.Command(body, "insert"));
+            return Json(attrib.Command(body, "insert"));
         }
 
         //Update
         /// <summary>
-        /// Update Category1 by ID with JSON Body
+        /// Update ReleasedItemDetails by ID with JSON Body
         /// </summary>
         /// <param name="id"></param>
         /// <param name="body"></param>
@@ -47,14 +47,14 @@ namespace Inventory_API4.Controllers
         [HttpPut]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        public IHttpActionResult Put(int id, [FromBody]_001_invRefCategory1Domain body)
+        public IHttpActionResult Put(int id, [FromBody]_020_invReleasedItemDetailsDomain body)
         {
             body.ID = id;
-            return Json(cat1.Command(body, "update"));
+            return Json(attrib.Command(body, "update"));
         }
 
         /// <summary>
-        /// Delete Specific Category1
+        /// Delete Specific ReleasedItemDetails
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -62,17 +62,17 @@ namespace Inventory_API4.Controllers
         public IHttpActionResult Delete(int id)
         {
             ///body.ID = id;
-            return Json(cat1.Delete(id));
+            return Json(attrib.Delete(id));
         }
 
         /// <summary>
-        /// Get List of Category1
+        /// Get List of ReleasedItemDetails
         /// </summary>
         /// <returns>List</returns>
-        [ResponseType(typeof(IEnumerable<_001_invRefCategory1Domain>))]
+        [ResponseType(typeof(IEnumerable<_020_invReleasedItemDetailsDomain>))]
         public IHttpActionResult Get()
         {
-            var result = cat1.Get();
+            var result = attrib.Get();
             /*
              * 
              */
@@ -81,14 +81,14 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get Specific Category1 by ID
+        /// Get Specific ReleasedItemDetails by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
-        [ResponseType(typeof(_001_invRefCategory1Domain))]
+        [ResponseType(typeof(_020_invReleasedItemDetailsDomain))]
         public IHttpActionResult Get(int id)
         {
-            var result = cat1.Get(id);
+            var result = attrib.Get(id);
             /*
              *
              */

@@ -61,6 +61,11 @@
     <Compile Include="016_invRefItemCategory.cs" />
     <Compile Include="017_invDeliveryMethodEntryList.cs" />
     <Compile Include="018_invRefItemCondition.cs" />
+    <Compile Include="019_invReleasedItemHeader.cs" />
+    <Compile Include="020_invReleasedItemDetails.cs" />
+    <Compile Include="021_invTransferedItemsHeader.cs" />
+    <Compile Include="022_invTransferedItemsDetails.cs" />
+    <Compile Include="023_invTransItemsDelMethodAttribute.cs" />
     <Compile Include="Derived\StockEntryDomain.cs" />
     <Compile Include="MessageViewDomain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
