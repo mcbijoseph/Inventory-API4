@@ -11,7 +11,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="App_Data/InventoryAPI4.xml">
-      <publishTime>01/31/2020 15:05:11</publishTime>
+      <publishTime>02/03/2020 13:48:04</publishTime>
     </File>
     <File Include="Areas/HelpPage/HelpPage.css">
       <publishTime>01/27/2020 09:09:08</publishTime>
@@ -83,7 +83,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/27/2020 09:09:09</publishTime>
     </File>
     <File Include="bin/App_Data/InventoryAPI4.xml">
-      <publishTime>01/31/2020 15:05:11</publishTime>
+      <publishTime>02/03/2020 13:48:04</publishTime>
     </File>
     <File Include="bin/Autofac.dll">
       <publishTime>01/27/2020 09:09:09</publishTime>
@@ -113,25 +113,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/27/2020 09:09:08</publishTime>
     </File>
     <File Include="bin/Inventory API4.dll">
-      <publishTime>01/31/2020 15:05:12</publishTime>
+      <publishTime>02/03/2020 13:48:04</publishTime>
     </File>
     <File Include="bin/Inventory API4.pdb">
-      <publishTime>01/31/2020 15:05:12</publishTime>
+      <publishTime>02/03/2020 13:48:04</publishTime>
     </File>
     <File Include="bin/Inventory Domain Layer.dll">
-      <publishTime>01/31/2020 15:05:09</publishTime>
+      <publishTime>02/03/2020 13:48:03</publishTime>
     </File>
     <File Include="bin/Inventory Domain Layer.pdb">
-      <publishTime>01/31/2020 15:05:09</publishTime>
+      <publishTime>02/03/2020 13:48:03</publishTime>
     </File>
     <File Include="bin/InventoryAPI4.xml">
-      <publishTime>01/31/2020 15:05:11</publishTime>
+      <publishTime>02/03/2020 13:48:04</publishTime>
     </File>
     <File Include="bin/InventoryBL.dll">
-      <publishTime>01/31/2020 15:05:10</publishTime>
+      <publishTime>02/03/2020 13:48:03</publishTime>
     </File>
     <File Include="bin/InventoryBL.pdb">
-      <publishTime>01/31/2020 15:05:10</publishTime>
+      <publishTime>02/03/2020 13:48:03</publishTime>
     </File>
     <File Include="bin/InventoryDAL.dll">
       <publishTime>01/31/2020 11:49:56</publishTime>

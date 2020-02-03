@@ -1207,14 +1207,14 @@
             PropertyName1
             </summary>
         </member>
-        <member name="M:Inventory_API4.Controllers.PropertyName1Controller.Post(Inventory_Domain_Layer._005_invRefPropertyName2Domain)">
+        <member name="M:Inventory_API4.Controllers.PropertyName1Controller.Post(Inventory_Domain_Layer._004_invRefPropertyName1Domain)">
             <summary>
             Add new PropertyName1
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
-        <member name="M:Inventory_API4.Controllers.PropertyName1Controller.Put(System.Int32,Inventory_Domain_Layer._005_invRefPropertyName2Domain)">
+        <member name="M:Inventory_API4.Controllers.PropertyName1Controller.Put(System.Int32,Inventory_Domain_Layer._004_invRefPropertyName1Domain)">
             <summary>
             Update PropertyName1 by ID with JSON Body
             </summary>
