@@ -18,9 +18,9 @@ namespace Inventory_API4.Controllers
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class PropertyName1Controller : ApiController
     {
-        I_005_invRefPropertyName2BL<_005_invRefPropertyName2Domain> cat3;
+        I_004_invRefPropertyName1BL<_004_invRefPropertyName1Domain> cat3;
 
-        public PropertyName1Controller(I_005_invRefPropertyName2BL<_005_invRefPropertyName2Domain> _cat3)
+        public PropertyName1Controller(I_004_invRefPropertyName1BL<_004_invRefPropertyName1Domain> _cat3)
         {
             cat3 = _cat3;
         }
@@ -33,7 +33,7 @@ namespace Inventory_API4.Controllers
         [HttpPost]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        public IHttpActionResult Post([FromBody]_005_invRefPropertyName2Domain body)
+        public IHttpActionResult Post([FromBody]_004_invRefPropertyName1Domain body)
         {
             return Json(cat3.Command(body, Command.Insert));
         }
@@ -48,7 +48,7 @@ namespace Inventory_API4.Controllers
         [HttpPut]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        public IHttpActionResult Put(int id, [FromBody]_005_invRefPropertyName2Domain body)
+        public IHttpActionResult Put(int id, [FromBody]_004_invRefPropertyName1Domain body)
         {
             body.ID = id;
             return Json(cat3.Command(body, Command.Update));
@@ -70,7 +70,7 @@ namespace Inventory_API4.Controllers
         /// Get List of PropertyName1
         /// </summary>
         /// <returns>List</returns>
-        [ResponseType(typeof(IEnumerable<_001_invRefCategory1Domain>))]
+        [ResponseType(typeof(IEnumerable<_004_invRefPropertyName1Domain>))]
         public IHttpActionResult Get()
         {
             var result = cat3.Get();
@@ -86,7 +86,7 @@ namespace Inventory_API4.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
-        [ResponseType(typeof(_001_invRefCategory1Domain))]
+        [ResponseType(typeof(_004_invRefPropertyName1Domain))]
         public IHttpActionResult Get(int id)
         {
             var result = cat3.Get(id);

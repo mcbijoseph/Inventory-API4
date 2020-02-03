@@ -23,6 +23,6 @@ namespace Inventory_Domain_Layer
         public int ReceiverID_HRDB { get; set; }
 
         public List<_013_invItemsEntryListDomain> ItemEntryList { get; set; }
-        public List<_017_invDeliveryMethodEntryListDomain> DeliveryEntry { get; set; }
+        public _017_invDeliveryMethodEntryListDomain DeliveryMethod { get; set; }
     }
 }

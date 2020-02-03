@@ -7,6 +7,7 @@ using Inventory.DAL;
 using System.Data;
 using System.Data.SqlClient;
 using Inventory_Domain_Layer;
+using Newtonsoft.Json;
 
 
 namespace InventoryBL
@@ -33,7 +34,7 @@ namespace InventoryBL
 
             return this.GetMessage(_dbHelper.Command("sp001invRefCategory1Command", commandType.ToString(), sqlParameters).Tables[0]);
 
-            
+
         }
 
         public MessageViewDomain Delete(int id)
@@ -56,7 +57,7 @@ namespace InventoryBL
         {
             throw new NotImplementedException();
         }
-        
+
         /// <summary>
         /// Reuse the query
         /// </summary>
@@ -67,16 +68,17 @@ namespace InventoryBL
             List<SqlParameter> pars = new List<SqlParameter>();
             pars.Add(new SqlParameter { ParameterName = "ID", Value = id, Direction = ParameterDirection.Input });
 
-            return _dbHelper.GetRecords("sp001invRefCategory1Select", pars).Tables[0].AsEnumerable().Select
+            /*return _dbHelper.GetRecords("sp001invRefCategory1Select", pars).Tables[0].AsEnumerable().Select
             (
                 drow => new _001_invRefCategory1Domain
                 {
                     ID = drow.Field<int>("ID"),
                     Name = drow.Field<string>("Name")
                 }
-            );
+            );*/
+            string tabledata = _dbHelper.GetRecords("sp001invRefCategory1Select", pars).Tables[0].Rows[0][0].ToString();//, Newtonsoft.Json.Formatting.None);
+            return JsonConvert.DeserializeObject<List<_001_invRefCategory1Domain>>(tabledata);
+
         }
-
-
     }
 }

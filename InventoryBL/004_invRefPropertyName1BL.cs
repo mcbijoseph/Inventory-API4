@@ -7,17 +7,18 @@ using Inventory.DAL;
 using System.Data;
 using System.Data.SqlClient;
 using Inventory_Domain_Layer;
+using Newtonsoft.Json;
 
 namespace InventoryBL
 {
 
-    public interface I_004_invRefPropertyName1<TEntity> : Common.IBaseBL<TEntity> where TEntity : class
+    public interface I_004_invRefPropertyName1BL<TEntity> : Common.IBaseBL<TEntity> where TEntity : class
     {
 
     }
 
 
-    public class _004_invRefPropertyName1BL : Common.BaseBL, I_004_invRefPropertyName1<_004_invRefPropertyName1Domain>
+    public class _004_invRefPropertyName1BL : Common.BaseBL, I_004_invRefPropertyName1BL<_004_invRefPropertyName1Domain>
     {
         private IDBHelper _dbHelper = new DBHelper();
 
@@ -61,11 +62,13 @@ namespace InventoryBL
         {
             List<SqlParameter> pars = new List<SqlParameter>();
             pars.Add(new SqlParameter { ParameterName = "ID", Value = id, Direction = ParameterDirection.Input });
-            return _dbHelper.GetRecords("sp004invRefPropertyName1Select",pars).Tables[0].AsEnumerable().Select(drow => new _004_invRefPropertyName1Domain
+            /*return _dbHelper.GetRecords("sp004invRefPropertyName1Select",pars).Tables[0].AsEnumerable().Select(drow => new _004_invRefPropertyName1Domain
             {
                 ID = drow.Field<int>("ID"),
                 Name = drow.Field<string>("Name"),
-            });
+            });*/
+            string tabledata = _dbHelper.GetRecords("sp004invRefPropertyName1Select", pars).Tables[0].Rows[0][0].ToString();//, Newtonsoft.Json.Formatting.None);
+            return JsonConvert.DeserializeObject<List<_004_invRefPropertyName1Domain>>(tabledata);
         }
     }
 }

@@ -13,5 +13,10 @@ namespace Inventory_Domain_Layer
         public int ID { get; set; }
         [Required]
         public string Name { get; set; }
+
+        public List<_008_invRefDelMethodAttributeDomain> DelMethodAttribute
+        {
+            get; set;
+        }
     }
 }

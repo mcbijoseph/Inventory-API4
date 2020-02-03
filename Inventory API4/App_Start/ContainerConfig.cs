@@ -29,7 +29,7 @@ namespace Inventory_API4.App_Start
             builder.RegisterType<InventoryBL._001_invRefCategory1BL>().As<InventoryBL.I_001_invRefCategory1BL<Inventory_Domain_Layer._001_invRefCategory1Domain>>();
             builder.RegisterType<InventoryBL._002_invRefCategory2BL>().As<InventoryBL.I_002_invRefCategory2BL<Inventory_Domain_Layer._002_invRefCategory2Domain>>();
             builder.RegisterType<InventoryBL._003_invRefCategory3BL>().As<InventoryBL.I_003_invRefCategory3BL<Inventory_Domain_Layer._003_invRefCategory3Domain>>();
-            builder.RegisterType<InventoryBL._004_invRefPropertyName1BL>().As<InventoryBL.I_004_invRefPropertyName1<Inventory_Domain_Layer._004_invRefPropertyName1Domain>>();
+            builder.RegisterType<InventoryBL._004_invRefPropertyName1BL>().As<InventoryBL.I_004_invRefPropertyName1BL<Inventory_Domain_Layer._004_invRefPropertyName1Domain>>();
             builder.RegisterType<InventoryBL._005_invRefPropertyName2BL>().As<InventoryBL.I_005_invRefPropertyName2BL<Inventory_Domain_Layer._005_invRefPropertyName2Domain>>();
             builder.RegisterType<InventoryBL._006_invRefAttributeBL>().As<InventoryBL.I_006_invRefAttributeBL<Inventory_Domain_Layer._006_invRefAttributeDomain>>();
             builder.RegisterType<InventoryBL._007_invRefDocEntryListBL>().As<InventoryBL.I_007_invRefDocEntryListBL<Inventory_Domain_Layer._007_invRefDocEntryListDomain>>();

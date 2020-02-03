@@ -41,7 +41,7 @@ namespace InventoryBL
                 new SqlParameter
                 {
                     ParameterName = "@DeliveryEntry",
-                    Value = Newtonsoft.Json.JsonConvert.SerializeObject( entity.DeliveryEntry ),// projectDomain.Name,
+                    Value = Newtonsoft.Json.JsonConvert.SerializeObject( entity.DeliveryMethod ),// projectDomain.Name,
                     Direction = ParameterDirection.Input
                 }
             };

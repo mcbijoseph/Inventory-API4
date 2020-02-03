@@ -7,6 +7,7 @@ using Inventory.DAL;
 using System.Data;
 using System.Data.SqlClient;
 using Inventory_Domain_Layer;
+using Newtonsoft.Json;
 
 namespace InventoryBL
 {
@@ -62,11 +63,13 @@ namespace InventoryBL
         {
             List<SqlParameter> pars = new List<SqlParameter>();
             pars.Add(new SqlParameter { ParameterName = "ID", Value = id, Direction = ParameterDirection.Input });
-            return _dbHelper.GetRecords("sp010invRefDeliveryMethodSelect", pars).Tables[0].AsEnumerable().Select(drow => new _010_invRefDeliveryMethodDomain
+            /*return _dbHelper.GetRecords("sp010invRefDeliveryMethodSelect", pars).Tables[0].AsEnumerable().Select(drow => new _010_invRefDeliveryMethodDomain
             {
                 ID = drow.Field<int>("ID"),
                 Name = drow.Field<string>("Name")
-            });
+            });*/
+            string tabledata = _dbHelper.GetRecords("sp010invRefDeliveryMethodSelect", pars).Tables[0].Rows[0][0].ToString();//, Newtonsoft.Json.Formatting.None);
+            return JsonConvert.DeserializeObject<List<_010_invRefDeliveryMethodDomain>>(tabledata);
         }
     }
 }
