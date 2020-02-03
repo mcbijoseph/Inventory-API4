@@ -9,6 +9,6 @@ namespace Inventory_Domain_Layer
     public class _024_RefCourierListDomain
     {
         public int ID { get; set; }
-        public string Name { get; set; }
+        public string CourierName { get; set; }
     }
 }

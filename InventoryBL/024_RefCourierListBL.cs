@@ -25,7 +25,7 @@ namespace InventoryBL
             var sqlParameters = new List<SqlParameter>()
             {
                 new SqlParameter { ParameterName = "@ID", Value = projectDomain.ID, Direction = ParameterDirection.Input  },
-                new SqlParameter { ParameterName = "@Name", Value = projectDomain.Name, Direction = ParameterDirection.Input }
+                new SqlParameter { ParameterName = "@CourierName", Value = projectDomain.CourierName, Direction = ParameterDirection.Input }
                 
             };
 
@@ -62,7 +62,7 @@ namespace InventoryBL
             return _dbHelper.GetRecords("sp024invRefCourierListSelect", pars).Tables[0].AsEnumerable().Select(drow => new _024_RefCourierListDomain
             {
                 ID = drow.Field<int>("ID"),
-                Name = drow.Field<string>("Name")
+                CourierName = drow.Field<string>("CourierName")
             });
         }
     }

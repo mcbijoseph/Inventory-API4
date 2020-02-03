@@ -634,6 +634,46 @@
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
         </member>
+        <member name="T:Inventory_API4.Controllers.RawControllers.CourierListController">
+            <summary>
+            Category1
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.CourierListController.Post(Inventory_Domain_Layer._024_RefCourierListDomain)">
+            <summary>
+            Add new Category1
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.CourierListController.Put(System.Int32,Inventory_Domain_Layer._024_RefCourierListDomain)">
+            <summary>
+            Update Category1 by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.CourierListController.Delete(System.Int32)">
+            <summary>
+            Delete Specific Category1
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.CourierListController.Get">
+            <summary>
+            Get List of Category1
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.CourierListController.Get(System.Int32)">
+            <summary>
+            Get Specific Category1 by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
         <member name="T:Inventory_API4.Controllers.RawControllers.DeliveryMethodEntryListController">
             <summary>
             DeliveryMethodEntryList
