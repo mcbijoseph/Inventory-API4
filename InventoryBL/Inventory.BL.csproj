@@ -67,6 +67,7 @@
     <Compile Include="021_invTransferedItemsHeaderBL.cs" />
     <Compile Include="022_invTransferedItemsDetailsBL.cs" />
     <Compile Include="023_invTransItemsDelMethodAttributeBL.cs" />
+    <Compile Include="024_RefCourierListBL.cs" />
     <Compile Include="Common\IBaseBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Sample.cs" />

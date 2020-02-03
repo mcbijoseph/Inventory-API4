@@ -66,6 +66,7 @@
     <Compile Include="021_invTransferedItemsHeader.cs" />
     <Compile Include="022_invTransferedItemsDetails.cs" />
     <Compile Include="023_invTransItemsDelMethodAttribute.cs" />
+    <Compile Include="024_RefCourierList.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="ItemFullName.cs" />
     <Compile Include="MessageViewDomain.cs" />

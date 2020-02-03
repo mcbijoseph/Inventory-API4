@@ -49,6 +49,7 @@ namespace Inventory_API4.App_Start
             builder.RegisterType<InventoryBL._021_invTransferedItemsHeaderBL>().As<InventoryBL.I_021_invTransferedItemsHeaderBL<Inventory_Domain_Layer._021_invTransferedItemsHeaderDomain>>();
             builder.RegisterType<InventoryBL._022_invTransferedItemsDetailsBL>().As<InventoryBL.I_022_invTransferedItemsDetailsBL<Inventory_Domain_Layer._022_invTransferedItemsDetailsDomain>>();
             builder.RegisterType<InventoryBL._023_invTransItemsDelMethodAttributeBL>().As<InventoryBL.I_023_invTransItemsDelMethodAttributeBL<Inventory_Domain_Layer._023_invTransItemsDelMethodAttributeDomain>>();
+            builder.RegisterType<InventoryBL._024_RefCourierListBL>().As<InventoryBL.I_024_RefCourierListBL<Inventory_Domain_Layer._024_RefCourierListDomain>>();
 
             List<Autofac.Core.Parameter> pars = new List<Autofac.Core.Parameter>();
             //pars.Add( new Autofac.Core.Parameter(""))

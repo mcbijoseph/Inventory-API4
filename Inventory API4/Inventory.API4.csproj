@@ -178,6 +178,7 @@
     <Compile Include="Controllers\RawControllers\Category1Controller.cs" />
     <Compile Include="Controllers\RawControllers\Category2Controller.cs" />
     <Compile Include="Controllers\RawControllers\Category3Controller.cs" />
+    <Compile Include="Controllers\RawControllers\CourierListController.cs" />
     <Compile Include="Controllers\RawControllers\DeliveryMethodEntryListController.cs" />
     <Compile Include="Controllers\RawControllers\DocEntryListController.cs" />
     <Compile Include="Controllers\RawControllers\DelMethodAttributeController.cs" />
