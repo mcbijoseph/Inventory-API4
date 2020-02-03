@@ -11,9 +11,11 @@ namespace Inventory_Domain_Layer
     {
         [Range(0, int.MaxValue)]
         public int ID { get; set; }
-        [Required]
+
         [Range(0, int.MaxValue)]
         public int DelMethodID_010 { get; set; }
+
+        [Required]
         public string MethodAttribute { get; set; }
 
         public List<_017_invDeliveryMethodEntryListDomain> DeliveryMethodEntryList
