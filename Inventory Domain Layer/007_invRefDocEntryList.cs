@@ -24,5 +24,6 @@ namespace Inventory_Domain_Layer
 
         public List<_013_invItemsEntryListDomain> ItemEntryList { get; set; }
         public _010_invRefDeliveryMethodDomain DeliveryMethod { get; set; }
+
     }
 }

@@ -8,6 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using Inventory_Domain_Layer;
 using InventoryBL.Common;
+using Newtonsoft.Json;
 
 namespace InventoryBL
 {
@@ -65,7 +66,7 @@ namespace InventoryBL
         {
             List<SqlParameter> pars = new List<SqlParameter>();
             pars.Add( new SqlParameter { ParameterName = "ID", Value = id, Direction = ParameterDirection.Input });
-            return _dbHelper.GetRecords("sp013invItemsEntryListSelect", pars).Tables[0].AsEnumerable().Select(drow => new _013_invItemsEntryListDomain
+            /*return _dbHelper.GetRecords("sp013invItemsEntryListSelect", pars).Tables[0].AsEnumerable().Select(drow => new _013_invItemsEntryListDomain
             {
                 ID = drow.Field<int>("ID"),
                 DocEntryId_007 = drow.Field<int>("DelID_007"),
@@ -74,7 +75,9 @@ namespace InventoryBL
                 UnitPrice = drow.Field<decimal>("ItemID_011"),
                 Quantity = drow.Field<decimal>("Qty"),
                 ItemConditionID_018 = drow.Field<int>("Sup_ID")
-            });
+            });*/
+            string tabledata = _dbHelper.GetRecords("sp013invItemsEntryListSelect", pars).Tables[0].Rows[0][0].ToString();//, Newtonsoft.Json.Formatting.None);
+            return JsonConvert.DeserializeObject<List<_013_invItemsEntryListDomain>>(tabledata);
         }
     }
 }

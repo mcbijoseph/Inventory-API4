@@ -17,6 +17,6 @@ namespace Inventory_Domain_Layer
         public string Name { get; set; }
         [Required]
         public string FullName { get; set; }
-
+        public List<_015_invRefItemPropListDomain> ItemPropList { get; set;}
     }
 }
