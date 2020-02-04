@@ -12,9 +12,9 @@ using System.Web.Http.Description;
 
 namespace Inventory_API4.Controllers.RawControllers
 {
-    
+
     /// <summary>
-    /// Category1
+    /// TransItemRecievedList
     /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class TransItemRecievedListController : ApiController
@@ -26,7 +26,7 @@ namespace Inventory_API4.Controllers.RawControllers
             cat1 = _001;
         }
         /// <summary>
-        /// Add new Category1
+        /// Add new TransItemRecievedList
         /// </summary>
         /// <param name="body"></param>
         /// <returns></returns>
@@ -40,7 +40,7 @@ namespace Inventory_API4.Controllers.RawControllers
 
         //Update
         /// <summary>
-        /// Update Category1 by ID with JSON Body
+        /// Update TransItemRecievedList by ID with JSON Body
         /// </summary>
         /// <param name="id"></param>
         /// <param name="body"></param>
@@ -55,7 +55,7 @@ namespace Inventory_API4.Controllers.RawControllers
         }
 
         /// <summary>
-        /// Delete Specific Category1
+        /// Delete Specific TransItemRecievedList
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -67,7 +67,7 @@ namespace Inventory_API4.Controllers.RawControllers
         }
 
         /// <summary>
-        /// Get List of Category1
+        /// Get List of TransItemRecievedList
         /// </summary>
         /// <returns>List</returns>
         [ResponseType(typeof(IEnumerable<_026_invTransItemRecievedListDomain>))]
@@ -82,7 +82,7 @@ namespace Inventory_API4.Controllers.RawControllers
         }
 
         /// <summary>
-        /// Get Specific Category1 by ID
+        /// Get Specific TransItemRecievedList by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>

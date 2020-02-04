@@ -76,7 +76,7 @@ namespace InventoryBL
                     Name = drow.Field<string>("Name")
                 }
             );*/
-            string tabledata = _dbHelper.GetRecords("sp025invTransItemEntryListSelect", pars).Tables[0].Rows[0][0].ToString();//, Newtonsoft.Json.Formatting.None);
+            string tabledata = _dbHelper.GetRecords("sp025invTransItemEntryListSelect", pars).Tables[0].Rows[0][0].ToString() ?? "{}";//, Newtonsoft.Json.Formatting.None);
             return JsonConvert.DeserializeObject<List<_025_invTransItemEntryListDomain>>(tabledata);
 
         }

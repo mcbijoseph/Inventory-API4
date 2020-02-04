@@ -78,7 +78,7 @@ namespace InventoryBL
                     Name = drow.Field<string>("Name")
                 }
             );*/
-            string tabledata = _dbHelper.GetRecords("sp027invWithdrawMasterListSelect", pars).Tables[0].Rows[0][0].ToString();//, Newtonsoft.Json.Formatting.None);
+            string tabledata = _dbHelper.GetRecords("sp027invWithdrawMasterListSelect", pars).Tables[0].Rows[0][0].ToString() ?? "{}";//, Newtonsoft.Json.Formatting.None);
             return JsonConvert.DeserializeObject<List<_027_invWithdrawMasterListDomain>>(tabledata);
 
         }

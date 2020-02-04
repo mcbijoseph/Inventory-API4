@@ -13,7 +13,7 @@ using System.Web.Http.Description;
 namespace Inventory_API4.Controllers.RawControllers
 {
     /// <summary>
-    /// TransferedItemsDetails
+    /// TransInfoDestination
     /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class TransInfoDestinationController : ApiController
@@ -25,7 +25,7 @@ namespace Inventory_API4.Controllers.RawControllers
             attrib = _attrib;
         }
         /// <summary>
-        /// Add new TransferedItemsDetails
+        /// Add new TransInfoDestination
         /// </summary>
         /// <param name="body"></param>
         /// <returns></returns>
@@ -39,7 +39,7 @@ namespace Inventory_API4.Controllers.RawControllers
 
         //Update
         /// <summary>
-        /// Update TransferedItemsDetails by ID with JSON Body
+        /// Update TransInfoDestination by ID with JSON Body
         /// </summary>
         /// <param name="id"></param>
         /// <param name="body"></param>
@@ -54,7 +54,7 @@ namespace Inventory_API4.Controllers.RawControllers
         }
 
         /// <summary>
-        /// Delete Specific TransferedItemsDetails
+        /// Delete Specific TransInfoDestination
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -66,7 +66,7 @@ namespace Inventory_API4.Controllers.RawControllers
         }
 
         /// <summary>
-        /// Get List of TransferedItemsDetails
+        /// Get List of TransInfoDestination
         /// </summary>
         /// <returns>List</returns>
         [ResponseType(typeof(IEnumerable<_023_invTransInfoDestinationDomain>))]
@@ -81,7 +81,7 @@ namespace Inventory_API4.Controllers.RawControllers
         }
 
         /// <summary>
-        /// Get Specific TransferedItemsDetails by ID
+        /// Get Specific TransInfoDestination by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>

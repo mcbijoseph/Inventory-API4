@@ -79,7 +79,7 @@ namespace InventoryBL
                 ReceivedDate = drow.Field<DateTime>("ReceivedDate"),
                 DocEntryListID_007 = drow.Field<int>("DocEntryListID_007")
             });*/
-            string tabledata = _dbHelper.GetRecords("sp021invTransMasterListSelect", pars).Tables[0].Rows[0][0].ToString();//, Newtonsoft.Json.Formatting.None);
+            string tabledata = _dbHelper.GetRecords("sp021invTransMasterListSelect", pars).Tables[0].Rows[0][0].ToString() ?? "{}";//, Newtonsoft.Json.Formatting.None);
             return JsonConvert.DeserializeObject<List<_021_invTransMasterListDomain>>(tabledata);
         }
     }

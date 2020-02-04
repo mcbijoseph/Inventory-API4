@@ -11,9 +11,9 @@ using System.Collections.Generic;
 
 namespace Inventory_API4.Controllers.RawControllers
 {
-    
+
     /// <summary>
-    /// Category1
+    /// WithdrawItemEntryList
     /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class WithdrawItemEntryListController : ApiController
@@ -25,7 +25,7 @@ namespace Inventory_API4.Controllers.RawControllers
             cat1 = _001;
         }
         /// <summary>
-        /// Add new Category1
+        /// Add new WithdrawItemEntryList
         /// </summary>
         /// <param name="body"></param>
         /// <returns></returns>
@@ -39,7 +39,7 @@ namespace Inventory_API4.Controllers.RawControllers
 
         //Update
         /// <summary>
-        /// Update Category1 by ID with JSON Body
+        /// Update WithdrawItemEntryList by ID with JSON Body
         /// </summary>
         /// <param name="id"></param>
         /// <param name="body"></param>
@@ -54,7 +54,7 @@ namespace Inventory_API4.Controllers.RawControllers
         }
 
         /// <summary>
-        /// Delete Specific Category1
+        /// Delete Specific WithdrawItemEntryList
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -66,7 +66,7 @@ namespace Inventory_API4.Controllers.RawControllers
         }
 
         /// <summary>
-        /// Get List of Category1
+        /// Get List of WithdrawItemEntryList
         /// </summary>
         /// <returns>List</returns>
         [ResponseType(typeof(IEnumerable<_028_invWithdrawItemEntryListDomain>))]
@@ -81,7 +81,7 @@ namespace Inventory_API4.Controllers.RawControllers
         }
 
         /// <summary>
-        /// Get Specific Category1 by ID
+        /// Get Specific WithdrawItemEntryList by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>

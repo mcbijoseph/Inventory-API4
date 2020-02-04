@@ -13,7 +13,7 @@ using System.Web.Http.Description;
 namespace Inventory_API4.Controllers.RawControllers
 {
     /// <summary>
-    /// TransferedItemsHeader
+    /// TransMasterList
     /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class TransMasterListController : ApiController
@@ -25,7 +25,7 @@ namespace Inventory_API4.Controllers.RawControllers
             attrib = _attrib;
         }
         /// <summary>
-        /// Add new TransferedItemsHeader
+        /// Add new TransMasterList
         /// </summary>
         /// <param name="body"></param>
         /// <returns></returns>
@@ -39,7 +39,7 @@ namespace Inventory_API4.Controllers.RawControllers
 
         //Update
         /// <summary>
-        /// Update TransferedItemsHeader by ID with JSON Body
+        /// Update TransMasterList by ID with JSON Body
         /// </summary>
         /// <param name="id"></param>
         /// <param name="body"></param>
@@ -54,7 +54,7 @@ namespace Inventory_API4.Controllers.RawControllers
         }
 
         /// <summary>
-        /// Delete Specific TransferedItemsHeader
+        /// Delete Specific TransMasterList
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -66,7 +66,7 @@ namespace Inventory_API4.Controllers.RawControllers
         }
 
         /// <summary>
-        /// Get List of TransferedItemsHeader
+        /// Get List of TransMasterList
         /// </summary>
         /// <returns>List</returns>
         [ResponseType(typeof(IEnumerable<_021_invTransMasterListDomain>))]
@@ -81,7 +81,7 @@ namespace Inventory_API4.Controllers.RawControllers
         }
 
         /// <summary>
-        /// Get Specific TransferedItemsHeader by ID
+        /// Get Specific TransMasterList by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>

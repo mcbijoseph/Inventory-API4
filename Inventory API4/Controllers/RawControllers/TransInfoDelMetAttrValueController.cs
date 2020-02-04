@@ -13,7 +13,7 @@ using System.Web.Http.Description;
 namespace Inventory_API4.Controllers
 {
     /// <summary>
-    /// Category1
+    /// TransInfoDelMetAttrValue
     /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class TransInfoDelMetAttrValueController : ApiController
@@ -25,7 +25,7 @@ namespace Inventory_API4.Controllers
             cat1 = _001;
         }
         /// <summary>
-        /// Add new Category1
+        /// Add new TransInfoDelMetAttrValue
         /// </summary>
         /// <param name="body"></param>
         /// <returns></returns>
@@ -39,7 +39,7 @@ namespace Inventory_API4.Controllers
 
         //Update
         /// <summary>
-        /// Update Category1 by ID with JSON Body
+        /// Update TransInfoDelMetAttrValue by ID with JSON Body
         /// </summary>
         /// <param name="id"></param>
         /// <param name="body"></param>
@@ -54,7 +54,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Delete Specific Category1
+        /// Delete Specific TransInfoDelMetAttrValue
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -66,7 +66,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get List of Category1
+        /// Get List of TransInfoDelMetAttrValue
         /// </summary>
         /// <returns>List</returns>
         [ResponseType(typeof(IEnumerable<_024_invTransInfoDelMetAttrValueDomain>))]
@@ -81,7 +81,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get Specific Category1 by ID
+        /// Get Specific TransInfoDelMetAttrValue by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>

@@ -73,7 +73,7 @@ namespace InventoryBL
                 Quantity = drow.Field<decimal>("Quantity"),
                 ItemConditionId_018 = drow.Field<int>("ItemConditionId_018")
             });*/
-            string tabledata = _dbHelper.GetRecords("sp022invTransInfoOriginSelect", pars).Tables[0].Rows[0][0].ToString();//, Newtonsoft.Json.Formatting.None);
+            string tabledata = _dbHelper.GetRecords("sp022invTransInfoOriginSelect", pars).Tables[0].Rows[0][0].ToString() ?? "{}";//, Newtonsoft.Json.Formatting.None);
             return JsonConvert.DeserializeObject<List<_022_invTransInfoOriginDomain>>(tabledata);
         }
     }
