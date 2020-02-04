@@ -18,7 +18,7 @@ namespace Inventory_Domain_Layer
         [Required]
         public string MethodAttribute { get; set; }
 
-        public List<_017_invDeliveryMethodEntryListDomain> DeliveryMethodEntryList
+        public List<_017_invNewInfoDelMetAttrValueDomain> DeliveryMethodEntryList
         {
             get; set;
         }

@@ -13,36 +13,33 @@ using System.Web.Http.Description;
 namespace Inventory_API4.Controllers.RawControllers
 {
     /// <summary>
-    /// DeliveryMethodEntryList
+    /// TransferedItemsDetails
     /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class DeliveryMethodEntryListController : ApiController
+    public class TransInfoOriginController : ApiController
     {
-        //IProjectBL<ProjectDomainModel> _projectBL = new ProjectBL();
-        //attributeDo<_001_invRefCategory1Domain> cat1 = new _001_invRefCategory1BL();
-        I_017_invDeliveryMethodEntryListBL<_017_invDeliveryMethodEntryListDomain> attrib;
+        I_022_invTransInfoOriginBL<_022_invTransInfoOriginDomain> attrib;
 
-        public DeliveryMethodEntryListController(I_017_invDeliveryMethodEntryListBL<_017_invDeliveryMethodEntryListDomain> _attrib) 
+        public TransInfoOriginController(I_022_invTransInfoOriginBL<_022_invTransInfoOriginDomain> _attrib)
         {
             attrib = _attrib;
         }
-
         /// <summary>
-        /// Add new DeliveryMethodEntryList
+        /// Add new TransferedItemsDetails
         /// </summary>
         /// <param name="body"></param>
         /// <returns></returns>
         [HttpPost]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        public IHttpActionResult Post([FromBody]_017_invDeliveryMethodEntryListDomain body)
+        public IHttpActionResult Post([FromBody]_022_invTransInfoOriginDomain body)
         {
             return Json(attrib.Command(body, Command.Insert));
         }
 
         //Update
         /// <summary>
-        /// Update DeliveryMethodEntryList by ID with JSON Body
+        /// Update TransferedItemsDetails by ID with JSON Body
         /// </summary>
         /// <param name="id"></param>
         /// <param name="body"></param>
@@ -50,14 +47,14 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpPut]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        public IHttpActionResult Put(int id, [FromBody]_017_invDeliveryMethodEntryListDomain body)
+        public IHttpActionResult Put(int id, [FromBody]_022_invTransInfoOriginDomain body)
         {
             body.ID = id;
             return Json(attrib.Command(body, Command.Update));
         }
 
         /// <summary>
-        /// Delete Specific DeliveryMethodEntryList
+        /// Delete Specific TransferedItemsDetails
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -69,10 +66,10 @@ namespace Inventory_API4.Controllers.RawControllers
         }
 
         /// <summary>
-        /// Get List of DeliveryMethodEntryList
+        /// Get List of TransferedItemsDetails
         /// </summary>
         /// <returns>List</returns>
-        [ResponseType(typeof(IEnumerable<_001_invRefCategory1Domain>))]
+        [ResponseType(typeof(IEnumerable<_022_invTransInfoOriginDomain>))]
         public IHttpActionResult Get()
         {
             var result = attrib.Get();
@@ -84,16 +81,16 @@ namespace Inventory_API4.Controllers.RawControllers
         }
 
         /// <summary>
-        /// Get Specific DeliveryMethodEntryList by ID
+        /// Get Specific TransferedItemsDetails by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
-        [ResponseType(typeof(_001_invRefCategory1Domain))]
+        [ResponseType(typeof(_022_invTransInfoOriginDomain))]
         public IHttpActionResult Get(int id)
         {
             var result = attrib.Get(id);
             /*
-             * 
+             *
              */
 
             return Ok(result);

@@ -10,17 +10,17 @@ using InventoryBL;
 using System.Web.Http.Cors;
 using System.Web.Http.Description;
 
-namespace Inventory_API4.Controllers.RawControllers
+namespace Inventory_API4.Controllers
 {
     /// <summary>
     /// Category1
     /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class CourierListController : ApiController
+    public class TransInfoDelMetAttrValueController : ApiController
     {
-        I_024_RefCourierListBL<_024_RefCourierListDomain> cat1;
+        I_024_invTransInfoDelMetAttrValueBL<_024_invTransInfoDelMetAttrValueDomain> cat1;
 
-        public CourierListController(I_024_RefCourierListBL<_024_RefCourierListDomain> _001)
+        public TransInfoDelMetAttrValueController(I_024_invTransInfoDelMetAttrValueBL<_024_invTransInfoDelMetAttrValueDomain> _001)
         {
             cat1 = _001;
         }
@@ -32,7 +32,7 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpPost]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        public IHttpActionResult Post([FromBody]_024_RefCourierListDomain body)
+        public IHttpActionResult Post([FromBody]_024_invTransInfoDelMetAttrValueDomain body)
         {
             return Json(cat1.Command(body, Command.Insert));
         }
@@ -47,7 +47,7 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpPut]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        public IHttpActionResult Put(int id, [FromBody]_024_RefCourierListDomain body)
+        public IHttpActionResult Put(int id, [FromBody]_024_invTransInfoDelMetAttrValueDomain body)
         {
             body.ID = id;
             return Json(cat1.Command(body, Command.Update));
@@ -69,7 +69,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// Get List of Category1
         /// </summary>
         /// <returns>List</returns>
-        [ResponseType(typeof(IEnumerable<_024_RefCourierListDomain>))]
+        [ResponseType(typeof(IEnumerable<_024_invTransInfoDelMetAttrValueDomain>))]
         public IHttpActionResult Get()
         {
             var result = cat1.Get();
@@ -85,7 +85,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
-        [ResponseType(typeof(_024_RefCourierListDomain))]
+        [ResponseType(typeof(_024_invTransInfoDelMetAttrValueDomain))]
         public IHttpActionResult Get(int id)
         {
             var result = cat1.Get(id);

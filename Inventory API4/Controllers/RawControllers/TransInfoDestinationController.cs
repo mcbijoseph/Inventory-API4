@@ -13,33 +13,33 @@ using System.Web.Http.Description;
 namespace Inventory_API4.Controllers.RawControllers
 {
     /// <summary>
-    /// TransferedItemsHeader
+    /// TransferedItemsDetails
     /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class TransferedItemsHeaderController : ApiController
+    public class TransInfoDestinationController : ApiController
     {
-        I_021_invTransferedItemsHeaderBL<_021_invTransferedItemsHeaderDomain> attrib;
+        I_023_invTransInfoDestinationBL<_023_invTransInfoDestinationDomain> attrib;
 
-        public TransferedItemsHeaderController(I_021_invTransferedItemsHeaderBL<_021_invTransferedItemsHeaderDomain> _attrib)
+        public TransInfoDestinationController(I_023_invTransInfoDestinationBL<_023_invTransInfoDestinationDomain> _attrib)
         {
             attrib = _attrib;
         }
         /// <summary>
-        /// Add new TransferedItemsHeader
+        /// Add new TransferedItemsDetails
         /// </summary>
         /// <param name="body"></param>
         /// <returns></returns>
         [HttpPost]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        public IHttpActionResult Post([FromBody]_021_invTransferedItemsHeaderDomain body)
+        public IHttpActionResult Post([FromBody]_023_invTransInfoDestinationDomain body)
         {
             return Json(attrib.Command(body, Command.Insert));
         }
 
         //Update
         /// <summary>
-        /// Update TransferedItemsHeader by ID with JSON Body
+        /// Update TransferedItemsDetails by ID with JSON Body
         /// </summary>
         /// <param name="id"></param>
         /// <param name="body"></param>
@@ -47,14 +47,14 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpPut]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        public IHttpActionResult Put(int id, [FromBody]_021_invTransferedItemsHeaderDomain body)
+        public IHttpActionResult Put(int id, [FromBody]_023_invTransInfoDestinationDomain body)
         {
             body.ID = id;
             return Json(attrib.Command(body, Command.Update));
         }
 
         /// <summary>
-        /// Delete Specific TransferedItemsHeader
+        /// Delete Specific TransferedItemsDetails
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -66,10 +66,10 @@ namespace Inventory_API4.Controllers.RawControllers
         }
 
         /// <summary>
-        /// Get List of TransferedItemsHeader
+        /// Get List of TransferedItemsDetails
         /// </summary>
         /// <returns>List</returns>
-        [ResponseType(typeof(IEnumerable<_021_invTransferedItemsHeaderDomain>))]
+        [ResponseType(typeof(IEnumerable<_023_invTransInfoDestinationDomain>))]
         public IHttpActionResult Get()
         {
             var result = attrib.Get();
@@ -81,11 +81,11 @@ namespace Inventory_API4.Controllers.RawControllers
         }
 
         /// <summary>
-        /// Get Specific TransferedItemsHeader by ID
+        /// Get Specific TransferedItemsDetails by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
-        [ResponseType(typeof(_021_invTransferedItemsHeaderDomain))]
+        [ResponseType(typeof(_023_invTransInfoDestinationDomain))]
         public IHttpActionResult Get(int id)
         {
             var result = attrib.Get(id);

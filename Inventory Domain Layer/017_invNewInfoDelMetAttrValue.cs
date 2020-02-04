@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Inventory_Domain_Layer
 {
-    public class _017_invDeliveryMethodEntryListDomain
+    public class _017_invNewInfoDelMetAttrValueDomain
     {
         [Range(0, int.MaxValue)]
         public int ID { get; set; }
@@ -17,6 +17,7 @@ namespace Inventory_Domain_Layer
 
         [Range(0, int.MaxValue)]
         public int DelMethodAttrID_008 { get; set; }
+        public int AttributeValueID_008a { get; set; }
 
         [Required]
         public string AttributeValue { get; set; }

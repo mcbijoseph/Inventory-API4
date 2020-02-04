@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace Inventory_Domain_Layer
 {
-    public class _023_invTransItemsDelMethodAttributeDomain
+    public class _024_invTransInfoDelMetAttrValueDomain
     {
         public int ID { get; set; }
-        public int HeaderID_021 { get; set; }
+        public int TransMasterID_021 { get; set; }
         public int DeliveryAttrID_008 { get; set; }
+        public int AttributeValueID { get; set; }
         public string AttributeValue { get; set; }
+        public Boolean isDestination { get; set; }
     }
 }

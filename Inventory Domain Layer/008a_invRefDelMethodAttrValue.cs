@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Inventory_Domain_Layer
 {
-    public class _024_RefCourierListDomain
+    public class _008a_invRefDelMethodAttrValueDomain
     {
         public int ID { get; set; }
-        public string CourierName { get; set; }
+        public int DelMethodAttrID_008 { get; set; }
+        public string AttrValueName { get; set; }
     }
 }
