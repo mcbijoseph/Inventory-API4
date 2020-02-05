@@ -32,5 +32,27 @@ namespace InventoryDAL.Properties {
                 return ((string)(this["connectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=mcbi-dev2;password=password..;user=sa;connection timeout=0;Initial Catalog" +
+            " = inventory_db_final;")]
+        public string connectionStringTest {
+            get {
+                return ((string)(this["connectionStringTest"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool isTest {
+            get {
+                return ((bool)(this["isTest"]));
+            }
+            set {
+                this["isTest"] = value;
+            }
+        }
     }
 }

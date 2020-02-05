@@ -11,6 +11,5 @@ namespace Inventory_Domain_Layer
 
         public int ItemID_011 { get; set; }
         public string Name { get; set; }
-        public int Cat3ID_003 { get; set; }
     }
 }

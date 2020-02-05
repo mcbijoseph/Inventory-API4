@@ -35,7 +35,13 @@ namespace Inventory.DAL
         public string ConnectionString
         {
             //get { return ConfigurationManager.ConnectionStrings["con"].ConnectionString; }
-            get { return InventoryDAL.Properties.Settings.Default.connectionString; }
+            get
+            {
+                if (InventoryDAL.Properties.Settings.Default.isTest)
+                    return InventoryDAL.Properties.Settings.Default.connectionStringTest;
+
+                return InventoryDAL.Properties.Settings.Default.connectionString;
+            }
         }
 
         public DataSet Command(string sp, string commandType, List<SqlParameter> sqlParameters)
