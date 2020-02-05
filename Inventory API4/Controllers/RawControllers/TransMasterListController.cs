@@ -37,6 +37,20 @@ namespace Inventory_API4.Controllers.RawControllers
             return Json(attrib.Command(body, Command.Insert));
         }
 
+        /// <summary>
+        /// Add Receive
+        /// </summary>
+        /// <param name="body"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [DomainValidatorFilter]
+        [ResponseType(typeof(MessageViewDomain))]
+        public IHttpActionResult AddReceive([FromBody]_021_invTransMasterListDomain body)
+        {
+            return Json(attrib.Command(body, Command.Insert, true));
+        }
+
+
         //Update
         /// <summary>
         /// Update TransMasterList by ID with JSON Body
