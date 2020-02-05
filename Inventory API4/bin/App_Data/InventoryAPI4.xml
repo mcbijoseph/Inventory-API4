@@ -839,14 +839,14 @@
             TransItemRecievedList
             </summary>
         </member>
-        <member name="M:Inventory_API4.Controllers.RawControllers.TransItemRecievedListController.Post(Inventory_Domain_Layer._026_invTransItemRecievedListDomain)">
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransItemRecievedListController.Post(Inventory_Domain_Layer._026_invTransItemReceivedListDomain)">
             <summary>
             Add new TransItemRecievedList
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
-        <member name="M:Inventory_API4.Controllers.RawControllers.TransItemRecievedListController.Put(System.Int32,Inventory_Domain_Layer._026_invTransItemRecievedListDomain)">
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransItemRecievedListController.Put(System.Int32,Inventory_Domain_Layer._026_invTransItemReceivedListDomain)">
             <summary>
             Update TransItemRecievedList by ID with JSON Body
             </summary>
