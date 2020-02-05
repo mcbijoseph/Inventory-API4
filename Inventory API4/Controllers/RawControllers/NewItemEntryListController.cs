@@ -13,14 +13,14 @@ using System.Web.Http.Description;
 namespace Inventory_API4.Controllers
 {
     /// <summary>
-    /// ItemsEntryList
+    /// NewItemEntryList
     /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class ItemsEntryListController : ApiController
+    public class NewItemEntryListController : ApiController
     {
-        I_013_invItemsEntryListBL<_013_invItemsEntryListDomain> cat3;
+        I_013_invNewItemEntryListBL<_013_invNewItemEntryListDomain> cat3;
 
-        public ItemsEntryListController(I_013_invItemsEntryListBL<_013_invItemsEntryListDomain> _cat3)
+        public NewItemEntryListController(I_013_invNewItemEntryListBL<_013_invNewItemEntryListDomain> _cat3)
         {
             cat3 = _cat3;
         }
@@ -33,14 +33,14 @@ namespace Inventory_API4.Controllers
         [HttpPost]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        public IHttpActionResult Post([FromBody]_013_invItemsEntryListDomain body)
+        public IHttpActionResult Post([FromBody]_013_invNewItemEntryListDomain body)
         {
             return Json(cat3.Command(body, Command.Insert));
         }
 
         //Update
         /// <summary>
-        /// Update ItemsEntryList by ID with JSON Body
+        /// Update NewItemEntryList by ID with JSON Body
         /// </summary>
         /// <param name="id"></param>
         /// <param name="body"></param>
@@ -48,14 +48,14 @@ namespace Inventory_API4.Controllers
         [HttpPut]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        public IHttpActionResult Put(int id, [FromBody]_013_invItemsEntryListDomain body)
+        public IHttpActionResult Put(int id, [FromBody]_013_invNewItemEntryListDomain body)
         {
             body.ID = id;
             return Json(cat3.Command(body, Command.Update));
         }
 
         /// <summary>
-        /// Delete Specific ItemsEntryList
+        /// Delete Specific NewItemEntryList
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -67,7 +67,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get List of ItemsEntryList
+        /// Get List of NewItemEntryList
         /// </summary>
         /// <returns>List</returns>
         [ResponseType(typeof(IEnumerable<_001_invRefCategory1Domain>))]
@@ -82,7 +82,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get Specific ItemsEntryList by ID
+        /// Get Specific NewItemEntryList by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>

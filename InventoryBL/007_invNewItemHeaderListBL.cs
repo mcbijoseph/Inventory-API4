@@ -11,17 +11,17 @@ using Newtonsoft.Json;
 
 namespace InventoryBL
 {
-    public interface I_007_invRefDocEntryListBL<TEntity> : Common.IBaseBL<TEntity> where TEntity : class
+    public interface I_007_invNewItemHeaderListBL<TEntity> : Common.IBaseBL<TEntity> where TEntity : class
     {
 
     }
 
 
-    public class _007_invRefDocEntryListBL : Common.BaseBL, I_007_invRefDocEntryListBL<_007_invRefDocEntryListDomain>
+    public class _007_invNewItemHeaderListBL : Common.BaseBL, I_007_invNewItemHeaderListBL<_007_invNewItemHeaderListDomain>
     {
         private IDBHelper _dbHelper = new DBHelper();
 
-        public MessageViewDomain Command(_007_invRefDocEntryListDomain entity, Command commandType)
+        public MessageViewDomain Command(_007_invNewItemHeaderListDomain entity, Command commandType)
         {
 
             var sqlParameters = new List<SqlParameter>()
@@ -53,25 +53,25 @@ namespace InventoryBL
         public MessageViewDomain Delete(int id)
         {
             ///throw new NotImplementedException();
-            return Command(new _007_invRefDocEntryListDomain() { ID = id }, Inventory_Domain_Layer.Command.Delete);
+            return Command(new _007_invNewItemHeaderListDomain() { ID = id }, Inventory_Domain_Layer.Command.Delete);
         }
 
-        public IEnumerable<_007_invRefDocEntryListDomain> Get()
+        public IEnumerable<_007_invNewItemHeaderListDomain> Get()
         {
             return GetData(0);
         }
 
-        public _007_invRefDocEntryListDomain Get(int id)
+        public _007_invNewItemHeaderListDomain Get(int id)
         {
             return GetData(id).FirstOrDefault();
         }
 
-        public IEnumerable<_007_invRefDocEntryListDomain> Search(int offset, int limit, string orderBy)
+        public IEnumerable<_007_invNewItemHeaderListDomain> Search(int offset, int limit, string orderBy)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<_007_invRefDocEntryListDomain> GetData(int id)
+        public IEnumerable<_007_invNewItemHeaderListDomain> GetData(int id)
         {
             List<SqlParameter> pars = new List<SqlParameter>();
             pars.Add(new SqlParameter { ParameterName = "ID", Value = id, Direction = ParameterDirection.Input });
@@ -90,8 +90,8 @@ namespace InventoryBL
             });
             */
 
-            string tabledata = _dbHelper.GetRecords("sp007invRefDocEntryListSelect", pars).Tables[0].Rows[0]["RESULT"].ToString();//, Newtonsoft.Json.Formatting.None);
-            return JsonConvert.DeserializeObject<List<_007_invRefDocEntryListDomain>>(tabledata );
+            string tabledata = _dbHelper.GetRecords("sp007invNewItemHeaderListSelect", pars).Tables[0].Rows[0]["RESULT"].ToString();//, Newtonsoft.Json.Formatting.None);
+            return JsonConvert.DeserializeObject<List<_007_invNewItemHeaderListDomain>>(tabledata );
 
         }
     }

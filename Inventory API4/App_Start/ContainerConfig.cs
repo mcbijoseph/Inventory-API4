@@ -32,14 +32,14 @@ namespace Inventory_API4.App_Start
             builder.RegisterType<InventoryBL._004_invRefPropertyName1BL>().As<InventoryBL.I_004_invRefPropertyName1BL<Inventory_Domain_Layer._004_invRefPropertyName1Domain>>();
             builder.RegisterType<InventoryBL._005_invRefPropertyName2BL>().As<InventoryBL.I_005_invRefPropertyName2BL<Inventory_Domain_Layer._005_invRefPropertyName2Domain>>();
             builder.RegisterType<InventoryBL._006_invRefAttributeBL>().As<InventoryBL.I_006_invRefAttributeBL<Inventory_Domain_Layer._006_invRefAttributeDomain>>();
-            builder.RegisterType<InventoryBL._007_invRefDocEntryListBL>().As<InventoryBL.I_007_invRefDocEntryListBL<Inventory_Domain_Layer._007_invRefDocEntryListDomain>>();
+            builder.RegisterType<InventoryBL._007_invNewItemHeaderListBL>().As<InventoryBL.I_007_invNewItemHeaderListBL<Inventory_Domain_Layer._007_invNewItemHeaderListDomain>>();
             builder.RegisterType<InventoryBL._008_invRefDelMethodAttributeBL>().As<InventoryBL.I_008_invRefDelMethodAttributeBL<Inventory_Domain_Layer._008_invRefDelMethodAttributeDomain>>();
             builder.RegisterType<InventoryBL._008a_invRefDelMethodAttrValueBL>().As<InventoryBL.I_008a_invRefDelMethodAttrValueBL<Inventory_Domain_Layer._008a_invRefDelMethodAttrValueDomain>>();
             builder.RegisterType<InventoryBL._009_invRefUnitsBL>().As<InventoryBL.I_009_invRefUnitsBL<Inventory_Domain_Layer._009_invRefUnitsDomain>>();
             builder.RegisterType<InventoryBL._010_invRefDeliveryMethodBL>().As<InventoryBL.I_010_invRefDeliveryMethodBL<Inventory_Domain_Layer._010_invRefDeliveryMethodDomain>>();
             builder.RegisterType<InventoryBL._011_invRefItemsMasterListBL>().As<InventoryBL.I_011_invRefItemsMasterListBL<Inventory_Domain_Layer._011_invRefItemsMasterListDomain>>();
             builder.RegisterType<InventoryBL._012_invItemAttrivbuteBL>().As<InventoryBL.I_012_invItemAttributeBL<Inventory_Domain_Layer._012_invItemAttributeDomain>>();
-            builder.RegisterType<InventoryBL._013_invItemsEntryListBL>().As<InventoryBL.I_013_invItemsEntryListBL<Inventory_Domain_Layer._013_invItemsEntryListDomain>>();
+            builder.RegisterType<InventoryBL._013_invNewItemEntryListBL>().As<InventoryBL.I_013_invNewItemEntryListBL<Inventory_Domain_Layer._013_invNewItemEntryListDomain>>();
             builder.RegisterType<InventoryBL._014_invRefItemImageBL>().As<InventoryBL.I_014_invRefItemImageBL<Inventory_Domain_Layer._014_invRefItemImageDomain>>();
             builder.RegisterType<InventoryBL._015_invRefItemPropListBL>().As<InventoryBL.I_015_invRefItemPropListBL<Inventory_Domain_Layer._015_invRefItemPropListDomain>>();
             builder.RegisterType<InventoryBL._016_invRefItemCategoryBL>().As<InventoryBL.I_016_invRefItemCategoryBL<Inventory_Domain_Layer._016_invRefItemCategoryDomain>>();

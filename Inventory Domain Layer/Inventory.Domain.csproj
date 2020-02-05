@@ -49,13 +49,13 @@
     <Compile Include="004_invRefPropertyName1.cs" />
     <Compile Include="005_invRefPropertyName2.cs" />
     <Compile Include="006_invRefAttribute.cs" />
-    <Compile Include="007_invRefDocEntryList.cs" />
+    <Compile Include="007_invNewItemHeaderList.cs" />
     <Compile Include="008_invRefDelMethodAttribute.cs" />
     <Compile Include="009_invRefUnits.cs" />
     <Compile Include="010_invRefDeliveryMethod.cs" />
     <Compile Include="011_invRefItemsMasterList.cs" />
     <Compile Include="012_invItemAttribute.cs" />
-    <Compile Include="013_invItemsEntryList.cs" />
+    <Compile Include="013_invNewItemEntryList.cs" />
     <Compile Include="014_invRefItemImage.cs" />
     <Compile Include="015_invRefItemPropList.cs" />
     <Compile Include="016_invRefItemCategory.cs" />

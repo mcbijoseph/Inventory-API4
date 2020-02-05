@@ -180,7 +180,7 @@
     <Compile Include="Controllers\RawControllers\Category3Controller.cs" />
     <Compile Include="Controllers\RawControllers\DelMethodAttrValue.cs" />
     <Compile Include="Controllers\RawControllers\NewInfoDelMetAttrValueController.cs" />
-    <Compile Include="Controllers\RawControllers\DocEntryListController.cs" />
+    <Compile Include="Controllers\RawControllers\NewItemHeaderListController.cs" />
     <Compile Include="Controllers\RawControllers\DelMethodAttributeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RawControllers\ItemAttributeController.cs" />
@@ -188,7 +188,7 @@
     <Compile Include="Controllers\RawControllers\ItemConditionController.cs" />
     <Compile Include="Controllers\RawControllers\ItemImageController.cs" />
     <Compile Include="Controllers\RawControllers\ItemPropListController.cs" />
-    <Compile Include="Controllers\RawControllers\ItemsEntryListController.cs" />
+    <Compile Include="Controllers\RawControllers\NewItemEntryListController.cs" />
     <Compile Include="Controllers\RawControllers\ItemsMasterListController.cs" />
     <Compile Include="Controllers\RawControllers\PropertyName1Controller.cs" />
     <Compile Include="Controllers\RawControllers\PropertyName2Controller.cs" />

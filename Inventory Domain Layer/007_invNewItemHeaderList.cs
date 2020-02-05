@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Inventory_Domain_Layer
 {
-    public class _007_invRefDocEntryListDomain
+    public class _007_invNewItemHeaderListDomain
     {
         [Range(0, int.MaxValue)]
         public int ID { get; set; }
@@ -22,7 +22,7 @@ namespace Inventory_Domain_Layer
         [Range(0, int.MaxValue)]
         public int ReceiverID_HRDB { get; set; }
 
-        public List<_013_invItemsEntryListDomain> ItemEntryList { get; set; }
+        public List<_013_invNewItemEntryListDomain> ItemEntryList { get; set; }
         public _010_invRefDeliveryMethodDomain DeliveryMethod { get; set; }
 
     }

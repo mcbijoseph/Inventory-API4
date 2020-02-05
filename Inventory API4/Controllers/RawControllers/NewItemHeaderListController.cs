@@ -13,34 +13,34 @@ using System.Web.Http.Description;
 namespace Inventory_API4.Controllers
 {
     /// <summary>
-    /// DocumentsEntryList
+    /// NewItemHeaderList
     /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class DocEntryListController : ApiController
+    public class NewItemHeaderListController : ApiController
     {
-        I_007_invRefDocEntryListBL<_007_invRefDocEntryListDomain> cat3;
+        I_007_invNewItemHeaderListBL<_007_invNewItemHeaderListDomain> cat3;
 
-        public DocEntryListController(I_007_invRefDocEntryListBL<_007_invRefDocEntryListDomain> _cat3) 
+        public NewItemHeaderListController(I_007_invNewItemHeaderListBL<_007_invNewItemHeaderListDomain> _cat3) 
         {
             cat3 = _cat3;
         }
 
         /// <summary>
-        /// Add new DocumentsEntryList
+        /// Add new NewItemHeaderList
         /// </summary>
         /// <param name="body"></param>
         /// <returns></returns>
         [HttpPost]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        public IHttpActionResult Post([FromBody]_007_invRefDocEntryListDomain body)
+        public IHttpActionResult Post([FromBody]_007_invNewItemHeaderListDomain body)
         {
             return Json(cat3.Command(body, Command.Insert));
         }
 
         //Update
         /// <summary>
-        /// Update DocumentsEntryList by ID with JSON Body
+        /// Update NewItemHeaderList by ID with JSON Body
         /// </summary>
         /// <param name="id"></param>
         /// <param name="body"></param>
@@ -48,14 +48,14 @@ namespace Inventory_API4.Controllers
         [HttpPut]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        public IHttpActionResult Put(int id, [FromBody]_007_invRefDocEntryListDomain body)
+        public IHttpActionResult Put(int id, [FromBody]_007_invNewItemHeaderListDomain body)
         {
             body.ID = id;
             return Json(cat3.Command(body, Command.Update));
         }
 
         /// <summary>
-        /// Delete Specific DocumentsEntryList
+        /// Delete Specific NewItemHeaderList
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -67,7 +67,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get List of DocumentsEntryList
+        /// Get List of NewItemHeaderList
         /// </summary>
         /// <returns>List</returns>
         [ResponseType(typeof(IEnumerable<_001_invRefCategory1Domain>))]
@@ -82,7 +82,7 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get Specific DocumentsEntryList by ID
+        /// Get Specific NewItemHeaderList by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>

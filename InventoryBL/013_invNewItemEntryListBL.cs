@@ -12,17 +12,17 @@ using Newtonsoft.Json;
 
 namespace InventoryBL
 {
-    public interface I_013_invItemsEntryListBL<TEntity> : Common.IBaseBL<TEntity> where TEntity : class
+    public interface I_013_invNewItemEntryListBL<TEntity> : Common.IBaseBL<TEntity> where TEntity : class
     {
 
     }
 
 
-    public class _013_invItemsEntryListBL : Common.BaseBL, I_013_invItemsEntryListBL<_013_invItemsEntryListDomain>
+    public class _013_invNewItemEntryListBL : Common.BaseBL, I_013_invNewItemEntryListBL<_013_invNewItemEntryListDomain>
     {
         private IDBHelper _dbHelper = new DBHelper();
 
-        public MessageViewDomain Command(_013_invItemsEntryListDomain projectDomain, Command commandType)
+        public MessageViewDomain Command(_013_invNewItemEntryListDomain projectDomain, Command commandType)
         {
 
             var sqlParameters = new List<SqlParameter>()
@@ -44,25 +44,25 @@ namespace InventoryBL
         public MessageViewDomain Delete(int id)
         {
             ///throw new NotImplementedException();
-            return Command(new _013_invItemsEntryListDomain() { ID = id }, Inventory_Domain_Layer.Command.Delete);
+            return Command(new _013_invNewItemEntryListDomain() { ID = id }, Inventory_Domain_Layer.Command.Delete);
         }
 
-        public IEnumerable<_013_invItemsEntryListDomain> Get()
+        public IEnumerable<_013_invNewItemEntryListDomain> Get()
         {
             return GetData(0);
         }
 
-        public _013_invItemsEntryListDomain Get(int id)
+        public _013_invNewItemEntryListDomain Get(int id)
         {
             return GetData(id).FirstOrDefault();
         }
 
-        public IEnumerable<_013_invItemsEntryListDomain> Search(int offset, int limit, string orderBy)
+        public IEnumerable<_013_invNewItemEntryListDomain> Search(int offset, int limit, string orderBy)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<_013_invItemsEntryListDomain> GetData(int id)
+        public IEnumerable<_013_invNewItemEntryListDomain> GetData(int id)
         {
             List<SqlParameter> pars = new List<SqlParameter>();
             pars.Add( new SqlParameter { ParameterName = "ID", Value = id, Direction = ParameterDirection.Input });
@@ -77,7 +77,7 @@ namespace InventoryBL
                 ItemConditionID_018 = drow.Field<int>("Sup_ID")
             });*/
             string tabledata = _dbHelper.GetRecords("sp013invItemsEntryListSelect", pars).Tables[0].Rows[0][0].ToString();//, Newtonsoft.Json.Formatting.None);
-            return JsonConvert.DeserializeObject<List<_013_invItemsEntryListDomain>>(tabledata);
+            return JsonConvert.DeserializeObject<List<_013_invNewItemEntryListDomain>>(tabledata);
         }
     }
 }
