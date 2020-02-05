@@ -17,6 +17,11 @@ namespace Inventory_Domain_Layer
         //public int ReceiverProjectID_ENGGDB { get; set; }
         public DateTime Date { get; set; }
         //public int DocEntryListID_007 { get; set; }
+        public _022_invTransInfoOriginDomain TransInfoOrigin { get; set; }
+        public _023_invTransInfoDestinationDomain TransInfoDestination { get; set; }
+        public _024_invTransInfoDelMetAttrValueDomain TransInfoDelMetAttrValue { get; set; }
+        public List<_025_invTransItemEntryListDomain> TransItemEntryList { get; set; }
+        public List<_026_invTransItemReceivedListDomain> TransItemReceivedList { get; set; }
 
     }
 }

@@ -51,7 +51,7 @@ namespace Inventory_API4.App_Start
             builder.RegisterType<InventoryBL._023_invTransInfoDestinationBL>().As<InventoryBL.I_023_invTransInfoDestinationBL<Inventory_Domain_Layer._023_invTransInfoDestinationDomain>>();
             builder.RegisterType<InventoryBL._024_invTransInfoDelMetAttrValueBL>().As<InventoryBL.I_024_invTransInfoDelMetAttrValueBL<Inventory_Domain_Layer._024_invTransInfoDelMetAttrValueDomain>>();
             builder.RegisterType<InventoryBL._025_invTransItemEntryListBL>().As<InventoryBL.I_025_invTransItemEntryListBL<Inventory_Domain_Layer._025_invTransItemEntryListDomain>>();
-            builder.RegisterType<InventoryBL._026_invTransItemRecievedListBL>().As<InventoryBL.I_026_invTransItemRecievedListBL<Inventory_Domain_Layer._026_invTransItemRecievedListDomain>>();
+            builder.RegisterType<InventoryBL._026_invTransItemRecievedListBL>().As<InventoryBL.I_026_invTransItemRecievedListBL<Inventory_Domain_Layer._026_invTransItemReceivedListDomain>>();
             builder.RegisterType<InventoryBL._027_invWithdrawMasterListBL>().As<InventoryBL.I_027_invWithdrawMasterListBL<Inventory_Domain_Layer._027_invWithdrawMasterListDomain>>();
             builder.RegisterType<InventoryBL._028_invWithdrawItemEntryListBL>().As<InventoryBL.I_028_invWithdrawItemEntryListBL<Inventory_Domain_Layer._028_invWithdrawItemEntryListDomain>>();
 

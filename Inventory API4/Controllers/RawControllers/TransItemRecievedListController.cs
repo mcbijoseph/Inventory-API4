@@ -19,9 +19,9 @@ namespace Inventory_API4.Controllers.RawControllers
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class TransItemRecievedListController : ApiController
     {
-        I_026_invTransItemRecievedListBL<_026_invTransItemRecievedListDomain> cat1;
+        I_026_invTransItemRecievedListBL<_026_invTransItemReceivedListDomain> cat1;
 
-        public TransItemRecievedListController(I_026_invTransItemRecievedListBL<_026_invTransItemRecievedListDomain> _001)
+        public TransItemRecievedListController(I_026_invTransItemRecievedListBL<_026_invTransItemReceivedListDomain> _001)
         {
             cat1 = _001;
         }
@@ -33,7 +33,7 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpPost]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        public IHttpActionResult Post([FromBody]_026_invTransItemRecievedListDomain body)
+        public IHttpActionResult Post([FromBody]_026_invTransItemReceivedListDomain body)
         {
             return Json(cat1.Command(body, Command.Insert));
         }
@@ -48,7 +48,7 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpPut]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        public IHttpActionResult Put(int id, [FromBody]_026_invTransItemRecievedListDomain body)
+        public IHttpActionResult Put(int id, [FromBody]_026_invTransItemReceivedListDomain body)
         {
             body.ID = id;
             return Json(cat1.Command(body, Command.Update));
@@ -70,7 +70,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// Get List of TransItemRecievedList
         /// </summary>
         /// <returns>List</returns>
-        [ResponseType(typeof(IEnumerable<_026_invTransItemRecievedListDomain>))]
+        [ResponseType(typeof(IEnumerable<_026_invTransItemReceivedListDomain>))]
         public IHttpActionResult Get()
         {
             var result = cat1.Get();
@@ -86,7 +86,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
-        [ResponseType(typeof(_026_invTransItemRecievedListDomain))]
+        [ResponseType(typeof(_026_invTransItemReceivedListDomain))]
         public IHttpActionResult Get(int id)
         {
             var result = cat1.Get(id);

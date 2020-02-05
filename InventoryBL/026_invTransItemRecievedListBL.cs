@@ -15,11 +15,11 @@ namespace InventoryBL
     {
     }
 
-    public class _026_invTransItemRecievedListBL : Common.BaseBL, I_026_invTransItemRecievedListBL<_026_invTransItemRecievedListDomain>
+    public class _026_invTransItemRecievedListBL : Common.BaseBL, I_026_invTransItemRecievedListBL<_026_invTransItemReceivedListDomain>
     {
         private IDBHelper _dbHelper = new DBHelper();
 
-        public MessageViewDomain Command(_026_invTransItemRecievedListDomain projectDomain, Command commandType)
+        public MessageViewDomain Command(_026_invTransItemReceivedListDomain projectDomain, Command commandType)
         {
 
             var sqlParameters = new List<SqlParameter>()
@@ -42,20 +42,20 @@ namespace InventoryBL
         public MessageViewDomain Delete(int id)
         {
             // throw new NotImplementedException();
-            return Command(new _026_invTransItemRecievedListDomain() { ID = id }, Inventory_Domain_Layer.Command.Delete);
+            return Command(new _026_invTransItemReceivedListDomain() { ID = id }, Inventory_Domain_Layer.Command.Delete);
         }
 
-        public IEnumerable<_026_invTransItemRecievedListDomain> Get()
+        public IEnumerable<_026_invTransItemReceivedListDomain> Get()
         {
             return GetData(0);
         }
 
-        public _026_invTransItemRecievedListDomain Get(int id)
+        public _026_invTransItemReceivedListDomain Get(int id)
         {
             return GetData(id).FirstOrDefault();
         }
 
-        public IEnumerable<_026_invTransItemRecievedListDomain> Search(int offset, int limit, string orderBy)
+        public IEnumerable<_026_invTransItemReceivedListDomain> Search(int offset, int limit, string orderBy)
         {
             throw new NotImplementedException();
         }
@@ -65,7 +65,7 @@ namespace InventoryBL
         /// </summary>
         /// <param name="id">0 Means ALL</param>
         /// <returns>List</returns>
-        private IEnumerable<_026_invTransItemRecievedListDomain> GetData(int id)
+        private IEnumerable<_026_invTransItemReceivedListDomain> GetData(int id)
         {
             List<SqlParameter> pars = new List<SqlParameter>();
             pars.Add(new SqlParameter { ParameterName = "ID", Value = id, Direction = ParameterDirection.Input });
@@ -79,7 +79,7 @@ namespace InventoryBL
                 }
             );*/
             string tabledata = _dbHelper.GetRecords("sp026invTransItemReceivedListSelect", pars).Tables[0].Rows[0][0].ToString() ?? "{}";//, Newtonsoft.Json.Formatting.None);
-            return JsonConvert.DeserializeObject<List<_026_invTransItemRecievedListDomain>>(tabledata);
+            return JsonConvert.DeserializeObject<List<_026_invTransItemReceivedListDomain>>(tabledata);
 
         }
     }

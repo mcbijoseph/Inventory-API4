@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Inventory_Domain_Layer
 {
-    public class _026_invTransItemRecievedListDomain
+    public class _026_invTransItemReceivedListDomain
     {
         public int ID { get; set; }
         public int TransMasterID_021 { get; set; }
