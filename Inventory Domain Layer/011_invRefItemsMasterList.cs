@@ -17,8 +17,8 @@ namespace Inventory_Domain_Layer
         public bool hasAttribute { get; set; }
 
         public List<_014_invRefItemImageDomain> ItemImage { get; set; }
-        public List<_006_invRefAttributeDomain> Attributes { get; set; }
         public List<_012_invItemAttributeDomain> ItemAttribute { get; set; }
         public _003_invRefCategory3Domain Category3 { get; set; }
+        public List<_015_invRefItemPropListDomain> ItemPropList { get; set; }
     }
 }
