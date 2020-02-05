@@ -184,7 +184,6 @@
     <Compile Include="Controllers\RawControllers\DelMethodAttributeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RawControllers\ItemAttributeController.cs" />
-    <Compile Include="Controllers\RawControllers\ItemCategoryController.cs" />
     <Compile Include="Controllers\RawControllers\ItemConditionController.cs" />
     <Compile Include="Controllers\RawControllers\ItemImageController.cs" />
     <Compile Include="Controllers\RawControllers\ItemPropListController.cs" />

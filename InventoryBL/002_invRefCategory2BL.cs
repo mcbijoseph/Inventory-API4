@@ -29,8 +29,9 @@ namespace InventoryBL
             var sqlParameters = new List<SqlParameter>()
             {
                 new SqlParameter { ParameterName = "@ID", Value = projectDomain.ID, Direction = ParameterDirection.Input  },
-                new SqlParameter { ParameterName = "@ProjectName", Value = projectDomain.Name, Direction = ParameterDirection.Input }
-                
+                new SqlParameter { ParameterName = "@Name", Value = projectDomain.Name, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@Cat1ID_001", Value = projectDomain.Cat1ID_001, Direction = ParameterDirection.Input }
+
             };
 
             return this.GetMessage(_dbHelper.Command("sp002invRefCategory2Command", commandType.ToString(), sqlParameters).Tables[0]);

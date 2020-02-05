@@ -59,7 +59,6 @@
     <Compile Include="013_invNewItemEntryListBL.cs" />
     <Compile Include="014_invRefItemImageBL.cs" />
     <Compile Include="015_invRefItemPropListBL.cs" />
-    <Compile Include="016_invRefItemCategoryBL.cs" />
     <Compile Include="017_invNewInfoDelMetAttrValueBL.cs" />
     <Compile Include="018_invRefItemConditionBL.cs" />
     <Compile Include="019_invReleasedItemHeaderBL.cs" />

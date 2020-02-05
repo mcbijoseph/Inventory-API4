@@ -30,7 +30,7 @@ namespace InventoryBL
                 new SqlParameter { ParameterName = "@UnitsID_009", Value = projectDomain.UnitsID_009, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@Quantity", Value = projectDomain.Quantity, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@ItemCondID_018", Value = projectDomain.ItemCondID_018, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@RecieverID_HrmsDB", Value = projectDomain.RecieverID_HrmsDB, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@ReceiverID_HrmsDB", Value = projectDomain.ReceiverID_HrmsDB, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@DelMethodID_024", Value = projectDomain.DelMethodID_024, Direction = ParameterDirection.Input }
             };
 

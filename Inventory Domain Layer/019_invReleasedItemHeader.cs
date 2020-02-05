@@ -15,9 +15,9 @@ namespace Inventory_Domain_Layer
         public string  Ctrlnumber { get; set; }
         public int ProjectID_ENGGDB { get; set; }
         public DateTime Date { get; set; }
-        public int RequestbyHRMSDB { get; set; }
-        public int ApprovedbyHRMSDB { get; set; }
-        public int ReceivedbyHRMSDB { get; set; }
+        public int Requestedby_HRMSDB { get; set; }
+        public int Approvedby_HRMSDB { get; set; }
+        public int Receivedby_HRMSDB { get; set; }
         public DateTime ReceivedDate { get; set; }
     }
 }

@@ -14,7 +14,7 @@ namespace Inventory_Domain_Layer
         public int ProjectNameID_EnggDB { get; set; }
         public int RequestedByID_HrmsDB { get; set; }
         public int ApprovedByID_HrmsDB { get; set; }
-        public int RecievedByID_HrmsDB { get; set; }
+        public int ReceivedByID_HrmsDB { get; set; }
         public DateTime Date { get; set; }
     }
 }

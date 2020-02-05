@@ -30,7 +30,7 @@ namespace InventoryBL
                 new SqlParameter { ParameterName = "@ProjectNameID_EnggDB", Value = projectDomain.ProjectNameID_EnggDB, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@RequestedByID_HrmsDB", Value = projectDomain.RequestedByID_HrmsDB, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@ApprovedByID_HrmsDB", Value = projectDomain.ApprovedByID_HrmsDB, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@RecievedByID_HrmsDB", Value = projectDomain.RecievedByID_HrmsDB, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@ReceivedByID_HrmsDB", Value = projectDomain.ReceivedByID_HrmsDB, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@Date", Value = projectDomain.Date, Direction = ParameterDirection.Input }
             };
 

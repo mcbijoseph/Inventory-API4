@@ -17,6 +17,6 @@ namespace Inventory_Domain_Layer
         [Range(0, int.MaxValue)]
         public int Prop2ID_005 { get; set; }
         public string PropValue { get; set; }
-        public _003_invRefCategory3Domain ItemPropList { get; set; }
+        //public _003_invRefCategory3Domain ItemPropList { get; set; }
     }
 }

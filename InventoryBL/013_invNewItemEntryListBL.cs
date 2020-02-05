@@ -36,7 +36,7 @@ namespace InventoryBL
                 new SqlParameter { ParameterName = "@ItemConditionID_018", Value = projectDomain.ItemConditionID_018, Direction = ParameterDirection.Input }
             };
 
-            return this.GetMessage(_dbHelper.Command("sp013invItemsEntryListCommand", commandType.ToString(), sqlParameters).Tables[0]);
+            return this.GetMessage(_dbHelper.Command("sp013invNewItemEntryListCommand", commandType.ToString(), sqlParameters).Tables[0]);
 
 
         }
@@ -76,7 +76,7 @@ namespace InventoryBL
                 Quantity = drow.Field<decimal>("Qty"),
                 ItemConditionID_018 = drow.Field<int>("Sup_ID")
             });*/
-            string tabledata = _dbHelper.GetRecords("sp013invItemsEntryListSelect", pars).Tables[0].Rows[0][0].ToString();//, Newtonsoft.Json.Formatting.None);
+            string tabledata = _dbHelper.GetRecords("sp013invNewItemEntryListSelect", pars).Tables[0].Rows[0][0].ToString();//, Newtonsoft.Json.Formatting.None);
             return JsonConvert.DeserializeObject<List<_013_invNewItemEntryListDomain>>(tabledata);
         }
     }

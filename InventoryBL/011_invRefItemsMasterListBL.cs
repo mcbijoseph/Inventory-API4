@@ -29,7 +29,8 @@ namespace InventoryBL
 
                 new SqlParameter { ParameterName = "@ID", Value = projectDomain.ID, Direction = ParameterDirection.Input  },
                 new SqlParameter { ParameterName = "@Code", Value = projectDomain.Code, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@Tag", Value = projectDomain.Tag, Direction = ParameterDirection.Input }
+                new SqlParameter { ParameterName = "@Tag", Value = projectDomain.Tag, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@hasAttribute", Value = projectDomain.hasAttribute, Direction = ParameterDirection.Input }
 
             };
 

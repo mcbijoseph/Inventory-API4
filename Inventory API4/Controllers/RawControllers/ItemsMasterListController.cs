@@ -70,7 +70,7 @@ namespace Inventory_API4.Controllers
         /// Get List of ItemsMasterList
         /// </summary>
         /// <returns>List</returns>
-        [ResponseType(typeof(IEnumerable<_001_invRefCategory1Domain>))]
+        [ResponseType(typeof(IEnumerable<_011_invRefItemsMasterListDomain>))]
         public IHttpActionResult Get()
         {
             var result = cat3.Get();
@@ -86,7 +86,7 @@ namespace Inventory_API4.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
-        [ResponseType(typeof(_001_invRefCategory1Domain))]
+        [ResponseType(typeof(_011_invRefItemsMasterListDomain))]
         public IHttpActionResult Get(int id)
         {
             var result = cat3.Get(id);

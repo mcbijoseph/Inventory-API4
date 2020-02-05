@@ -28,7 +28,7 @@ namespace InventoryBL
             var sqlParameters = new List<SqlParameter>()
             {
                 new SqlParameter { ParameterName = "@ID", Value = projectDomain.ID, Direction = ParameterDirection.Input  },
-                new SqlParameter { ParameterName = "@ProjectName", Value = projectDomain.Name, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@Name", Value = projectDomain.Name, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@Cat2ID_002", Value = projectDomain.Cat2ID_002, Direction = ParameterDirection.Input }
             };
 

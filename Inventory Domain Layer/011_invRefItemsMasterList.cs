@@ -14,6 +14,7 @@ namespace Inventory_Domain_Layer
         [Required]
         public String Code { get; set; }
         public String Tag { get; set; }
+        public bool hasAttribute { get; set; }
 
         public List<_014_invRefItemImageDomain> ItemImage { get; set; }
         public List<_006_invRefAttributeDomain> Attributes { get; set; }

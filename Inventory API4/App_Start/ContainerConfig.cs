@@ -42,7 +42,6 @@ namespace Inventory_API4.App_Start
             builder.RegisterType<InventoryBL._013_invNewItemEntryListBL>().As<InventoryBL.I_013_invNewItemEntryListBL<Inventory_Domain_Layer._013_invNewItemEntryListDomain>>();
             builder.RegisterType<InventoryBL._014_invRefItemImageBL>().As<InventoryBL.I_014_invRefItemImageBL<Inventory_Domain_Layer._014_invRefItemImageDomain>>();
             builder.RegisterType<InventoryBL._015_invRefItemPropListBL>().As<InventoryBL.I_015_invRefItemPropListBL<Inventory_Domain_Layer._015_invRefItemPropListDomain>>();
-            builder.RegisterType<InventoryBL._016_invRefItemCategoryBL>().As<InventoryBL.I_016_invRefItemCategoryBL<Inventory_Domain_Layer._016_invRefItemCategoryDomain>>();
             builder.RegisterType<InventoryBL._017_invNewInfoDelMetAttrValueBL>().As<InventoryBL.I_017_invNewInfoDelMetAttrValueBL<Inventory_Domain_Layer._017_invNewInfoDelMetAttrValueDomain>>();
             builder.RegisterType<InventoryBL._018_invRefItemConditiontBL>().As<InventoryBL.I_018_invRefItemConditiontBL<Inventory_Domain_Layer._018_invRefItemConditionDomain>>();
             builder.RegisterType<InventoryBL._019_invReleasedItemHeaderBL>().As<InventoryBL.I_019_invReleasedItemHeaderBL<Inventory_Domain_Layer._019_invReleasedItemHeaderDomain>>();

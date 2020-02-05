@@ -14,7 +14,7 @@ namespace Inventory_Domain_Layer
         public int UnitsID_009 { get; set; }
         public decimal Quantity { get; set; }
         public int ItemCondID_018 { get; set; }
-        public int RecieverID_HrmsDB { get; set; }
+        public int ReceiverID_HrmsDB { get; set; }
         public int DelMethodID_024 { get; set; }
     }
 }

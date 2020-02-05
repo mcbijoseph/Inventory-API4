@@ -28,9 +28,9 @@ namespace InventoryBL
                 new SqlParameter { ParameterName = "@Ctrlnumber", Value = projectDomain.Ctrlnumber, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@ProjectID_ENGGDB", Value = projectDomain.ProjectID_ENGGDB, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@Date", Value = projectDomain.Date, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@RequestbyHRMSDB", Value = projectDomain.RequestbyHRMSDB, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@ApprovedbyHRMSDB", Value = projectDomain.ApprovedbyHRMSDB, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@ReceivedbyHRMSDB", Value = projectDomain.ReceivedbyHRMSDB, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@Requestedby_HRMSDB", Value = projectDomain.Requestedby_HRMSDB, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@Approvedby_HRMSDB", Value = projectDomain.Approvedby_HRMSDB, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@Receivedby_HRMSDB", Value = projectDomain.Receivedby_HRMSDB, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@ReceivedDate", Value = projectDomain.ReceivedDate, Direction = ParameterDirection.Input }
             };
 
@@ -70,9 +70,9 @@ namespace InventoryBL
                 Ctrlnumber = drow.Field<string>("Ctrlnumber"),
                 ProjectID_ENGGDB = drow.Field<int>("ProjectID_ENGGDB"),
                 Date = drow.Field<DateTime>("Date"),
-                RequestbyHRMSDB = drow.Field<int>("RequestbyHRMSDB"),
-                ApprovedbyHRMSDB = drow.Field<int>("ApprovedbyHRMSDB"),
-                ReceivedbyHRMSDB = drow.Field<int>("ReceivedbyHRMSDB"),
+                Requestedby_HRMSDB = drow.Field<int>("RequestbyHRMSDB"),
+                Approvedby_HRMSDB = drow.Field<int>("ApprovedbyHRMSDB"),
+                Receivedby_HRMSDB = drow.Field<int>("ReceivedbyHRMSDB"),
                 ReceivedDate = drow.Field<DateTime>("ReceivedDate")
             });
         }
