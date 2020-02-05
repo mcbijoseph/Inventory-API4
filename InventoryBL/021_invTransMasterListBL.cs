@@ -28,6 +28,12 @@ namespace InventoryBL
                 new SqlParameter { ParameterName = "@ID", Value = projectDomain.ID, Direction = ParameterDirection.Input  },
                 new SqlParameter { ParameterName = "@Ctrlnumber", Value = projectDomain.Ctrlnumber, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@Date", Value = projectDomain.Date, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@TransInfoOrigin", Value = JsonConvert.SerializeObject(projectDomain.TransInfoOrigin), Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@TransInfoDestination", Value = JsonConvert.SerializeObject(projectDomain.TransInfoDestination), Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@TransInfoDelMetAttrValue", Value = JsonConvert.SerializeObject(projectDomain.TransInfoDelMetAttrValue), Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@TransItemEntryList", Value = JsonConvert.SerializeObject(projectDomain.TransItemEntryList), Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@TransItemReceivedList", Value = JsonConvert.SerializeObject(projectDomain.TransItemReceivedList), Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@isReceive", Value = false, Direction = ParameterDirection.Input }
                 /*new SqlParameter { ParameterName = "@WarehouseInCharge_HRMSDB", Value = projectDomain.WarehouseInCharge_HRMSDB, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@DatePrepared", Value = projectDomain.DatePrepared, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@ReceiverWarehouseInCharge_HRMSDB", Value = projectDomain.ReceiverWarehouseInCharge_HRMSDB, Direction = ParameterDirection.Input },
