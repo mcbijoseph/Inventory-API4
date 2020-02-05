@@ -796,19 +796,19 @@
         </member>
         <member name="T:Inventory_API4.Controllers.RawControllers.TransInfoOriginController">
             <summary>
-            TransferedItemsDetails
+            TransInfoOrigin
             </summary>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.TransInfoOriginController.Post(Inventory_Domain_Layer._022_invTransInfoOriginDomain)">
             <summary>
-            Add new TransferedItemsDetails
+            Add new TransInfoOrigin
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.TransInfoOriginController.Put(System.Int32,Inventory_Domain_Layer._022_invTransInfoOriginDomain)">
             <summary>
-            Update TransferedItemsDetails by ID with JSON Body
+            Update TransInfoOrigin by ID with JSON Body
             </summary>
             <param name="id"></param>
             <param name="body"></param>
@@ -816,39 +816,39 @@
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.TransInfoOriginController.Delete(System.Int32)">
             <summary>
-            Delete Specific TransferedItemsDetails
+            Delete Specific TransInfoOrigin
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.TransInfoOriginController.Get">
             <summary>
-            Get List of TransferedItemsDetails
+            Get List of TransInfoOrigin
             </summary>
             <returns>List</returns>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.TransInfoOriginController.Get(System.Int32)">
             <summary>
-            Get Specific TransferedItemsDetails by ID
+            Get Specific TransInfoOrigin by ID
             </summary>
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
         </member>
         <member name="T:Inventory_API4.Controllers.RawControllers.TransItemRecievedListController">
             <summary>
-            Category1
+            TransItemRecievedList
             </summary>
         </member>
-        <member name="M:Inventory_API4.Controllers.RawControllers.TransItemRecievedListController.Post(Inventory_Domain_Layer._026_invTransItemRecievedListDomain)">
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransItemRecievedListController.Post(Inventory_Domain_Layer._026_invTransItemReceivedListDomain)">
             <summary>
-            Add new Category1
+            Add new TransItemRecievedList
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
-        <member name="M:Inventory_API4.Controllers.RawControllers.TransItemRecievedListController.Put(System.Int32,Inventory_Domain_Layer._026_invTransItemRecievedListDomain)">
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransItemRecievedListController.Put(System.Int32,Inventory_Domain_Layer._026_invTransItemReceivedListDomain)">
             <summary>
-            Update Category1 by ID with JSON Body
+            Update TransItemRecievedList by ID with JSON Body
             </summary>
             <param name="id"></param>
             <param name="body"></param>
@@ -856,39 +856,39 @@
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.TransItemRecievedListController.Delete(System.Int32)">
             <summary>
-            Delete Specific Category1
+            Delete Specific TransItemRecievedList
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.TransItemRecievedListController.Get">
             <summary>
-            Get List of Category1
+            Get List of TransItemRecievedList
             </summary>
             <returns>List</returns>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.TransItemRecievedListController.Get(System.Int32)">
             <summary>
-            Get Specific Category1 by ID
+            Get Specific TransItemRecievedList by ID
             </summary>
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
         </member>
         <member name="T:Inventory_API4.Controllers.RawControllers.TransMasterListController">
             <summary>
-            TransferedItemsHeader
+            TransMasterList
             </summary>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.TransMasterListController.Post(Inventory_Domain_Layer._021_invTransMasterListDomain)">
             <summary>
-            Add new TransferedItemsHeader
+            Add new TransMasterList
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.TransMasterListController.Put(System.Int32,Inventory_Domain_Layer._021_invTransMasterListDomain)">
             <summary>
-            Update TransferedItemsHeader by ID with JSON Body
+            Update TransMasterList by ID with JSON Body
             </summary>
             <param name="id"></param>
             <param name="body"></param>
@@ -896,39 +896,39 @@
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.TransMasterListController.Delete(System.Int32)">
             <summary>
-            Delete Specific TransferedItemsHeader
+            Delete Specific TransMasterList
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.TransMasterListController.Get">
             <summary>
-            Get List of TransferedItemsHeader
+            Get List of TransMasterList
             </summary>
             <returns>List</returns>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.TransMasterListController.Get(System.Int32)">
             <summary>
-            Get Specific TransferedItemsHeader by ID
+            Get Specific TransMasterList by ID
             </summary>
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
         </member>
         <member name="T:Inventory_API4.Controllers.RawControllers.TransInfoDestinationController">
             <summary>
-            TransferedItemsDetails
+            TransInfoDestination
             </summary>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.TransInfoDestinationController.Post(Inventory_Domain_Layer._023_invTransInfoDestinationDomain)">
             <summary>
-            Add new TransferedItemsDetails
+            Add new TransInfoDestination
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.TransInfoDestinationController.Put(System.Int32,Inventory_Domain_Layer._023_invTransInfoDestinationDomain)">
             <summary>
-            Update TransferedItemsDetails by ID with JSON Body
+            Update TransInfoDestination by ID with JSON Body
             </summary>
             <param name="id"></param>
             <param name="body"></param>
@@ -936,39 +936,39 @@
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.TransInfoDestinationController.Delete(System.Int32)">
             <summary>
-            Delete Specific TransferedItemsDetails
+            Delete Specific TransInfoDestination
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.TransInfoDestinationController.Get">
             <summary>
-            Get List of TransferedItemsDetails
+            Get List of TransInfoDestination
             </summary>
             <returns>List</returns>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.TransInfoDestinationController.Get(System.Int32)">
             <summary>
-            Get Specific TransferedItemsDetails by ID
+            Get Specific TransInfoDestination by ID
             </summary>
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
         </member>
         <member name="T:Inventory_API4.Controllers.RawControllers.WithdrawItemEntryListController">
             <summary>
-            Category1
+            WithdrawItemEntryList
             </summary>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.WithdrawItemEntryListController.Post(Inventory_Domain_Layer._028_invWithdrawItemEntryListDomain)">
             <summary>
-            Add new Category1
+            Add new WithdrawItemEntryList
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.WithdrawItemEntryListController.Put(System.Int32,Inventory_Domain_Layer._028_invWithdrawItemEntryListDomain)">
             <summary>
-            Update Category1 by ID with JSON Body
+            Update WithdrawItemEntryList by ID with JSON Body
             </summary>
             <param name="id"></param>
             <param name="body"></param>
@@ -976,39 +976,39 @@
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.WithdrawItemEntryListController.Delete(System.Int32)">
             <summary>
-            Delete Specific Category1
+            Delete Specific WithdrawItemEntryList
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.WithdrawItemEntryListController.Get">
             <summary>
-            Get List of Category1
+            Get List of WithdrawItemEntryList
             </summary>
             <returns>List</returns>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.WithdrawItemEntryListController.Get(System.Int32)">
             <summary>
-            Get Specific Category1 by ID
+            Get Specific WithdrawItemEntryList by ID
             </summary>
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
         </member>
         <member name="T:Inventory_API4.Controllers.RawControllers.WithdrawMasterListController">
             <summary>
-            Category1
+            WithdrawMasterList
             </summary>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.WithdrawMasterListController.Post(Inventory_Domain_Layer._027_invWithdrawMasterListDomain)">
             <summary>
-            Add new Category1
+            Add new WithdrawMasterList
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.WithdrawMasterListController.Put(System.Int32,Inventory_Domain_Layer._027_invWithdrawMasterListDomain)">
             <summary>
-            Update Category1 by ID with JSON Body
+            Update WithdrawMasterList by ID with JSON Body
             </summary>
             <param name="id"></param>
             <param name="body"></param>
@@ -1016,60 +1016,60 @@
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.WithdrawMasterListController.Delete(System.Int32)">
             <summary>
-            Delete Specific Category1
+            Delete Specific WithdrawMasterList
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.WithdrawMasterListController.Get">
             <summary>
-            Get List of Category1
+            Get List of WithdrawMasterList
             </summary>
             <returns>List</returns>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.WithdrawMasterListController.Get(System.Int32)">
             <summary>
-            Get Specific Category1 by ID
+            Get Specific WithdrawMasterList by ID
             </summary>
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
         </member>
-        <member name="T:Inventory_API4.Controllers.DocEntryListController">
+        <member name="T:Inventory_API4.Controllers.NewItemHeaderListController">
             <summary>
-            DocumentsEntryList
+            NewItemHeaderList
             </summary>
         </member>
-        <member name="M:Inventory_API4.Controllers.DocEntryListController.Post(Inventory_Domain_Layer._007_invRefDocEntryListDomain)">
+        <member name="M:Inventory_API4.Controllers.NewItemHeaderListController.Post(Inventory_Domain_Layer._007_invNewItemHeaderListDomain)">
             <summary>
-            Add new DocumentsEntryList
+            Add new NewItemHeaderList
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
-        <member name="M:Inventory_API4.Controllers.DocEntryListController.Put(System.Int32,Inventory_Domain_Layer._007_invRefDocEntryListDomain)">
+        <member name="M:Inventory_API4.Controllers.NewItemHeaderListController.Put(System.Int32,Inventory_Domain_Layer._007_invNewItemHeaderListDomain)">
             <summary>
-            Update DocumentsEntryList by ID with JSON Body
+            Update NewItemHeaderList by ID with JSON Body
             </summary>
             <param name="id"></param>
             <param name="body"></param>
             <returns></returns>
         </member>
-        <member name="M:Inventory_API4.Controllers.DocEntryListController.Delete(System.Int32)">
+        <member name="M:Inventory_API4.Controllers.NewItemHeaderListController.Delete(System.Int32)">
             <summary>
-            Delete Specific DocumentsEntryList
+            Delete Specific NewItemHeaderList
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:Inventory_API4.Controllers.DocEntryListController.Get">
+        <member name="M:Inventory_API4.Controllers.NewItemHeaderListController.Get">
             <summary>
-            Get List of DocumentsEntryList
+            Get List of NewItemHeaderList
             </summary>
             <returns>List</returns>
         </member>
-        <member name="M:Inventory_API4.Controllers.DocEntryListController.Get(System.Int32)">
+        <member name="M:Inventory_API4.Controllers.NewItemHeaderListController.Get(System.Int32)">
             <summary>
-            Get Specific DocumentsEntryList by ID
+            Get Specific NewItemHeaderList by ID
             </summary>
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
@@ -1162,46 +1162,6 @@
             <param name="id"></param>
             <returns>1 JSON OR NULL</returns>
         </member>
-        <member name="T:Inventory_API4.Controllers.ItemCategoryController">
-            <summary>
-            ItemCategory
-            </summary>
-        </member>
-        <member name="M:Inventory_API4.Controllers.ItemCategoryController.Post(Inventory_Domain_Layer._016_invRefItemCategoryDomain)">
-            <summary>
-            Add new ItemCategory
-            </summary>
-            <param name="body"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Inventory_API4.Controllers.ItemCategoryController.Put(System.Int32,Inventory_Domain_Layer._016_invRefItemCategoryDomain)">
-            <summary>
-            Update ItemCategory by ID with JSON Body
-            </summary>
-            <param name="id"></param>
-            <param name="body"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Inventory_API4.Controllers.ItemCategoryController.Delete(System.Int32)">
-            <summary>
-            Delete Specific ItemCategory
-            </summary>
-            <param name="id"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Inventory_API4.Controllers.ItemCategoryController.Get">
-            <summary>
-            Get List of ItemCategory
-            </summary>
-            <returns>List</returns>
-        </member>
-        <member name="M:Inventory_API4.Controllers.ItemCategoryController.Get(System.Int32)">
-            <summary>
-            Get Specific ItemCategory by ID
-            </summary>
-            <param name="id"></param>
-            <returns>1 JSON or NULL</returns>
-        </member>
         <member name="T:Inventory_API4.Controllers.ItemImageController">
             <summary>
             ItemImage
@@ -1282,42 +1242,42 @@
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
         </member>
-        <member name="T:Inventory_API4.Controllers.ItemsEntryListController">
+        <member name="T:Inventory_API4.Controllers.NewItemEntryListController">
             <summary>
-            ItemsEntryList
+            NewItemEntryList
             </summary>
         </member>
-        <member name="M:Inventory_API4.Controllers.ItemsEntryListController.Post(Inventory_Domain_Layer._013_invItemsEntryListDomain)">
+        <member name="M:Inventory_API4.Controllers.NewItemEntryListController.Post(Inventory_Domain_Layer._013_invNewItemEntryListDomain)">
             <summary>
             Add new ItemsEntryList
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
-        <member name="M:Inventory_API4.Controllers.ItemsEntryListController.Put(System.Int32,Inventory_Domain_Layer._013_invItemsEntryListDomain)">
+        <member name="M:Inventory_API4.Controllers.NewItemEntryListController.Put(System.Int32,Inventory_Domain_Layer._013_invNewItemEntryListDomain)">
             <summary>
-            Update ItemsEntryList by ID with JSON Body
+            Update NewItemEntryList by ID with JSON Body
             </summary>
             <param name="id"></param>
             <param name="body"></param>
             <returns></returns>
         </member>
-        <member name="M:Inventory_API4.Controllers.ItemsEntryListController.Delete(System.Int32)">
+        <member name="M:Inventory_API4.Controllers.NewItemEntryListController.Delete(System.Int32)">
             <summary>
-            Delete Specific ItemsEntryList
+            Delete Specific NewItemEntryList
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:Inventory_API4.Controllers.ItemsEntryListController.Get">
+        <member name="M:Inventory_API4.Controllers.NewItemEntryListController.Get">
             <summary>
-            Get List of ItemsEntryList
+            Get List of NewItemEntryList
             </summary>
             <returns>List</returns>
         </member>
-        <member name="M:Inventory_API4.Controllers.ItemsEntryListController.Get(System.Int32)">
+        <member name="M:Inventory_API4.Controllers.NewItemEntryListController.Get(System.Int32)">
             <summary>
-            Get Specific ItemsEntryList by ID
+            Get Specific NewItemEntryList by ID
             </summary>
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
@@ -1524,19 +1484,19 @@
         </member>
         <member name="T:Inventory_API4.Controllers.TransInfoDelMetAttrValueController">
             <summary>
-            Category1
+            TransInfoDelMetAttrValue
             </summary>
         </member>
         <member name="M:Inventory_API4.Controllers.TransInfoDelMetAttrValueController.Post(Inventory_Domain_Layer._024_invTransInfoDelMetAttrValueDomain)">
             <summary>
-            Add new Category1
+            Add new TransInfoDelMetAttrValue
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.TransInfoDelMetAttrValueController.Put(System.Int32,Inventory_Domain_Layer._024_invTransInfoDelMetAttrValueDomain)">
             <summary>
-            Update Category1 by ID with JSON Body
+            Update TransInfoDelMetAttrValue by ID with JSON Body
             </summary>
             <param name="id"></param>
             <param name="body"></param>
@@ -1544,39 +1504,39 @@
         </member>
         <member name="M:Inventory_API4.Controllers.TransInfoDelMetAttrValueController.Delete(System.Int32)">
             <summary>
-            Delete Specific Category1
+            Delete Specific TransInfoDelMetAttrValue
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.TransInfoDelMetAttrValueController.Get">
             <summary>
-            Get List of Category1
+            Get List of TransInfoDelMetAttrValue
             </summary>
             <returns>List</returns>
         </member>
         <member name="M:Inventory_API4.Controllers.TransInfoDelMetAttrValueController.Get(System.Int32)">
             <summary>
-            Get Specific Category1 by ID
+            Get Specific TransInfoDelMetAttrValue by ID
             </summary>
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
         </member>
         <member name="T:Inventory_API4.Controllers.TransItemEntryListController">
             <summary>
-            Category1
+            TransItemEntryList
             </summary>
         </member>
         <member name="M:Inventory_API4.Controllers.TransItemEntryListController.Post(Inventory_Domain_Layer._025_invTransItemEntryListDomain)">
             <summary>
-            Add new Category1
+            Add new TransItemEntryList
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.TransItemEntryListController.Put(System.Int32,Inventory_Domain_Layer._025_invTransItemEntryListDomain)">
             <summary>
-            Update Category1 by ID with JSON Body
+            Update TransItemEntryList by ID with JSON Body
             </summary>
             <param name="id"></param>
             <param name="body"></param>
@@ -1584,20 +1544,20 @@
         </member>
         <member name="M:Inventory_API4.Controllers.TransItemEntryListController.Delete(System.Int32)">
             <summary>
-            Delete Specific Category1
+            Delete Specific TransItemEntryList
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.TransItemEntryListController.Get">
             <summary>
-            Get List of Category1
+            Get List of TransItemEntryList
             </summary>
             <returns>List</returns>
         </member>
         <member name="M:Inventory_API4.Controllers.TransItemEntryListController.Get(System.Int32)">
             <summary>
-            Get Specific Category1 by ID
+            Get Specific TransItemEntryList by ID
             </summary>
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
