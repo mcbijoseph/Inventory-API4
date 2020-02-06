@@ -25,7 +25,7 @@ namespace Inventory_Domain_Layer
         public int ItemConditionID_018 { get; set; }
 
 
-        public ItemFullNameDomain ItemFullName { get; set; }
+        public fnItemFullNameDomain ItemFullName { get; set; }
         public _018_invRefItemConditionDomain Condition
         {
             get; set;
