@@ -886,6 +886,13 @@
             <param name="body"></param>
             <returns></returns>
         </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransMasterListController.AddReceive(Inventory_Domain_Layer._021_invTransMasterListDomain)">
+            <summary>
+            Add Receive
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.TransMasterListController.Put(System.Int32,Inventory_Domain_Layer._021_invTransMasterListDomain)">
             <summary>
             Update TransMasterList by ID with JSON Body
