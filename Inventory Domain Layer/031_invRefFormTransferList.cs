@@ -10,6 +10,7 @@ namespace Inventory_Domain_Layer
     {
         public int ID { get; set; }
         public string StrDate { get; set; }
+        public int Year { get; set; }
         public int Series { get; set; }
         public int HardSeriesNo { get; set; }
     }

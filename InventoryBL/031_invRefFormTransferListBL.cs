@@ -26,6 +26,7 @@ namespace InventoryBL
             {
                 new SqlParameter { ParameterName = "@ID", Value = projectDomain.ID, Direction = ParameterDirection.Input  },
                 new SqlParameter { ParameterName = "@StrDate", Value = projectDomain.StrDate, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@Year", Value = projectDomain.Year, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@Series", Value = projectDomain.Series, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@HardSeriesNo", Value = projectDomain.HardSeriesNo, Direction = ParameterDirection.Input }
             };

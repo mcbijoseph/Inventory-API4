@@ -1571,19 +1571,19 @@
         </member>
         <member name="T:Inventory_API4.Controllers.FormTransferListController">
             <summary>
-            TransferList
+            FormTransferList
             </summary>
         </member>
         <member name="M:Inventory_API4.Controllers.FormTransferListController.Post(Inventory_Domain_Layer._031_invRefFormTransferListDomain)">
             <summary>
-            Add new TransferList
+            Add new FormTransferList
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.FormTransferListController.Put(System.Int32,Inventory_Domain_Layer._031_invRefFormTransferListDomain)">
             <summary>
-            Update TransferList by ID with JSON Body
+            Update FormTransferList by ID with JSON Body
             </summary>
             <param name="id"></param>
             <param name="body"></param>
@@ -1591,20 +1591,20 @@
         </member>
         <member name="M:Inventory_API4.Controllers.FormTransferListController.Delete(System.Int32)">
             <summary>
-            Delete Specific TransferList
+            Delete Specific FormTransferList
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.FormTransferListController.Get">
             <summary>
-            Get List of TransferList
+            Get List of FormTransferList
             </summary>
             <returns>List</returns>
         </member>
         <member name="M:Inventory_API4.Controllers.FormTransferListController.Get(System.Int32)">
             <summary>
-            Get Specific TransferList by ID
+            Get Specific FormTransferList by ID
             </summary>
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
