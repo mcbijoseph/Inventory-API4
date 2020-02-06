@@ -36,8 +36,9 @@ namespace InventoryBL
                 new SqlParameter { ParameterName = "@TransInfoDelMetAttrValue", Value = JsonConvert.SerializeObject(projectDomain.TransInfoDelMetAttrValue), Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@TransItemEntryList", Value = JsonConvert.SerializeObject(projectDomain.TransItemEntryList), Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@TransItemReceivedList", Value = JsonConvert.SerializeObject(projectDomain.TransItemReceivedList), Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@isReceive", Value = false, Direction = ParameterDirection.Input }
-                /*new SqlParameter { ParameterName = "@WarehouseInCharge_HRMSDB", Value = projectDomain.WarehouseInCharge_HRMSDB, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@isReceive", Value = false, Direction = ParameterDirection.Input },
+                /*
+                new SqlParameter { ParameterName = "@WarehouseInCharge_HRMSDB", Value = projectDomain.WarehouseInCharge_HRMSDB, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@DatePrepared", Value = projectDomain.DatePrepared, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@ReceiverWarehouseInCharge_HRMSDB", Value = projectDomain.ReceiverWarehouseInCharge_HRMSDB, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@ReceiverProjectID_ENGGDB", Value = projectDomain.ReceiverProjectID_ENGGDB, Direction = ParameterDirection.Input },
