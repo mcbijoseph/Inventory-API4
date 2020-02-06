@@ -13,7 +13,7 @@ namespace InventoryBL
 {
     public interface I_011_invRefItemsMasterListBL<TEntity> : Common.IBaseBL<TEntity> where TEntity : class
     {
-
+        IEnumerable<_011_invRefItemsMasterListDomain> GetbyProjectID(int id);
     }
 
 
@@ -48,12 +48,16 @@ namespace InventoryBL
 
         public IEnumerable<_011_invRefItemsMasterListDomain> Get()
         {
-            return GetData(0);
+            return GetData(0,0);
         }
 
         public _011_invRefItemsMasterListDomain Get(int id)
         {
-            return GetData(id).FirstOrDefault();
+            return GetData(id,0).FirstOrDefault();
+        }
+        public IEnumerable<_011_invRefItemsMasterListDomain> GetbyProjectID(int id)
+        {
+            return GetData(0, id);
         }
 
         public IEnumerable<_011_invRefItemsMasterListDomain> Search(int offset, int limit, string orderBy)
@@ -61,10 +65,12 @@ namespace InventoryBL
             throw new NotImplementedException();
         }
 
-        public IEnumerable<_011_invRefItemsMasterListDomain> GetData(int id)
+        public IEnumerable<_011_invRefItemsMasterListDomain> GetData(int id, int projectID)
         {
+
             List<SqlParameter> pars = new List<SqlParameter>();
             pars.Add(new SqlParameter { ParameterName = "ID", Value = id, Direction = ParameterDirection.Input });
+            pars.Add(new SqlParameter { ParameterName = "projectID", Value = projectID, Direction = ParameterDirection.Input });
             /*return _dbHelper.GetRecords("sp011invRefITemsMAsterListSelect", pars).Tables[0].AsEnumerable().Select(drow => new _011_invRefItemsMasterListDomain
             {
                 ID = drow.Field<int>("ID"),

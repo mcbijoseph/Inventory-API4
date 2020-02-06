@@ -54,6 +54,19 @@ namespace Inventory_API4.Controllers
             return Json(cat3.Command(body, Command.Update));
         }
 
+        [HttpGet]
+        [ResponseType(typeof(_011_invRefItemsMasterListDomain))]
+        [Route("api/ItemsMasterList/ItemsbyProjects/{id}")]
+        public IHttpActionResult ItemsbyProjects(int id)
+        {
+            var result = cat3.GetbyProjectID(id);
+            /*
+             *
+             */
+
+            return Ok(result);
+        }
+
         /// <summary>
         /// Delete Specific ItemsMasterList
         /// </summary>
@@ -96,5 +109,7 @@ namespace Inventory_API4.Controllers
 
             return Ok(result);
         }
+
+
     }
 }
