@@ -10,7 +10,7 @@ namespace Inventory_Domain_Layer
     {
         public int ID { get; set; }
         public string ReferenceNumber { get; set; }
-        public string HardSeriesNumber { get; set; }
+        public int HardSeriesNumber { get; set; }
         public bool isCancelled { get; set; }
         public string cancelReason { get; set; }
         //public int ProjectID_ENGGDB { get; set; }
