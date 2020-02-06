@@ -179,6 +179,8 @@
     <Compile Include="Controllers\RawControllers\Category2Controller.cs" />
     <Compile Include="Controllers\RawControllers\Category3Controller.cs" />
     <Compile Include="Controllers\RawControllers\DelMethodAttrValue.cs" />
+    <Compile Include="Controllers\RawControllers\FormHardCopySeriesController.cs" />
+    <Compile Include="Controllers\RawControllers\FormListController.cs" />
     <Compile Include="Controllers\RawControllers\NewInfoDelMetAttrValueController.cs" />
     <Compile Include="Controllers\RawControllers\NewItemHeaderListController.cs" />
     <Compile Include="Controllers\RawControllers\DelMethodAttributeController.cs" />
@@ -194,6 +196,7 @@
     <Compile Include="Controllers\RawControllers\DeliveryMethodController.cs" />
     <Compile Include="Controllers\RawControllers\ReleasedItemDetailsController.cs" />
     <Compile Include="Controllers\RawControllers\ReleasedItemHeaderController.cs" />
+    <Compile Include="Controllers\RawControllers\FormTransferListController.cs" />
     <Compile Include="Controllers\RawControllers\TransInfoDelMetAttrValueController.cs" />
     <Compile Include="Controllers\RawControllers\TransInfoOriginController.cs" />
     <Compile Include="Controllers\RawControllers\TransItemEntryListController.cs" />

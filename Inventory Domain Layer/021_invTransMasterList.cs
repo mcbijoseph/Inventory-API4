@@ -9,7 +9,10 @@ namespace Inventory_Domain_Layer
     public class _021_invTransMasterListDomain
     {
         public int ID { get; set; }
-        public string Ctrlnumber { get; set; }
+        public string ReferenceNumber { get; set; }
+        public string HardSeriesNumber { get; set; }
+        public bool isCancelled { get; set; }
+        public string cancelReason { get; set; }
         //public int ProjectID_ENGGDB { get; set; }
         //public int WarehouseInCharge_HRMSDB { get; set; }
         //public DateTime DatePrepared { get; set; }

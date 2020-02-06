@@ -1034,6 +1034,86 @@
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
         </member>
+        <member name="T:Inventory_API4.Controllers.FormHardCopySeriesController">
+            <summary>
+            FormHardCopySeries
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormHardCopySeriesController.Post(Inventory_Domain_Layer._030_invRefFormHardCopySeriesDomain)">
+            <summary>
+            Add new FormHardCopySeries
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormHardCopySeriesController.Put(System.Int32,Inventory_Domain_Layer._030_invRefFormHardCopySeriesDomain)">
+            <summary>
+            Update FormHardCopySeries by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormHardCopySeriesController.Delete(System.Int32)">
+            <summary>
+            Delete Specific FormHardCopySeries
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormHardCopySeriesController.Get">
+            <summary>
+            Get List of FormHardCopySeries
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormHardCopySeriesController.Get(System.Int32)">
+            <summary>
+            Get Specific FormHardCopySeries by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.FormListController">
+            <summary>
+            FormList
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormListController.Post(Inventory_Domain_Layer._029_invRefFormListDomain)">
+            <summary>
+            Add new FormList
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormListController.Put(System.Int32,Inventory_Domain_Layer._029_invRefFormListDomain)">
+            <summary>
+            Update FormList by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormListController.Delete(System.Int32)">
+            <summary>
+            Delete Specific FormList
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormListController.Get">
+            <summary>
+            Get List of FormList
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormListController.Get(System.Int32)">
+            <summary>
+            Get Specific FormList by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
         <member name="T:Inventory_API4.Controllers.NewItemHeaderListController">
             <summary>
             NewItemHeaderList
@@ -1478,6 +1558,46 @@
         <member name="M:Inventory_API4.Controllers.ReleasedItemHeaderController.Get(System.Int32)">
             <summary>
             Get Specific ReleasedItemHeader by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.FormTransferListController">
+            <summary>
+            TransferList
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormTransferListController.Post(Inventory_Domain_Layer._031_invRefFormTransferListDomain)">
+            <summary>
+            Add new TransferList
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormTransferListController.Put(System.Int32,Inventory_Domain_Layer._031_invRefFormTransferListDomain)">
+            <summary>
+            Update TransferList by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormTransferListController.Delete(System.Int32)">
+            <summary>
+            Delete Specific TransferList
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormTransferListController.Get">
+            <summary>
+            Get List of TransferList
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormTransferListController.Get(System.Int32)">
+            <summary>
+            Get Specific TransferList by ID
             </summary>
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>

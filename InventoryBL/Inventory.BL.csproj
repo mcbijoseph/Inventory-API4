@@ -72,6 +72,9 @@
     <Compile Include="026_invTransItemRecievedListBL.cs" />
     <Compile Include="027_invWithdrawMasterListBL.cs" />
     <Compile Include="028_invWithdrawItemEntryListBL.cs" />
+    <Compile Include="029_invRefFormListBL.cs" />
+    <Compile Include="030_invRefFormHardCopySeriesBL.cs" />
+    <Compile Include="031_invRefFormTransferListBL.cs" />
     <Compile Include="Common\IBaseBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Sample.cs" />

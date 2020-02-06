@@ -26,7 +26,10 @@ namespace InventoryBL
             var sqlParameters = new List<SqlParameter>()
             {
                 new SqlParameter { ParameterName = "@ID", Value = projectDomain.ID, Direction = ParameterDirection.Input  },
-                new SqlParameter { ParameterName = "@Ctrlnumber", Value = projectDomain.Ctrlnumber, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@ReferenceNumber", Value = projectDomain.ReferenceNumber, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@HardSeriesNumber", Value = projectDomain.HardSeriesNumber, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@isCancelled", Value = projectDomain.isCancelled, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@cancelReason", Value = projectDomain.cancelReason, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@Date", Value = projectDomain.Date, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@TransInfoOrigin", Value = JsonConvert.SerializeObject(projectDomain.TransInfoOrigin), Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@TransInfoDestination", Value = JsonConvert.SerializeObject(projectDomain.TransInfoDestination), Direction = ParameterDirection.Input },

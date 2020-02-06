@@ -71,6 +71,9 @@
     <Compile Include="026_invTransItemRecievedList.cs" />
     <Compile Include="027_invWithdrawMasterList.cs" />
     <Compile Include="028_invWithdrawItemEntryList.cs" />
+    <Compile Include="029_invRefFormList.cs" />
+    <Compile Include="030_invRefFormHardCopySeries.cs" />
+    <Compile Include="031_invRefFormTransferList.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="ItemFullName.cs" />
     <Compile Include="MessageViewDomain.cs" />

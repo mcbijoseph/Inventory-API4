@@ -54,6 +54,9 @@ namespace Inventory_API4.App_Start
             builder.RegisterType<InventoryBL._026_invTransItemRecievedListBL>().As<InventoryBL.I_026_invTransItemRecievedListBL<Inventory_Domain_Layer._026_invTransItemReceivedListDomain>>();
             builder.RegisterType<InventoryBL._027_invWithdrawMasterListBL>().As<InventoryBL.I_027_invWithdrawMasterListBL<Inventory_Domain_Layer._027_invWithdrawMasterListDomain>>();
             builder.RegisterType<InventoryBL._028_invWithdrawItemEntryListBL>().As<InventoryBL.I_028_invWithdrawItemEntryListBL<Inventory_Domain_Layer._028_invWithdrawItemEntryListDomain>>();
+            builder.RegisterType<InventoryBL._029_invRefFormListBL>().As<InventoryBL.I_029_invRefFormListBL<Inventory_Domain_Layer._029_invRefFormListDomain>>();
+            builder.RegisterType<InventoryBL._030_invRefFormHardCopySeriesBL>().As<InventoryBL.I_030_invRefFormHardCopySeriesBL<Inventory_Domain_Layer._030_invRefFormHardCopySeriesDomain>>();
+            builder.RegisterType<InventoryBL._031_invRefTransferListBL>().As<InventoryBL.I_031_invRefFormTransferListBL<Inventory_Domain_Layer._031_invRefFormTransferListDomain>>();
 
             List<Autofac.Core.Parameter> pars = new List<Autofac.Core.Parameter>();
             //pars.Add( new Autofac.Core.Parameter(""))
