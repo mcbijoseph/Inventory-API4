@@ -25,7 +25,6 @@ namespace Inventory_Domain_Layer
         public _024_invTransInfoDelMetAttrValueDomain TransInfoDelMetAttrValue { get; set; }
         public List<_025_invTransItemEntryListDomain> TransItemEntryList { get; set; }
         public List<_026_invTransItemReceivedListDomain> TransItemReceivedList { get; set; }
-        public _031_invRefFormTransferListDomain FormTransfer { get; set; }
 
     }
 }
