@@ -17,7 +17,7 @@ namespace Inventory_Domain_Layer
         public bool hasAttribute { get; set; }
 
         public _009_invRefUnitsDomain Units { get; set; }
-        public List<vwItemProjectQuantity> PojectQuantity { get; set; }
+        public List<vwItemProjectQuantity> ProjectQuantity { get; set; }
 
         public List<_014_invRefItemImageDomain> ItemImage { get; set; }
         public List<_012_invItemAttributeDomain> ItemAttribute { get; set; }
