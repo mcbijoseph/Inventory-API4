@@ -81,5 +81,7 @@ namespace InventoryBL
             string tabledata = _dbHelper.GetRecords("sp011invRefITemsMAsterListSelect", pars).Tables[0].Rows[0][0].ToString();//, Newtonsoft.Json.Formatting.None);
             return JsonConvert.DeserializeObject<List<_011_invRefItemsMasterListDomain>>(tabledata);
         }
+
+
     }
 }

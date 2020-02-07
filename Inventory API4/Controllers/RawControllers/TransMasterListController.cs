@@ -45,8 +45,8 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpPost]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        [Route("api/TransMasterList/AddReceive")]
-        public IHttpActionResult AddReceive([FromBody]_021_invTransMasterListDomain body)
+        [Route("api/TransMasterList/ConfirmReceive")]
+        public IHttpActionResult ConfirmReceive([FromBody]_021_invTransMasterListDomain body)
         {
             return Json(attrib.Command(body, Command.Insert, true));
         }
