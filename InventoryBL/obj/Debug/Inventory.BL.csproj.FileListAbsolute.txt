@@ -36,3 +36,16 @@ C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryBL\obj\Debug\Inventory
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryBL\obj\Debug\InventoryBL.pdb
 C:\Users\LENOVO\Source\Repos\Inventory-API4\InventoryBL\bin\Debug\Newtonsoft.Json.dll
 C:\Users\LENOVO\Source\Repos\Inventory-API4\InventoryBL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Bengoan\Desktop\INV\Inventory-API4\InventoryBL\bin\Debug\InventoryBL.dll
+C:\Users\Bengoan\Desktop\INV\Inventory-API4\InventoryBL\bin\Debug\InventoryBL.pdb
+C:\Users\Bengoan\Desktop\INV\Inventory-API4\InventoryBL\bin\Debug\Inventory Domain Layer.dll
+C:\Users\Bengoan\Desktop\INV\Inventory-API4\InventoryBL\bin\Debug\InventoryDAL.dll
+C:\Users\Bengoan\Desktop\INV\Inventory-API4\InventoryBL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Bengoan\Desktop\INV\Inventory-API4\InventoryBL\bin\Debug\Inventory Domain Layer.pdb
+C:\Users\Bengoan\Desktop\INV\Inventory-API4\InventoryBL\bin\Debug\InventoryDAL.pdb
+C:\Users\Bengoan\Desktop\INV\Inventory-API4\InventoryBL\bin\Debug\InventoryDAL.dll.config
+C:\Users\Bengoan\Desktop\INV\Inventory-API4\InventoryBL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Bengoan\Desktop\INV\Inventory-API4\InventoryBL\obj\Debug\Inventory.BL.csprojAssemblyReference.cache
+C:\Users\Bengoan\Desktop\INV\Inventory-API4\InventoryBL\obj\Debug\Inventory.BL.csproj.CopyComplete
+C:\Users\Bengoan\Desktop\INV\Inventory-API4\InventoryBL\obj\Debug\InventoryBL.dll
+C:\Users\Bengoan\Desktop\INV\Inventory-API4\InventoryBL\obj\Debug\InventoryBL.pdb
