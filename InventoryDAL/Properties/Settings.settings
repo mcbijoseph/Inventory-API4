@@ -9,7 +9,7 @@
       <Value Profile="(Default)">server=mcbi-dev2;password=password..;user=sa;connection timeout=0;Initial Catalog =  ERP_INVE;</Value>
     </Setting>
     <Setting Name="isTest" Type="System.Boolean" Scope="Application">
-      <Value Profile="(Default)">True</Value>
+      <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
 </SettingsFile>
