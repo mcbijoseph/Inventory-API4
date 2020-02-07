@@ -15,6 +15,7 @@ namespace InventoryBL
     {
         MessageViewDomain Command(_021_invTransMasterListDomain projectDomain, Command commandType, bool isReceived);
         IEnumerable<_021_invTransMasterListDomain> Search( string args);
+        _021_invTransMasterListDomain SearchbyReference(string reference);
     }
 
     public class _021_invTransMasterListBL : Common.BaseBL, I_021_invTransMasterListBL<_021_invTransMasterListDomain>
@@ -124,6 +125,20 @@ namespace InventoryBL
 
         }
 
+        public _021_invTransMasterListDomain SearchbyReference(string reference)
+        {
+            IEnumerable<_021_invTransMasterListDomain> testVal = GetData(0);
+
+            foreach (_021_invTransMasterListDomain tmld in testVal)
+            {
+                if (tmld.HardSeriesNumber.ToString() == reference || tmld.ReferenceNumber == reference)
+                {
+                    return tmld;
+                }
+            }
+            return null;
+
+        }
 
         public IEnumerable<_021_invTransMasterListDomain> GetData(int id)
         {
