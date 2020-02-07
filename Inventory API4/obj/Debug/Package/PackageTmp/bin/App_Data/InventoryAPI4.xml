@@ -1,0 +1,1733 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Inventory API4</name>
+    </assembly>
+    <members>
+        <member name="M:Inventory_API4.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
+            </summary>
+            <param name="description">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The ID as a string.</returns>
+        </member>
+        <member name="T:Inventory_API4.Areas.HelpPage.HelpPageConfig">
+            <summary>
+            Use this class to customize the Help Page.
+            For example you can set a custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> to supply the documentation
+            or you can provide the samples for the requests/responses.
+            </summary>
+        </member>
+        <member name="T:Inventory_API4.Areas.HelpPage.Controllers.HelpController">
+            <summary>
+            The controller that will handle requests for the help page.
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageConfigurationExtensions.SetDocumentationProvider(System.Web.Http.HttpConfiguration,System.Web.Http.Description.IDocumentationProvider)">
+            <summary>
+            Sets the documentation provider for help page.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="documentationProvider">The documentation provider.</param>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleObjects(System.Web.Http.HttpConfiguration,System.Collections.Generic.IDictionary{System.Type,System.Object})">
+            <summary>
+            Sets the objects that will be used by the formatters to produce sample requests/responses.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleObjects">The sample objects.</param>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type and action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample request directly for the specified media type and action with parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type of the action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample response directly for the specified media type of the action with specific parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForMediaType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Sets the sample directly for all actions with the specified media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Sets the sample directly for all actions with the specified type and media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The parameter type or return type of an action.</param>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <returns>The help page sample generator.</returns>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageConfigurationExtensions.SetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration,Inventory_API4.Areas.HelpPage.HelpPageSampleGenerator)">
+            <summary>
+            Sets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleGenerator">The help page sample generator.</param>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageConfigurationExtensions.GetModelDescriptionGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the model description generator.
+            </summary>
+            <param name="config">The configuration.</param>
+            <returns>The <see cref="T:Inventory_API4.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator"/></returns>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageApiModel(System.Web.Http.HttpConfiguration,System.String)">
+            <summary>
+            Gets the model that represents an API displayed on the help page. The model is initialized on the first call and cached for subsequent calls.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="apiDescriptionId">The <see cref="T:System.Web.Http.Description.ApiDescription"/> ID.</param>
+            <returns>
+            An <see cref="T:Inventory_API4.Areas.HelpPage.Models.HelpPageApiModel"/>
+            </returns>
+        </member>
+        <member name="T:Inventory_API4.Areas.HelpPage.ModelDescriptions.ModelDescription">
+            <summary>
+            Describes a type model.
+            </summary>
+        </member>
+        <member name="T:Inventory_API4.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator">
+            <summary>
+            Generates model descriptions for given types.
+            </summary>
+        </member>
+        <member name="T:Inventory_API4.Areas.HelpPage.ModelDescriptions.ModelNameAttribute">
+            <summary>
+            Use this attribute to change the name of the <see cref="T:Inventory_API4.Areas.HelpPage.ModelDescriptions.ModelDescription"/> generated for a type.
+            </summary>
+        </member>
+        <member name="T:Inventory_API4.Areas.HelpPage.Models.HelpPageApiModel">
+            <summary>
+            The model that represents an API displayed on the help page.
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.Models.HelpPageApiModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Inventory_API4.Areas.HelpPage.Models.HelpPageApiModel"/> class.
+            </summary>
+        </member>
+        <member name="P:Inventory_API4.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription">
+            <summary>
+            Gets or sets the <see cref="P:Inventory_API4.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription"/> that describes the API.
+            </summary>
+        </member>
+        <member name="P:Inventory_API4.Areas.HelpPage.Models.HelpPageApiModel.UriParameters">
+            <summary>
+            Gets or sets the <see cref="T:Inventory_API4.Areas.HelpPage.ModelDescriptions.ParameterDescription"/> collection that describes the URI parameters for the API.
+            </summary>
+        </member>
+        <member name="P:Inventory_API4.Areas.HelpPage.Models.HelpPageApiModel.RequestDocumentation">
+            <summary>
+            Gets or sets the documentation for the request.
+            </summary>
+        </member>
+        <member name="P:Inventory_API4.Areas.HelpPage.Models.HelpPageApiModel.RequestModelDescription">
+            <summary>
+            Gets or sets the <see cref="T:Inventory_API4.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the request body.
+            </summary>
+        </member>
+        <member name="P:Inventory_API4.Areas.HelpPage.Models.HelpPageApiModel.RequestBodyParameters">
+            <summary>
+            Gets the request body parameter descriptions.
+            </summary>
+        </member>
+        <member name="P:Inventory_API4.Areas.HelpPage.Models.HelpPageApiModel.ResourceDescription">
+            <summary>
+            Gets or sets the <see cref="T:Inventory_API4.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the resource.
+            </summary>
+        </member>
+        <member name="P:Inventory_API4.Areas.HelpPage.Models.HelpPageApiModel.ResourceProperties">
+            <summary>
+            Gets the resource property descriptions.
+            </summary>
+        </member>
+        <member name="P:Inventory_API4.Areas.HelpPage.Models.HelpPageApiModel.SampleRequests">
+            <summary>
+            Gets the sample requests associated with the API.
+            </summary>
+        </member>
+        <member name="P:Inventory_API4.Areas.HelpPage.Models.HelpPageApiModel.SampleResponses">
+            <summary>
+            Gets the sample responses associated with the API.
+            </summary>
+        </member>
+        <member name="P:Inventory_API4.Areas.HelpPage.Models.HelpPageApiModel.ErrorMessages">
+            <summary>
+            Gets the error messages associated with this model.
+            </summary>
+        </member>
+        <member name="T:Inventory_API4.Areas.HelpPage.HelpPageSampleGenerator">
+            <summary>
+            This class will generate the samples for the help page.
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageSampleGenerator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Inventory_API4.Areas.HelpPage.HelpPageSampleGenerator"/> class.
+            </summary>
+        </member>
+        <member name="P:Inventory_API4.Areas.HelpPage.HelpPageSampleGenerator.ActualHttpMessageTypes">
+            <summary>
+            Gets CLR types that are used as the content of <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/>.
+            </summary>
+        </member>
+        <member name="P:Inventory_API4.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples">
+            <summary>
+            Gets the objects that are used directly as samples for certain actions.
+            </summary>
+        </member>
+        <member name="P:Inventory_API4.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects">
+            <summary>
+            Gets the objects that are serialized as samples by the supported formatters.
+            </summary>
+        </member>
+        <member name="P:Inventory_API4.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories">
+            <summary>
+            Gets factories for the objects that the supported formatters will serialize as samples. Processed in order,
+            stopping when the factory successfully returns a non-<see langref="null"/> object.
+            </summary>
+            <remarks>
+            Collection includes just <see cref="M:Inventory_API4.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)"/> initially. Use
+            <code>SampleObjectFactories.Insert(0, func)</code> to provide an override and
+            <code>SampleObjectFactories.Add(func)</code> to provide a fallback.</remarks>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageSampleGenerator.GetSampleRequests(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the request body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageSampleGenerator.GetSampleResponses(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the response body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageSampleGenerator.GetSample(System.Web.Http.Description.ApiDescription,Inventory_API4.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Gets the request or response body samples.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageSampleGenerator.GetActionSample(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Type,System.Net.Http.Formatting.MediaTypeFormatter,System.Net.Http.Headers.MediaTypeHeaderValue,Inventory_API4.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Search for samples that are provided directly through <see cref="P:Inventory_API4.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples"/>.
+            </summary>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="type">The CLR type.</param>
+            <param name="formatter">The formatter.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The sample that matches the parameters.</returns>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject(System.Type)">
+            <summary>
+            Gets the sample object that will be serialized by the formatters. 
+            First, it will look at the <see cref="P:Inventory_API4.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects"/>. If no sample object is found, it will try to create
+            one using <see cref="M:Inventory_API4.Areas.HelpPage.HelpPageSampleGenerator.DefaultSampleObjectFactory(Inventory_API4.Areas.HelpPage.HelpPageSampleGenerator,System.Type)"/> (which wraps an <see cref="T:Inventory_API4.Areas.HelpPage.ObjectGenerator"/>) and other
+            factories in <see cref="P:Inventory_API4.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The sample object.</returns>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageSampleGenerator.ResolveHttpRequestMessageType(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Resolves the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The type.</returns>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageSampleGenerator.ResolveType(System.Web.Http.Description.ApiDescription,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},Inventory_API4.Areas.HelpPage.SampleDirection,System.Collections.ObjectModel.Collection{System.Net.Http.Formatting.MediaTypeFormatter}@)">
+            <summary>
+            Resolves the type of the action parameter or return value when <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/> is used.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or a response.</param>
+            <param name="formatters">The formatters.</param>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageSampleGenerator.WriteSampleObjectUsingFormatter(System.Net.Http.Formatting.MediaTypeFormatter,System.Object,System.Type,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Writes the sample object using formatter.
+            </summary>
+            <param name="formatter">The formatter.</param>
+            <param name="value">The value.</param>
+            <param name="type">The type.</param>
+            <param name="mediaType">Type of the media.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Inventory_API4.Areas.HelpPage.HelpPageSampleKey">
+            <summary>
+            This is used to identify the place where the sample should be applied.
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Creates a new <see cref="T:Inventory_API4.Areas.HelpPage.HelpPageSampleKey"/> based on media type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Creates a new <see cref="T:Inventory_API4.Areas.HelpPage.HelpPageSampleKey"/> based on media type and CLR type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The CLR type.</param>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageSampleKey.#ctor(Inventory_API4.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:Inventory_API4.Areas.HelpPage.HelpPageSampleKey"/> based on <see cref="P:Inventory_API4.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="sampleDirection">The <see cref="P:Inventory_API4.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,Inventory_API4.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:Inventory_API4.Areas.HelpPage.HelpPageSampleKey"/> based on media type, <see cref="P:Inventory_API4.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The <see cref="P:Inventory_API4.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="P:Inventory_API4.Areas.HelpPage.HelpPageSampleKey.ControllerName">
+            <summary>
+            Gets the name of the controller.
+            </summary>
+            <value>
+            The name of the controller.
+            </value>
+        </member>
+        <member name="P:Inventory_API4.Areas.HelpPage.HelpPageSampleKey.ActionName">
+            <summary>
+            Gets the name of the action.
+            </summary>
+            <value>
+            The name of the action.
+            </value>
+        </member>
+        <member name="P:Inventory_API4.Areas.HelpPage.HelpPageSampleKey.MediaType">
+            <summary>
+            Gets the media type.
+            </summary>
+            <value>
+            The media type.
+            </value>
+        </member>
+        <member name="P:Inventory_API4.Areas.HelpPage.HelpPageSampleKey.ParameterNames">
+            <summary>
+            Gets the parameter names.
+            </summary>
+        </member>
+        <member name="P:Inventory_API4.Areas.HelpPage.HelpPageSampleKey.SampleDirection">
+            <summary>
+            Gets the <see cref="P:Inventory_API4.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.
+            </summary>
+        </member>
+        <member name="T:Inventory_API4.Areas.HelpPage.ImageSample">
+            <summary>
+            This represents an image sample on the help page. There's a display template named ImageSample associated with this class.
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.ImageSample.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Inventory_API4.Areas.HelpPage.ImageSample"/> class.
+            </summary>
+            <param name="src">The URL of an image.</param>
+        </member>
+        <member name="T:Inventory_API4.Areas.HelpPage.InvalidSample">
+            <summary>
+            This represents an invalid sample on the help page. There's a display template named InvalidSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:Inventory_API4.Areas.HelpPage.ObjectGenerator">
+            <summary>
+            This class will create an object of a given type and populate it with sample data.
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)">
+            <summary>
+            Generates an object for a given type. The type needs to be public, have a public default constructor and settable public properties/fields. Currently it supports the following types:
+            Simple types: <see cref="T:System.Int32"/>, <see cref="T:System.String"/>, <see cref="T:System.Enum"/>, <see cref="T:System.DateTime"/>, <see cref="T:System.Uri"/>, etc.
+            Complex types: POCO types.
+            Nullables: <see cref="T:System.Nullable`1"/>.
+            Arrays: arrays of simple types or complex types.
+            Key value pairs: <see cref="T:System.Collections.Generic.KeyValuePair`2"/>
+            Tuples: <see cref="T:System.Tuple`1"/>, <see cref="T:System.Tuple`2"/>, etc
+            Dictionaries: <see cref="T:System.Collections.Generic.IDictionary`2"/> or anything deriving from <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            Collections: <see cref="T:System.Collections.Generic.IList`1"/>, <see cref="T:System.Collections.Generic.IEnumerable`1"/>, <see cref="T:System.Collections.Generic.ICollection`1"/>, <see cref="T:System.Collections.IList"/>, <see cref="T:System.Collections.IEnumerable"/>, <see cref="T:System.Collections.ICollection"/> or anything deriving from <see cref="T:System.Collections.Generic.ICollection`1"/> or <see cref="T:System.Collections.IList"/>.
+            Queryables: <see cref="T:System.Linq.IQueryable"/>, <see cref="T:System.Linq.IQueryable`1"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>An object of the given type.</returns>
+        </member>
+        <member name="T:Inventory_API4.Areas.HelpPage.SampleDirection">
+            <summary>
+            Indicates whether the sample is used for request or response
+            </summary>
+        </member>
+        <member name="T:Inventory_API4.Areas.HelpPage.TextSample">
+            <summary>
+            This represents a preformatted text sample on the help page. There's a display template named TextSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:Inventory_API4.Areas.HelpPage.XmlDocumentationProvider">
+            <summary>
+            A custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> that reads the API documentation from an XML documentation file.
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Areas.HelpPage.XmlDocumentationProvider.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Inventory_API4.Areas.HelpPage.XmlDocumentationProvider"/> class.
+            </summary>
+            <param name="documentPath">The physical path to XML document.</param>
+        </member>
+        <member name="T:Inventory_API4.Controllers.AttributeController">
+            <summary>
+            Items Attribute
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.AttributeController.Post(Inventory_Domain_Layer._006_invRefAttributeDomain)">
+            <summary>
+            Add new Attribute
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.AttributeController.Put(System.Int32,Inventory_Domain_Layer._006_invRefAttributeDomain)">
+            <summary>
+            Update Attribute by ID with JSON BODY
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.AttributeController.Get">
+            <summary>
+            Get List of Item Attribute
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.AttributeController.Get(System.Int32)">
+            <summary>
+            Get Specific Item Attribute by ID
+            </summary>
+            <param name="id">ID of target</param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.Category1Controller">
+            <summary>
+            Category1
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category1Controller.Post(Inventory_Domain_Layer._001_invRefCategory1Domain)">
+            <summary>
+            Add new Category1
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category1Controller.Put(System.Int32,Inventory_Domain_Layer._001_invRefCategory1Domain)">
+            <summary>
+            Update Category1 by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category1Controller.Delete(System.Int32)">
+            <summary>
+            Delete Specific Category1
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category1Controller.Get">
+            <summary>
+            Get List of Category1
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category1Controller.Get(System.Int32)">
+            <summary>
+            Get Specific Category1 by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.Category2Controller">
+            <summary>
+            Category2
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category2Controller.Post(Inventory_Domain_Layer._002_invRefCategory2Domain)">
+            <summary>
+            Add new Category2
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category2Controller.Put(System.Int32,Inventory_Domain_Layer._002_invRefCategory2Domain)">
+            <summary>
+            Update Category2 by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category2Controller.Delete(System.Int32)">
+            <summary>
+            Delete Specific Category2
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category2Controller.Get">
+            <summary>
+            Get List of Category2
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category2Controller.Get(System.Int32)">
+            <summary>
+            Get Specific Category2 by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.Category3Controller">
+            <summary>
+            Category3
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category3Controller.Post(Inventory_Domain_Layer._003_invRefCategory3Domain)">
+            <summary>
+            Add new Category3
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category3Controller.Put(System.Int32,Inventory_Domain_Layer._003_invRefCategory3Domain)">
+            <summary>
+            Update Category3 by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category3Controller.Delete(System.Int32)">
+            <summary>
+            Delete Specific Category3
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category3Controller.Get">
+            <summary>
+            Get List of Category3
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.Category3Controller.Get(System.Int32)">
+            <summary>
+            Get Specific Category3 by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.RawControllers.DelMethodAttrValue">
+            <summary>
+            Category1
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.DelMethodAttrValue.Post(Inventory_Domain_Layer._008a_invRefDelMethodAttrValueDomain)">
+            <summary>
+            Add new Category1
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.DelMethodAttrValue.Put(System.Int32,Inventory_Domain_Layer._008a_invRefDelMethodAttrValueDomain)">
+            <summary>
+            Update Category1 by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.DelMethodAttrValue.Delete(System.Int32)">
+            <summary>
+            Delete Specific Category1
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.DelMethodAttrValue.Get">
+            <summary>
+            Get List of Category1
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.DelMethodAttrValue.Get(System.Int32)">
+            <summary>
+            Get Specific Category1 by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.RawControllers.NewInfoDelMetAttrValueController">
+            <summary>
+            DeliveryMethodEntryList
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.NewInfoDelMetAttrValueController.Post(Inventory_Domain_Layer._017_invNewInfoDelMetAttrValueDomain)">
+            <summary>
+            Add new DeliveryMethodEntryList
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.NewInfoDelMetAttrValueController.Put(System.Int32,Inventory_Domain_Layer._017_invNewInfoDelMetAttrValueDomain)">
+            <summary>
+            Update DeliveryMethodEntryList by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.NewInfoDelMetAttrValueController.Delete(System.Int32)">
+            <summary>
+            Delete Specific DeliveryMethodEntryList
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.NewInfoDelMetAttrValueController.Get">
+            <summary>
+            Get List of DeliveryMethodEntryList
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.NewInfoDelMetAttrValueController.Get(System.Int32)">
+            <summary>
+            Get Specific DeliveryMethodEntryList by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.RawControllers.ItemConditionController">
+            <summary>
+            ItemCondition
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.ItemConditionController.Post(Inventory_Domain_Layer._018_invRefItemConditionDomain)">
+            <summary>
+            Add new ItemCondition
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.ItemConditionController.Put(System.Int32,Inventory_Domain_Layer._018_invRefItemConditionDomain)">
+            <summary>
+            Update ItemCondition by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.ItemConditionController.Delete(System.Int32)">
+            <summary>
+            Delete Specific ItemCondition
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.ItemConditionController.Get">
+            <summary>
+            Get List of ItemCondition
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.ItemConditionController.Get(System.Int32)">
+            <summary>
+            Get Specific ItemCondition by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.RawControllers.ReleasedItemDetailsController">
+            <summary>
+            ReleasedItemDetails
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.ReleasedItemDetailsController.Post(Inventory_Domain_Layer._020_invReleasedItemDetailsDomain)">
+            <summary>
+            Add new ReleasedItemDetails
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.ReleasedItemDetailsController.Put(System.Int32,Inventory_Domain_Layer._020_invReleasedItemDetailsDomain)">
+            <summary>
+            Update ReleasedItemDetails by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.ReleasedItemDetailsController.Delete(System.Int32)">
+            <summary>
+            Delete Specific ReleasedItemDetails
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.ReleasedItemDetailsController.Get">
+            <summary>
+            Get List of ReleasedItemDetails
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.ReleasedItemDetailsController.Get(System.Int32)">
+            <summary>
+            Get Specific ReleasedItemDetails by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.RawControllers.TransInfoOriginController">
+            <summary>
+            TransInfoOrigin
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransInfoOriginController.Post(Inventory_Domain_Layer._022_invTransInfoOriginDomain)">
+            <summary>
+            Add new TransInfoOrigin
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransInfoOriginController.Put(System.Int32,Inventory_Domain_Layer._022_invTransInfoOriginDomain)">
+            <summary>
+            Update TransInfoOrigin by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransInfoOriginController.Delete(System.Int32)">
+            <summary>
+            Delete Specific TransInfoOrigin
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransInfoOriginController.Get">
+            <summary>
+            Get List of TransInfoOrigin
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransInfoOriginController.Get(System.Int32)">
+            <summary>
+            Get Specific TransInfoOrigin by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.RawControllers.TransItemRecievedListController">
+            <summary>
+            TransItemRecievedList
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransItemRecievedListController.Post(Inventory_Domain_Layer._026_invTransItemReceivedListDomain)">
+            <summary>
+            Add new TransItemRecievedList
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransItemRecievedListController.Put(System.Int32,Inventory_Domain_Layer._026_invTransItemReceivedListDomain)">
+            <summary>
+            Update TransItemRecievedList by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransItemRecievedListController.Delete(System.Int32)">
+            <summary>
+            Delete Specific TransItemRecievedList
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransItemRecievedListController.Get">
+            <summary>
+            Get List of TransItemRecievedList
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransItemRecievedListController.Get(System.Int32)">
+            <summary>
+            Get Specific TransItemRecievedList by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.RawControllers.TransMasterListController">
+            <summary>
+            TransMasterList
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransMasterListController.Post(Inventory_Domain_Layer._021_invTransMasterListDomain)">
+            <summary>
+            Add new TransMasterList
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransMasterListController.ConfirmReceive(Inventory_Domain_Layer._021_invTransMasterListDomain)">
+            <summary>
+            Add Receive
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransMasterListController.Put(System.Int32,Inventory_Domain_Layer._021_invTransMasterListDomain)">
+            <summary>
+            Update TransMasterList by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransMasterListController.Delete(System.Int32)">
+            <summary>
+            Delete Specific TransMasterList
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransMasterListController.Get">
+            <summary>
+            Get List of TransMasterList
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransMasterListController.Get(System.Int32)">
+            <summary>
+            Get Specific TransMasterList by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.RawControllers.TransInfoDestinationController">
+            <summary>
+            TransInfoDestination
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransInfoDestinationController.Post(Inventory_Domain_Layer._023_invTransInfoDestinationDomain)">
+            <summary>
+            Add new TransInfoDestination
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransInfoDestinationController.Put(System.Int32,Inventory_Domain_Layer._023_invTransInfoDestinationDomain)">
+            <summary>
+            Update TransInfoDestination by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransInfoDestinationController.Delete(System.Int32)">
+            <summary>
+            Delete Specific TransInfoDestination
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransInfoDestinationController.Get">
+            <summary>
+            Get List of TransInfoDestination
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransInfoDestinationController.Get(System.Int32)">
+            <summary>
+            Get Specific TransInfoDestination by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.RawControllers.WithdrawItemEntryListController">
+            <summary>
+            WithdrawItemEntryList
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.WithdrawItemEntryListController.Post(Inventory_Domain_Layer._028_invWithdrawItemEntryListDomain)">
+            <summary>
+            Add new WithdrawItemEntryList
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.WithdrawItemEntryListController.Put(System.Int32,Inventory_Domain_Layer._028_invWithdrawItemEntryListDomain)">
+            <summary>
+            Update WithdrawItemEntryList by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.WithdrawItemEntryListController.Delete(System.Int32)">
+            <summary>
+            Delete Specific WithdrawItemEntryList
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.WithdrawItemEntryListController.Get">
+            <summary>
+            Get List of WithdrawItemEntryList
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.WithdrawItemEntryListController.Get(System.Int32)">
+            <summary>
+            Get Specific WithdrawItemEntryList by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.RawControllers.WithdrawMasterListController">
+            <summary>
+            WithdrawMasterList
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.WithdrawMasterListController.Post(Inventory_Domain_Layer._027_invWithdrawMasterListDomain)">
+            <summary>
+            Add new WithdrawMasterList
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.WithdrawMasterListController.Put(System.Int32,Inventory_Domain_Layer._027_invWithdrawMasterListDomain)">
+            <summary>
+            Update WithdrawMasterList by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.WithdrawMasterListController.Delete(System.Int32)">
+            <summary>
+            Delete Specific WithdrawMasterList
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.WithdrawMasterListController.Get">
+            <summary>
+            Get List of WithdrawMasterList
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.RawControllers.WithdrawMasterListController.Get(System.Int32)">
+            <summary>
+            Get Specific WithdrawMasterList by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.FormHardCopySeriesController">
+            <summary>
+            FormHardCopySeries
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormHardCopySeriesController.Post(Inventory_Domain_Layer._030_invRefFormHardCopySeriesDomain)">
+            <summary>
+            Add new FormHardCopySeries
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormHardCopySeriesController.Put(System.Int32,Inventory_Domain_Layer._030_invRefFormHardCopySeriesDomain)">
+            <summary>
+            Update FormHardCopySeries by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormHardCopySeriesController.Delete(System.Int32)">
+            <summary>
+            Delete Specific FormHardCopySeries
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormHardCopySeriesController.Get">
+            <summary>
+            Get List of FormHardCopySeries
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormHardCopySeriesController.Get(System.Int32)">
+            <summary>
+            Get Specific FormHardCopySeries by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.FormListController">
+            <summary>
+            FormList
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormListController.Post(Inventory_Domain_Layer._029_invRefFormListDomain)">
+            <summary>
+            Add new FormList
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormListController.Put(System.Int32,Inventory_Domain_Layer._029_invRefFormListDomain)">
+            <summary>
+            Update FormList by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormListController.Delete(System.Int32)">
+            <summary>
+            Delete Specific FormList
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormListController.Get">
+            <summary>
+            Get List of FormList
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormListController.Get(System.Int32)">
+            <summary>
+            Get Specific FormList by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.NewItemHeaderListController">
+            <summary>
+            NewItemHeaderList
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.NewItemHeaderListController.Post(Inventory_Domain_Layer._007_invNewItemHeaderListDomain)">
+            <summary>
+            Add new NewItemHeaderList
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.NewItemHeaderListController.Put(System.Int32,Inventory_Domain_Layer._007_invNewItemHeaderListDomain)">
+            <summary>
+            Update NewItemHeaderList by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.NewItemHeaderListController.Delete(System.Int32)">
+            <summary>
+            Delete Specific NewItemHeaderList
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.NewItemHeaderListController.Get">
+            <summary>
+            Get List of NewItemHeaderList
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.NewItemHeaderListController.Get(System.Int32)">
+            <summary>
+            Get Specific NewItemHeaderList by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.DelMethodAttributeController">
+            <summary>
+            DeliveryMethodAttribute
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DelMethodAttributeController.Post(Inventory_Domain_Layer._008_invRefDelMethodAttributeDomain)">
+            <summary>
+            Add new DeliveryMethodAttribute
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DelMethodAttributeController.Put(System.Int32,Inventory_Domain_Layer._008_invRefDelMethodAttributeDomain)">
+            <summary>
+            Update DeliveryMethodAttribute by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DelMethodAttributeController.Delete(System.Int32)">
+            <summary>
+            Delete Specific DeliveryMethodAttribute
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DelMethodAttributeController.Get">
+            <summary>
+            Get List of DeliveryMethodAttribute 
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DelMethodAttributeController.Get(System.Int32)">
+            <summary>
+            Get Specific DeliveryMethodAttribute by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DelMethodAttributeController.Get(System.Int32,System.Int32)">
+            <summary>
+            Get Specific DeliveryMethodAttribute by DelMethodID_010
+            </summary>
+            <param name="id"></param>
+            <param name="DelMethod"></param>
+            <returns>1/Many Json or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.ItemAttributeController">
+            <summary>
+            ItemAttribute
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ItemAttributeController.Post(Inventory_Domain_Layer._012_invItemAttributeDomain)">
+            <summary>
+            Add new ItemAttribute
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ItemAttributeController.Put(System.Int32,Inventory_Domain_Layer._012_invItemAttributeDomain)">
+            <summary>
+            Update ItemAttribute by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ItemAttributeController.Delete(System.Int32)">
+            <summary>
+            Delete Specific ItemAttribute
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ItemAttributeController.Get">
+            <summary>
+            Get List of ItemAttribute
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ItemAttributeController.Get(System.Int32)">
+            <summary>
+            Get Specific ItemAttribute by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON OR NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.ItemImageController">
+            <summary>
+            ItemImage
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ItemImageController.Post(Inventory_Domain_Layer._014_invRefItemImageDomain)">
+            <summary>
+            Add new ItemImage
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ItemImageController.Put(System.Int32,Inventory_Domain_Layer._014_invRefItemImageDomain)">
+            <summary>
+            Update ItemImage by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ItemImageController.Delete(System.Int32)">
+            <summary>
+            Delete Specific ItemImage
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ItemImageController.Get">
+            <summary>
+            Get List of ItemImage
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ItemImageController.Get(System.Int32)">
+            <summary>
+            Get Specific ItemImage by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.ItemPropListController">
+            <summary>
+            ItemPropertyList
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ItemPropListController.Post(Inventory_Domain_Layer._015_invRefItemPropListDomain)">
+            <summary>
+            Add new ItemPropertyList
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ItemPropListController.Put(System.Int32,Inventory_Domain_Layer._015_invRefItemPropListDomain)">
+            <summary>
+            Update ItemPropertyList by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ItemPropListController.Delete(System.Int32)">
+            <summary>
+            Delete Specific ItemPropertyList
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ItemPropListController.Get">
+            <summary>
+            Get List of ItemPropertyList
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ItemPropListController.Get(System.Int32)">
+            <summary>
+            Get Specific ItemPropertyList by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.NewItemEntryListController">
+            <summary>
+            NewItemEntryList
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.NewItemEntryListController.Post(Inventory_Domain_Layer._013_invNewItemEntryListDomain)">
+            <summary>
+            Add new ItemsEntryList
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.NewItemEntryListController.Put(System.Int32,Inventory_Domain_Layer._013_invNewItemEntryListDomain)">
+            <summary>
+            Update NewItemEntryList by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.NewItemEntryListController.Delete(System.Int32)">
+            <summary>
+            Delete Specific NewItemEntryList
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.NewItemEntryListController.Get">
+            <summary>
+            Get List of NewItemEntryList
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.NewItemEntryListController.Get(System.Int32)">
+            <summary>
+            Get Specific NewItemEntryList by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.ItemsMasterListController">
+            <summary>
+            ItemsMasterList
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ItemsMasterListController.Post(Inventory_Domain_Layer._011_invRefItemsMasterListDomain)">
+            <summary>
+            Add new ItemsMasterList
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ItemsMasterListController.Put(System.Int32,Inventory_Domain_Layer._011_invRefItemsMasterListDomain)">
+            <summary>
+            Update ItemsMasterList by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ItemsMasterListController.Delete(System.Int32)">
+            <summary>
+            Delete Specific ItemsMasterList
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ItemsMasterListController.Get">
+            <summary>
+            Get List of ItemsMasterList
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ItemsMasterListController.Get(System.Int32)">
+            <summary>
+            Get Specific ItemsMasterList by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.PropertyName1Controller">
+            <summary>
+            PropertyName1
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.PropertyName1Controller.Post(Inventory_Domain_Layer._004_invRefPropertyName1Domain)">
+            <summary>
+            Add new PropertyName1
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.PropertyName1Controller.Put(System.Int32,Inventory_Domain_Layer._004_invRefPropertyName1Domain)">
+            <summary>
+            Update PropertyName1 by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.PropertyName1Controller.Delete(System.Int32)">
+            <summary>
+            Delete Specific PropertyName1
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.PropertyName1Controller.Get">
+            <summary>
+            Get List of PropertyName1
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.PropertyName1Controller.Get(System.Int32)">
+            <summary>
+            Get Specifc PropertyName1 by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.PropertyName2Controller">
+            <summary>
+            PropertyName2
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.PropertyName2Controller.Post(Inventory_Domain_Layer._005_invRefPropertyName2Domain)">
+            <summary>
+            Add new PropertyName2
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.PropertyName2Controller.Put(System.Int32,Inventory_Domain_Layer._005_invRefPropertyName2Domain)">
+            <summary>
+            Update PropertyName2 by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.PropertyName2Controller.Delete(System.Int32)">
+            <summary>
+            Delete Specific PropertyName2
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.PropertyName2Controller.Get">
+            <summary>
+            Get List of PropertyName2
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.PropertyName2Controller.Get(System.Int32)">
+            <summary>
+            Get Specific PropertyName2 by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.DeliveryMethodController">
+            <summary>
+            DeliveryMethod
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DeliveryMethodController.Post(Inventory_Domain_Layer._010_invRefDeliveryMethodDomain)">
+            <summary>
+            Add new DeliveryMethod
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DeliveryMethodController.Put(System.Int32,Inventory_Domain_Layer._010_invRefDeliveryMethodDomain)">
+            <summary>
+            Update DeliveryMethod by ID with JSON BODY
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DeliveryMethodController.Delete(System.Int32)">
+            <summary>
+            Delete Specific DeliveryMethod
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DeliveryMethodController.Get">
+            <summary>
+            Get List of DeliveryMethod
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.DeliveryMethodController.Get(System.Int32)">
+            <summary>
+            Get Specific DeliveryMethod by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.ReleasedItemHeaderController">
+            <summary>
+            ReleasedItemHeader
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ReleasedItemHeaderController.Post(Inventory_Domain_Layer._019_invReleasedItemHeaderDomain)">
+            <summary>
+            Add new ReleasedItemHeader
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ReleasedItemHeaderController.Put(System.Int32,Inventory_Domain_Layer._019_invReleasedItemHeaderDomain)">
+            <summary>
+            Update ReleasedItemHeader by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ReleasedItemHeaderController.Delete(System.Int32)">
+            <summary>
+            Delete Specific ReleasedItemHeader
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ReleasedItemHeaderController.Get">
+            <summary>
+            Get List of ReleasedItemHeader
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.ReleasedItemHeaderController.Get(System.Int32)">
+            <summary>
+            Get Specific ReleasedItemHeader by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.FormTransferListController">
+            <summary>
+            FormTransferList
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormTransferListController.Post(Inventory_Domain_Layer._031_invRefFormTransferListDomain)">
+            <summary>
+            Add new FormTransferList
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormTransferListController.Put(System.Int32,Inventory_Domain_Layer._031_invRefFormTransferListDomain)">
+            <summary>
+            Update FormTransferList by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormTransferListController.Delete(System.Int32)">
+            <summary>
+            Delete Specific FormTransferList
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormTransferListController.Get">
+            <summary>
+            Get List of FormTransferList
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.FormTransferListController.Get(System.Int32)">
+            <summary>
+            Get Specific FormTransferList by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.TransInfoDelMetAttrValueController">
+            <summary>
+            TransInfoDelMetAttrValue
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.TransInfoDelMetAttrValueController.Post(Inventory_Domain_Layer._024_invTransInfoDelMetAttrValueDomain)">
+            <summary>
+            Add new TransInfoDelMetAttrValue
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.TransInfoDelMetAttrValueController.Put(System.Int32,Inventory_Domain_Layer._024_invTransInfoDelMetAttrValueDomain)">
+            <summary>
+            Update TransInfoDelMetAttrValue by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.TransInfoDelMetAttrValueController.Delete(System.Int32)">
+            <summary>
+            Delete Specific TransInfoDelMetAttrValue
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.TransInfoDelMetAttrValueController.Get">
+            <summary>
+            Get List of TransInfoDelMetAttrValue
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.TransInfoDelMetAttrValueController.Get(System.Int32)">
+            <summary>
+            Get Specific TransInfoDelMetAttrValue by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.TransItemEntryListController">
+            <summary>
+            TransItemEntryList
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.TransItemEntryListController.Post(Inventory_Domain_Layer._025_invTransItemEntryListDomain)">
+            <summary>
+            Add new TransItemEntryList
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.TransItemEntryListController.Put(System.Int32,Inventory_Domain_Layer._025_invTransItemEntryListDomain)">
+            <summary>
+            Update TransItemEntryList by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.TransItemEntryListController.Delete(System.Int32)">
+            <summary>
+            Delete Specific TransItemEntryList
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.TransItemEntryListController.Get">
+            <summary>
+            Get List of TransItemEntryList
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.TransItemEntryListController.Get(System.Int32)">
+            <summary>
+            Get Specific TransItemEntryList by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+        <member name="T:Inventory_API4.Controllers.UnitsController">
+            <summary>
+            Units
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.Controllers.UnitsController.Post(Inventory_Domain_Layer._009_invRefUnitsDomain)">
+            <summary>
+            Add new Units
+            </summary>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.UnitsController.Put(System.Int32,Inventory_Domain_Layer._009_invRefUnitsDomain)">
+            <summary>
+            Update Units by ID with JSON Body
+            </summary>
+            <param name="id"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.UnitsController.Delete(System.Int32)">
+            <summary>
+            Delete Specific Units
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.UnitsController.Get">
+            <summary>
+            Get List of Units
+            </summary>
+            <returns>List</returns>
+        </member>
+        <member name="M:Inventory_API4.Controllers.UnitsController.Get(System.Int32)">
+            <summary>
+            Get Specific Units by ID
+            </summary>
+            <param name="id"></param>
+            <returns>1 JSON or NULL</returns>
+        </member>
+    </members>
+</doc>
