@@ -110,6 +110,18 @@ namespace Inventory_API4.Controllers
             return Ok(result);
         }
 
+        [HttpGet]
+        [Route("api/ItemsMasterList/Search")]
+        [ResponseType(typeof(_011_invRefItemsMasterListDomain))]
+        public IHttpActionResult Search(string q)
+        {
+            var result = cat3.Search(q);
+            /*
+             *
+             */
+
+            return Ok(result);
+        }
 
     }
 }

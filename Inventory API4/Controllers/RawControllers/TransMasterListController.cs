@@ -68,6 +68,8 @@ namespace Inventory_API4.Controllers.RawControllers
             return Json(attrib.Command(body, Command.Update));
         }
 
+
+
         /// <summary>
         /// Delete Specific TransMasterList
         /// </summary>
@@ -104,6 +106,19 @@ namespace Inventory_API4.Controllers.RawControllers
         public IHttpActionResult Get(int id)
         {
             var result = attrib.Get(id);
+            /*
+             *
+             */
+
+            return Ok(result);
+        }
+
+        [HttpGet]
+        [Route("api/TransMasterList/Search")]
+        [ResponseType(typeof(_021_invTransMasterListDomain))]
+        public IHttpActionResult Search(string q)
+        {
+            var result = attrib.Search(q);
             /*
              *
              */
