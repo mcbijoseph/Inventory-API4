@@ -12,7 +12,7 @@ namespace InventoryDAL.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.4.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -25,8 +25,8 @@ namespace InventoryDAL.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=124.105.198.3;password=MCBI_ITadmin;user=sa;connection timeout=0;Initial C" +
-            "atalog = ERP_INVE;")]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=mcbi-dev;password=MCBI_ITadmin;user=sa;connection timeout=0;Initial Catalo" +
+            "g = ERP_INVE;")]
         public string connectionString {
             get {
                 return ((string)(this["connectionString"]));
