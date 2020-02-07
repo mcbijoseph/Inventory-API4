@@ -14,6 +14,7 @@ namespace InventoryBL
     public interface I_021_invTransMasterListBL<TEntity> : Common.IBaseBL<TEntity> where TEntity : class
     {
         MessageViewDomain Command(_021_invTransMasterListDomain projectDomain, Command commandType, bool isReceived);
+        IEnumerable<_021_invTransMasterListDomain> Search( string args);
     }
 
     public class _021_invTransMasterListBL : Common.BaseBL, I_021_invTransMasterListBL<_021_invTransMasterListDomain>
@@ -67,6 +68,27 @@ namespace InventoryBL
         {
             throw new NotImplementedException();
         }
+        public IEnumerable<_021_invTransMasterListDomain> Search(string args)
+        {
+            IEnumerable<_021_invTransMasterListDomain> testVal = GetData(0);
+            args = args.ToLower();
+            string[] argsArray = args.Split(' ');
+            if (testVal == null)
+                return null;
+            return testVal.Where(e => {
+                string s = JsonConvert.SerializeObject(e);
+                bool hasItem = true;
+
+                foreach (string eacs in argsArray)
+                {
+                    if (!s.Contains(eacs)) return false;
+                }
+
+                return hasItem;
+            });
+
+        }
+
 
         public IEnumerable<_021_invTransMasterListDomain> GetData(int id)
         {

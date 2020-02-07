@@ -14,6 +14,7 @@ namespace InventoryBL
     public interface I_011_invRefItemsMasterListBL<TEntity> : Common.IBaseBL<TEntity> where TEntity : class
     {
         IEnumerable<_011_invRefItemsMasterListDomain> GetbyProjectID(int id);
+        IEnumerable<_011_invRefItemsMasterListDomain> Search(string args);
     }
 
 
@@ -65,6 +66,28 @@ namespace InventoryBL
             throw new NotImplementedException();
         }
 
+        public IEnumerable<_011_invRefItemsMasterListDomain> Search(string args)
+        {
+            IEnumerable<_011_invRefItemsMasterListDomain> testVal = GetData(0, 0);
+            args = args.ToLower();
+            string[] argsArray = args.Split(' ');
+
+            if (testVal == null)
+                return null;
+            return testVal.Where(e =>
+            {
+                string s = JsonConvert.SerializeObject(e).ToLower();
+                bool hasItem = true;
+
+                foreach (string eacs in argsArray)
+                {
+                    if (!s.Contains(eacs)) return false;
+                }
+
+                return hasItem;
+            });
+        }
+
         public IEnumerable<_011_invRefItemsMasterListDomain> GetData(int id, int projectID)
         {
 
@@ -81,5 +104,7 @@ namespace InventoryBL
             string tabledata = _dbHelper.GetRecords("sp011invRefITemsMAsterListSelect", pars).Tables[0].Rows[0][0].ToString();//, Newtonsoft.Json.Formatting.None);
             return JsonConvert.DeserializeObject<List<_011_invRefItemsMasterListDomain>>(tabledata);
         }
+
+
     }
 }

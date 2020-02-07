@@ -886,7 +886,7 @@
             <param name="body"></param>
             <returns></returns>
         </member>
-        <member name="M:Inventory_API4.Controllers.RawControllers.TransMasterListController.AddReceive(Inventory_Domain_Layer._021_invTransMasterListDomain)">
+        <member name="M:Inventory_API4.Controllers.RawControllers.TransMasterListController.ConfirmReceive(Inventory_Domain_Layer._021_invTransMasterListDomain)">
             <summary>
             Add Receive
             </summary>

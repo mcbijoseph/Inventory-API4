@@ -45,8 +45,8 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpPost]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        [Route("api/TransMasterList/AddReceive")]
-        public IHttpActionResult AddReceive([FromBody]_021_invTransMasterListDomain body)
+        [Route("api/TransMasterList/ConfirmReceive")]
+        public IHttpActionResult ConfirmReceive([FromBody]_021_invTransMasterListDomain body)
         {
             return Json(attrib.Command(body, Command.Insert, true));
         }
@@ -67,6 +67,8 @@ namespace Inventory_API4.Controllers.RawControllers
             body.ID = id;
             return Json(attrib.Command(body, Command.Update));
         }
+
+
 
         /// <summary>
         /// Delete Specific TransMasterList
@@ -104,6 +106,19 @@ namespace Inventory_API4.Controllers.RawControllers
         public IHttpActionResult Get(int id)
         {
             var result = attrib.Get(id);
+            /*
+             *
+             */
+
+            return Ok(result);
+        }
+
+        [HttpGet]
+        [Route("api/TransMasterList/Search")]
+        [ResponseType(typeof(_021_invTransMasterListDomain))]
+        public IHttpActionResult Search(string q)
+        {
+            var result = attrib.Search(q);
             /*
              *
              */
