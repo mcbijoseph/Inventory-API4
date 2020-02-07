@@ -23,6 +23,7 @@ namespace Inventory_Domain_Layer
         public _022_invTransInfoOriginDomain TransInfoOrigin { get; set; }
         public _023_invTransInfoDestinationDomain TransInfoDestination { get; set; }
         public List< _024_invTransInfoDelMetAttrValueDomain> TransInfoDelMetAttrValue { get; set; }
+        public _010_invRefDeliveryMethodDomain DeliveryMethod { get; set; }
         public List<_025_invTransItemEntryListDomain> TransItemEntryList { get; set; }
         public List<_026_invTransItemReceivedListDomain> TransItemReceivedList { get; set; }
 

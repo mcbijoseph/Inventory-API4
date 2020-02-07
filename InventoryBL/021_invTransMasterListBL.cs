@@ -22,34 +22,7 @@ namespace InventoryBL
 
         public MessageViewDomain Command(_021_invTransMasterListDomain projectDomain, Command commandType)
         {
-
-            var sqlParameters = new List<SqlParameter>()
-            {
-                new SqlParameter { ParameterName = "@ID", Value = projectDomain.ID, Direction = ParameterDirection.Input  },
-                new SqlParameter { ParameterName = "@ReferenceNumber", Value = projectDomain.ReferenceNumber, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@HardSeriesNumber", Value = projectDomain.HardSeriesNumber, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@isCancelled", Value = projectDomain.isCancelled, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@cancelReason", Value = projectDomain.cancelReason, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@Date", Value = projectDomain.Date, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@TransInfoOrigin", Value = JsonConvert.SerializeObject(projectDomain.TransInfoOrigin), Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@TransInfoDestination", Value = JsonConvert.SerializeObject(projectDomain.TransInfoDestination), Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@TransInfoDelMetAttrValue", Value = JsonConvert.SerializeObject(projectDomain.TransInfoDelMetAttrValue), Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@TransItemEntryList", Value = JsonConvert.SerializeObject(projectDomain.TransItemEntryList), Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@TransItemReceivedList", Value = JsonConvert.SerializeObject(projectDomain.TransItemReceivedList), Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@isReceive", Value = false, Direction = ParameterDirection.Input },
-                /*
-                new SqlParameter { ParameterName = "@WarehouseInCharge_HRMSDB", Value = projectDomain.WarehouseInCharge_HRMSDB, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@DatePrepared", Value = projectDomain.DatePrepared, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@ReceiverWarehouseInCharge_HRMSDB", Value = projectDomain.ReceiverWarehouseInCharge_HRMSDB, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@ReceiverProjectID_ENGGDB", Value = projectDomain.ReceiverProjectID_ENGGDB, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@ReceivedDate", Value = projectDomain.ReceivedDate, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@DocEntryListID_007", Value = projectDomain.DocEntryListID_007, Direction = ParameterDirection.Input }*/
-
-            };
-
-            return this.GetMessage(_dbHelper.Command("sp021invTransMasterListCommand", commandType.ToString(), sqlParameters).Tables[0]);
-
-
+            return this.Command(projectDomain, commandType, false);
         }
         public MessageViewDomain Command(_021_invTransMasterListDomain projectDomain, Command commandType, bool isReceived)
         {
@@ -68,18 +41,10 @@ namespace InventoryBL
                 new SqlParameter { ParameterName = "@TransItemEntryList", Value = JsonConvert.SerializeObject(projectDomain.TransItemEntryList), Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@TransItemReceivedList", Value = JsonConvert.SerializeObject(projectDomain.TransItemReceivedList), Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@isReceive", Value = isReceived, Direction = ParameterDirection.Input }
-                /*new SqlParameter { ParameterName = "@WarehouseInCharge_HRMSDB", Value = projectDomain.WarehouseInCharge_HRMSDB, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@DatePrepared", Value = projectDomain.DatePrepared, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@ReceiverWarehouseInCharge_HRMSDB", Value = projectDomain.ReceiverWarehouseInCharge_HRMSDB, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@ReceiverProjectID_ENGGDB", Value = projectDomain.ReceiverProjectID_ENGGDB, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@ReceivedDate", Value = projectDomain.ReceivedDate, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@DocEntryListID_007", Value = projectDomain.DocEntryListID_007, Direction = ParameterDirection.Input }*/
 
             };
 
             return this.GetMessage(_dbHelper.Command("sp021invTransMasterListCommand", commandType.ToString(), sqlParameters).Tables[0]);
-
-
         }
 
         public MessageViewDomain Delete(int id)

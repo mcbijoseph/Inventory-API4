@@ -36,7 +36,7 @@ namespace InventoryDAL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("server=mcbi-dev2;password=password..;user=sa;connection timeout=0;Initial Catalog" +
-            " = inventory_db_final;")]
+            " =  ERP_INVE;")]
         public string connectionStringTest {
             get {
                 return ((string)(this["connectionStringTest"]));
@@ -45,7 +45,7 @@ namespace InventoryDAL.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool isTest {
             get {
                 return ((bool)(this["isTest"]));
