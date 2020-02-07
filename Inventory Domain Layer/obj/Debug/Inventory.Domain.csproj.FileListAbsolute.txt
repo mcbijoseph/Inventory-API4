@@ -13,3 +13,8 @@ C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory Domain Layer\obj\Debug\Inv
 C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory Domain Layer\obj\Debug\Inventory Domain Layer.dll
 C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory Domain Layer\obj\Debug\Inventory Domain Layer.pdb
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory Domain Layer\obj\Debug\Inventory.Domain.csprojAssemblyReference.cache
+C:\Users\Bengoan\Desktop\INV\Inventory-API4\Inventory Domain Layer\bin\Debug\Inventory Domain Layer.dll
+C:\Users\Bengoan\Desktop\INV\Inventory-API4\Inventory Domain Layer\bin\Debug\Inventory Domain Layer.pdb
+C:\Users\Bengoan\Desktop\INV\Inventory-API4\Inventory Domain Layer\obj\Debug\Inventory.Domain.csprojAssemblyReference.cache
+C:\Users\Bengoan\Desktop\INV\Inventory-API4\Inventory Domain Layer\obj\Debug\Inventory Domain Layer.dll
+C:\Users\Bengoan\Desktop\INV\Inventory-API4\Inventory Domain Layer\obj\Debug\Inventory Domain Layer.pdb

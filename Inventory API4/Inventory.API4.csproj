@@ -181,6 +181,7 @@
     <Compile Include="Controllers\RawControllers\DelMethodAttrValue.cs" />
     <Compile Include="Controllers\RawControllers\FormHardCopySeriesController.cs" />
     <Compile Include="Controllers\RawControllers\FormListController.cs" />
+    <Compile Include="Controllers\RawControllers\ItemIssuanceController.cs" />
     <Compile Include="Controllers\RawControllers\NewInfoDelMetAttrValueController.cs" />
     <Compile Include="Controllers\RawControllers\NewItemHeaderListController.cs" />
     <Compile Include="Controllers\RawControllers\DelMethodAttributeController.cs" />
