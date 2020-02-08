@@ -14,6 +14,7 @@ namespace InventoryBL
     public interface I_011_invRefItemsMasterListBL<TEntity> : Common.IBaseBL<TEntity> where TEntity : class
     {
         IEnumerable<_011_invRefItemsMasterListDomain> GetbyProjectID(int id);
+
         IEnumerable<_011_invRefItemsMasterListDomain> Search(string args);
     }
 
@@ -33,6 +34,7 @@ namespace InventoryBL
                 new SqlParameter { ParameterName = "@Tag", Value = projectDomain.Tag, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@hasAttribute", Value = projectDomain.hasAttribute, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@ItemPropList", Value = JsonConvert.SerializeObject( projectDomain.Category3.Property2[0].ItemPropList) , Direction = ParameterDirection.Input },
+                new SqlParameter{ParameterName = "@ItemAttribute", Value = JsonConvert.SerializeObject(projectDomain.ItemAttribute), Direction =  ParameterDirection.Input },
                 new SqlParameter{ParameterName = "@ItemAttribute", Value = JsonConvert.SerializeObject(projectDomain.ItemAttribute), Direction =  ParameterDirection.Input }
             };
 
@@ -60,6 +62,7 @@ namespace InventoryBL
         {
             return GetData(0, id);
         }
+
 
         public IEnumerable<_011_invRefItemsMasterListDomain> Search(int offset, int limit, string orderBy)
         {

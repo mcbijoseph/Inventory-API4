@@ -171,5 +171,18 @@ namespace Inventory_API4.Controllers.RawControllers
 
             return Ok(result);
         }
+
+        [HttpGet]
+        [Route("api/TransMasterList/SearchbyReference")]
+        [ResponseType(typeof(_021_invTransMasterListDomain))]
+        public IHttpActionResult SearchbyReference(string q)
+        {
+            var result = attrib.SearchbyReference(q);
+            /*
+             *
+             */
+
+            return Ok(result);
+        }
     }
 }
