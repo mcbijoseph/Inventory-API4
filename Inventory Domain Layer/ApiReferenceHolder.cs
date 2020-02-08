@@ -26,5 +26,18 @@ namespace Inventory_Domain_Layer
             }
             return null;
         }
+
+
+
+        public JObject sample => null;
+        public JObject Sample
+        {
+            get
+            {                /*Syntax here*/
+                return null;
+            }
+
+
+        }
     }
 }
