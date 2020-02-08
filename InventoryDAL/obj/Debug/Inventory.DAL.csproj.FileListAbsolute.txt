@@ -4,6 +4,12 @@ C:\Users\LENOVO\Source\Repos\Inventory-API4\InventoryDAL\bin\Debug\InventoryDAL.
 C:\Users\LENOVO\Source\Repos\Inventory-API4\InventoryDAL\obj\Debug\Inventory.DAL.csprojAssemblyReference.cache
 C:\Users\LENOVO\Source\Repos\Inventory-API4\InventoryDAL\obj\Debug\InventoryDAL.dll
 C:\Users\LENOVO\Source\Repos\Inventory-API4\InventoryDAL\obj\Debug\InventoryDAL.pdb
+C:\Users\Bengoan\Desktop\INV\Inventory-API4\InventoryDAL\bin\Debug\InventoryDAL.dll.config
+C:\Users\Bengoan\Desktop\INV\Inventory-API4\InventoryDAL\bin\Debug\InventoryDAL.dll
+C:\Users\Bengoan\Desktop\INV\Inventory-API4\InventoryDAL\bin\Debug\InventoryDAL.pdb
+C:\Users\Bengoan\Desktop\INV\Inventory-API4\InventoryDAL\obj\Debug\Inventory.DAL.csprojAssemblyReference.cache
+C:\Users\Bengoan\Desktop\INV\Inventory-API4\InventoryDAL\obj\Debug\InventoryDAL.dll
+C:\Users\Bengoan\Desktop\INV\Inventory-API4\InventoryDAL\obj\Debug\InventoryDAL.pdb
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryDAL\bin\Debug\InventoryDAL.dll.config
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryDAL\bin\Debug\InventoryDAL.dll
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryDAL\bin\Debug\InventoryDAL.pdb
@@ -11,9 +17,3 @@ C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryDAL\obj\Debug\Inventor
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryDAL\obj\Debug\Inventory.DAL.csproj.CoreCompileInputs.cache
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryDAL\obj\Debug\InventoryDAL.dll
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\InventoryDAL\obj\Debug\InventoryDAL.pdb
-C:\Users\Bengoan\Desktop\INV\Inventory-API4\InventoryDAL\bin\Debug\InventoryDAL.dll.config
-C:\Users\Bengoan\Desktop\INV\Inventory-API4\InventoryDAL\bin\Debug\InventoryDAL.dll
-C:\Users\Bengoan\Desktop\INV\Inventory-API4\InventoryDAL\bin\Debug\InventoryDAL.pdb
-C:\Users\Bengoan\Desktop\INV\Inventory-API4\InventoryDAL\obj\Debug\Inventory.DAL.csprojAssemblyReference.cache
-C:\Users\Bengoan\Desktop\INV\Inventory-API4\InventoryDAL\obj\Debug\InventoryDAL.dll
-C:\Users\Bengoan\Desktop\INV\Inventory-API4\InventoryDAL\obj\Debug\InventoryDAL.pdb
