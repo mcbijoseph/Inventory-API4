@@ -25,5 +25,9 @@ namespace Inventory_Domain_Layer
         public List<_013_invNewItemEntryListDomain> ItemEntryList { get; set; }
         public _010_invRefDeliveryMethodDomain DeliveryMethod { get; set; }
 
+        public object ReceiverInfo => ApiReferenceHolder.getHrmsbyID(ReceiverID_HRDB);
+        public object ProjectInfo => ApiReferenceHolder.GetProjectByID(ProjectID_EnggDB);
+        public object SupInfo => ApiReferenceHolder.getSupplierbyID(SupID_VendorDB);
+
     }
 }

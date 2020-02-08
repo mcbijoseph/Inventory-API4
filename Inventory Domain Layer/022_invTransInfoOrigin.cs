@@ -18,12 +18,7 @@ namespace Inventory_Domain_Layer
         public int TransDelMethodID_024 { get; set; }
         public DateTime? Date { get; set; }
 
-        public object ProjectInfo
-        {
-            get
-            {
-                return ApiReferenceHolder.GetProjectByID(ProjectID_EnggDB);
-            }
-        }
+        public object ProjectInfo => ApiReferenceHolder.GetProjectByID(ProjectID_EnggDB);
+        public object WHInchargeInfo => ApiReferenceHolder.getHrmsbyID(WHInchargeID_HrmsDB);
     }
 }
