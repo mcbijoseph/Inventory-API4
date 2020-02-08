@@ -17,9 +17,7 @@ namespace Inventory_Domain_Layer
         public int ReceivedByID_HrmsDB { get; set; }
         public DateTime Date { get; set; }
 
-        public object ProjectInfo
-        {
-            get { return ApiReferenceHolder.GetProjectByID(ProjectNameID_EnggDB); }
-        }
+        public object ProjectInfo => ApiReferenceHolder.GetProjectByID(ProjectNameID_EnggDB);
+
     }
 }
