@@ -396,3 +396,5 @@ C:\Users\Bengoan\Desktop\INV\Inventory-API4\Inventory API4\obj\Debug\Inventory A
 C:\Users\Bengoan\Desktop\INV\Inventory-API4\Inventory API4\obj\Debug\Inventory API4.pdb
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\bin\Helper.dll
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\bin\Helper.pdb
+C:\Users\LENOVO\source\repos\Inventory-API4\Inventory API4\bin\Helper.dll
+C:\Users\LENOVO\source\repos\Inventory-API4\Inventory API4\bin\Helper.pdb

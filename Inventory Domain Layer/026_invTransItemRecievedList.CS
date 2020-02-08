@@ -16,5 +16,7 @@ namespace Inventory_Domain_Layer
         public int ItemCondID_018 { get; set; }
         public int ReceiverID_HrmsDB { get; set; }
         public int DelMethodID_024 { get; set; }
+
+        public object ReceiverByInfo => ApiReferenceHolder.getHrmsbyID(ReceiverID_HrmsDB);
     }
 }

@@ -18,6 +18,9 @@ namespace Inventory_Domain_Layer
         public DateTime Date { get; set; }
 
         public object ProjectInfo => ApiReferenceHolder.GetProjectByID(ProjectNameID_EnggDB);
-
+        public object RequestedByInfo => ApiReferenceHolder.getHrmsbyID(RequestedByID_HrmsDB);
+        public object ApprovedByInfo => ApiReferenceHolder.getHrmsbyID(ApprovedByID_HrmsDB);
+        public object ReceivedByInfo => ApiReferenceHolder.getHrmsbyID(ReceivedByID_HrmsDB);
+        public object WidraweeByInfo => ApiReferenceHolder.getHrmsbyID(WidraweeNameID_Hrms);
     }
 }

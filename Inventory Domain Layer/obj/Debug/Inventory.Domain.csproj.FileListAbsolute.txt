@@ -21,3 +21,6 @@ C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory Domain Layer\obj\Debu
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory Domain Layer\obj\Debug\Inventory.Domain.csproj.CopyComplete
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory Domain Layer\obj\Debug\Inventory Domain Layer.dll
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory Domain Layer\obj\Debug\Inventory Domain Layer.pdb
+C:\Users\LENOVO\source\repos\Inventory-API4\Inventory Domain Layer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\LENOVO\source\repos\Inventory-API4\Inventory Domain Layer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\LENOVO\source\repos\Inventory-API4\Inventory Domain Layer\obj\Debug\Inventory.Domain.csproj.CopyComplete
