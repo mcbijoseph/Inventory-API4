@@ -208,6 +208,9 @@
     <Compile Include="Controllers\RawControllers\UnitsController.cs" />
     <Compile Include="Controllers\RawControllers\WithdrawItemEntryListController.cs" />
     <Compile Include="Controllers\RawControllers\WithdrawMasterListController.cs" />
+    <Compile Include="Controllers\ReferenceApi\ENGProjectListController.cs" />
+    <Compile Include="Controllers\ReferenceApi\HRMSEmployeeListController.cs" />
+    <Compile Include="Controllers\ReferenceApi\VendorListController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Filters\DomainValidatorFilter.cs" />
     <Compile Include="Global.asax.cs">
