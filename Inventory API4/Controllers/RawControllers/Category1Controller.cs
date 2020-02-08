@@ -34,6 +34,7 @@ namespace Inventory_API4.Controllers
         [ResponseType(typeof(MessageViewDomain))]
         public IHttpActionResult Post([FromBody]_001_invRefCategory1Domain body)
         {
+
             return Json(cat1.Command(body, Command.Insert));
         }
 

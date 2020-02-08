@@ -18,7 +18,7 @@ namespace Inventory_Domain_Layer
         //public DateTime DatePrepared { get; set; }
         //public int ReceiverWarehouseInCharge_HRMSDB { get; set; }
         //public int ReceiverProjectID_ENGGDB { get; set; }
-        public DateTime Date { get; set; }
+        public DateTime? Date { get; set; }
         //public int DocEntryListID_007 { get; set; }
         public _022_invTransInfoOriginDomain TransInfoOrigin { get; set; }
         public _023_invTransInfoDestinationDomain TransInfoDestination { get; set; }
@@ -26,6 +26,6 @@ namespace Inventory_Domain_Layer
         public _010_invRefDeliveryMethodDomain DeliveryMethod { get; set; }
         public List<_025_invTransItemEntryListDomain> TransItemEntryList { get; set; }
         public List<_026_invTransItemReceivedListDomain> TransItemReceivedList { get; set; }
-
+        
     }
 }

@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.InteropServices;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,6 +16,14 @@ namespace Inventory_Domain_Layer
         public int ProjectID_EnggDB { get; set; }
         public int WHInchargeID_HrmsDB { get; set; }
         public int TransDelMethodID_024 { get; set; }
-        public DateTime Date { get; set; }
+        public DateTime? Date { get; set; }
+
+        public object ProjectInfo
+        {
+            get
+            {
+                return ApiReferenceHolder.GetProjectByID(ProjectID_EnggDB);
+            }
+        }
     }
 }

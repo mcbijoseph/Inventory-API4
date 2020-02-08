@@ -9,6 +9,7 @@ using Inventory_API4.Filters;
 using InventoryBL;
 using System.Web.Http.Cors;
 using System.Web.Http.Description;
+using Newtonsoft.Json.Linq;
 
 namespace Inventory_API4.Controllers.RawControllers
 {
@@ -81,6 +82,9 @@ namespace Inventory_API4.Controllers.RawControllers
             ///body.ID = id;
             return Json(attrib.Delete(id));
         }
+        
+
+
 
         /// <summary>
         /// Get List of TransMasterList
@@ -89,12 +93,48 @@ namespace Inventory_API4.Controllers.RawControllers
         [ResponseType(typeof(IEnumerable<_021_invTransMasterListDomain>))]
         public IHttpActionResult Get()
         {
+           
             var result = attrib.Get();
+            setProject(result);
             /*
              * 
              */
 
             return Ok(result);
+        }
+
+        void setProjectInfo(_021_invTransMasterListDomain transMaster, JArray projectArray)
+        {
+            if (transMaster == null) return;
+            foreach (JObject trans in projectArray)
+            {
+                if (transMaster.TransInfoOrigin != null)
+                {
+                    if (transMaster.TransInfoOrigin.ProjectID_EnggDB == int.Parse(trans["ID"].ToString()))
+                    {
+                        //transMaster.TransInfoOrigin.ProjectInfo = trans;
+                        //break;
+                    }
+                   if( transMaster.TransInfoDestination != null)
+                    {
+                       if( transMaster.TransInfoDestination.ProjectID_EnggDB == int.Parse(trans["ID"].ToString()))
+                        {
+                            //transMaster.TransInfoDestination.ProjectInfo = trans;
+                        }
+                    }
+                }
+            }
+        }
+
+        void setProject(IEnumerable<_021_invTransMasterListDomain> list)
+        {
+            return;
+            JArray projectArray = Newtonsoft.Json.JsonConvert.DeserializeObject<JArray>(new Helper.SynchronousRequest("http://124.105.198.3:94/api/Projects").HttpRequest());
+
+            foreach (_021_invTransMasterListDomain trans in list)
+            {
+                setProjectInfo(trans, projectArray);
+            }
         }
 
         /// <summary>
@@ -105,7 +145,11 @@ namespace Inventory_API4.Controllers.RawControllers
         [ResponseType(typeof(_021_invTransMasterListDomain))]
         public IHttpActionResult Get(int id)
         {
-            var result = attrib.Get(id);
+            //return Ok(projectArray);
+            _021_invTransMasterListDomain result = attrib.Get(id);
+
+            JArray projectArray = Newtonsoft.Json.JsonConvert.DeserializeObject<JArray>(new Helper.SynchronousRequest("http://124.105.198.3:94/api/Projects").HttpRequest());
+            setProjectInfo(result, projectArray);
             /*
              *
              */
@@ -115,10 +159,12 @@ namespace Inventory_API4.Controllers.RawControllers
 
         [HttpGet]
         [Route("api/TransMasterList/Search")]
-        [ResponseType(typeof(_021_invTransMasterListDomain))]
+        [ResponseType(typeof(IEnumerable<_021_invTransMasterListDomain>))]
         public IHttpActionResult Search(string q)
         {
+            
             var result = attrib.Search(q);
+            setProject(result);
             /*
              *
              */

@@ -20,6 +20,7 @@ namespace Inventory_API4
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             ContainerConfig.Configure();
+            ApiSourcesConfig.Config();
         }
     }
 }

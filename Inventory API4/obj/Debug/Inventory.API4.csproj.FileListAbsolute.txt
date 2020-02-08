@@ -394,3 +394,5 @@ C:\Users\Bengoan\Desktop\INV\Inventory-API4\Inventory API4\obj\Debug\Inventory.A
 C:\Users\Bengoan\Desktop\INV\Inventory-API4\Inventory API4\obj\Debug\Inventory.API4.csproj.CopyComplete
 C:\Users\Bengoan\Desktop\INV\Inventory-API4\Inventory API4\obj\Debug\Inventory API4.dll
 C:\Users\Bengoan\Desktop\INV\Inventory-API4\Inventory API4\obj\Debug\Inventory API4.pdb
+C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\bin\Helper.dll
+C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\bin\Helper.pdb
