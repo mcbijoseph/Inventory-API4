@@ -16,5 +16,10 @@ namespace Inventory_Domain_Layer
         public int ApprovedByID_HrmsDB { get; set; }
         public int ReceivedByID_HrmsDB { get; set; }
         public DateTime Date { get; set; }
+
+        public object ProjectInfo
+        {
+            get { return ApiReferenceHolder.GetProjectByID(ProjectNameID_EnggDB); }
+        }
     }
 }

@@ -9,6 +9,9 @@ namespace Inventory_API4
     {
         public static void Register(HttpConfiguration config)
         {
+
+           
+
             // Web API configuration and services
             config.EnableCors();
 
@@ -21,6 +24,7 @@ namespace Inventory_API4
                 defaults: new { id = RouteParameter.Optional }
             );
             config.Formatters.Add(new BrowserJsonFormatter());
+            
         }
     }
 }
