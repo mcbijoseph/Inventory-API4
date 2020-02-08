@@ -11,6 +11,7 @@ namespace Inventory_Domain_Layer
     {
         public static JArray projectArray { get; set; }
         public static JArray hrmsArray { get; set; }
+        public static JArray supplierArray { get; set; }
 
         public static JObject GetProjectByID(int ProjectID_EnggDB)
         {
