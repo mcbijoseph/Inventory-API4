@@ -4,6 +4,8 @@
 /.vs/Inventory API4/v16/Server/sqlite3/db.lock
 /InventoryAPI4/Inventory Domain Layer/obj
 /InventoryAPI4/Inventory API4/obj
-/InventoryAPI4/InventoryBL/obj
-/InventoryAPI4/InventoryDAL/obj
 /InventoryAPI4/Inventory API4/bin
+/InventoryAPI4/InventoryBL/obj
+/InventoryAPI4/InventoryBL/bin
+/InventoryAPI4/InventoryDAL/obj
+/InventoryAPI4/InventoryDAL/bin
