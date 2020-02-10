@@ -11,7 +11,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="App_Data/InventoryAPI4.xml">
-      <publishTime>02/07/2020 16:24:24</publishTime>
+      <publishTime>02/08/2020 11:24:13</publishTime>
     </File>
     <File Include="Areas/HelpPage/HelpPage.css">
       <publishTime>01/27/2020 09:09:08</publishTime>
@@ -83,7 +83,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/27/2020 09:09:09</publishTime>
     </File>
     <File Include="bin/App_Data/InventoryAPI4.xml">
-      <publishTime>02/07/2020 16:24:24</publishTime>
+      <publishTime>02/08/2020 11:24:13</publishTime>
     </File>
     <File Include="bin/Autofac.dll">
       <publishTime>01/27/2020 09:09:09</publishTime>
@@ -112,35 +112,41 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/DAL.pdb">
       <publishTime>01/27/2020 09:09:08</publishTime>
     </File>
+    <File Include="bin/Helper.dll">
+      <publishTime>02/08/2020 10:36:37</publishTime>
+    </File>
+    <File Include="bin/Helper.pdb">
+      <publishTime>02/08/2020 10:36:37</publishTime>
+    </File>
     <File Include="bin/Inventory API4.dll">
-      <publishTime>02/07/2020 16:24:24</publishTime>
+      <publishTime>02/08/2020 11:24:13</publishTime>
     </File>
     <File Include="bin/Inventory API4.pdb">
-      <publishTime>02/07/2020 16:24:24</publishTime>
+      <publishTime>02/08/2020 11:24:13</publishTime>
     </File>
     <File Include="bin/Inventory Domain Layer.dll">
-      <publishTime>02/07/2020 16:24:20</publishTime>
+      <publishTime>02/08/2020 11:14:57</publishTime>
     </File>
     <File Include="bin/Inventory Domain Layer.pdb">
-      <publishTime>02/07/2020 16:24:20</publishTime>
+      <publishTime>02/08/2020 11:14:57</publishTime>
     </File>
     <File Include="bin/InventoryAPI4.xml">
-      <publishTime>02/07/2020 16:24:24</publishTime>
+      <publishTime>02/08/2020 11:24:13</publishTime>
     </File>
     <File Include="bin/InventoryBL.dll">
-      <publishTime>02/07/2020 16:24:20</publishTime>
+      <publishTime>02/08/2020 11:14:57</publishTime>
     </File>
     <File Include="bin/InventoryBL.pdb">
-      <publishTime>02/07/2020 16:24:20</publishTime>
+      <publishTime>02/08/2020 11:14:57</publishTime>
     </File>
     <File Include="bin/InventoryDAL.dll">
-      <publishTime>02/07/2020 15:45:12</publishTime>
+      <publishTime>02/08/2020 10:36:37</publishTime>
     </File>
     <File Include="bin/InventoryDAL.dll.config">
       <publishTime>02/07/2020 15:44:50</publishTime>
     </File>
     <File Include="bin/InventoryDAL.pdb">
-      <publishTime>02/07/2020 15:45:12</publishTime>
+      <publishTime>02/08/2020 10:36:37</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>01/27/2020 09:09:10</publishTime>

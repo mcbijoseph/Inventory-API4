@@ -14,7 +14,7 @@ namespace Inventory_API4.Controllers.ReferenceApi
 
         public IHttpActionResult Get()
         {
-            return Ok(Inventory_Domain_Layer.ApiReferenceHolder.hrmsArray);
+            return Ok(Inventory_Domain_Layer.ApiReferenceHolder.hrmsArray); 
         }
     }
 }
