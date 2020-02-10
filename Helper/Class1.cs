@@ -10,6 +10,10 @@ using System.Data.SqlClient;
 namespace Helper
 {
     public class ObjectToTable {
+        public static DataTable Set(object obj)
+        {
+            return new ObjectToTable <obj.GetType()>(obj);
+        }
     }
 
     public class ObjectToTable<T> : DataTable
