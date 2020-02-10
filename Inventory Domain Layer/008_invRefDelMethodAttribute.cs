@@ -22,5 +22,7 @@ namespace Inventory_Domain_Layer
         {
             get; set;
         }
+        public List<_024_invTransInfoDelMetAttrValueDomain> TransferDeliveryMethodEntryList
+        { get; set; }
     }
 }

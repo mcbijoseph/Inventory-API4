@@ -52,7 +52,5 @@ namespace Inventory_Domain_Layer
             }
             return null;
         }
-
-        
     }
 }
