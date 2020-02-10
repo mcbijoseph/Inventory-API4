@@ -634,19 +634,19 @@
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
         </member>
-        <member name="T:Inventory_API4.Controllers.RawControllers.DelMethodAttrValue">
+        <member name="T:Inventory_API4.Controllers.RawControllers.DelMethodAttrValueController">
             <summary>
             Category1
             </summary>
         </member>
-        <member name="M:Inventory_API4.Controllers.RawControllers.DelMethodAttrValue.Post(Inventory_Domain_Layer._008a_invRefDelMethodAttrValueDomain)">
+        <member name="M:Inventory_API4.Controllers.RawControllers.DelMethodAttrValueController.Post(Inventory_Domain_Layer._008a_invRefDelMethodAttrValueDomain)">
             <summary>
             Add new Category1
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
-        <member name="M:Inventory_API4.Controllers.RawControllers.DelMethodAttrValue.Put(System.Int32,Inventory_Domain_Layer._008a_invRefDelMethodAttrValueDomain)">
+        <member name="M:Inventory_API4.Controllers.RawControllers.DelMethodAttrValueController.Put(System.Int32,Inventory_Domain_Layer._008a_invRefDelMethodAttrValueDomain)">
             <summary>
             Update Category1 by ID with JSON Body
             </summary>
@@ -654,20 +654,20 @@
             <param name="body"></param>
             <returns></returns>
         </member>
-        <member name="M:Inventory_API4.Controllers.RawControllers.DelMethodAttrValue.Delete(System.Int32)">
+        <member name="M:Inventory_API4.Controllers.RawControllers.DelMethodAttrValueController.Delete(System.Int32)">
             <summary>
             Delete Specific Category1
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:Inventory_API4.Controllers.RawControllers.DelMethodAttrValue.Get">
+        <member name="M:Inventory_API4.Controllers.RawControllers.DelMethodAttrValueController.Get">
             <summary>
             Get List of Category1
             </summary>
             <returns>List</returns>
         </member>
-        <member name="M:Inventory_API4.Controllers.RawControllers.DelMethodAttrValue.Get(System.Int32)">
+        <member name="M:Inventory_API4.Controllers.RawControllers.DelMethodAttrValueController.Get(System.Int32)">
             <summary>
             Get Specific Category1 by ID
             </summary>
