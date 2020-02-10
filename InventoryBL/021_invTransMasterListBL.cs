@@ -37,11 +37,11 @@ namespace InventoryBL
                 new SqlParameter { ParameterName = "@isCancelled", Value = projectDomain.isCancelled, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@cancelReason", Value = projectDomain.cancelReason ?? "", Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@Date", Value = projectDomain.Date ?? DateTime.Now, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@TransInfoOrigin", Value = JsonConvert.SerializeObject(projectDomain.TransInfoOrigin), Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@TransInfoDestination", Value = JsonConvert.SerializeObject(projectDomain.TransInfoDestination), Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@TransInfoDelMetAttrValue", Value = JsonConvert.SerializeObject(projectDomain.TransInfoDelMetAttrValue), Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@TransItemEntryList", Value = JsonConvert.SerializeObject(projectDomain.TransItemEntryList), Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@TransItemReceivedList", Value = JsonConvert.SerializeObject(projectDomain.TransItemReceivedList), Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@TransInfoOrigin", Value = JsonConvert.SerializeObject(projectDomain.TransInfoOrigin) ?? "[]", Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@TransInfoDestination", Value = JsonConvert.SerializeObject(projectDomain.TransInfoDestination) ?? "[]", Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@TransInfoDelMetAttrValue", Value = JsonConvert.SerializeObject(projectDomain.TransInfoDelMetAttrValue) ?? "[]", Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@TransItemEntryList", Value = JsonConvert.SerializeObject(projectDomain.TransItemEntryList) ??"[]", Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@TransItemReceivedList", Value = JsonConvert.SerializeObject(projectDomain.TransItemReceivedList) ?? "[]", Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@isReceive", Value = isReceived, Direction = ParameterDirection.Input }
 
             };
