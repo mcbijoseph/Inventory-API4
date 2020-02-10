@@ -16,11 +16,11 @@ namespace Inventory_API4.Controllers.RawControllers
     /// Category1
     /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class DelMethodAttrValue : ApiController
+    public class DelMethodAttrValueController : ApiController
     {
         I_008a_invRefDelMethodAttrValueBL<_008a_invRefDelMethodAttrValueDomain> cat1;
 
-        public DelMethodAttrValue(I_008a_invRefDelMethodAttrValueBL<_008a_invRefDelMethodAttrValueDomain> _001)
+        public DelMethodAttrValueController(I_008a_invRefDelMethodAttrValueBL<_008a_invRefDelMethodAttrValueDomain> _001)
         {
             cat1 = _001;
         }

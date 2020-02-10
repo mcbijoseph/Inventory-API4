@@ -14,5 +14,6 @@ namespace Inventory_Domain_Layer
         public int AttributeValueID { get; set; }
         public string AttributeValue { get; set; }
         public Boolean isDestination { get; set; }
+        public List<_008a_invRefDelMethodAttrValueDomain> DelMethodAttrValue2 { get; set; }
     }
 }
