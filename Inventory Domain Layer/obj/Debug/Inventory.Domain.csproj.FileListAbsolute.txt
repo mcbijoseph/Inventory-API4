@@ -15,12 +15,3 @@ C:\Users\Bengoan\Desktop\INV\Inventory-API4\Inventory Domain Layer\obj\Debug\Inv
 C:\Users\LENOVO\source\repos\Inventory-API4\Inventory Domain Layer\bin\Debug\Newtonsoft.Json.dll
 C:\Users\LENOVO\source\repos\Inventory-API4\Inventory Domain Layer\bin\Debug\Newtonsoft.Json.xml
 C:\Users\LENOVO\source\repos\Inventory-API4\Inventory Domain Layer\obj\Debug\Inventory.Domain.csproj.CopyComplete
-C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory Domain Layer\bin\Debug\Inventory Domain Layer.dll
-C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory Domain Layer\bin\Debug\Inventory Domain Layer.pdb
-C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory Domain Layer\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory Domain Layer\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory Domain Layer\obj\Debug\Inventory.Domain.csprojAssemblyReference.cache
-C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory Domain Layer\obj\Debug\Inventory.Domain.csproj.CoreCompileInputs.cache
-C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory Domain Layer\obj\Debug\Inventory.Domain.csproj.CopyComplete
-C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory Domain Layer\obj\Debug\Inventory Domain Layer.dll
-C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory Domain Layer\obj\Debug\Inventory Domain Layer.pdb
