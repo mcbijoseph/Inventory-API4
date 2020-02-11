@@ -9,7 +9,7 @@ using System.Web.Mvc;
 namespace Helper
 {
     /**
-     * 
+     * //USAGE SAMPLE
      * Helper.SynchronousRequest sr = new Helper.SynchronousRequest("http://124.105.198.3:94/api/Projects");
      * sr.HttpRequest();
      * 
