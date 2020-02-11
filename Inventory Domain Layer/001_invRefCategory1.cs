@@ -15,9 +15,6 @@ namespace Inventory_Domain_Layer
         public string Name { get; set; }
         //public bool isDeleted { get; set; }
 
-        public List<_002_invRefCategory2Domain> Category2
-        {
-            get; set;
-        }
+        public List<_002_invRefCategory2Domain> Category2 {get; set;}
     }
 }
