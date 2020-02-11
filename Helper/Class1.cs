@@ -156,5 +156,16 @@ namespace Helper
                 TypeName = "dbo.TypeName"
             };
         }
+
+        public static SqlParameter DotnetPiperExtentionMethod(string parName, string tableTypeName, object entity)
+        {
+            return new SqlParameter
+            {
+                ParameterName = parName,
+                SqlDbType = SqlDbType.Structured,
+                Value = Helper.ObjectToTable.Convert(entity),
+                TypeName = tableTypeName
+            };
+        }
     }
 }
