@@ -31,7 +31,7 @@ namespace Inventory_Domain_Layer
             if (SupplierID == 0) { return null; }
             foreach (JObject j in supplierArray)
             {
-                if (int.Parse(j["ID"].ToString()) == SupplierID)
+                if (int.Parse(j["SupplierID"].ToString()) == SupplierID)
                 {
                     return j;
                 }

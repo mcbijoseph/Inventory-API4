@@ -8,11 +8,16 @@ using System.Net.Http.Headers;
 using System.Web.Mvc;
 namespace Helper
 {
-    //http://124.105.198.3:94/api/Projects/1
+    /**
+     * 
+     * Helper.SynchronousRequest sr = new Helper.SynchronousRequest("http://124.105.198.3:94/api/Projects");
+     * sr.HttpRequest();
+     * 
+     */
     public class SynchronousRequest
     {
         //
-        HttpClient httpClient;
+        public HttpClient httpClient;
         /// <summary>
         ///
         /// </summary>
