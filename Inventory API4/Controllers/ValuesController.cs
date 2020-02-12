@@ -16,9 +16,11 @@ namespace Inventory_API4.Controllers
         }
 
         // GET api/values/5
-        public string Get(int id)
+        public int Get(int id)
         {
-            return "value";
+
+            return App_Start.ApiSourcesConfig.requestCount;
+            //return "value";
         }
 
         // POST api/values
