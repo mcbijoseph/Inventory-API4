@@ -15,5 +15,16 @@ namespace Inventory_API4.Controllers.ReferenceApi
         {
             return Ok(Inventory_Domain_Layer.ApiReferenceHolder.supplierArray);
         }
+
+        public IHttpActionResult Get(int id)
+        {
+            //Newtonsoft.Json.Linq.JArray jar = Newtonsoft.Json.JsonConvert.DeserializeObject<>
+            foreach (Newtonsoft.Json.Linq.JObject jo in Inventory_Domain_Layer.ApiReferenceHolder.supplierArray)
+            {
+                if (int.Parse(jo["SupplierID"].ToString()) == id)
+                    return Ok(jo);
+            }
+            return Ok();
+        }
     }
 }
