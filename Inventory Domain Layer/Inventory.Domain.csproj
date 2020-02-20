@@ -81,6 +81,7 @@
     <Compile Include="ApiReferenceHolder.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="fnItemFullName.cs" />
+    <Compile Include="032_Login.cs" />
     <Compile Include="MessageViewDomain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="vwItemProjectQuantity.cs" />

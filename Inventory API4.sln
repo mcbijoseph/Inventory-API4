@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.902
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.API4", "Inventory API4\Inventory.API4.csproj", "{E334127F-DB63-479D-B14B-1B87AD60A035}"
 EndProject
@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.BL", "InventoryBL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.DAL", "InventoryDAL\Inventory.DAL.csproj", "{20E2E9D1-1706-4DF5-80E7-169FD316C7D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helper", "Helper\Helper.csproj", "{36EA3F0D-4906-4EDA-AE1E-1ABCC0791879}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helper", "..\..\..\Desktop\ApiCommon\Helper\Helper.csproj", "{36EA3F0D-4906-4EDA-AE1E-1ABCC0791879}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

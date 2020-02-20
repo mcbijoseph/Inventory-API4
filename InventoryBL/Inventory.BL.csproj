@@ -75,6 +75,7 @@
     <Compile Include="029_invRefFormListBL.cs" />
     <Compile Include="030_invRefFormHardCopySeriesBL.cs" />
     <Compile Include="031_invRefFormTransferListBL.cs" />
+    <Compile Include="032_LoginBL.cs" />
     <Compile Include="Common\IBaseBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="vwItemProjectQuantityBL.cs" />

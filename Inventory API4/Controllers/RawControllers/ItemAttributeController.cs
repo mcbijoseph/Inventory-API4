@@ -34,6 +34,7 @@ namespace Inventory_API4.Controllers
         [HttpPost]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
+        [Auth("POST", "ItemAttribute", "Insert")]
         public IHttpActionResult Post([FromBody]_012_invItemAttributeDomain body)
         {
             return Json(cat3.Command(body, Command.Insert));
@@ -49,6 +50,7 @@ namespace Inventory_API4.Controllers
         [HttpPut]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
+        [Auth("PUT", "ItemAttribute", "Update")]
         public IHttpActionResult Put(int id, [FromBody]_012_invItemAttributeDomain body)
         {
             body.ID = id;
@@ -61,6 +63,7 @@ namespace Inventory_API4.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [ResponseType(typeof(MessageViewDomain))]
+        [Auth("DELETE", "ItemAttribute", "Delete")]
         public IHttpActionResult Delete(int id)
         {
             ///body.ID = id;
@@ -72,6 +75,7 @@ namespace Inventory_API4.Controllers
         /// </summary>
         /// <returns>List</returns>
         [ResponseType(typeof(IEnumerable<_001_invRefCategory1Domain>))]
+        [Auth("GET", "ItemAttribute", "SelectList")]
         public IHttpActionResult Get()
         {
             var result = cat3.Get();
@@ -88,6 +92,7 @@ namespace Inventory_API4.Controllers
         /// <param name="id"></param>
         /// <returns>1 JSON OR NULL</returns>
         [ResponseType(typeof(_001_invRefCategory1Domain))]
+        [Auth("GET", "ItemAttribute", "Select")]
         public IHttpActionResult Get(int id)
         {
             var result = cat3.Get(id);

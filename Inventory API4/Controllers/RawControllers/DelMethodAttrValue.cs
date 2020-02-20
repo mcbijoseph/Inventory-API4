@@ -13,7 +13,7 @@ using System.Web.Http.Description;
 namespace Inventory_API4.Controllers.RawControllers
 {
     /// <summary>
-    /// Category1
+    /// DelMethodAttrValue
     /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class DelMethodAttrValueController : ApiController
@@ -25,13 +25,14 @@ namespace Inventory_API4.Controllers.RawControllers
             cat1 = _001;
         }
         /// <summary>
-        /// Add new Category1
+        /// Add new DelMethodAttrValue
         /// </summary>
         /// <param name="body"></param>
         /// <returns></returns>
         [HttpPost]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
+        [Auth("POST", "DelMethodAttrValue", "Insert")]
         public IHttpActionResult Post([FromBody]_008a_invRefDelMethodAttrValueDomain body)
         {
             return Json(cat1.Command(body, Command.Insert));
@@ -39,7 +40,7 @@ namespace Inventory_API4.Controllers.RawControllers
 
         //Update
         /// <summary>
-        /// Update Category1 by ID with JSON Body
+        /// Update DelMethodAttrValue by ID with JSON Body
         /// </summary>
         /// <param name="id"></param>
         /// <param name="body"></param>
@@ -47,6 +48,7 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpPut]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
+        [Auth("PUT", "DelMethodAttrValue", "Update")]
         public IHttpActionResult Put(int id, [FromBody]_008a_invRefDelMethodAttrValueDomain body)
         {
             body.ID = id;
@@ -54,11 +56,12 @@ namespace Inventory_API4.Controllers.RawControllers
         }
 
         /// <summary>
-        /// Delete Specific Category1
+        /// Delete Specific DelMethodAttrValue
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
         [ResponseType(typeof(MessageViewDomain))]
+        [Auth("DELETE", "DelMethodAttrValue", "Delete")]
         public IHttpActionResult Delete(int id)
         {
             ///body.ID = id;
@@ -66,10 +69,11 @@ namespace Inventory_API4.Controllers.RawControllers
         }
 
         /// <summary>
-        /// Get List of Category1
+        /// Get List of DelMethodAttrValue
         /// </summary>
         /// <returns>List</returns>
         [ResponseType(typeof(IEnumerable<_008a_invRefDelMethodAttrValueDomain>))]
+        [Auth("GET", "DelMethodAttrValue", "SelectList")]
         public IHttpActionResult Get()
         {
             var result = cat1.Get();
@@ -81,11 +85,12 @@ namespace Inventory_API4.Controllers.RawControllers
         }
 
         /// <summary>
-        /// Get Specific Category1 by ID
+        /// Get Specific DelMethodAttrValue by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
         [ResponseType(typeof(_008a_invRefDelMethodAttrValueDomain))]
+        [Auth("GET", "DelMethodAttrValue", "Select")]
         public IHttpActionResult Get(int id)
         {
             var result = cat1.Get(id);

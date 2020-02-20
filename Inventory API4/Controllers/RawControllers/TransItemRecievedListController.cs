@@ -33,6 +33,7 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpPost]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
+        [Auth("POST", "TransItemRecievedList", "Insert")]
         public IHttpActionResult Post([FromBody]_026_invTransItemReceivedListDomain body)
         {
             return Json(cat1.Command(body, Command.Insert));
@@ -48,6 +49,7 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpPut]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
+        [Auth("PUT", "TransItemRecievedList", "Update")]
         public IHttpActionResult Put(int id, [FromBody]_026_invTransItemReceivedListDomain body)
         {
             body.ID = id;
@@ -60,6 +62,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// <param name="id"></param>
         /// <returns></returns>
         [ResponseType(typeof(MessageViewDomain))]
+        [Auth("DELETE", "TransItemRecievedList", "Delete")]
         public IHttpActionResult Delete(int id)
         {
             ///body.ID = id;
@@ -71,6 +74,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// </summary>
         /// <returns>List</returns>
         [ResponseType(typeof(IEnumerable<_026_invTransItemReceivedListDomain>))]
+        [Auth("GET", "TransItemRecievedList", "SelectList")]
         public IHttpActionResult Get()
         {
             var result = cat1.Get();
@@ -87,6 +91,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
         [ResponseType(typeof(_026_invTransItemReceivedListDomain))]
+        [Auth("GET", "TransItemRecievedList", "Select")]
         public IHttpActionResult Get(int id)
         {
             var result = cat1.Get(id);

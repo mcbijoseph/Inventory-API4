@@ -32,6 +32,7 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpPost]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
+        [Auth("POST", "ReleasedItemDetails", "Insert")]
         public IHttpActionResult Post([FromBody]_020_invReleasedItemDetailsDomain body)
         {
             return Json(attrib.Command(body, Command.Insert));
@@ -47,6 +48,7 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpPut]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
+        [Auth("PUT", "ReleasedItemDetails", "Update")]
         public IHttpActionResult Put(int id, [FromBody]_020_invReleasedItemDetailsDomain body)
         {
             body.ID = id;
@@ -59,6 +61,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// <param name="id"></param>
         /// <returns></returns>
         [ResponseType(typeof(MessageViewDomain))]
+        [Auth("DELETE", "ReleasedItemDetails", "Delete")]
         public IHttpActionResult Delete(int id)
         {
             ///body.ID = id;
@@ -70,6 +73,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// </summary>
         /// <returns>List</returns>
         [ResponseType(typeof(IEnumerable<_020_invReleasedItemDetailsDomain>))]
+        [Auth("GET", "ReleasedItemDetails", "SelectList")]
         public IHttpActionResult Get()
         {
             var result = attrib.Get();
@@ -86,6 +90,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
         [ResponseType(typeof(_020_invReleasedItemDetailsDomain))]
+        [Auth("GET", "ReleasedItemDetails", "Select")]
         public IHttpActionResult Get(int id)
         {
             var result = attrib.Get(id);

@@ -35,6 +35,7 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpPost]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
+        [Auth("POST", "DeliveryMethodEntryList", "Insert")]
         public IHttpActionResult Post([FromBody]_017_invNewInfoDelMetAttrValueDomain body)
         {
             return Json(attrib.Command(body, Command.Insert));
@@ -50,6 +51,7 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpPut]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
+        [Auth("PUT", "DeliveryMethodEntryList", "Update")]
         public IHttpActionResult Put(int id, [FromBody]_017_invNewInfoDelMetAttrValueDomain body)
         {
             body.ID = id;
@@ -62,6 +64,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// <param name="id"></param>
         /// <returns></returns>
         [ResponseType(typeof(MessageViewDomain))]
+        [Auth("DELETE", "DeliveryMethodEntryList", "Delete")]
         public IHttpActionResult Delete(int id)
         {
             ///body.ID = id;
@@ -73,6 +76,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// </summary>
         /// <returns>List</returns>
         [ResponseType(typeof(IEnumerable<_017_invNewInfoDelMetAttrValueDomain>))]
+        [Auth("GET", "DeliveryMethodEntryList", "SelectList")]
         public IHttpActionResult Get()
         {
             var result = attrib.Get();
@@ -89,6 +93,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
         [ResponseType(typeof(_017_invNewInfoDelMetAttrValueDomain))]
+        [Auth("GET", "DeliveryMethodEntryList", "Select")]
         public IHttpActionResult Get(int id)
         {
             var result = attrib.Get(id);

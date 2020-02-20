@@ -57,6 +57,8 @@ namespace Inventory_API4.App_Start
             builder.RegisterType<InventoryBL._029_invRefFormListBL>().As<InventoryBL.I_029_invRefFormListBL<Inventory_Domain_Layer._029_invRefFormListDomain>>();
             builder.RegisterType<InventoryBL._030_invRefFormHardCopySeriesBL>().As<InventoryBL.I_030_invRefFormHardCopySeriesBL<Inventory_Domain_Layer._030_invRefFormHardCopySeriesDomain>>();
             builder.RegisterType<InventoryBL._031_invRefTransferListBL>().As<InventoryBL.I_031_invRefFormTransferListBL<Inventory_Domain_Layer._031_invRefFormTransferListDomain>>();
+            builder.RegisterType<InventoryBL._032_LoginBL>().As<InventoryBL.I_032_LoginBL<Inventory_Domain_Layer._032_LoginDomain>>();
+
             builder.RegisterType<InventoryBL.vwItemProjectQuantityBL>().As<InventoryBL.IvwItemProjectQuantityBL>();
 
             List<Autofac.Core.Parameter> pars = new List<Autofac.Core.Parameter>();
