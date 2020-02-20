@@ -18,7 +18,7 @@ namespace Inventory_API4.Controllers
         // GET api/values/5
         public int Get(int id)
         {
-
+            App_Start.ApiSourcesConfig.requestCount++;
             return App_Start.ApiSourcesConfig.requestCount;
             //return "value";
         }
