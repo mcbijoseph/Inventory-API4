@@ -33,7 +33,7 @@ namespace Inventory_API4.Controllers
         [HttpPost]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        [AuthRoleAccess("POST", "NewItemEntryList", "Insert")]
+        [AuthRoleAccess( "NewItemEntryList", "Insert")]
         public IHttpActionResult Post([FromBody]_013_invNewItemEntryListDomain body)
         {
             return Json(cat3.Command(body, Command.Insert));

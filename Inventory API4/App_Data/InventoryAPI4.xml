@@ -481,6 +481,25 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="M:Inventory_API4.AuthRoleAccess.#ctor(System.String,System.String)">
+            <summary>
+            Customize the request setup
+            </summary>
+            <param name="method"></param>
+            <param name="controlName"></param>
+            <param name="actioname"></param>
+        </member>
+        <member name="M:Inventory_API4.AuthRoleAccess.#ctor">
+            <summary>
+            Auto Provides Data Expression Required
+            </summary>
+        </member>
+        <member name="M:Inventory_API4.AuthRoleAccess.#ctor(System.String)">
+            <summary>
+            Custom Action 
+            </summary>
+            <param name="ActionName">Customized Action Name</param>
+        </member>
         <member name="T:Inventory_API4.Controllers.AttributeController">
             <summary>
             Items Attribute

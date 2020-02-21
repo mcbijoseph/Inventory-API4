@@ -317,7 +317,7 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ApiCommon\Helper\Helper.csproj">
+    <ProjectReference Include="..\..\..\..\Desktop\ApiCommon\Helper\Helper.csproj">
       <Project>{36ea3f0d-4906-4eda-ae1e-1abcc0791879}</Project>
       <Name>Helper</Name>
     </ProjectReference>

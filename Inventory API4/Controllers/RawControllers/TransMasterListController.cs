@@ -148,7 +148,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
         [ResponseType(typeof(_021_invTransMasterListDomain))]
-        [AuthRoleAccess("GET", "TransMasterList", "Select")]
+        [AuthRoleAccess( "TransMasterList", "Select")]
         public IHttpActionResult Get(int id)
         {
             //return Ok(projectArray);
@@ -166,7 +166,7 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpGet]
         [Route("api/TransMasterList/Search")]
         [ResponseType(typeof(IEnumerable<_021_invTransMasterListDomain>))]
-        [AuthRoleAccess("GET", "TransMasterList", "Select")]
+        [AuthRoleAccess( "TransMasterList", "Select")]
         public IHttpActionResult Search(string q)
         {
             
@@ -182,7 +182,7 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpGet]
         [Route("api/TransMasterList/SearchbyReference")]
         [ResponseType(typeof(_021_invTransMasterListDomain))]
-        [AuthRoleAccess("GET", "TransMasterList", "Select")]
+        [AuthRoleAccess( "TransMasterList", "Select")]
         public IHttpActionResult SearchbyReference(string q)
         {
             var result = attrib.SearchbyReference(q);
