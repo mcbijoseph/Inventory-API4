@@ -13,7 +13,7 @@ using System.Web.Http.Description;
 namespace Inventory_API4.Controllers
 {
     /// <summary>
-    /// DeliveryMethodAttribute
+    /// DelMethodAttribute
     /// </summary>
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class DelMethodAttributeController : ApiController
@@ -26,14 +26,14 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Add new DeliveryMethodAttribute
+        /// Add new DelMethodAttribute
         /// </summary>
         /// <param name="body"></param>
         /// <returns></returns>
         [HttpPost]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        [AuthRoleAccess("DeliveryMethodAttribute", "Insert")]
+        [AuthRoleAccess("DelMethodAttribute", "Insert")]
         public IHttpActionResult Post([FromBody]_008_invRefDelMethodAttributeDomain body)
         {
             return Json(cat3.Command(body, Command.Insert));
@@ -41,7 +41,7 @@ namespace Inventory_API4.Controllers
 
         //Update
         /// <summary>
-        /// Update DeliveryMethodAttribute by ID with JSON Body
+        /// Update DelMethodAttribute by ID with JSON Body
         /// </summary>
         /// <param name="id"></param>
         /// <param name="body"></param>
@@ -49,7 +49,7 @@ namespace Inventory_API4.Controllers
         [HttpPut]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        [AuthRoleAccess("DeliveryMethodAttribute", "Update")]
+        [AuthRoleAccess("DelMethodAttribute", "Update")]
         public IHttpActionResult Put(int id, [FromBody]_008_invRefDelMethodAttributeDomain body)
         {
             body.ID = id;
@@ -57,12 +57,12 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Delete Specific DeliveryMethodAttribute
+        /// Delete Specific DelMethodAttribute
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
         [ResponseType(typeof(MessageViewDomain))]
-        [AuthRoleAccess( "DeliveryMethodAttribute", "Delete")]
+        [AuthRoleAccess("DelMethodAttribute", "Delete")]
         public IHttpActionResult Delete(int id)
         {
             ///body.ID = id;
@@ -70,11 +70,11 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get List of DeliveryMethodAttribute 
+        /// Get List of DelMethodAttribute 
         /// </summary>
         /// <returns>List</returns>
         [ResponseType(typeof(IEnumerable<_001_invRefCategory1Domain>))]
-        [AuthRoleAccess("DeliveryMethodAttribute", "SelectList")]
+        [AuthRoleAccess("DelMethodAttribute", "SelectList")]
         public IHttpActionResult Get()
         {
             var result = cat3.Get();
@@ -86,12 +86,12 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get Specific DeliveryMethodAttribute by ID
+        /// Get Specific DelMethodAttribute by ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
         [ResponseType(typeof(_001_invRefCategory1Domain))]
-        [AuthRoleAccess( "DeliveryMethodAttribute", "Select")]
+        [AuthRoleAccess("DelMethodAttribute", "Select")]
         public IHttpActionResult Get(int id)
         {
             var result = cat3.Get(id);
@@ -103,13 +103,13 @@ namespace Inventory_API4.Controllers
         }
 
         /// <summary>
-        /// Get Specific DeliveryMethodAttribute by DelMethodID_010
+        /// Get Specific DelMethodAttribute by DelMethodID_010
         /// </summary>
         /// <param name="id"></param>
         /// <param name="DelMethod"></param>
         /// <returns>1/Many Json or NULL</returns>
         [ResponseType(typeof(_001_invRefCategory1Domain))]
-        [AuthRoleAccess( "DeliveryMethodAttribute", "Select")]
+        [AuthRoleAccess("DelMethodAttribute", "Select")]
         public IHttpActionResult Get(int id, int DelMethod)
         {
             var result = cat3.GetData(id, DelMethod);
