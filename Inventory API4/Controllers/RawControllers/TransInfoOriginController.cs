@@ -32,7 +32,7 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpPost]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("POST", "TransInfoOrigin", "Insert")]
+        [AuthRoleAccess("TransInfoOrigin", "Insert")]
         public IHttpActionResult Post([FromBody]_022_invTransInfoOriginDomain body)
         {
             return Json(attrib.Command(body, Command.Insert));
@@ -48,7 +48,7 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpPut]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("PUT", "TransInfoOrigin", "Update")]
+        [AuthRoleAccess("TransInfoOrigin", "Update")]
         public IHttpActionResult Put(int id, [FromBody]_022_invTransInfoOriginDomain body)
         {
             body.ID = id;
@@ -61,7 +61,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// <param name="id"></param>
         /// <returns></returns>
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("DELETE", "TransInfoOrigin", "Delete")]
+        [AuthRoleAccess("TransInfoOrigin", "Delete")]
         public IHttpActionResult Delete(int id)
         {
             ///body.ID = id;
@@ -73,7 +73,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// </summary>
         /// <returns>List</returns>
         [ResponseType(typeof(IEnumerable<_022_invTransInfoOriginDomain>))]
-        [Auth("GET", "TransInfoOrigin", "SelectList")]
+        [AuthRoleAccess( "TransInfoOrigin", "SelectList")]
         public IHttpActionResult Get()
         {
             var result = attrib.Get();
@@ -90,7 +90,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
         [ResponseType(typeof(_022_invTransInfoOriginDomain))]
-        [Auth("GET", "TransInfoOrigin", "Select")]
+        [AuthRoleAccess("TransInfoOrigin", "Select")]
         public IHttpActionResult Get(int id)
         {
             var result = attrib.Get(id);

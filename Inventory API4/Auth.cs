@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Http.Controllers;
 
 namespace Inventory_API4
 {
@@ -28,13 +29,51 @@ namespace Inventory_API4
         
     }
 
-    public class Auth: Helper.RoleAccessDataAttribute
+    public class AuthRoleAccess: Helper.RoleAccessDataAttribute
     {
-        public Auth(string method,string controlName, string actioname): 
-            base(Auth2.URL,"GET",Auth2.map,Auth2.Expression(controlName, actioname),"UserID","Token")
+        private string _ActionName = null;
+        /// <summary>
+        /// Customize the request setup
+        /// </summary>
+        /// <param name="method"></param>
+        /// <param name="controlName"></param>
+        /// <param name="actioname"></param>
+        public AuthRoleAccess(string controlName, string actioname) :
+            base(Auth2.URL, "GET", Auth2.map, Auth2.Expression(controlName, actioname), "UserID", "Token")
         {
 
         }
+        /// <summary>
+        /// Auto Provides Data Expression Required
+        /// </summary>
+        public AuthRoleAccess():base(Auth2.URL, "GET", Auth2.map, null, "UserID", "Token")
+        {
+        }
+        /// <summary>
+        /// Custom Action 
+        /// </summary>
+        /// <param name="ActionName">Customized Action Name</param>
+        public AuthRoleAccess(string ActionName) : base(Auth2.URL, "GET", Auth2.map, null, "UserID", "Token")
+        {
+            _ActionName = ActionName;
+        }
+
+        public override void OnActionExecuting(HttpActionContext actionContext)
+        {
+
+            if (_ra.TestMatchExpressionValue == null)
+            {
+                string actionName = _ActionName ?? actionContext.ActionDescriptor.ActionName;
+                string cName = actionContext.ActionDescriptor.ControllerDescriptor.ControllerName;
+
+                this.SetMatchExpression(Auth2.Expression(cName, actionName));
+            }
+
+
+            base.OnActionExecuting(actionContext);
+        }
+
+
 
     }
 

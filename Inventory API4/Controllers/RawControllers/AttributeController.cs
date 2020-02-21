@@ -27,7 +27,7 @@ namespace Inventory_API4.Controllers
         //view
         [HttpPost]
         [DomainValidatorFilter]
-        [Auth("POST", "Attribute", "Insert")]
+        [AuthRoleAccess("POST", "Attribute", "Insert")]
         public IHttpActionResult Post([FromBody]_006_invRefAttributeDomain body)
         {
             return Json(cat1.Command(body, Command.Insert));
@@ -42,7 +42,7 @@ namespace Inventory_API4.Controllers
         //Update
         [HttpPut]
         [DomainValidatorFilter]
-        [Auth("PUT", "Attribute", "Update")]
+        [AuthRoleAccess("PUT", "Attribute", "Update")]
         public IHttpActionResult Put(int id, [FromBody]_006_invRefAttributeDomain body)
         {
             body.ID = id;
@@ -53,7 +53,7 @@ namespace Inventory_API4.Controllers
         /// Get List of Item Attribute
         /// </summary>
         /// <returns>List</returns>
-        [Auth("GET", "Attribute", "SelectList")]
+        [AuthRoleAccess("GET", "Attribute", "SelectList")]
         public IHttpActionResult Get()
         {
             var result = cat1.Get();
@@ -69,7 +69,7 @@ namespace Inventory_API4.Controllers
         /// </summary>
         /// <param name="id">ID of target</param>
         /// <returns>1 JSON or NULL</returns>
-        [Auth("GET", "Attribute", "Select")]
+        [AuthRoleAccess("GET", "Attribute", "Select")]
         public IHttpActionResult Get(int id)
         {
             var result = cat1.Get(id);

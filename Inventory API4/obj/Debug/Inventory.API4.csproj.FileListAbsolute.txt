@@ -399,3 +399,4 @@ C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\obj\Debug\Invent
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\obj\Debug\Inventory API4.dll
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\obj\Debug\Inventory API4.pdb
 C:\Users\LENOVO\Source\Repos\Inventory-API4\Inventory API4\bin\Helper.dll.config
+C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\bin\Helper.dll.config

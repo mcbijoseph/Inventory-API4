@@ -32,7 +32,7 @@ namespace Inventory_API4.Controllers
         [HttpPost]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("POST", "ReleasedItemHeader", "Insert")]
+        [AuthRoleAccess("ReleasedItemHeader", "Insert")]
         public IHttpActionResult Post([FromBody]_019_invReleasedItemHeaderDomain body)
         {
             return Json(attrib.Command(body, Command.Insert));
@@ -48,7 +48,7 @@ namespace Inventory_API4.Controllers
         [HttpPut]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("PUT", "ReleasedItemHeader", "Update")]
+        [AuthRoleAccess("ReleasedItemHeader", "Update")]
         public IHttpActionResult Put(int id, [FromBody]_019_invReleasedItemHeaderDomain body)
         {
             body.ID = id;
@@ -61,7 +61,7 @@ namespace Inventory_API4.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("DELETE", "ReleasedItemHeader", "Delete")]
+        [AuthRoleAccess("ReleasedItemHeader", "Delete")]
         public IHttpActionResult Delete(int id)
         {
             ///body.ID = id;
@@ -73,7 +73,7 @@ namespace Inventory_API4.Controllers
         /// </summary>
         /// <returns>List</returns>
         [ResponseType(typeof(IEnumerable<_019_invReleasedItemHeaderDomain>))]
-        [Auth("GET", "ReleasedItemHeader", "SelectList")]
+        [AuthRoleAccess("ReleasedItemHeader", "SelectList")]
         public IHttpActionResult Get()
         {
             var result = attrib.Get();
@@ -90,7 +90,7 @@ namespace Inventory_API4.Controllers
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
         [ResponseType(typeof(_019_invReleasedItemHeaderDomain))]
-        [Auth("GET", "ReleasedItemHeader", "Select")]
+        [AuthRoleAccess("ReleasedItemHeader", "Select")]
         public IHttpActionResult Get(int id)
         {
             var result = attrib.Get(id);

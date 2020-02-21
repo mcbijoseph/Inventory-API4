@@ -33,7 +33,7 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpPost]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("POST", "WithdrawMasterList", "Insert")]
+        [AuthRoleAccess("WithdrawMasterList", "Insert")]
         public IHttpActionResult Post([FromBody]_027_invWithdrawMasterListDomain body)
         {
             return Json(cat1.Command(body, Command.Insert));
@@ -49,7 +49,7 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpPut]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("PUT", "WithdrawMasterList", "Update")]
+        [AuthRoleAccess("WithdrawMasterList", "Update")]
         public IHttpActionResult Put(int id, [FromBody]_027_invWithdrawMasterListDomain body)
         {
             body.ID = id;
@@ -62,7 +62,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// <param name="id"></param>
         /// <returns></returns>
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("DELETE", "WithdrawMasterList", "Delete")]
+        [AuthRoleAccess( "WithdrawMasterList", "Delete")]
         public IHttpActionResult Delete(int id)
         {
             ///body.ID = id;
@@ -74,7 +74,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// </summary>
         /// <returns>List</returns>
         [ResponseType(typeof(IEnumerable<_027_invWithdrawMasterListDomain>))]
-        [Auth("GET", "WithdrawMasterList", "SelectList")]
+        [AuthRoleAccess("WithdrawMasterList", "SelectList")]
         public IHttpActionResult Get()
         {
             var result = cat1.Get();
@@ -91,7 +91,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
         [ResponseType(typeof(_027_invWithdrawMasterListDomain))]
-        [Auth("GET", "WithdrawMasterList", "Select")]
+        [AuthRoleAccess("WithdrawMasterList", "Select")]
         public IHttpActionResult Get(int id)
         {
             var result = cat1.Get(id);

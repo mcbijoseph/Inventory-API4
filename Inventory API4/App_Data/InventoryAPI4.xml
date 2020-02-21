@@ -636,19 +636,19 @@
         </member>
         <member name="T:Inventory_API4.Controllers.RawControllers.DelMethodAttrValueController">
             <summary>
-            Category1
+            DelMethodAttrValue
             </summary>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.DelMethodAttrValueController.Post(Inventory_Domain_Layer._008a_invRefDelMethodAttrValueDomain)">
             <summary>
-            Add new Category1
+            Add new DelMethodAttrValue
             </summary>
             <param name="body"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.DelMethodAttrValueController.Put(System.Int32,Inventory_Domain_Layer._008a_invRefDelMethodAttrValueDomain)">
             <summary>
-            Update Category1 by ID with JSON Body
+            Update DelMethodAttrValue by ID with JSON Body
             </summary>
             <param name="id"></param>
             <param name="body"></param>
@@ -656,20 +656,20 @@
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.DelMethodAttrValueController.Delete(System.Int32)">
             <summary>
-            Delete Specific Category1
+            Delete Specific DelMethodAttrValue
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.DelMethodAttrValueController.Get">
             <summary>
-            Get List of Category1
+            Get List of DelMethodAttrValue
             </summary>
             <returns>List</returns>
         </member>
         <member name="M:Inventory_API4.Controllers.RawControllers.DelMethodAttrValueController.Get(System.Int32)">
             <summary>
-            Get Specific Category1 by ID
+            Get Specific DelMethodAttrValue by ID
             </summary>
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>
@@ -1117,46 +1117,6 @@
         <member name="M:Inventory_API4.Controllers.FormListController.Get(System.Int32)">
             <summary>
             Get Specific FormList by ID
-            </summary>
-            <param name="id"></param>
-            <returns>1 JSON or NULL</returns>
-        </member>
-        <member name="T:Inventory_API4.Controllers.LoginController">
-            <summary>
-            Login
-            </summary>
-        </member>
-        <member name="M:Inventory_API4.Controllers.LoginController.Post(Inventory_Domain_Layer._032_LoginDomain)">
-            <summary>
-            Add new Login
-            </summary>
-            <param name="body"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Inventory_API4.Controllers.LoginController.Put(System.Int32,Inventory_Domain_Layer._032_LoginDomain)">
-            <summary>
-            Update Login by ID with JSON Body
-            </summary>
-            <param name="id"></param>
-            <param name="body"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Inventory_API4.Controllers.LoginController.Delete(System.Int32)">
-            <summary>
-            Delete Specific Login
-            </summary>
-            <param name="id"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Inventory_API4.Controllers.LoginController.Get">
-            <summary>
-            Get List of Login
-            </summary>
-            <returns>List</returns>
-        </member>
-        <member name="M:Inventory_API4.Controllers.LoginController.Get(System.Int32)">
-            <summary>
-            Get Specific Login by ID
             </summary>
             <param name="id"></param>
             <returns>1 JSON or NULL</returns>

@@ -19,7 +19,7 @@ namespace Inventory_API4.Controllers
     public class Category1Controller : ApiController
     {
         I_001_invRefCategory1BL<_001_invRefCategory1Domain> cat1;
-        
+
         public Category1Controller(I_001_invRefCategory1BL<_001_invRefCategory1Domain> _001)
         {
             cat1 = _001;
@@ -32,7 +32,7 @@ namespace Inventory_API4.Controllers
         [HttpPost]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("POST", "Category1", "Insert")]
+        [AuthRoleAccess("Category1", "Insert")]
         public IHttpActionResult Post([FromBody]_001_invRefCategory1Domain body)
         {
 
@@ -49,7 +49,7 @@ namespace Inventory_API4.Controllers
         [HttpPut]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("PUT", "Category1", "Update")]
+        [AuthRoleAccess("Category1", "Update")]
         public IHttpActionResult Put(int id, [FromBody]_001_invRefCategory1Domain body)
         {
             body.ID = id;
@@ -62,7 +62,7 @@ namespace Inventory_API4.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("DELETE", "Category1", "Delete")]
+        [AuthRoleAccess("Category1", "Delete")]
         public IHttpActionResult Delete(int id)
         {
             ///body.ID = id;
@@ -74,7 +74,7 @@ namespace Inventory_API4.Controllers
         /// </summary>
         /// <returns>List</returns>
         [ResponseType(typeof(IEnumerable<_001_invRefCategory1Domain>))]
-        [Auth("GET","Category1","SelectList")]
+        [AuthRoleAccess("Category1", "SelectList")]
         public IHttpActionResult Get()
         {
             var result = cat1.Get();
@@ -91,7 +91,7 @@ namespace Inventory_API4.Controllers
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
         [ResponseType(typeof(_001_invRefCategory1Domain))]
-        [Auth("GET","Category1","Select")]
+        [AuthRoleAccess("Category1", "Select")]
         public IHttpActionResult Get(int id)
         {
             var result = cat1.Get(id);

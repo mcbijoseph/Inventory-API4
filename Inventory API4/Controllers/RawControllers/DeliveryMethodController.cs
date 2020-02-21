@@ -35,7 +35,7 @@ namespace Inventory_API4.Controllers
         [HttpPost]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("POST", "DeliveryMethod", "Insert")]
+        [AuthRoleAccess("DeliveryMethod", "Insert")]
         public IHttpActionResult Post([FromBody]_010_invRefDeliveryMethodDomain body)
         {
             return Json(attrib.Command(body, Command.Insert));
@@ -51,7 +51,7 @@ namespace Inventory_API4.Controllers
         [HttpPut]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("PUT", "DeliveryMethod", "Update")]
+        [AuthRoleAccess("DeliveryMethod", "Update")]
         public IHttpActionResult Put(int id, [FromBody]_010_invRefDeliveryMethodDomain body)
         {
             body.ID = id;
@@ -64,7 +64,7 @@ namespace Inventory_API4.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("DELETE", "DeliveryMethod", "Delete")]
+        [AuthRoleAccess("DeliveryMethod", "Delete")]
         public IHttpActionResult Delete(int id)
         {
             ///body.ID = id;
@@ -76,7 +76,7 @@ namespace Inventory_API4.Controllers
         /// </summary>
         /// <returns>List</returns>
         [ResponseType(typeof(IEnumerable<_001_invRefCategory1Domain>))]
-        [Auth("GET", "DeliveryMethod", "SelectList")]
+        [AuthRoleAccess("DeliveryMethod", "SelectList")]
         public IHttpActionResult Get()
         {
             var result = attrib.Get();
@@ -93,7 +93,7 @@ namespace Inventory_API4.Controllers
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
         [ResponseType(typeof(_001_invRefCategory1Domain))]
-        [Auth("GET", "DeliveryMethod", "Select")]
+        [AuthRoleAccess( "DeliveryMethod", "Select")]
         public IHttpActionResult Get(int id)
         {
             var result = attrib.Get(id);

@@ -33,7 +33,7 @@ namespace Inventory_API4.Controllers
         [HttpPost]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("POST", "NewItemHeaderList", "Insert")]
+        [AuthRoleAccess("NewItemHeaderList", "Insert")]
         public IHttpActionResult Post([FromBody]_007_invNewItemHeaderListDomain body)
         {
             return Json(cat3.Command(body, Command.Insert));
@@ -49,7 +49,7 @@ namespace Inventory_API4.Controllers
         [HttpPut]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("PUT", "NewItemHeaderList", "Update")]
+        [AuthRoleAccess( "NewItemHeaderList", "Update")]
         public IHttpActionResult Put(int id, [FromBody]_007_invNewItemHeaderListDomain body)
         {
             body.ID = id;
@@ -62,7 +62,7 @@ namespace Inventory_API4.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("DELETE", "NewItemHeaderList", "Delete")]
+        [AuthRoleAccess("NewItemHeaderList", "Delete")]
         public IHttpActionResult Delete(int id)
         {
             ///body.ID = id;
@@ -74,7 +74,7 @@ namespace Inventory_API4.Controllers
         /// </summary>
         /// <returns>List</returns>
         [ResponseType(typeof(IEnumerable<_001_invRefCategory1Domain>))]
-        [Auth("GET", "NewItemHeaderList", "SelectList")]
+        [AuthRoleAccess( "NewItemHeaderList", "SelectList")]
         public IHttpActionResult Get()
         {
             var result = cat3.Get();
@@ -91,7 +91,7 @@ namespace Inventory_API4.Controllers
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
         [ResponseType(typeof(_001_invRefCategory1Domain))]
-        [Auth("GET", "NewItemHeaderList", "Select")]
+        [AuthRoleAccess("NewItemHeaderList", "Select")]
         public IHttpActionResult Get(int id)
         {
             var result = cat3.Get(id);
