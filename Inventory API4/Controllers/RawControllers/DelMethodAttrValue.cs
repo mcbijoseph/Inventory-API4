@@ -32,7 +32,7 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpPost]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("POST", "DelMethodAttrValue", "Insert")]
+        [AuthRoleAccess("DelMethodAttrValue", "Insert")]
         public IHttpActionResult Post([FromBody]_008a_invRefDelMethodAttrValueDomain body)
         {
             return Json(cat1.Command(body, Command.Insert));
@@ -48,7 +48,7 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpPut]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("PUT", "DelMethodAttrValue", "Update")]
+        [AuthRoleAccess( "DelMethodAttrValue", "Update")]
         public IHttpActionResult Put(int id, [FromBody]_008a_invRefDelMethodAttrValueDomain body)
         {
             body.ID = id;
@@ -61,7 +61,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// <param name="id"></param>
         /// <returns></returns>
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("DELETE", "DelMethodAttrValue", "Delete")]
+        [AuthRoleAccess( "DelMethodAttrValue", "Delete")]
         public IHttpActionResult Delete(int id)
         {
             ///body.ID = id;
@@ -73,7 +73,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// </summary>
         /// <returns>List</returns>
         [ResponseType(typeof(IEnumerable<_008a_invRefDelMethodAttrValueDomain>))]
-        [Auth("GET", "DelMethodAttrValue", "SelectList")]
+        [AuthRoleAccess( "DelMethodAttrValue", "SelectList")]
         public IHttpActionResult Get()
         {
             var result = cat1.Get();
@@ -90,7 +90,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
         [ResponseType(typeof(_008a_invRefDelMethodAttrValueDomain))]
-        [Auth("GET", "DelMethodAttrValue", "Select")]
+        [AuthRoleAccess("DelMethodAttrValue", "Select")]
         public IHttpActionResult Get(int id)
         {
             var result = cat1.Get(id);

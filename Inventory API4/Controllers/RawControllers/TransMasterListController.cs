@@ -33,7 +33,7 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpPost]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("POST", "TransMasterList", "Insert")]
+        [AuthRoleAccess("TransMasterList", "Insert")]
         public IHttpActionResult Post([FromBody]_021_invTransMasterListDomain body)
         {
             return Json(attrib.Command(body, Command.Insert));
@@ -48,7 +48,7 @@ namespace Inventory_API4.Controllers.RawControllers
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
         [Route("api/TransMasterList/ConfirmReceive")]
-        [Auth("POST", "TransMasterList", "Insert")]
+        [AuthRoleAccess("TransMasterList", "Insert")]
         public IHttpActionResult ConfirmReceive([FromBody]_021_invTransMasterListDomain body)
         {
             return Json(attrib.Command(body, Command.Insert, true));
@@ -65,7 +65,7 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpPut]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("PUT", "TransMasterList", "Update")]
+        [AuthRoleAccess("TransMasterList", "Update")]
         public IHttpActionResult Put(int id, [FromBody]_021_invTransMasterListDomain body)
         {
             body.ID = id;
@@ -80,7 +80,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// <param name="id"></param>
         /// <returns></returns>
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("DELETE", "TransMasterList", "Delete")]
+        [AuthRoleAccess("TransMasterList", "Delete")]
         public IHttpActionResult Delete(int id)
         {
             ///body.ID = id;
@@ -95,7 +95,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// </summary>
         /// <returns>List</returns>
         [ResponseType(typeof(IEnumerable<_021_invTransMasterListDomain>))]
-        [Auth("GET", "TransMasterList", "SelectList")]
+        [AuthRoleAccess("TransMasterList", "SelectList")]
         public IHttpActionResult Get()
         {
            
@@ -148,7 +148,7 @@ namespace Inventory_API4.Controllers.RawControllers
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
         [ResponseType(typeof(_021_invTransMasterListDomain))]
-        [Auth("GET", "TransMasterList", "Select")]
+        [AuthRoleAccess("GET", "TransMasterList", "Select")]
         public IHttpActionResult Get(int id)
         {
             //return Ok(projectArray);
@@ -166,7 +166,7 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpGet]
         [Route("api/TransMasterList/Search")]
         [ResponseType(typeof(IEnumerable<_021_invTransMasterListDomain>))]
-        [Auth("GET", "TransMasterList", "Select")]
+        [AuthRoleAccess("GET", "TransMasterList", "Select")]
         public IHttpActionResult Search(string q)
         {
             
@@ -182,7 +182,7 @@ namespace Inventory_API4.Controllers.RawControllers
         [HttpGet]
         [Route("api/TransMasterList/SearchbyReference")]
         [ResponseType(typeof(_021_invTransMasterListDomain))]
-        [Auth("GET", "TransMasterList", "Select")]
+        [AuthRoleAccess("GET", "TransMasterList", "Select")]
         public IHttpActionResult SearchbyReference(string q)
         {
             var result = attrib.SearchbyReference(q);

@@ -33,7 +33,7 @@ namespace Inventory_API4.Controllers
         [HttpPost]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("POST", "DeliveryMethodAttribute", "Insert")]
+        [AuthRoleAccess("DeliveryMethodAttribute", "Insert")]
         public IHttpActionResult Post([FromBody]_008_invRefDelMethodAttributeDomain body)
         {
             return Json(cat3.Command(body, Command.Insert));
@@ -49,7 +49,7 @@ namespace Inventory_API4.Controllers
         [HttpPut]
         [DomainValidatorFilter]
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("PUT", "DeliveryMethodAttribute", "Update")]
+        [AuthRoleAccess("DeliveryMethodAttribute", "Update")]
         public IHttpActionResult Put(int id, [FromBody]_008_invRefDelMethodAttributeDomain body)
         {
             body.ID = id;
@@ -62,7 +62,7 @@ namespace Inventory_API4.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [ResponseType(typeof(MessageViewDomain))]
-        [Auth("DELETE", "DeliveryMethodAttribute", "Delete")]
+        [AuthRoleAccess( "DeliveryMethodAttribute", "Delete")]
         public IHttpActionResult Delete(int id)
         {
             ///body.ID = id;
@@ -74,7 +74,7 @@ namespace Inventory_API4.Controllers
         /// </summary>
         /// <returns>List</returns>
         [ResponseType(typeof(IEnumerable<_001_invRefCategory1Domain>))]
-        [Auth("GET", "DeliveryMethodAttribute", "SelectList")]
+        [AuthRoleAccess("DeliveryMethodAttribute", "SelectList")]
         public IHttpActionResult Get()
         {
             var result = cat3.Get();
@@ -91,7 +91,7 @@ namespace Inventory_API4.Controllers
         /// <param name="id"></param>
         /// <returns>1 JSON or NULL</returns>
         [ResponseType(typeof(_001_invRefCategory1Domain))]
-        [Auth("GET", "DeliveryMethodAttribute", "Select")]
+        [AuthRoleAccess( "DeliveryMethodAttribute", "Select")]
         public IHttpActionResult Get(int id)
         {
             var result = cat3.Get(id);
@@ -109,7 +109,7 @@ namespace Inventory_API4.Controllers
         /// <param name="DelMethod"></param>
         /// <returns>1/Many Json or NULL</returns>
         [ResponseType(typeof(_001_invRefCategory1Domain))]
-        [Auth("GET", "DeliveryMethodAttribute", "Select")]
+        [AuthRoleAccess( "DeliveryMethodAttribute", "Select")]
         public IHttpActionResult Get(int id, int DelMethod)
         {
             var result = cat3.GetData(id, DelMethod);
