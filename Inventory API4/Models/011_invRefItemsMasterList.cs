@@ -11,10 +11,11 @@ namespace Inventory_API4.Models
     {
         [Range(0, int.MaxValue)]
         public int ID { get; set; }
+        public int Cat3ID_003 { get; set; }
         [Required]
         public String Code { get; set; }
         public String Tag { get; set; }
-        public bool hasAttribute { get; set; }
+        public bool hasAccountability { get; set; }
 
         public _009_invRefUnitsDomain Units { get; set; }
         public List<vwItemProjectQuantity> ProjectQuantity { get; set; }
