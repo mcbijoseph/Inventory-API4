@@ -5,7 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Inventory_Domain_Layer;
+using Inventory_API4.Models;
 using Inventory_API4.Filters;
 using InventoryBL;
 using System.Web.Http.Description;

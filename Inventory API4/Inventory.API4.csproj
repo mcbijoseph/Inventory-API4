@@ -140,6 +140,77 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\001_invRefCategory1BL.cs" />
+    <Compile Include="App_Code\002_invRefCategory2BL.cs" />
+    <Compile Include="App_Code\003_invRefCategory3BL.cs" />
+    <Compile Include="App_Code\004_invRefPropertyName1BL.cs" />
+    <Compile Include="App_Code\005_invRefPropertyName2BL.cs" />
+    <Compile Include="App_Code\006_invRefAttributeBL.cs" />
+    <Compile Include="App_Code\007_invNewItemHeaderListBL.cs" />
+    <Compile Include="App_Code\008a_invRefDelMethodAttrValueBL.cs" />
+    <Compile Include="App_Code\008_invRefDelMethodAttributeBL.cs" />
+    <Compile Include="App_Code\009_invRefUnitsBL.cs" />
+    <Compile Include="App_Code\010_invRefDeliveryMethodoBL.cs" />
+    <Compile Include="App_Code\011_invRefItemsMasterListBL.cs" />
+    <Compile Include="App_Code\012_invItemAttributeBL.cs" />
+    <Compile Include="App_Code\013_invNewItemEntryListBL.cs" />
+    <Compile Include="App_Code\014_invRefItemImageBL.cs" />
+    <Compile Include="App_Code\015_invRefItemPropListBL.cs" />
+    <Compile Include="App_Code\017_invNewInfoDelMetAttrValueBL.cs" />
+    <Compile Include="App_Code\018_invRefItemConditionBL.cs" />
+    <Compile Include="App_Code\019_invReleasedItemHeaderBL.cs" />
+    <Compile Include="App_Code\020_invReleasedItemDetailsBL.cs" />
+    <Compile Include="App_Code\021_invTransMasterListBL.cs" />
+    <Compile Include="App_Code\022_invTransInfoOriginBL.cs" />
+    <Compile Include="App_Code\023_invTransInfoDestinationBL.cs" />
+    <Compile Include="App_Code\024_invTransInfoDelMetAttrValueBL.cs" />
+    <Compile Include="App_Code\025_invTransItemEntryListBL.cs" />
+    <Compile Include="App_Code\026_invTransItemRecievedListBL.cs" />
+    <Compile Include="App_Code\027_invWithdrawMasterListBL.cs" />
+    <Compile Include="App_Code\028_invWithdrawItemEntryListBL.cs" />
+    <Compile Include="App_Code\029_invRefFormListBL.cs" />
+    <Compile Include="App_Code\030_invRefFormHardCopySeriesBL.cs" />
+    <Compile Include="App_Code\031_invRefFormTransferListBL.cs" />
+    <Compile Include="App_Code\032_LoginBL.cs" />
+    <Compile Include="App_Code\Common\IBaseBL.cs" />
+    <Compile Include="App_Code\vwItemProjectQuantityBL.cs" />
+    <Compile Include="Models\001_invRefCategory1.cs" />
+    <Compile Include="Models\002_invRefCategory2.cs" />
+    <Compile Include="Models\003_invRefCategory3.cs" />
+    <Compile Include="Models\004_invRefPropertyName1.cs" />
+    <Compile Include="Models\005_invRefPropertyName2.cs" />
+    <Compile Include="Models\006_invRefAttribute.cs" />
+    <Compile Include="Models\007_invNewItemHeaderList.cs" />
+    <Compile Include="Models\008a_invRefDelMethodAttrValue.cs" />
+    <Compile Include="Models\008_invRefDelMethodAttribute.cs" />
+    <Compile Include="Models\009_invRefUnits.cs" />
+    <Compile Include="Models\010_invRefDeliveryMethod.cs" />
+    <Compile Include="Models\011_invRefItemsMasterList.cs" />
+    <Compile Include="Models\012_invItemAttribute.cs" />
+    <Compile Include="Models\013_invNewItemEntryList.cs" />
+    <Compile Include="Models\014_invRefItemImage.cs" />
+    <Compile Include="Models\015_invRefItemPropList.cs" />
+    <Compile Include="Models\017_invNewInfoDelMetAttrValue.cs" />
+    <Compile Include="Models\018_invRefItemCondition.cs" />
+    <Compile Include="Models\019_invReleasedItemHeader.cs" />
+    <Compile Include="Models\020_invReleasedItemDetails.cs" />
+    <Compile Include="Models\021_invTransMasterList.cs" />
+    <Compile Include="Models\022_invTransInfoOrigin.cs" />
+    <Compile Include="Models\023_invTransInfoDestination.cs" />
+    <Compile Include="Models\024_invTransInfoDelMetAttrValue.cs" />
+    <Compile Include="Models\025_invTransItemEntryList.cs" />
+    <Compile Include="Models\026_invTransItemRecievedList.CS" />
+    <Compile Include="Models\027_invWithdrawMasterList.cs" />
+    <Compile Include="Models\028_invWithdrawItemEntryList.cs" />
+    <Compile Include="Models\029_invRefFormList.cs" />
+    <Compile Include="Models\030_invRefFormHardCopySeries.cs" />
+    <Compile Include="Models\031_invRefFormTransferList.cs" />
+    <Compile Include="Models\032_Login.cs" />
+    <Compile Include="Models\ApiReferenceHolder.cs" />
+    <Compile Include="Models\Command.cs" />
+    <Compile Include="Models\fnItemFullName.cs" />
+    <Compile Include="Models\MessageViewDomain.cs" />
+    <Compile Include="Models\vwItemProjectQuantity.cs" />
     <Compile Include="App_Start\ApiSourcesConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\ContainerConfig.cs" />
@@ -285,7 +356,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
+    <Folder Include="App_Code\Interface\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -321,13 +392,9 @@
       <Project>{36ea3f0d-4906-4eda-ae1e-1abcc0791879}</Project>
       <Name>Helper</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Inventory Domain Layer\Inventory.Domain.csproj">
-      <Project>{b4fd9a3c-dff1-42e3-af45-7f914929e280}</Project>
-      <Name>Inventory.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\InventoryBL\Inventory.BL.csproj">
-      <Project>{025226f9-1670-4d99-a912-b543e251f6f4}</Project>
-      <Name>Inventory.BL</Name>
+    <ProjectReference Include="..\InventoryDAL\Inventory.DAL.csproj">
+      <Project>{20e2e9d1-1706-4df5-80e7-169fd316c7d1}</Project>
+      <Name>Inventory.DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

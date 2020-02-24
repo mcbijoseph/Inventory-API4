@@ -82,10 +82,6 @@
     <Content Include="Sample.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Inventory Domain Layer\Inventory.Domain.csproj">
-      <Project>{b4fd9a3c-dff1-42e3-af45-7f914929e280}</Project>
-      <Name>Inventory.Domain</Name>
-    </ProjectReference>
     <ProjectReference Include="..\InventoryDAL\Inventory.DAL.csproj">
       <Project>{20e2e9d1-1706-4df5-80e7-169fd316c7d1}</Project>
       <Name>Inventory.DAL</Name>

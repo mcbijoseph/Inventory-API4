@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Inventory.DAL;
 using System.Data;
 using System.Data.SqlClient;
-using Inventory_Domain_Layer;
+using Inventory_API4.Models;
 
 
 namespace InventoryBL

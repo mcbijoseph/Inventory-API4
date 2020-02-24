@@ -14,13 +14,13 @@ namespace Inventory_API4.Controllers.ReferenceApi
 
         public IHttpActionResult Get()
         {
-            return Ok(Inventory_Domain_Layer.ApiReferenceHolder.hrmsArray); 
+            return Ok(Models.ApiReferenceHolder.hrmsArray); 
         }
 
         public IHttpActionResult Get(int id)
         { 
             //Newtonsoft.Json.Linq.JArray jar = Newtonsoft.Json.JsonConvert.DeserializeObject<>
-            foreach(Newtonsoft.Json.Linq.JObject jo in Inventory_Domain_Layer.ApiReferenceHolder.hrmsArray)
+            foreach(Newtonsoft.Json.Linq.JObject jo in Models.ApiReferenceHolder.hrmsArray)
             {
                 if (int.Parse(jo["ID"].ToString()) == id)
                     return  Ok(jo);

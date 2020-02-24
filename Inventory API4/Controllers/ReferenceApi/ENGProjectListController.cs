@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Cors;
-using Inventory_Domain_Layer;
+using Inventory_API4.Models;
 
 namespace Inventory_API4.Controllers.ReferenceApi
 {
