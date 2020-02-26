@@ -12,9 +12,7 @@ namespace Inventory_API4.Models
         [Range(0, int.MaxValue)]
         public int ID { get; set; }
 
-        [Range(0, int.MaxValue)]
         public int ItemID_011 { get; set; }
-
         public int AttID_006 { get; set; }
         public string AttributeValue { get; set; }
     }
