@@ -252,8 +252,6 @@ C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\bin\Antlr3.Runti
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\bin\Autofac.dll
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\bin\Autofac.Integration.WebApi.dll
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\bin\Helper.dll
-C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\bin\Inventory Domain Layer.dll
-C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\bin\InventoryBL.dll
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\bin\Newtonsoft.Json.dll
@@ -272,8 +270,6 @@ C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\bin\System.Web.W
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\bin\WebGrease.dll
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\bin\InventoryDAL.dll
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\bin\Helper.pdb
-C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\bin\Inventory Domain Layer.pdb
-C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\bin\InventoryBL.pdb
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\bin\Autofac.xml
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\bin\Autofac.Integration.WebApi.pdb
 C:\Users\Owner\Desktop\inventories\InventoryAPI4\Inventory API4\bin\Autofac.Integration.WebApi.xml
