@@ -56,6 +56,10 @@
     <Reference Include="Autofac.Integration.WebApi, Version=4.3.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.WebApi2.4.3.1\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
     </Reference>
+    <Reference Include="Helper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ApiCommon\Helper\bin\Debug\Helper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -391,10 +395,6 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Desktop\ApiCommon\Helper\Helper.csproj">
-      <Project>{36ea3f0d-4906-4eda-ae1e-1abcc0791879}</Project>
-      <Name>Helper</Name>
-    </ProjectReference>
     <ProjectReference Include="..\InventoryDAL\Inventory.DAL.csproj">
       <Project>{20e2e9d1-1706-4df5-80e7-169fd316c7d1}</Project>
       <Name>Inventory.DAL</Name>

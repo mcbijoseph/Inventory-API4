@@ -15,7 +15,7 @@ namespace Inventory_API4.Models
 
         public static JObject getHrmsbyID(int HrmsID)
         {
-            if (HrmsID == 0) { return null; }
+            if (HrmsID == 0 || hrmsArray == null) { return null; }
             foreach (JObject j in hrmsArray)
             {
                 if (int.Parse(j["ID"].ToString()) == HrmsID)
@@ -28,7 +28,7 @@ namespace Inventory_API4.Models
 
         public static JObject getSupplierbyID(int SupplierID)
         {
-            if (SupplierID == 0) { return null; }
+            if (SupplierID == 0 || supplierArray == null) { return null; }
             foreach (JObject j in supplierArray)
             {
                 if (int.Parse(j["SupplierID"].ToString()) == SupplierID)
@@ -41,7 +41,7 @@ namespace Inventory_API4.Models
 
         public static JObject GetProjectByID(int ProjectID_EnggDB)
         {
-            if (ProjectID_EnggDB == 0) { return null; }
+            if (ProjectID_EnggDB == 0 || projectArray == null) { return null; }
 
             foreach (JObject j in projectArray)
             {

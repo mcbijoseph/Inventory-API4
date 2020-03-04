@@ -12,7 +12,7 @@ namespace Inventory_API4.Models
         [Range(0, int.MaxValue)]
         public int ID { get; set; }
         public int Cat3ID_003 { get; set; }
-        [Required]
+        //[Required]
         public String Code { get; set; }
         public String Tag { get; set; }
         public bool hasAccountability { get; set; }
@@ -24,6 +24,7 @@ namespace Inventory_API4.Models
         public List<_012_invItemAttributeDomain> ItemAttribute { get; set; }
         public _003_invRefItemFullNameDomain Category3 { get; set; }
         public fnItemFullNameDomain ItemFullNameInfo { get; set; }
+
         
     }
 }

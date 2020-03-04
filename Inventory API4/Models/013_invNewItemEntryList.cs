@@ -15,6 +15,8 @@ namespace Inventory_API4.Models
 
         [Range(0, int.MaxValue)]
         public int ItemID_011 { get; set; }
+        public int Cat3ID_003 { get; set; }
+        public bool hasAttribute { get; set; }
 
         [Range(0, int.MaxValue)]
         public int UnitID_009 { get; set; }
@@ -35,6 +37,9 @@ namespace Inventory_API4.Models
         {
             get; set;
         }
+
+        public List<_012_invItemAttributeDomain> ItemAttributes
+        { get; set; }
        
     }
 }
