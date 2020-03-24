@@ -146,7 +146,7 @@
   <ItemGroup>
     <Compile Include="App_Code\001_invRefCategory1BL.cs" />
     <Compile Include="App_Code\002_invRefCategory2BL.cs" />
-    <Compile Include="App_Code\003_invRefCategory3BL.cs" />
+    <Compile Include="App_Code\003_invRefItemFullNameBL.cs" />
     <Compile Include="App_Code\004_invRefPropertyName1BL.cs" />
     <Compile Include="App_Code\005_invRefPropertyName2BL.cs" />
     <Compile Include="App_Code\006_invRefAttributeBL.cs" />
@@ -176,11 +176,13 @@
     <Compile Include="App_Code\030_invRefFormHardCopySeriesBL.cs" />
     <Compile Include="App_Code\031_invRefFormTransferListBL.cs" />
     <Compile Include="App_Code\032_LoginBL.cs" />
+    <Compile Include="App_Code\033_invRefCategory3DefaultAttributeBL.cs" />
     <Compile Include="App_Code\Common\IBaseBL.cs" />
     <Compile Include="App_Code\vwItemProjectQuantityBL.cs" />
+    <Compile Include="Controllers\RawControllers\Category3DefaultAttributeController.cs" />
     <Compile Include="Models\001_invRefCategory1.cs" />
     <Compile Include="Models\002_invRefCategory2.cs" />
-    <Compile Include="Models\003_invRefCategory3.cs" />
+    <Compile Include="Models\003_invRefItemFullName.cs" />
     <Compile Include="Models\004_invRefPropertyName1.cs" />
     <Compile Include="Models\005_invRefPropertyName2.cs" />
     <Compile Include="Models\006_invRefAttribute.cs" />
@@ -210,6 +212,7 @@
     <Compile Include="Models\030_invRefFormHardCopySeries.cs" />
     <Compile Include="Models\031_invRefFormTransferList.cs" />
     <Compile Include="Models\032_Login.cs" />
+    <Compile Include="Models\033_invRefCategory3DefaultAttribute.cs" />
     <Compile Include="Models\ApiReferenceHolder.cs" />
     <Compile Include="Models\Command.cs" />
     <Compile Include="Models\fnItemFullName.cs" />
@@ -254,7 +257,7 @@
     <Compile Include="Controllers\RawControllers\AttributeController.cs" />
     <Compile Include="Controllers\RawControllers\Category1Controller.cs" />
     <Compile Include="Controllers\RawControllers\Category2Controller.cs" />
-    <Compile Include="Controllers\RawControllers\Category3Controller.cs" />
+    <Compile Include="Controllers\RawControllers\ItemFullNameController.cs" />
     <Compile Include="Controllers\RawControllers\DelMethodAttrValue.cs" />
     <Compile Include="Controllers\RawControllers\FormHardCopySeriesController.cs" />
     <Compile Include="Controllers\RawControllers\FormListController.cs" />

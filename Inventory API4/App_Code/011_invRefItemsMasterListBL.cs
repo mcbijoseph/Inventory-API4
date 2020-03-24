@@ -34,7 +34,7 @@ namespace InventoryBL
                 new SqlParameter { ParameterName = "@Code", Value = projectDomain.Code, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@Tag", Value = projectDomain.Tag, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@hasAccountability", Value = projectDomain.hasAccountability, Direction = ParameterDirection.Input },
-               // new SqlParameter { ParameterName = "@ItemPropList", Value = JsonConvert.SerializeObject( projectDomain.Category3.Property2[0].ItemPropList) , Direction = ParameterDirection.Input },
+                //new SqlParameter { ParameterName = "@ItemPropList", Value = JsonConvert.SerializeObject( projectDomain.Category3.Property2[0].ItemPropList) , Direction = ParameterDirection.Input },
                 new SqlParameter{ParameterName = "@ItemAttribute", Value = JsonConvert.SerializeObject(projectDomain.ItemAttribute), Direction =  ParameterDirection.Input },
                 new SqlParameter{ParameterName = "@ItemAttribute", Value = JsonConvert.SerializeObject(projectDomain.ItemAttribute), Direction =  ParameterDirection.Input }
             };

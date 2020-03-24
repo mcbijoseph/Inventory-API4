@@ -16,7 +16,7 @@ namespace Inventory_API4.Models
         [Required]
         public string Name { get; set; }
 
-        public List<_003_invRefCategory3Domain> Category3
+        public List<_003_invRefItemFullNameDomain> Category3
         {
             get; set;
         }

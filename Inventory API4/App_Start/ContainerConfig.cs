@@ -28,7 +28,7 @@ namespace Inventory_API4.App_Start
 
             builder.RegisterType<InventoryBL._001_invRefCategory1BL>().As<InventoryBL.I_001_invRefCategory1BL<Models._001_invRefCategory1Domain>>();
             builder.RegisterType<InventoryBL._002_invRefCategory2BL>().As<InventoryBL.I_002_invRefCategory2BL<Models._002_invRefCategory2Domain>>();
-            builder.RegisterType<InventoryBL._003_invRefCategory3BL>().As<InventoryBL.I_003_invRefCategory3BL<Models._003_invRefCategory3Domain>>();
+            builder.RegisterType<InventoryBL._003_invRefItemFullNameBL>().As<InventoryBL.I_003_invRefItemFullNameBL<Models._003_invRefItemFullNameDomain>>();
             builder.RegisterType<InventoryBL._004_invRefPropertyName1BL>().As<InventoryBL.I_004_invRefPropertyName1BL<Models._004_invRefPropertyName1Domain>>();
             builder.RegisterType<InventoryBL._005_invRefPropertyName2BL>().As<InventoryBL.I_005_invRefPropertyName2BL<Models._005_invRefPropertyName2Domain>>();
             builder.RegisterType<InventoryBL._006_invRefAttributeBL>().As<InventoryBL.I_006_invRefAttributeBL<Models._006_invRefAttributeDomain>>();
@@ -58,6 +58,7 @@ namespace Inventory_API4.App_Start
             builder.RegisterType<InventoryBL._030_invRefFormHardCopySeriesBL>().As<InventoryBL.I_030_invRefFormHardCopySeriesBL<Models._030_invRefFormHardCopySeriesDomain>>();
             builder.RegisterType<InventoryBL._031_invRefTransferListBL>().As<InventoryBL.I_031_invRefFormTransferListBL<Models._031_invRefFormTransferListDomain>>();
             builder.RegisterType<InventoryBL._032_LoginBL>().As<InventoryBL.I_032_LoginBL<Models._032_LoginDomain>>();
+            builder.RegisterType<InventoryBL._033_invRefCategory3DefaultAttributeBL>().As<InventoryBL.I_033_invRefCategory3DefaultAttributeBL<Models._033_invRefCategory3DefaultAttributeDomain>>();
 
             builder.RegisterType<InventoryBL.vwItemProjectQuantityBL>().As<InventoryBL.IvwItemProjectQuantityBL>();
 
